@@ -1,0 +1,39 @@
+dataset_name: take_or_store_plates
+dataset_uuid:
+task_descriptions:
+- take out or store plates on the stove and in the cabinet drawers.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: cabinet
+  level1: furniture
+  level2: cabinet
+  level3:
+  level4:
+  level5:
+- object_name: drawer
+  level1: container
+  level2: drawer
+  level3:
+  level4:
+  level5:
+- object_name: plate
+  level1: container
+  level2: plate
+  level3:
+  level4:
+  level5:
+- object_name: stove
+  level1: furniture
+  level2: stove
+  level3:
+  level4:
+  level5:
+operation_platform_height:
+device_model:
+- galaxea_r1_lite
+end_effector_type: two_finger_gripper

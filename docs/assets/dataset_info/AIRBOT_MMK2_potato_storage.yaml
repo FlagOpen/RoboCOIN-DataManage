@@ -1,0 +1,35 @@
+dataset_name: potato_storage
+dataset_uuid:
+task_descriptions:
+- put the potato in the right compartment with your right hand.
+- Put the potatoes in the left compartment with your left hand.
+scene_type:
+- home
+- restaurant
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3:
+  level4:
+  level5:
+- object_name: potato
+  level1: food
+  level2: potato
+  level3:
+  level4:
+  level5:
+- object_name: compartment
+  level1: container
+  level2: compartment
+  level3:
+  level4:
+  level5:
+operation_platform_height: 77.2
+device_model:
+- discover_robotics_aitbot_mmk2
+end_effector_type: two_finger_gripper

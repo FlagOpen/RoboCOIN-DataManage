@@ -1,13 +1,12 @@
 {
-  "unitree_g1_basket_storage_apple": {
-    "dataset_name": "basket_storage_apple",
+  "AIRBOT_MMK2_place_the_shark_toys_and_gold_bars": {
+    "dataset_name": "place_the_shark_toys_and_gold_bars",
     "dataset_uuid": null,
     "task_descriptions": [
-      "pick up the apple from the table and place it into the basket."
+      "pick up the shark doll with your left hand and put it in the lid of the paper box. then, with your right hand, pick up the gold bar on the table and put it in the lid of the paper box."
     ],
     "scene_type": [
-      "home",
-      "kitchen"
+      "home"
     ],
     "atomic_actions": [
       "grasp",
@@ -24,9 +23,1043 @@
         "level5": null
       },
       {
-        "object_name": "apple",
+        "object_name": "shark_doll",
+        "level1": "toy",
+        "level2": "shark_doll",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "gold_bar",
+        "level1": "metal",
+        "level2": "gold_bar",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "paper_lid_box",
+        "level1": "daily_necessities",
+        "level2": "paper_lid_box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "RMC-AIDA-L_pour_coffee_beans": {
+    "dataset_name": "pour_coffee_beans",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "use a blue spoon with right hand to take out the coffee beans from the glass, and then pour the coffee beans into the gray cup.",
+      "use a pink spoon with right hand to take out the coffee beans from the glass, and then pour the coffee beans into the gray cup.",
+      "use a blue spoon with right hand to take out the coffee beans from the glass, and then pour the coffee beans into the red cup.",
+      "use a pink spoon with left hand to take out the coffee beans from the glass, and then pour the coffee beans into the gray cup.",
+      "use a blue spoon with left hand to take out the coffee beans from the glass, and then pour the coffee beans into the red cup.",
+      "use a pink spoon with left hand to take out the coffee beans from the glass, and then pour the coffee beans into the red cup.",
+      "use a pink spoon with right hand to take out the coffee beans from the glass, and then pour the coffee beans into the red cup.",
+      "use a blue spoon with left hand to take out the coffee beans from the glass, and then pour the coffee beans into the gray cup."
+    ],
+    "scene_type": [
+      "kitchen",
+      "restaurant"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick",
+      "takeout"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "gray_cup",
+        "level1": "container",
+        "level2": "gray_cup",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "red_cup",
+        "level1": "container",
+        "level2": "red_cup",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "glass",
+        "level1": "container",
+        "level2": "glass",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "coffee_bean",
+        "level1": "food",
+        "level2": "coffee_bean",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "blue_spoon",
+        "level1": "tableware",
+        "level2": "blue_spoon",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "pink_spoon",
+        "level1": "tableware",
+        "level2": "pink_spoon",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "glass_lid",
+        "level1": "daily_necessities",
+        "level2": "glass_lid",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "realman_rmc_aidal"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_push_building_blocks": {
+    "dataset_name": "push_building_blocks",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "push the cylindrical block to the right of the cubic block with your right hand.",
+      "push the dark blue and yellow blocks to the upper right corner below the arched block with your right hand.",
+      "push the arched block upwards with your right hand."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "push"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "building_blocks",
+        "level1": "toy",
+        "level2": "building_blocks",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "R1_Lite_move_the_position_of_the_soda": {
+    "dataset_name": "move_the_position_of_the_soda",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "put the soda the designated position."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "place",
+      "pick",
+      "grasp"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "pen",
+        "level1": "office_supplies",
+        "level2": "pen",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "banana",
         "level1": "fruit",
-        "level2": "apple",
+        "level2": "banana",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bath_ball",
+        "level1": "daily_necessities",
+        "level2": "bath_ball",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bowl",
+        "level1": "container",
+        "level2": "bowl",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "plate",
+        "level1": "container",
+        "level2": "plate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "can",
+        "level1": "container",
+        "level2": "can",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "eraser",
+        "level1": "office_supplies",
+        "level2": "eraser",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "hard_cleanser",
+        "level1": "daily_necessities",
+        "level2": "hard_cleanser",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "long_bread",
+        "level1": "food",
+        "level2": "long_bread",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "peeler",
+        "level1": "tool",
+        "level2": "peeler",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "block",
+        "level1": "toy",
+        "level2": "block",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "duck",
+        "level1": "toy",
+        "level2": "duck",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "soap",
+        "level1": "daily_necessities",
+        "level2": "soap",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "basket",
+        "level1": "container",
+        "level2": "basket",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cola",
+        "level1": "drink",
+        "level2": "cola",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "detergent",
+        "level1": "daily_necessities",
+        "level2": "detergent",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "egg_beater",
+        "level1": "electrical_appliances",
+        "level2": "egg_beater",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "towel",
+        "level1": "clothing",
+        "level2": "towel",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "orange",
+        "level1": "fruit",
+        "level2": "orange",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "peach",
+        "level1": "fruit",
+        "level2": "peach",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "marker",
+        "level1": "office_supplies",
+        "level2": "marker",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "rubiks_cube",
+        "level1": "toy",
+        "level2": "rubiks_cube",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bread_slice",
+        "level1": "food",
+        "level2": "bread_slice",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "brush",
+        "level1": "daily_necessities",
+        "level2": "brush",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "yogurt",
+        "level1": "drink",
+        "level2": "yogurt",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "power_strip",
+        "level1": "electric_appliance",
+        "level2": "power_strip",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "milk",
+        "level1": "drink",
+        "level2": "milk",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "soda",
+        "level1": "drink",
+        "level2": "soda",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "lime",
+        "level1": "fruit",
+        "level2": "lime",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "coffee_capsule",
+        "level1": "drink",
+        "level2": "coffee_capsule",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "dish",
+        "level1": "container",
+        "level2": "dish",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "glass",
+        "level1": "furniture",
+        "level2": "glass",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "egg_yolk_pastry",
+        "level1": "food",
+        "level2": "egg_yolk_pastry",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "glasses_case",
+        "level1": "daily_necessities",
+        "level2": "glasses_case",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "gum",
+        "level1": "daily_necessities",
+        "level2": "gum",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "tape",
+        "level1": "daily_necessities",
+        "level2": "tape",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "soft_cleanser",
+        "level1": "daily_necessities",
+        "level2": "soft_cleanser",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "chips",
+        "level1": "food",
+        "level2": "chips",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "chocolate",
+        "level1": "food",
+        "level2": "chocolate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cookie",
+        "level1": "food",
+        "level2": "cookie",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "spoon",
+        "level1": "tableware",
+        "level2": "spoon",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "device_model": [
+      "galaxea_r1_lite"
+    ],
+    "end_effector_type": "two_finger_gripper",
+    "operation_platform_height": 77.2
+  },
+  "AIRBOT_MMK2_cake_storage": {
+    "dataset_name": "cake_storage",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "pick up the cake on the table with both hands and place it on a white plate."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cake",
+        "level1": "food",
+        "level2": "cake",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "plate",
+        "level1": "container",
+        "level2": "plate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_place_the_sponge_and_wet_wipes": {
+    "dataset_name": "place_the_sponge_and_wet_wipes",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "pick up the sponge and wet wipes on the table with both hands and place them in a white tray.",
+      "Pick up the mouse box and the power bank box on the table with both hands simultaneously and put them into the white lid."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "sponge",
+        "level1": "daily_necessities",
+        "level2": "sponge",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "wet_wipes",
+        "level1": "daily_necessities",
+        "level2": "wet_wipes",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "plate",
+        "level1": "container",
+        "level2": "plate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "mouse_box",
+        "level1": "container",
+        "level2": "mouse_box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "charging_power_bank_box",
+        "level1": "container",
+        "level2": "charging_power_bank_box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "lid",
+        "level1": "container",
+        "level2": "lid",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_place_the_building_blocks": {
+    "dataset_name": "place_the_building_blocks",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "put the red building blocks into the plate on the table with your left hand and the green building blocks into the plate with your right hand."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "open",
+      "hold"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "building_block",
+        "level1": "toy",
+        "level2": "building_block",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "plate",
+        "level1": "container",
+        "level2": "plate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_storage_for_building_blocks_and_beauty_sponges": {
+    "dataset_name": "storage_for_building_blocks_and_beauty_sponges",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take the beauty blender out of the plate with your left hand and place it on the table; pick up the building blocks from the table with your right hand and place them on the plate.",
+      "take the sponge out of the plate with your left hand and place it on the table. pick up the mouse box from the table with your right hand and place it on the plate.",
+      "take the drink out of the plate with your left hand and place it on the table. pick up the wet wipes from the table with your right hand and place them on the plate."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "beauty_blender",
+        "level1": "tool",
+        "level2": "beauty_blender",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "plate",
+        "level1": "container",
+        "level2": "plate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "building_blocks",
+        "level1": "toy",
+        "level2": "building_blocks",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "sponge",
+        "level1": "daily_necessities",
+        "level2": "sponge",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "mouse_box",
+        "level1": "container",
+        "level2": "mouse_box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "beverage",
+        "level1": "juice",
+        "level2": "beverage",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "wet_wipes",
+        "level1": "daily_necessities",
+        "level2": "wet_wipes",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "R1_Lite_make_a_landline_call": {
+    "dataset_name": "make_a_landline_call",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "lift phone handle dial number then replace to end call."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "furnitureixed_line_telephone",
+        "level1": "communication_equipment",
+        "level2": "furnitureixed_line_telephone",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "galaxea_r1_lite"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_open_notebook": {
+    "dataset_name": "open_notebook",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "press the bottom right corner of the notebook with your right hand and open the notebook with your left hand."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "open",
+      "hold"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "notebook",
+        "level1": "office_supplies",
+        "level2": "notebook",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "RMC-AIDA-L_glasses_storage": {
+    "dataset_name": "glasses_storage",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "put the black glasses into the black glasses case.",
+      "put the black glasses into the green glasses case.",
+      "put the white glasses into the black glasses case.",
+      "put the white glasses into the green glasses case."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "fold",
+      "close",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "glasses_case",
+        "level1": "daily_necessities",
+        "level2": "glasses_case",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "glasses",
+        "level1": "daily_necessities",
+        "level2": "glasses",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "realman_rmc_aidal"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "RMC-AIDA-L_stack_baskets": {
+    "dataset_name": "stack_baskets",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "put the yellow basket on top of the brown basket.",
+      "put the brown basket on top of the yellow basket."
+    ],
+    "scene_type": [
+      "home",
+      "restaurant"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "brown_basket",
+        "level1": "container",
+        "level2": "brown_basket",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "yellow_basket",
+        "level1": "container",
+        "level2": "yellow_basket",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "device_model": [
+      "realman_rmc_aidal"
+    ],
+    "end_effector_type": "two_finger_gripper",
+    "operation_platform_height": 77.2
+  },
+  "Cobot_Magic_move_the_bread": {
+    "dataset_name": "move_the_bread",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "grasp yellow bread place into yellow plate retrieve it."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bread",
+        "level1": "food",
+        "level2": "bread",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "plate",
+        "level1": "container",
+        "level2": "plate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "Split_aloha_basket_storage_banana": {
+    "dataset_name": "basket_storage_banana",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "pick up the banana and put it into the basket."
+    ],
+    "scene_type": [
+      "home",
+      "kitchen"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "banana",
+        "level1": "fruit",
+        "level2": "banana",
         "level3": null,
         "level4": null,
         "level5": null
@@ -42,19 +1075,117 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "unitree_g1"
+      "agilex_cobot_magic_aloha"
     ],
-    "end_effector_type": "five_finger_hand"
+    "end_effector_type": "two_finger_gripper"
   },
-  "unitree_g1_plate_storage_doll": {
-    "dataset_name": "plate_storage_doll",
+  "Split_aloha_basket_storage_long_bread": {
+    "dataset_name": "basket_storage_long_bread",
     "dataset_uuid": null,
     "task_descriptions": [
-      "the left hand pick up the doll on the left side of the plate and place it into the plate.",
-      "the right hand pick up the doll on the right side of the plate and place it into the plate."
+      "pick up the long bread and put it into the basket."
+    ],
+    "scene_type": [
+      "home",
+      "kitchen"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "long_bread",
+        "level1": "food",
+        "level2": "long_bread",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "basket",
+        "level1": "container",
+        "level2": "basket",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_diamond_storage": {
+    "dataset_name": "diamond_storage",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "pick up the diamond with your right hand and put it into the box, then close the lid with your left hand."
     ],
     "scene_type": [
       "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place",
+      "cover"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "diamond",
+        "level1": "mineral",
+        "level2": "diamond",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "Split_aloha_plate_storage": {
+    "dataset_name": "plate_storage",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "put the plate on the plate rack.",
+      "the left gripper grasp the green plate, the left gripper pass the green plate to the right gripper, and the right gripper place the green plate on the plate rack.",
+      "the left gripper grasp the pink plate, the left gripper pass the pink plate to the right gripper, and the right gripper place the pink plate on the plate rack.",
+      "the right gripper grasp the green plate, the right gripper pass the green plate to the left gripper, and the left gripper place the green plate on the plate rack.",
+      "the right gripper grasp the pink plate, the right gripper pass the pink plate to the left gripper, and the left gripper place the pink plate on the plate rack."
+    ],
+    "scene_type": [
+      "home",
+      "kitchen"
     ],
     "atomic_actions": [
       "grasp",
@@ -79,9 +1210,9 @@
         "level5": null
       },
       {
-        "object_name": "doll",
-        "level1": "toy",
-        "level2": "doll",
+        "object_name": "plate_rack",
+        "level1": "furniture",
+        "level2": "plate_rack",
         "level3": null,
         "level4": null,
         "level5": null
@@ -89,11 +1220,517 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "unitree_g1"
+      "agilex_cobot_magic_aloha"
     ],
-    "end_effector_type": "five_finger_hand"
+    "end_effector_type": "two_finger_gripper"
   },
-  "realman_rmc_aidal_place_the_fruits_repeatedly": {
+  "RMC-AIDA-L_get_water": {
+    "dataset_name": "get_water",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "the left gripper pick up the black cup and place it horizontally under the faucet, the right gripper turn on the faucet to fill the cup, and then turn off the faucet.",
+      "the left gripper pick up the red cup and place it horizontally under the faucet, the right gripper turn on the faucet to fill the cup, and then turn off the faucet.",
+      "the right gripper pick up the red cup and place it horizontally under the faucet, the left gripper turn on the faucet to fill the cup, and then turn off the faucet."
+    ],
+    "scene_type": [
+      "home",
+      "kitchen"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place",
+      "hold",
+      "push"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "faucet",
+        "level1": "tool",
+        "level2": "faucet",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cup",
+        "level1": "container",
+        "level2": "cup",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "water",
+        "level1": "drink",
+        "level2": "water",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "realman_rmc_aidal"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_cup_storage": {
+    "dataset_name": "cup_storage",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "hold the blue cup in your left hand and place it on the plate, and hold the purple cup in your right hand and put it in the blue cup."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cup",
+        "level1": "container",
+        "level2": "cup",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "plate",
+        "level1": "container",
+        "level2": "plate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "R1_Lite_stack_baskets": {
+    "dataset_name": "stack_baskets",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "stack a basket on top of another basket.",
+      "stack a basket on top of another basket."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "basket",
+        "level1": "container",
+        "level2": "basket",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "galaxea_r1_lite"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "Cobot_Magic_move_the_cup": {
+    "dataset_name": "move_the_cup",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "grasp the transparent glass cup and place it within the blue towel."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "glass_cup",
+        "level1": "container",
+        "level2": "glass_cup",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "towel",
+        "level1": "clothing",
+        "level2": "towel",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "Cobot_Magic_put_down_the_pen": {
+    "dataset_name": "put_down_the_pen",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "grasp the red pen and place it on the paper on the table."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "pen",
+        "level1": "office_supplies",
+        "level2": "pen",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "paper",
+        "level1": "office_supplies",
+        "level2": "paper",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "R1_Lite_open_the_food_pan": {
+    "dataset_name": "open_the_food_pan",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "fully open pot lid on table then close it."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "pan",
+        "level1": "container",
+        "level2": "pan",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "galaxea_r1_lite"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "RMC-AIDA-L_basket_storage_orange": {
+    "dataset_name": "basket_storage_orange",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "the left gripper pick up the basket to the appropriate position,  the right gripper pick up the orange and place it into the basket.",
+      "the left gripper pick up the black basket and place it horizontally in the middle of the table, the right gripper pick up the orange and place it into the black basket.",
+      "the left gripper pick up the yellow basket and place it horizontally in the middle of the table, the right gripper pick up the orange and place it into the yellow basket.",
+      "the right gripper pick up the black basket and place it horizontally in the middle of the table, the left gripper pick up the orange and place it into the black basket.",
+      "the right gripper pick up the yellow basket and place it horizontally in the middle of the table, the left gripper pick up the orange and place it into the yellow basket."
+    ],
+    "scene_type": [
+      "home",
+      "kitchen"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "basket",
+        "level1": "container",
+        "level2": "basket",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "orange",
+        "level1": "fruit",
+        "level2": "orange",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "realman_rmc_aidal"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "Split_aloha_scoop_coffee_beans": {
+    "dataset_name": "scoop_coffee_beans",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "the left gripper place the grey cup in the center of the table, the right gripper take the blue spoon from the cup lid and scoop out the coffee beans from the coffee cup and put them into the grey cup, the right gripper put the spoon back into the cup lid.",
+      "the left gripper place the grey cup in the center of the table, the right gripper take the pink spoon from the cup lid and scoop out the coffee beans from the coffee cup and put them into the grey cup, the right gripper put the spoon back into the cup lid.",
+      "the right gripper place the grey cup in the center of the table, the left gripper take the blue spoon from the cup lid and scoop out the coffee beans from the coffee cup and put them into the grey cup, the left gripper put the spoon back into the cup lid.",
+      "the right gripper place the grey cup in the center of the table, the left gripper take the pink spoon from the cup lid and scoop out the coffee beans from the coffee cup and put them into the grey cup, the left gripper put the spoon back into the cup lid.",
+      "the left gripper place the red cup in the center of the table, the right gripper take the blue spoon from the cup lid and scoop out the coffee beans from the coffee cup and put them into the red cup, the right gripper put the spoon back into the cup lid.",
+      "the left gripper place the red cup in the center of the table, the right gripper take the pink spoon from the cup lid and scoop out the coffee beans from the coffee cup and put them into the red cup, the right gripper put the spoon back into the cup lid.",
+      "the right gripper place the red cup in the center of the table, the left gripper take the blue spoon from the cup lid and scoop out the coffee beans from the coffee cup and put them into the red cup, the left gripper put the spoon back into the cup lid.",
+      "the right gripper place the red cup in the center of the table, the left gripper take the pink spoon from the cup lid and scoop out the coffee beans from the coffee cup and put them into the red cup, the left gripper put the spoon back into the cup lid."
+    ],
+    "scene_type": [
+      "home",
+      "office"
+    ],
+    "atomic_actions": [
+      "scoop",
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cup",
+        "level1": "container",
+        "level2": "cup",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cup_lid",
+        "level1": "container",
+        "level2": "cup_lid",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "spoon",
+        "level1": "tableware",
+        "level2": "spoon",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "coffee_beans",
+        "level1": "food",
+        "level2": "coffee_beans",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "Cobot_Magic_store_egg": {
+    "dataset_name": "store_egg",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take egg from table egg box put into bowl.",
+      "take egg from green cloth egg box put into bowl.",
+      "take egg from yellow cloth egg box put into bowl."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "egg",
+        "level1": "food",
+        "level2": "egg",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bowl",
+        "level1": "container",
+        "level2": "bowl",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "egg_box",
+        "level1": "container",
+        "level2": "egg_box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_store_beauty_blender_and_building_blocks": {
+    "dataset_name": "store_beauty_blender_and_building_blocks",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "throw the beauty blender into the bowl with your left hand, and then throw the building blocks into the bowl with your right hand."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "beauty_blender",
+        "level1": "tool",
+        "level2": "beauty_blender",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "building_blocks",
+        "level1": "toy",
+        "level2": "building_blocks",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bowl",
+        "level1": "container",
+        "level2": "bowl",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "RMC-AIDA-L_place_the_fruits_repeatedly": {
     "dataset_name": "place_the_fruits_repeatedly",
     "dataset_uuid": null,
     "task_descriptions": [
@@ -171,7 +1808,2915 @@
     ],
     "end_effector_type": "two_finger_gripper"
   },
-  "realman_rmc_aidal_food_storage": {
+  "Cobot_Magic_move_the_plate": {
+    "dataset_name": "move_the_plate",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "move the plate that can hold fruits to the right side of the table."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "plate",
+        "level1": "container",
+        "level2": "plate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "Cobot_Magic_catch_the_ball": {
+    "dataset_name": "catch_the_ball",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "grasp the rolling ball descending the slope."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "ball",
+        "level1": "toy",
+        "level2": "ball",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_bowl_storage_pepper": {
+    "dataset_name": "bowl_storage_pepper",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "with the right hand, the person threw the chili peppers into the blue bowl.",
+      "put the pumpkin into the large white bowl with your left hand. give space to your left hand with your right hand.",
+      "put the small bowl into the large one with your left hand, and give space to your left hand with your right hand."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "chili_pepper",
+        "level1": "vegetables",
+        "level2": "chili_pepper",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bowl",
+        "level1": "container",
+        "level2": "bowl",
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "pumpkin",
+        "level1": "vegetables",
+        "level2": "pumpkin",
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_place_the_small_bowl_of_canned_food": {
+    "dataset_name": "place_the_small_bowl_of_canned_food",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "the right hand picked up the mini bowl of canned food from the table and placed it on the mini table."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "mini_table",
+        "level1": "furniture",
+        "level2": "mini_table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "small_bowl_of_canned_food",
+        "level1": "food",
+        "level2": "small_bowl_of_canned_food",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "Cobot_Magic_unplug_the_plug": {
+    "dataset_name": "unplug_the_plug",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "unplug the left plug.",
+      "unplug the right plug.",
+      "unplug the middle plug."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "plug",
+        "level1": "electric_appliance",
+        "level2": "plug",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "socket",
+        "level1": "electric_appliance",
+        "level2": "socket",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "R1_Lite_move_the_position_of_the_milk": {
+    "dataset_name": "move_the_position_of_the_milk",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "put the milk the designated position."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "place",
+      "pick",
+      "grasp"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "pen",
+        "level1": "office_supplies",
+        "level2": "pen",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "banana",
+        "level1": "fruit",
+        "level2": "banana",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bath_ball",
+        "level1": "daily_necessities",
+        "level2": "bath_ball",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bowl",
+        "level1": "container",
+        "level2": "bowl",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "plate",
+        "level1": "container",
+        "level2": "plate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "can",
+        "level1": "container",
+        "level2": "can",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "eraser",
+        "level1": "office_supplies",
+        "level2": "eraser",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "hard_cleanser",
+        "level1": "daily_necessities",
+        "level2": "hard_cleanser",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "long_bread",
+        "level1": "food",
+        "level2": "long_bread",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "peeler",
+        "level1": "tool",
+        "level2": "peeler",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "block",
+        "level1": "toy",
+        "level2": "block",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "duck",
+        "level1": "toy",
+        "level2": "duck",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "soap",
+        "level1": "daily_necessities",
+        "level2": "soap",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "basket",
+        "level1": "container",
+        "level2": "basket",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cola",
+        "level1": "drink",
+        "level2": "cola",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "detergent",
+        "level1": "daily_necessities",
+        "level2": "detergent",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "egg_beater",
+        "level1": "electrical_appliances",
+        "level2": "egg_beater",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "towel",
+        "level1": "clothing",
+        "level2": "towel",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "orange",
+        "level1": "fruit",
+        "level2": "orange",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "peach",
+        "level1": "fruit",
+        "level2": "peach",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "marker",
+        "level1": "office_supplies",
+        "level2": "marker",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "rubiks_cube",
+        "level1": "toy",
+        "level2": "rubiks_cube",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bread_slice",
+        "level1": "food",
+        "level2": "bread_slice",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "brush",
+        "level1": "daily_necessities",
+        "level2": "brush",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "yogurt",
+        "level1": "drink",
+        "level2": "yogurt",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "power_strip",
+        "level1": "electric_appliance",
+        "level2": "power_strip",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "milk",
+        "level1": "drink",
+        "level2": "milk",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "soda",
+        "level1": "drink",
+        "level2": "soda",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "lime",
+        "level1": "fruit",
+        "level2": "lime",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "coffee_capsule",
+        "level1": "drink",
+        "level2": "coffee_capsule",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "dish",
+        "level1": "container",
+        "level2": "dish",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "glass",
+        "level1": "furniture",
+        "level2": "glass",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "egg_yolk_pastry",
+        "level1": "food",
+        "level2": "egg_yolk_pastry",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "glasses_case",
+        "level1": "daily_necessities",
+        "level2": "glasses_case",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "gum",
+        "level1": "daily_necessities",
+        "level2": "gum",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "tape",
+        "level1": "daily_necessities",
+        "level2": "tape",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "soft_cleanser",
+        "level1": "daily_necessities",
+        "level2": "soft_cleanser",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "chips",
+        "level1": "food",
+        "level2": "chips",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "chocolate",
+        "level1": "food",
+        "level2": "chocolate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cookie",
+        "level1": "food",
+        "level2": "cookie",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "spoon",
+        "level1": "tableware",
+        "level2": "spoon",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "device_model": [
+      "galaxea_r1_lite"
+    ],
+    "end_effector_type": "two_finger_gripper",
+    "operation_platform_height": 77.2
+  },
+  "RMC-AIDA-L_food_packaging": {
+    "dataset_name": "food_packaging",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "the left gripper pick up the blue bag, the right gripper pick up the lunch box from the table and placed it in the bag, the right gripper pick up the cucumber from the table and placed it in the bag,the right gripper pick up the pear from the table and placed it in the bag, the right gripper zip up the bag.",
+      "the left gripper pick up the blue bag, the right gripper pick up the lunch box from the table and placed it in the bag, the right gripper pick up the banana from the table and placed it in the bag,the right gripper pick up the peach from the table and placed it in the bag, the right gripper zip up the bag."
+    ],
+    "scene_type": [
+      "home",
+      "kitchen"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place",
+      "pull"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bag",
+        "level1": "container",
+        "level2": "bag",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "lunch_box",
+        "level1": "container",
+        "level2": "lunch_box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cucumber",
+        "level1": "vegetable",
+        "level2": "cucumber",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "pear",
+        "level1": "fruit",
+        "level2": "pear",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "banana",
+        "level1": "fruit",
+        "level2": "banana",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "peach",
+        "level1": "fruit",
+        "level2": "peach",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "realman_rmc_aidal"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "Split_aloha_wipe_table": {
+    "dataset_name": "wipe_table",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "the left gripper pick up the fallen cup and place it upright, the right gripper grasp the black rag and wipe the stain on the table, the right gripper put the black rag back in its original position."
+    ],
+    "scene_type": [
+      "home",
+      "kitchen"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick",
+      "wipe"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cup",
+        "level1": "container",
+        "level2": "cup",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "rag",
+        "level1": "clothing",
+        "level2": "rag",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "stain",
+        "level1": "garbage",
+        "level2": "stain",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "R1_Lite_pour_water": {
+    "dataset_name": "pour_water",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "pour water into two cups then put kettle down on table."
+    ],
+    "scene_type": [
+      "home",
+      "restaurant"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "water",
+        "level1": "drink",
+        "level2": "water",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "kettle",
+        "level1": "electric_appliance",
+        "level2": "kettle",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cup",
+        "level1": "container",
+        "level2": "cup",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "galaxea_r1_lite"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_close_the_computer": {
+    "dataset_name": "close_the_computer",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "hold the computer with your left hand and close it with your right hand."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "computer",
+        "level1": "office_supplies",
+        "level2": "computer",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "RMC-AIDA-L_build_blocks": {
+    "dataset_name": "build_blocks",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "left arm begins to build blocks.",
+      "right arm begins to build blocks."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "building_block",
+        "level1": "toy",
+        "level2": "building_blocks",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "device_model": [
+      "realman_rmc_aidal"
+    ],
+    "end_effector_type": "two_finger_gripper",
+    "operation_platform_height": 77.2
+  },
+  "RMC-AIDA-L_organise_the_document_bag": {
+    "dataset_name": "organise_the_document_bag",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "open the green document bag with left hand.",
+      "open the green document bag with right hand.",
+      "open the red document bag with left hand.",
+      "open the red document bag with right hand."
+    ],
+    "scene_type": [
+      "office"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick",
+      "pull"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "document_bag",
+        "level1": "container",
+        "level2": "document_bag",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "realman_rmc_aidal"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "RMC-AIDA-L_fruit_storage": {
+    "dataset_name": "fruit_storage",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "the left gripper pick up the bowl from the table, the right gripper pick up the banana from the table and place it in the bowl, the left gripper put down the bowl.",
+      "the left gripper pick up the banana from the table and place it in the middle plate, the right gripper pick up the grape from the table and place it in the middle plate."
+    ],
+    "scene_type": [
+      "home",
+      "kitchen"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "grape",
+        "level1": "fruit",
+        "level2": "grape",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "banana",
+        "level1": "fruit",
+        "level2": "banana",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "plate",
+        "level1": "container",
+        "level2": "plate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bowl",
+        "level1": "container",
+        "level2": "bowl",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "realman_rmc_aidal"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "Split_aloha_basket_storage_orange": {
+    "dataset_name": "basket_storage_orange",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "pick up the orange and put it into the basket."
+    ],
+    "scene_type": [
+      "home",
+      "kitchen"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "orange",
+        "level1": "fruit",
+        "level2": "orange",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "basket",
+        "level1": "container",
+        "level2": "basket",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "R1_Lite_build_blocks": {
+    "dataset_name": "build_blocks",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "place the arched building blocks in the center of the table, set up the rectangular building blocks, and then set up the triangular building blocks."
+    ],
+    "scene_type": [
+      "home",
+      "living_room"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "blocks",
+        "level1": "toy",
+        "level2": "blocks",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "galaxea_r1_lite"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_place_the_cake": {
+    "dataset_name": "place_the_cake",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "pick up the cake with your left hand and place it on the plate, then pick up the cake from the plate with your right hand and put it on the table.",
+      "pick up the cake on the table with your left hand and place it on the yellow cube, and then pick up another cake on the table with your right hand and place it on the blue cube.",
+      "pick up the ice cream with your left hand and put it in the small white basin. then, pick up another ice cream with your right hand and put it in the small white basin.",
+      "pick up the cake on the table with your left hand and put it in the white lid. then, pick up the ice cream on the table with your right hand and put it in the white lid. foodinally, pick up another cake on the table with your left hand and put it in the white lid.",
+      "pick up the swiss roll with your left hand and put it on the plate, then pick up another swiss roll with your right hand and put it on the plate."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cake",
+        "level1": "food",
+        "level2": "cake",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "plate",
+        "level1": "container",
+        "level2": "plate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "building_blocks",
+        "level1": "toy",
+        "level2": "building_blocks",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "ice_cream",
+        "level1": "food",
+        "level2": "ice_cream",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "small_basin",
+        "level1": "container",
+        "level2": "small_basin",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "lid",
+        "level1": "container",
+        "level2": "lid",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "swiss_roll",
+        "level1": "food",
+        "level2": "swiss_roll",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "Split_aloha_pour_rice": {
+    "dataset_name": "pour_rice",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "the right gripper grasp the rice container and place it in the center of the table, the left gripper grasp the rice scoop and pour the rice into the rice container."
+    ],
+    "scene_type": [
+      "home",
+      "kitchen"
+    ],
+    "atomic_actions": [
+      "place",
+      "pick",
+      "grasp",
+      "pour"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "rice",
+        "level1": "food",
+        "level2": "rice",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "rice_container",
+        "level1": "container",
+        "level2": "rice_container",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "rice_scoop",
+        "level1": "container",
+        "level2": "rice_scoop",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_store_wet_wipes_and_bowls": {
+    "dataset_name": "store_wet_wipes_and_bowls",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "with the right hand, place the large blue bowl on the square plate, with the left hand, put the wet wipes into the blue bowl."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "open",
+      "hold"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bowl",
+        "level1": "container",
+        "level2": "bowl",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "wet_tissue",
+        "level1": "daily_necessities",
+        "level2": "wet_tissue",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "square_plate",
+        "level1": "container",
+        "level2": "square_plate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_mobile_phone_storage": {
+    "dataset_name": "mobile_phone_storage",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "pick up the mobile phone with your left hand and place it on the calculator box.use your right hand to pick up the mobile phone from the calculator box.Put it on the table."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "mobile_phone",
+        "level1": "communication_supplies",
+        "level2": "mobile_phone",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "calculator_box",
+        "level1": "container",
+        "level2": "calculator_box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "Cobot_Magic_take_out_the_bread": {
+    "dataset_name": "take_out_the_bread",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take toasted bread from bread machine on blue coffee table place on plate.",
+      "take toasted bread from bread machine on light coffee tablecloth place on plate.",
+      "take toasted bread from bread machine on green coffee tablecloth place on plate.",
+      "take toasted bread from bread machine on grey coffee table place on plate.",
+      "take toasted bread from bread machine on white table place on plate.",
+      "take toasted bread from bread machine on white checkered table place on plate."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bread_machine",
+        "level1": "kitchenware",
+        "level2": "bread_machine",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bread",
+        "level1": "food",
+        "level2": "bread",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "tablecloth",
+        "level1": "clothing",
+        "level2": "tablecloth",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "plate",
+        "level1": "container",
+        "level2": "plate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "RMC-AIDA-L_fold_shorts": {
+    "dataset_name": "fold_shorts",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "the shorts is place with the back facing up, the left gripper grasp the waist of the shorts, and the right gripper grasp the bottom of the shorts and folds them in the middle.",
+      "the shorts is place with the front facing upwards, the left gripper grasp the waist of the shorts, and the right gripper grasp the bottom of the shorts and folds them in the middle.",
+      "the shorts is place with the back facing up, the right gripper grasp the waist of the shorts, and the left gripper grasp the bottom of the shorts and folds them in the middle.",
+      "the shorts is place with the front facing upwards, the right gripper grasp the waist of the shorts, and the left gripper grasp the bottom of the shorts and folds them in the middle."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "fold",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "shorts",
+        "level1": "clothing",
+        "level2": "shorts",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "realman_rmc_aidal"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_place_the_yellow_block": {
+    "dataset_name": "place_the_yellow_block",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "place the yellow square on the table onto the rubik's cube with your left hand, and use your right hand to take the yellow square from the rubik's cube to the table."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "lower"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "square",
+        "level1": "toy",
+        "level2": "square",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "rubiks_cube",
+        "level1": "toy",
+        "level2": "rubiks_cube",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_beauty_sponge_and_cake_to_place": {
+    "dataset_name": "beauty_sponge_and_cake_to_place",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take the beauty blender out of the plate with your left hand and place it on the table, then pick up the cake on the table with your right hand and put it on the plate."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "beauty_blender",
+        "level1": "tools",
+        "level2": "beauty_blender",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cake",
+        "level1": "food",
+        "level2": "cake",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "plate",
+        "level1": "container",
+        "level2": "plate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "Cobot_Magic_move_the_ball": {
+    "dataset_name": "move_the_ball",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "pick up the ball and place it on the plate, then pick up the ball from the plate and put it in the center of the table."
+    ],
+    "scene_type": [
+      "industry"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "ball",
+        "level1": "toy",
+        "level2": "ball",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "plate",
+        "level1": "container",
+        "level2": "plate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "Split_aloha_fold_the_pants": {
+    "dataset_name": "fold_the_pants",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "the pants are placed with the back facing upwards, the cuffs facing to the left, the left gripper grasp the cuffs, the right gripper grasp the leg and fold it forward, the left gripper lift the folded cuffs and fold them against the leg, adjust the position of the pants to the center of the table.",
+      "the pants are placed with the back facing upwards, the cuffs facing to the right, the right gripper grasp the cuffs, the left gripper grasp the leg and fold it forward, the right gripper lift the folded cuffs and fold them against the leg, adjust the position of the pants to the center of the table.",
+      "the pants are placed with the front facing upwards, the cuffs facing to the left, the left gripper grasp the cuffs, the right gripper grasp the leg and fold it forward, the left gripper lift the folded cuffs and fold them against the leg, adjust the position of the pants to the center of the table.",
+      "the pants are placed with the front facing upwards, the cuffs facing to the right, the right gripper grasp the cuffs, the left gripper grasp the leg and fold it forward, the right gripper lift the folded cuffs and fold them against the leg, adjust the position of the pants to the center of the table."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "fold"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "pants",
+        "level1": "clothing",
+        "level2": "pants",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_organize_books": {
+    "dataset_name": "organize_books",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "pick up the book on the table with the right hand and put it into the bookshelf."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "book",
+        "level1": "office_supplies",
+        "level2": "book",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bookshelf",
+        "level1": "container",
+        "level2": "bookshelf",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "R1_Lite_peach_storage": {
+    "dataset_name": "peach_storage",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "place the basket in the center of the table and align it, then put the peaches into the basket.",
+      "place the basket in the center of the table and align it, then put the peaches into the basket."
+    ],
+    "scene_type": [
+      "kitchen",
+      "living_room"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "basket",
+        "level1": "container",
+        "level2": "basket",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "peach",
+        "level1": "fruit",
+        "level2": "peach",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "galaxea_r1_lite"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_store_coffee_cups": {
+    "dataset_name": "store_coffee_cups",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "pick up a coffee cup with your left hand and place it in the basin; pick up another coffee cup with your right hand and place it in the basin."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "coffee_cup",
+        "level1": "container",
+        "level2": "coffee_cup",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "basin",
+        "level1": "container",
+        "level2": "basin",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "Cobot_Magic_the_box_stores_table_tennis_balls": {
+    "dataset_name": "the_box_stores_table_tennis_balls",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "put the table tennis balls in the box on the blue coffee tablecloth.",
+      "put the table tennis balls in the box on the green coffee tablecloth.",
+      "put the table tennis balls into the box on the light coffee tablecloth.",
+      "put the table tennis balls into the box on the grey coffee tablecloth.",
+      "put the table tennis balls into the box on the white table.",
+      "put the table tennis balls into the box on the white checkered tablecloth."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "table_tennis",
+        "level1": "toy",
+        "level2": "table_tennis",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "tablecloth",
+        "level1": "clothing",
+        "level2": "tablecloth",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "RMC-AIDA-L_clean_table": {
+    "dataset_name": "clean_table",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "wipe off the black water stains in the middle of the table with a blue rag.",
+      "wipe off the brown water stains in the middle of the table with a blue rag.",
+      "wipe off the black water stains in the middle of the table with a pruple rag.",
+      "wipe off the brown water stains in the middle of the table with a pruple rag."
+    ],
+    "scene_type": [
+      "home",
+      "restaurant"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place",
+      "wipe"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cup",
+        "level1": "container",
+        "level2": "cup",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "blue_rag",
+        "level1": "clothing",
+        "level2": "blue_rag",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "pruple_rag",
+        "level1": "clothing",
+        "level2": "pruple_rag",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "water",
+        "level1": "drink",
+        "level2": "water",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "realman_rmc_aidal"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_stacking_blocks": {
+    "dataset_name": "stacking_blocks",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "use your left hand to move the large block on the left side to the center, and use your right hand to stack the small blocks on top of the large block.",
+      "use your left hand to pick up a block from the table and place it on the blocks. use your right hand to pick up another block from the table and place it on the blocks.",
+      "use your left hand to pick up the blue cube from the left side of the table and place it on top of the yellow cube in the middle of the table. use your right hand to pick up the green cube from the right side of the table and place it on top of the blue cube.",
+      "pick up the blue cube from the table with your left hand and place it on the small table. then, pick up the red cube from the table with your right hand and place it on top of the blue cube.",
+      "use your left hand to pick up the red rectangular block on the left side of the table and place it in the center of the table. use your right hand to pick up the blue hexagonal wooden block on the right side of the table and place it on top of the red rectangular block."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "building_block",
+        "level1": "toy",
+        "level2": "building_block",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_place_the_glasses_case_and_gold_bars": {
+    "dataset_name": "place_the_glasses_case_and_gold_bars",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "hold the glasses case in the middle of the table with your left hand and place the gold bar on the glasses case with  your right hand."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "eyeglass_case",
+        "level1": "container",
+        "level2": "eyeglass_case",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "gold_bar",
+        "level1": "metal",
+        "level2": "gold_bar",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "Cobot_Magic_plate_storage_bread": {
+    "dataset_name": "plate_storage_bread",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "grasp the yellow bread and place it into the yellow plate."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bread",
+        "level1": "food",
+        "level2": "bread",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "plate",
+        "level1": "container",
+        "level2": "plate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "Cobot_Magic_movethe_position_of_the_bluetooth": {
+    "dataset_name": "movethe_position_of_the_bluetooth",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "grasp the bluetooth earbud and place it on the right side of the table.",
+      "grasp the bluetooth earphone case and place it on the left side of the table."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bluetooth_earbud",
+        "level1": "electronic_products",
+        "level2": "bluetooth_earbud",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bluetooth_earphone_case",
+        "level1": "electronic_products",
+        "level2": "bluetooth_earphone_case",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_boxs_storage": {
+    "dataset_name": "boxs_storage",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "put the calculator box in the yellow bucket with your left hand and the power bank box in the yellow bucket with your right hand.",
+      "throw the pomegranate into the left square with your left hand and the mango into the right square with your right hand.",
+      "throw the potato into the left square with your left hand and the pumpkin into the right square with your right hand."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "calculator_box",
+        "level1": "container",
+        "level2": "calculator_box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "power_bank_box",
+        "level1": "container",
+        "level2": "power_bank_box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bucket",
+        "level1": "container",
+        "level2": "bucket",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "pomegranate",
+        "level1": "fruit",
+        "level2": "pomegranate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "mango",
+        "level1": "fruit",
+        "level2": "mango",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "potato",
+        "level1": "vegetable",
+        "level2": "potato",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_place_the_blue_and_purple_blocks": {
+    "dataset_name": "place_the_blue_and_purple_blocks",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "pick up the purple cube with your left hand and place it on the plate. use your right hand to pick up the blue cube on the table and place it on top of the purple cube."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "square",
+        "level1": "toy",
+        "level2": "square",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "plate",
+        "level1": "container",
+        "level2": "plate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_pour_out_the_beauty_blender": {
+    "dataset_name": "pour_out_the_beauty_blender",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "pick up the cup with your right hand and pour the beauty blender inside into the bowl."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "beauty_blender",
+        "level1": "tool",
+        "level2": "beauty_blender",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cup",
+        "level1": "container",
+        "level2": "cup",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bowl",
+        "level1": "container",
+        "level2": "bowl",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_item_storage": {
+    "dataset_name": "item_storage",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "pick up the large and small bowls simultaneously with both your left and right hands and put them into the yellow bucket at the same time.",
+      "place the umbrella on the white lid with your left hand, and then put the blue bottle on the white lid with your right hand."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "able",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "barrel",
+        "level1": "container",
+        "level2": "barrel",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "umbrella",
+        "level1": "daily_necessities",
+        "level2": "umbrella",
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bottle",
+        "level1": "container",
+        "level2": "bottle",
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "lid",
+        "level1": "daily_necessities",
+        "level2": "lid",
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bowl",
+        "level1": "container",
+        "level2": "bowl",
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "Split_aloha_basket_storage_bread": {
+    "dataset_name": "basket_storage_bread",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "the left hand grasp the black basket and placed it in the middle of the table, the right hand pick up the long bread and put it into the black basket.",
+      "the right hand grasp the black basket and placed it in the middle of the table, the left hand pick up the long bread and put it into the black basket.",
+      "the left hand grasp the yellow basket and placed it in the middle of the table, the right hand pick up the long bread and put it into the yellow basket.",
+      "the right hand grasp the yellow basket and placed it in the middle of the table, the left hand pick up the long bread and put it into the yellow basket."
+    ],
+    "scene_type": [
+      "home",
+      "kitchen"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "long_bread",
+        "level1": "food",
+        "level2": "long_bread",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "basket",
+        "level1": "container",
+        "level2": "basket",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "R1_Lite_move_the_position_of_the_spoon": {
+    "dataset_name": "move_the_position_of_the_spoon",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "put the spoon the designated position."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "place",
+      "pick",
+      "grasp"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "pen",
+        "level1": "office_supplies",
+        "level2": "pen",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "banana",
+        "level1": "fruit",
+        "level2": "banana",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bath_ball",
+        "level1": "daily_necessities",
+        "level2": "bath_ball",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bowl",
+        "level1": "container",
+        "level2": "bowl",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "plate",
+        "level1": "container",
+        "level2": "plate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "can",
+        "level1": "container",
+        "level2": "can",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "eraser",
+        "level1": "office_supplies",
+        "level2": "eraser",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "hard_cleanser",
+        "level1": "daily_necessities",
+        "level2": "hard_cleanser",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "long_bread",
+        "level1": "food",
+        "level2": "long_bread",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "peeler",
+        "level1": "tool",
+        "level2": "peeler",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "block",
+        "level1": "toy",
+        "level2": "block",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "duck",
+        "level1": "toy",
+        "level2": "duck",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "soap",
+        "level1": "daily_necessities",
+        "level2": "soap",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "basket",
+        "level1": "container",
+        "level2": "basket",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cola",
+        "level1": "drink",
+        "level2": "cola",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "detergent",
+        "level1": "daily_necessities",
+        "level2": "detergent",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "egg_beater",
+        "level1": "electrical_appliances",
+        "level2": "egg_beater",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "towel",
+        "level1": "clothing",
+        "level2": "towel",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "orange",
+        "level1": "fruit",
+        "level2": "orange",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "peach",
+        "level1": "fruit",
+        "level2": "peach",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "marker",
+        "level1": "office_supplies",
+        "level2": "marker",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "rubiks_cube",
+        "level1": "toy",
+        "level2": "rubiks_cube",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bread_slice",
+        "level1": "food",
+        "level2": "bread_slice",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "brush",
+        "level1": "daily_necessities",
+        "level2": "brush",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "yogurt",
+        "level1": "drink",
+        "level2": "yogurt",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "power_strip",
+        "level1": "electric_appliance",
+        "level2": "power_strip",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "milk",
+        "level1": "drink",
+        "level2": "milk",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "soda",
+        "level1": "drink",
+        "level2": "soda",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "lime",
+        "level1": "fruit",
+        "level2": "lime",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "coffee_capsule",
+        "level1": "drink",
+        "level2": "coffee_capsule",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "dish",
+        "level1": "container",
+        "level2": "dish",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "glass",
+        "level1": "furniture",
+        "level2": "glass",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "egg_yolk_pastry",
+        "level1": "food",
+        "level2": "egg_yolk_pastry",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "glasses_case",
+        "level1": "daily_necessities",
+        "level2": "glasses_case",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "gum",
+        "level1": "daily_necessities",
+        "level2": "gum",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "tape",
+        "level1": "daily_necessities",
+        "level2": "tape",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "soft_cleanser",
+        "level1": "daily_necessities",
+        "level2": "soft_cleanser",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "chips",
+        "level1": "food",
+        "level2": "chips",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "chocolate",
+        "level1": "food",
+        "level2": "chocolate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cookie",
+        "level1": "food",
+        "level2": "cookie",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "spoon",
+        "level1": "tableware",
+        "level2": "spoon",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "device_model": [
+      "galaxea_r1_lite"
+    ],
+    "end_effector_type": "two_finger_gripper",
+    "operation_platform_height": 77.2
+  },
+  "Cobot_Magic_fold_towel_a": {
+    "dataset_name": "fold_towel_a",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "fold the towel on the table twice."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place",
+      "fold"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "towel",
+        "level1": "clothing",
+        "level2": "towel",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_storage_box_for_mouse_and_sponge": {
+    "dataset_name": "storage_box_for_mouse_and_sponge",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "place the mouse box in the round plate with your left hand, put the sponge in the round plate with your left hand."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "mouse_box",
+        "level1": "container",
+        "level2": "mouse_box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "sponge",
+        "level1": "daily_necessities",
+        "level2": "sponge",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "disk",
+        "level1": "container",
+        "level2": "disk",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "Cobot_Magic_take_the_shoes_off_the_shelf": {
+    "dataset_name": "take_the_shoes_off_the_shelf",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take the shoes off the shelf with your hand from the blue coffee tablecloth.",
+      "take the shoes off the shelf from the light coffee tablecloth by hand.",
+      "take the shoes off the shelf with your hand from the green coffee tablecloth.",
+      "take the shoes off the shelf with your hand from the grey coffee tablecloth.",
+      "take the shoes off the shelf with your hand on the white table.",
+      "take the shoes off the shelf with your hand from the white checkered tablecloth."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "shoes",
+        "level1": "clothing",
+        "level2": "shoes",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "shoe_rack",
+        "level1": "furniture",
+        "level2": "shoe_rack",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_storage_item": {
+    "dataset_name": "storage_item",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "pick up the building blocks on the table with your left hand and place them in the bowl; pick up the tape measure from the table with your right hand and place it in the small tray."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "building_blocks",
+        "level1": "toy",
+        "level2": "building_blocks",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bowl",
+        "level1": "container",
+        "level2": "bowl",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "tape_measure",
+        "level1": "tool",
+        "level2": "tape_measure",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "plate",
+        "level1": "container",
+        "level2": "plate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "RMC-AIDA-L_food_storage": {
     "dataset_name": "food_storage",
     "dataset_uuid": null,
     "task_descriptions": [
@@ -253,7 +4798,584 @@
     ],
     "end_effector_type": "two_finger_gripper"
   },
-  "realman_rmc_aidal_basket_storage_peach": {
+  "Cobot_Magic_the_plate_holds_the_fruit": {
+    "dataset_name": "the_plate_holds_the_fruit",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take fruit from cloth bag on blue coffee tablecloth place on plate.",
+      "take fruit from bag on brown coffee tablecloth place on plate.",
+      "take fruit from bag on green coffee tablecloth place on plate.",
+      "take fruit from bag on grey coffee tablecloth place on plate.",
+      "take fruit from cloth bag on white table place on plate.",
+      "take fruit from bag on white checkered tablecloth place on plate."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "fruit",
+        "level1": "food",
+        "level2": "fruit",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "plate",
+        "level1": "container",
+        "level2": "plate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "tablecloth",
+        "level1": "clothing",
+        "level2": "tablecloth",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_screw_the_bottle_cap": {
+    "dataset_name": "screw_the_bottle_cap",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "pick up the water bottle with your left hand, twist off the cap with your right hand, and place the water bottle on the table."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bottle",
+        "level1": "container",
+        "level2": "bottle",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_toy_storage": {
+    "dataset_name": "toy_storage",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "with both hands, picked up the little dog doll on the white plate and placed it on the table.",
+      "the left hand picked up the shark doll on the table and handed it to the right hand, the right hand took the shark doll and placed it in the white lid.",
+      "use your left hand to pick up the building block and place it in the pink plate on the left, and use your right hand to put the other building block into the white plate on the right.",
+      "with both hands, he picked up the shark doll on the table and placed it in the white lid."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "little_dog_doll",
+        "level1": "toy",
+        "level2": "little_dog_doll",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "plate",
+        "level1": "container",
+        "level2": "plate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "shark_doll",
+        "level1": "toy",
+        "level2": "shark_doll",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "lid",
+        "level1": "container",
+        "level2": "lid",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "building_block",
+        "level1": "toy",
+        "level2": "building_block",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_place_the_books": {
+    "dataset_name": "place_the_books",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "push the book to the left side of the table with your right hand, and take it with your left hand to put it on the bookshelf."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place",
+      "push"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "book",
+        "level1": "office_supplies",
+        "level2": "book",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bookshelf",
+        "level1": "container",
+        "level2": "bookshelf",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_place_the_pliers_and_wallpaper_knife": {
+    "dataset_name": "place_the_pliers_and_wallpaper_knife",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "pick up the pliers with your left hand and place them in the white lid. then, with your right hand, pick up the wallpaper knife and place it in the white lid."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "pliers",
+        "level1": "tool",
+        "level2": "pliers",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "lid",
+        "level1": "container",
+        "level2": "lid",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "utility_knife",
+        "level1": "tool",
+        "level2": "utility_knife",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "Cobot_Magic_move_the_small_ball": {
+    "dataset_name": "move_the_small_ball",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "grasp the spherical object and relocate it to the left side."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "spherical_object",
+        "level1": "toy",
+        "level2": "spherical_object",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "Split_aloha_basket_storage_egg_yolk_pastry": {
+    "dataset_name": "basket_storage_egg_yolk_pastry",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "pick up the egg yolk pastry and put it into the basket."
+    ],
+    "scene_type": [
+      "home",
+      "kitchen"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "egg_yolk_pastry",
+        "level1": "food",
+        "level2": "egg_yolk_pastry",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "basket",
+        "level1": "container",
+        "level2": "basket",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_food_storage": {
+    "dataset_name": "food_storage",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "pick up the cake and ice cream from the table simultaneously with your left and right hands, and then throw them into the bowl and plate at the same time.",
+      "pick up the egg on the table with the right hand and put it into the egg box, then cover the egg box with the left hand.",
+      "place the potato in the left compartment with your left hand while keeping your right hand still.",
+      "pick up the braised pork on the table with your left hand and put it in the plate, and then pick up the prawns on the table with your right hand and put them in the plate.",
+      "pick up the egg on the table with your left hand and put it on the plate, then pick up another egg on the table with your right hand and put it on the plate.",
+      "take the sponge out of the plate with your left hand and place it on the table, then pick up the cake from the table with your right hand and put it on the plate.",
+      "pick up the cake on the left with your left hand and place it on the wooden rack, and pick up the cake on the right with your right hand and place it on the wooden rack."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cake",
+        "level1": "food",
+        "level2": "cake",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "ice_cream",
+        "level1": "food",
+        "level2": "ice_cream",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "bowl",
+        "level1": "container",
+        "level2": "bowl",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "plate",
+        "level1": "container",
+        "level2": "plate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "egg",
+        "level1": "food",
+        "level2": "egg",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "egg_box",
+        "level1": "container",
+        "level2": "egg_box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "potato",
+        "level1": "vegetables",
+        "level2": "potato",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "grid",
+        "level1": "container",
+        "level2": "grid",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "braised_pork",
+        "level1": "food",
+        "level2": "braised_pork",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "prawns",
+        "level1": "food",
+        "level2": "prawns",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "sponge",
+        "level1": "kitchenware",
+        "level2": "sponge",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "wooden_frame",
+        "level1": "furniture",
+        "level2": "wooden_frame",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "Cobot_Magic_put_the_building_block_on_the_table": {
+    "dataset_name": "put_the_building_block_on_the_table",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "grasp the rotating cube shaped block on the turntable and place it on the table."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place",
+      "rotate"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "building_block",
+        "level1": "toy",
+        "level2": "building_block",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "RMC-AIDA-L_basket_storage_banana": {
+    "dataset_name": "basket_storage_banana",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "the left gripper pick up the basket to the appropriate position,  the right gripper pick up the banana and place it into the basket.",
+      "the left gripper pick up the black basket and place it horizontally in the middle of the table, the right gripper pick up the banana and place it into the black basket.",
+      "the right gripper pick up the black basket and place it horizontally in the middle of the table, the left gripper pick up the banana and place it into the black basket.",
+      "the right gripper pick up the yellow basket and place it horizontally in the middle of the table, the left gripper pick up the banana and place it into the yellow basket."
+    ],
+    "scene_type": [
+      "home",
+      "kitchen"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "basket",
+        "level1": "container",
+        "level2": "basket",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "banana",
+        "level1": "fruit",
+        "level2": "banana",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "realman_rmc_aidal"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "RMC-AIDA-L_basket_storage_peach": {
     "dataset_name": "basket_storage_peach",
     "dataset_uuid": null,
     "task_descriptions": [
@@ -304,12 +5426,65 @@
     ],
     "end_effector_type": "two_finger_gripper"
   },
-  "unitree_g1_plate_storage_towel": {
-    "dataset_name": "plate_storage_towel",
+  "R1_Lite_take_or_store_plates": {
+    "dataset_name": "take_or_store_plates",
     "dataset_uuid": null,
     "task_descriptions": [
-      "the left hand pick up the towel on the left side of the plate and placed it in the plate.",
-      "the right hand pick up the towel on the right side of the plate and placed it in the plate."
+      "take out or store plates on the stove and in the cabinet drawers."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "cabinet",
+        "level1": "furniture",
+        "level2": "cabinet",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "drawer",
+        "level1": "container",
+        "level2": "drawer",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "plate",
+        "level1": "container",
+        "level2": "plate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "stove",
+        "level1": "furniture",
+        "level2": "stove",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": [
+      "galaxea_r1_lite"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_medicine_bottle_storage": {
+    "dataset_name": "medicine_bottle_storage",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "place the medicine bottle with the medicine in the left hand on the white platform, and then place the other white medicine bottle in the right hand on the same white platform."
     ],
     "scene_type": [
       "home"
@@ -329,17 +5504,9 @@
         "level5": null
       },
       {
-        "object_name": "plate",
+        "object_name": "medicine_bottle",
         "level1": "container",
-        "level2": "plate",
-        "level3": null,
-        "level4": null,
-        "level5": null
-      },
-      {
-        "object_name": "towel",
-        "level1": "clothing",
-        "level2": "towel",
+        "level2": "medicine_bottle",
         "level3": null,
         "level4": null,
         "level5": null
@@ -347,72 +5514,18 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "unitree_g1"
-    ],
-    "end_effector_type": "five_finger_hand"
-  },
-  "realman_rmc_aidal_basket_storage_long_bread": {
-    "dataset_name": "basket_storage_long_bread",
-    "dataset_uuid": null,
-    "task_descriptions": [
-      "the left gripper pick up the basket to the appropriate position,  the right gripper pick up the long bread and place it into the basket.",
-      "the left gripper pick up the black basket and place it horizontally in the middle of the table, the right gripper pick up the long bread and place it into the black basket.",
-      "the left gripper pick up the yellow basket and place it horizontally in the middle of the table, the right gripper pick up the long bread and place it into the yellow basket.",
-      "the right gripper pick up the basket to the appropriate position,  the left gripper pick up the long bread and place it into the basket.",
-      "the right gripper pick up the black basket and place it horizontally in the middle of the table, the left gripper pick up the long bread and place it into the black basket.",
-      "the right gripper pick up the yellow basket and place it horizontally in the middle of the table, the left gripper pick up the long bread and place it into the yellow basket."
-    ],
-    "scene_type": [
-      "home",
-      "kitchen"
-    ],
-    "atomic_actions": [
-      "grasp",
-      "pick",
-      "place"
-    ],
-    "objects": [
-      {
-        "object_name": "table",
-        "level1": "furniture",
-        "level2": "table",
-        "level3": null,
-        "level4": null,
-        "level5": null
-      },
-      {
-        "object_name": "long_bread",
-        "level1": "food",
-        "level2": "long_bread",
-        "level3": null,
-        "level4": null,
-        "level5": null
-      },
-      {
-        "object_name": "basket",
-        "level1": "container",
-        "level2": "basket",
-        "level3": null,
-        "level4": null,
-        "level5": null
-      }
-    ],
-    "operation_platform_height": 77.2,
-    "device_model": [
-      "realman_rmc_aidal"
+      "discover_robotics_aitbot_mmk2"
     ],
     "end_effector_type": "two_finger_gripper"
   },
-  "unitree_g1_stack_bowls": {
-    "dataset_name": "stack_bowls",
+  "AIRBOT_MMK2_double-sided_tape_placement": {
+    "dataset_name": "double-sided_tape_placement",
     "dataset_uuid": null,
     "task_descriptions": [
-      "the left hand pick up the bowl on the left side of the table and place it on top of the middle bowl, the right hand pick up the bowl on the right side of the table and place it on top of the middle bowls.",
-      "the right hand pick up the bowl on the right side of the table and place it on top of the middle bowl, the left hand pick up the bowl on the left side of the table and place it on top of the middle bowls."
+      "pick up the double-sided tape with your left hand and put it over the meinianda, pick up another double-sided tape with your right hand and put it over the meinianda."
     ],
     "scene_type": [
-      "home",
-      "kitchen"
+      "home"
     ],
     "atomic_actions": [
       "grasp",
@@ -429,9 +5542,17 @@
         "level5": null
       },
       {
-        "object_name": "bowl",
-        "level1": "container",
-        "level2": "bowl",
+        "object_name": "meinian_da",
+        "level1": "drink",
+        "level2": "meinian_da",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "double-sided_tape",
+        "level1": "tool",
+        "level2": "double-sided_tape",
         "level3": null,
         "level4": null,
         "level5": null
@@ -439,19 +5560,141 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "unitree_g1"
+      "discover_robotics_aitbot_mmk2"
     ],
-    "end_effector_type": "five_finger_hand"
+    "end_effector_type": "two_finger_gripper"
   },
-  "unitree_g1_food_storage": {
-    "dataset_name": "food_storage",
+  "AIRBOT_MMK2_play_the_guitar": {
+    "dataset_name": "play_the_guitar",
     "dataset_uuid": null,
     "task_descriptions": [
-      "pick up the donut from the bowl and place it in the plate, pick up the cake from the bowl and place it in the basket."
+      "hold the small guitar in your left hand, pluck the strings with your right hand,  and then put down the small guitar with your left hand."
     ],
     "scene_type": [
-      "home",
-      "kitchen"
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place",
+      "pull"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "little_guitar",
+        "level1": "musical_instrument",
+        "level2": "little_guitar",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_storage_computer_box": {
+    "dataset_name": "storage_computer_box",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take the computer box from the table with your left hand and pass it to your right hand. take the computer box with your right hand and place it inside the white lid."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "lid",
+        "level1": "container",
+        "level2": "lid",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_organize_and_place_books": {
+    "dataset_name": "organize_and_place_books",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take the book from the table with your left hand and pass it to your right hand. take the book with your right hand and place it on another book."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "book",
+        "level1": "office_supplies",
+        "level2": "book",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_pumpkin_storage": {
+    "dataset_name": "pumpkin_storage",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "throw the pumpkin into the right compartment with your right hand, while keeping your left hand still."
+    ],
+    "scene_type": [
+      "home"
     ],
     "atomic_actions": [
       "grasp",
@@ -468,9 +5711,97 @@
         "level5": null
       },
       {
-        "object_name": "plate",
+        "object_name": "pumpkin",
+        "level1": "food",
+        "level2": "pumpkin",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cubicle",
         "level1": "container",
-        "level2": "plate",
+        "level2": "cubicle",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_potato_storage": {
+    "dataset_name": "potato_storage",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "put the potato in the right compartment with your right hand.",
+      "Put the potatoes in the left compartment with your left hand."
+    ],
+    "scene_type": [
+      "home",
+      "restaurant"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "potato",
+        "level1": "food",
+        "level2": "potato",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "compartment",
+        "level1": "container",
+        "level2": "compartment",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "Split_aloha_stack_baskets": {
+    "dataset_name": "stack_baskets",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "the left gripper grasp the black basket and place it in the center of the table, the right gripper grasp the brown basket and place it inside the black one.",
+      "the left gripper grasp the brown basket and place it in the center of the table, the right gripper grasp the black basket and place it inside the brown one."
+    ],
+    "scene_type": [
+      "home",
+      "kitchen"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
         "level3": null,
         "level4": null,
         "level5": null
@@ -482,27 +5813,65 @@
         "level3": null,
         "level4": null,
         "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "agilex_cobot_magic_aloha"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_desktop_storage": {
+    "dataset_name": "desktop_storage",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "stack the mouse box on top of the computer box with your left hand and place the coffee cup on the plate with your right hand."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
       },
       {
-        "object_name": "bowl",
+        "object_name": "mouse_box",
         "level1": "container",
-        "level2": "bowl",
+        "level2": "mouse_box",
         "level3": null,
         "level4": null,
         "level5": null
       },
       {
-        "object_name": "donut",
-        "level1": "food",
-        "level2": "donut",
+        "object_name": "computer_box",
+        "level1": "container",
+        "level2": "computer_box",
         "level3": null,
         "level4": null,
         "level5": null
       },
       {
-        "object_name": "cake",
-        "level1": "food",
-        "level2": "cake",
+        "object_name": "coffee_cup",
+        "level1": "container",
+        "level2": "coffee_cup",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "palte",
+        "level1": "container",
+        "level2": "plate",
         "level3": null,
         "level4": null,
         "level5": null
@@ -510,8 +5879,216 @@
     ],
     "operation_platform_height": 77.2,
     "device_model": [
-      "unitree_g1"
+      "discover_robotics_aitbot_mmk2"
     ],
-    "end_effector_type": "five_finger_hand"
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_store_pomegranates_and_mangoes": {
+    "dataset_name": "store_pomegranates_and_mangoes",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "the left hand throws the pomegranate into the left compartment, the right hand throws the mango into the right compartment."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "pomegranate",
+        "level1": "fruit",
+        "level2": "pomegranate",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "compartment",
+        "level1": "container",
+        "level2": "compartment",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "mango",
+        "level1": "fruit",
+        "level2": "mango",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_lemon_and_orange_storage": {
+    "dataset_name": "lemon_and_orange_storage",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "put the lemon in the left compartment with your left hand, put the orange in the right compartment with your right hand."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "lemon",
+        "level1": "fruit",
+        "level2": "lemon",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "compartment",
+        "level1": "container",
+        "level2": "compartment",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "orange",
+        "level1": "fruit",
+        "level2": "orange",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_take_down_paper_cup": {
+    "dataset_name": "take_down_paper_cup",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take the white paper cup off the white lid with your left hand and the other white paper cup off with your right hand."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "paper_cup",
+        "level1": "container",
+        "level2": "paper_cup",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "lid",
+        "level1": "container",
+        "level2": "lid",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_storage_rubiks_cube_and_cup": {
+    "dataset_name": "storage_rubiks_cube_and_cup",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "the right hand places the rubik's cube onto the circular tray, the left hand places the paper cup on top of the rubik's cube."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "rubiks_cube",
+        "level1": "toy",
+        "level2": "rubiks_cube",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "circular_tray",
+        "level1": "container",
+        "level2": "circular_tray",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "paper_cup",
+        "level1": "container",
+        "level2": "paper_cup",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": [
+      "discover_robotics_aitbot_mmk2"
+    ],
+    "end_effector_type": "two_finger_gripper"
   }
 }

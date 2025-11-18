@@ -1,0 +1,41 @@
+dataset_name: fold_the_pants
+dataset_uuid:
+task_descriptions:
+- the pants are placed with the back facing upwards, the cuffs facing to the left,
+  the left gripper grasp the cuffs, the right gripper grasp the leg and fold it forward,
+  the left gripper lift the folded cuffs and fold them against the leg, adjust the
+  position of the pants to the center of the table.
+- the pants are placed with the back facing upwards, the cuffs facing to the right,
+  the right gripper grasp the cuffs, the left gripper grasp the leg and fold it forward,
+  the right gripper lift the folded cuffs and fold them against the leg, adjust the
+  position of the pants to the center of the table.
+- the pants are placed with the front facing upwards, the cuffs facing to the left,
+  the left gripper grasp the cuffs, the right gripper grasp the leg and fold it forward,
+  the left gripper lift the folded cuffs and fold them against the leg, adjust the
+  position of the pants to the center of the table.
+- the pants are placed with the front facing upwards, the cuffs facing to the right,
+  the right gripper grasp the cuffs, the left gripper grasp the leg and fold it forward,
+  the right gripper lift the folded cuffs and fold them against the leg, adjust the
+  position of the pants to the center of the table.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- fold
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3:
+  level4:
+  level5:
+- object_name: pants
+  level1: clothing
+  level2: pants
+  level3:
+  level4:
+  level5:
+operation_platform_height: 77.2
+device_model:
+- agilex_cobot_magic_aloha
+end_effector_type: two_finger_gripper

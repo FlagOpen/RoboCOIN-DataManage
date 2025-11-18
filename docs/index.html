@@ -55,6 +55,12 @@
                 <input type="text" id="searchBox" class="filter-search-input" placeholder="Search datasets...">
             </div>
             
+            <div class="cart-actions-container">
+                <button class="btn-toolbar success" id="addToListBtn">🛒 add</button>
+                <button class="btn-toolbar danger" id="deleteFromListBtn">🗑️ remove</button>
+                <button class="btn-toolbar secondary" id="clearListBtn">🔄 clear</button>
+            </div>
+            
             <div class="filter-stats-inline">
                 <span class="stat-inline">
                     <span class="stat-label">Results:</span>
@@ -98,11 +104,6 @@
                 <div class="selection-header-top">
                     <span class="cart-icon" style="margin-right: 6px;">🛒</span><span id="selectionCount">0</span> items in cart
                     <input type="file" id="importFile" accept=".json" style="display: none;">
-                </div>
-                <div class="selection-header-actions">
-                    <button class="btn-selection success" id="addToListBtn">🛒 add</button>
-                    <button class="btn-selection danger" id="deleteFromListBtn">🗑️ remove</button>
-                    <button class="btn-selection secondary" id="clearListBtn">🔄 clear</button>
                 </div>
             </div>
             

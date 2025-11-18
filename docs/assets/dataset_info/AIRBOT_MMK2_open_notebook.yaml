@@ -1,0 +1,28 @@
+dataset_name: open_notebook
+dataset_uuid:
+task_descriptions:
+- press the bottom right corner of the notebook with your right hand and open the
+  notebook with your left hand.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- open
+- hold
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3:
+  level4:
+  level5:
+- object_name: notebook
+  level1: office_supplies
+  level2: notebook
+  level3:
+  level4:
+  level5:
+operation_platform_height: 77.2
+device_model:
+- discover_robotics_aitbot_mmk2
+end_effector_type: two_finger_gripper

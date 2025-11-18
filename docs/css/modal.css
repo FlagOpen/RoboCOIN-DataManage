@@ -1,0 +1,262 @@
+/* ==================== Loading Overlay ==================== */
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.97);
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.loading-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading-spinner {
+    width: 3.75rem;
+    height: 3.75rem;
+    border: 0.25rem solid #d0d7de;
+    border-top-color: #0969da;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.loading-text {
+    margin-top: 1.5rem;
+    font-size: clamp(0.875rem, 0.8125rem + 0.25vw, 1.0625rem);
+    font-weight: 600;
+    color: #24292f;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, sans-serif;
+}
+
+.loading-progress {
+    margin-top: 0.75rem;
+    font-size: clamp(0.75rem, 0.6875rem + 0.25vw, 0.875rem);
+    color: #57606a;
+    font-family: 'SF Mono', 'Consolas', 'Courier New', Courier, monospace;
+}
+
+.loading-bar-container {
+    width: 18.75rem;
+    height: 0.25rem;
+    background: #d0d7de;
+    border-radius: 0.125rem;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+.loading-bar {
+    height: 100%;
+    background: #0969da;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/* ==================== Detail Modal ==================== */
+
+.detail-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    padding: 1rem;
+}
+
+.detail-modal-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.detail-modal {
+    width: min(90vw, 37.5rem);
+    max-height: min(90vh, 80vh);
+    background: #ffffff;
+    border-radius: 0.75rem;
+    border: 1px solid #d0d7de;
+    box-shadow: 0 0.5rem 1.5rem rgba(140, 149, 159, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: scale(0.95);
+    transition: transform 0.2s ease;
+}
+
+.detail-modal-overlay.visible .detail-modal {
+    transform: scale(1);
+}
+
+.detail-modal-header {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid #d0d7de;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detail-modal-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #24292f;
+    margin: 0;
+}
+
+.detail-modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #999;
+    cursor: pointer;
+    padding: 0;
+    width: 1.875rem;
+    height: 1.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+}
+
+.detail-modal-close:hover {
+    color: #333;
+}
+
+.detail-modal-body {
+    padding: 1.5rem;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.detail-video-container {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #000;
+    border-radius: 0.375rem;
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+}
+
+.detail-video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.detail-info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.detail-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+}
+
+.detail-info-label {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: #57606a;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.detail-info-value {
+    font-size: 0.875rem;
+    color: #24292f;
+    word-wrap: break-word;
+}
+
+/* ==================== Hover Preview Card ==================== */
+
+.hover-preview-card {
+    position: fixed;
+    width: 20rem;
+    height: 15rem;
+    background: #ffffff;
+    border-radius: 0.5rem;
+    border: 1px solid #d0d7de;
+    box-shadow: 0 0.5rem 1.5rem rgba(140, 149, 159, 0.2);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s ease, visibility 0.15s ease;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.hover-preview-card.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hover-preview-video {
+    width: 100%;
+    height: 10rem;
+    background: #000;
+    flex-shrink: 0;
+}
+
+.hover-preview-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hover-preview-info {
+    padding: 0.75rem;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.hover-preview-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #24292f;
+    margin-bottom: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.hover-preview-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.hover-preview-meta-item {
+    font-size: 0.6875rem;
+    color: #57606a;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.hover-preview-meta-item strong {
+    color: #24292f;
+    font-weight: 600;
+}
+

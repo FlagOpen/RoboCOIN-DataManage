@@ -1,0 +1,31 @@
+dataset_name: organise_the_document_bag
+dataset_uuid:
+task_descriptions:
+- open the green document bag with left hand.
+- open the green document bag with right hand.
+- open the red document bag with left hand.
+- open the red document bag with right hand.
+scene_type:
+- office
+atomic_actions:
+- grasp
+- place
+- pick
+- pull
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3:
+  level4:
+  level5:
+- object_name: document_bag
+  level1: container
+  level2: document_bag
+  level3:
+  level4:
+  level5:
+operation_platform_height: 77.2
+device_model:
+- realman_rmc_aidal
+end_effector_type: two_finger_gripper

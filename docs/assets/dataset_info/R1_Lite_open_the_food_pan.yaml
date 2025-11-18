@@ -1,0 +1,27 @@
+dataset_name: open_the_food_pan
+dataset_uuid:
+task_descriptions:
+- fully open pot lid on table then close it.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3:
+  level4:
+  level5:
+- object_name: pan
+  level1: container
+  level2: pan
+  level3:
+  level4:
+  level5:
+operation_platform_height:
+device_model:
+- galaxea_r1_lite
+end_effector_type: two_finger_gripper

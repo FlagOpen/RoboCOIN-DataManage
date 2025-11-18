@@ -1,0 +1,73 @@
+/**
+ * Base Styles
+ * Foundational styles including typography, resets, and scrollbars
+ */
+
+/* ==================== Fluid Typography ==================== */
+html {
+    /* Fluid font size: 13px on mobile to 18px on desktop */
+    font-size: clamp(13px, 0.8125rem + 0.3125vw, 18px);
+}
+
+/* Fallback for browsers that don't support clamp */
+@supports not (font-size: clamp(13px, 1vw, 18px)) {
+    html {
+        font-size: 14px;
+    }
+
+    @media (min-width: 768px) {
+        html { font-size: 15px; }
+    }
+
+    @media (min-width: 1024px) {
+        html { font-size: 16px; }
+    }
+
+    @media (min-width: 1440px) {
+        html { font-size: 17px; }
+    }
+    
+    @media (min-width: 1920px) {
+        html { font-size: 18px; }
+    }
+}
+
+/* ==================== Basic Resets ==================== */
+* { 
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+    background: #fafafa;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    color: #24292f;
+    transform: scale(0.8);
+    transform-origin: 0 0;
+    width: 125%;
+    height: 125vh;
+}
+
+/* ==================== Global Scrollbar Styles ==================== */
+::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 0.25rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+

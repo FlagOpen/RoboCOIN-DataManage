@@ -1,0 +1,44 @@
+/* ==================== CSS Animations ==================== */
+
+/* Tag slide-in animation */
+@keyframes tagSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Filter highlight pulse animation */
+@keyframes pulse-highlight {
+    0%, 100% { 
+        transform: scale(1); 
+    }
+    50% { 
+        transform: scale(1.02); 
+    }
+}
+
+/* Gradient shift animation for copy button */
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Loading spinner rotation */
+@keyframes spin {
+    to { 
+        transform: rotate(360deg); 
+    }
+}
+

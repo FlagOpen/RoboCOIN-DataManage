@@ -1,0 +1,28 @@
+dataset_name: push_building_blocks
+dataset_uuid:
+task_descriptions:
+- push the cylindrical block to the right of the cubic block with your right hand.
+- push the dark blue and yellow blocks to the upper right corner below the arched
+  block with your right hand.
+- push the arched block upwards with your right hand.
+scene_type:
+- home
+atomic_actions:
+- push
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3:
+  level4:
+  level5:
+- object_name: building_blocks
+  level1: toy
+  level2: building_blocks
+  level3:
+  level4:
+  level5:
+operation_platform_height: 77.2
+device_model:
+- discover_robotics_aitbot_mmk2
+end_effector_type: two_finger_gripper

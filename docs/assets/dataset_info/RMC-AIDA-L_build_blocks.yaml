@@ -1,0 +1,28 @@
+dataset_name: build_blocks
+dataset_uuid:
+task_descriptions:
+- left arm begins to build blocks.
+- right arm begins to build blocks.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3:
+  level4:
+  level5:
+- object_name: building_block
+  level1: toy
+  level2: building_blocks
+  level3:
+  level4:
+  level5:
+device_model:
+- realman_rmc_aidal
+end_effector_type: two_finger_gripper
+operation_platform_height: 77.2

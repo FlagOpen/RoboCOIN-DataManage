@@ -1,0 +1,961 @@
+/* ==================== Filter Control Bar ==================== */
+.filter-control-bar {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #d0d7de;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    z-index: 900;
+}
+
+.filter-control-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1.25rem;
+    flex-wrap: wrap;
+}
+
+.top-selection-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.selection-prefix-box {
+    font-weight: 700;
+    font-size: 0.9375rem;
+    color: #24292f;
+    padding: 0.375rem 0.75rem;
+    border: 2px solid #24292f;
+    border-radius: 0.25rem;
+    background: #ffffff;
+    letter-spacing: 0.05em;
+}
+
+.cart-actions-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto;
+}
+
+#resetFiltersBtn {
+    flex: 0 0 auto;
+    min-width: auto;
+    width: auto;
+    padding: 0.5rem 0.875rem;
+    height: 2.375rem;
+}
+
+.filter-trigger-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #0969da;
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(9, 105, 218, 0.2);
+    height: 2.375rem;
+}
+
+.top-selection-container .btn-toolbar {
+    height: 2.375rem;
+    padding: 0.5rem 0.625rem;
+    display: flex;
+    align-items: center;
+}
+
+.filter-trigger-btn:hover {
+    background: #0860ca;
+    box-shadow: 0 2px 6px rgba(9, 105, 218, 0.3);
+    transform: translateY(-1px);
+}
+
+.filter-trigger-btn:active {
+    transform: translateY(0);
+}
+
+.filter-trigger-icon {
+    font-size: 1rem;
+}
+
+.filter-trigger-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.25rem;
+    height: 1.25rem;
+    padding: 0 0.375rem;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 0.625rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.filter-trigger-count:empty {
+    display: none;
+}
+
+.filter-search-container {
+    flex: 1;
+    min-width: 200px;
+    max-width: 500px;
+}
+
+.filter-search-input {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d0d7de;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.filter-search-input:focus {
+    border-color: #0969da;
+    box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.1);
+}
+
+.filter-stats-inline {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.875rem;
+    color: #57606a;
+}
+
+.stat-inline {
+    display: flex;
+    gap: 0.375rem;
+    align-items: center;
+}
+
+.stat-label {
+    color: #6e7781;
+}
+
+.stat-inline strong {
+    color: #0969da;
+    font-weight: 600;
+}
+
+/* ==================== Filter Tags Container ==================== */
+.filter-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0 1.25rem 0.75rem;
+    min-height: 0;
+    transition: all 0.3s ease;
+}
+
+.filter-tags-container:empty {
+    padding: 0;
+}
+
+.filter-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.375rem 0.75rem;
+    background: #ddf4ff;
+    color: #0969da;
+    border: 1px solid #b6dcfe;
+    border-radius: 1rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    animation: tagSlideIn 0.2s ease;
+}
+
+.filter-tag-text {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.filter-tag-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    color: #0969da;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    padding: 0;
+    line-height: 1;
+}
+
+.filter-tag-close:hover {
+    background: #0969da;
+    color: white;
+}
+
+/* ==================== Filter Dropdown Overlay ==================== */
+.filter-dropdown-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.filter-dropdown-overlay.active {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.filter-dropdown-overlay.active.show {
+    opacity: 1;
+}
+
+.filter-dropdown {
+    background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+    border-radius: 1rem;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 900px;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-20px);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-dropdown-overlay.show .filter-dropdown {
+    transform: translateY(0);
+}
+
+.filter-dropdown-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1.75rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 1rem 1rem 0 0;
+}
+
+.filter-dropdown-title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    letter-spacing: 0.02em;
+}
+
+.filter-dropdown-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem 1.5rem;
+    background: white;
+    border-top: 1px solid #e1e4e8;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.filter-dropdown-done {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1.5rem;
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    color: #ffffff;
+    border: 2px solid #c82333;
+    box-shadow: 0 0.125rem 0.375rem rgba(220, 53, 69, 0.25);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-dropdown-done:hover {
+    background: linear-gradient(135deg, #c82333 0%, #bd2130 100%);
+    border-color: #bd2130;
+    box-shadow: 0 0.1875rem 0.5rem rgba(220, 53, 69, 0.35);
+    transform: translateY(-1px);
+}
+
+.filter-dropdown-done:active {
+    transform: translateY(0);
+}
+
+.filter-dropdown-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+    contain: layout style paint;
+    will-change: scroll-position;
+}
+
+/* ==================== Filter Group Styles ==================== */
+.filter-dropdown-content .filter-group {
+    margin-bottom: 0.5rem;
+    overflow: visible;
+}
+
+.filter-dropdown-content .filter-group:last-child {
+    margin-bottom: 0;
+}
+
+.filter-dropdown-content .filter-group-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 0.75rem;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.15s ease;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #2d3748;
+    letter-spacing: 0.01em;
+    min-height: 2.75rem;
+}
+
+.filter-dropdown-content .filter-group-title:hover {
+    background: #f6f8fa;
+}
+
+.filter-dropdown-content .filter-group-title-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.filter-dropdown-content .toggle-icon {
+    display: none;
+}
+
+.filter-dropdown-content .filter-group.collapsed .filter-options {
+    display: none;
+}
+
+.filter-dropdown-content .filter-options {
+    padding: 0.25rem 0.5rem 0.5rem;
+}
+
+/* ==================== Filter Option Styles ==================== */
+.filter-dropdown-content .filter-option {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.5rem;
+    margin: 0.125rem 0;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+    user-select: none;
+    position: relative;
+    background: transparent;
+    min-height: 2.5rem;
+}
+
+.filter-dropdown-content:not(.scrolling) .filter-option:hover {
+    background: #f6f8fa;
+}
+
+.filter-dropdown-content .filter-option.selected {
+    background: transparent;
+}
+
+/* Selection indicator: Bold + Underline */
+.filter-dropdown-content .filter-option.selected .filter-option-label {
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: #667eea;
+    text-underline-offset: 0.2rem;
+    color: #2d3748;
+}
+
+.filter-dropdown-content .filter-option-label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.8125rem;
+    color: #4a5568;
+    transition: all 0.15s ease;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.filter-dropdown-content .filter-option-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2rem;
+    padding: 0.25rem 0.625rem;
+    background: #e8ecf0;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    color: #64748b;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.filter-dropdown-content .filter-option.selected .filter-option-count {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 2px 6px rgba(102, 126, 234, 0.3);
+}
+
+/* ==================== Hierarchical Filter Options ==================== */
+.filter-dropdown-content .filter-children {
+    margin-left: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-left: 1px solid #d0d7de;
+    padding-left: 0.5rem;
+}
+
+.filter-dropdown-content .filter-children.collapsed {
+    display: none;
+}
+
+.filter-dropdown-content .filter-option-wrapper {
+    position: relative;
+}
+
+.filter-dropdown-content .filter-option.hierarchy-name-only {
+    font-weight: 500;
+    background: transparent;
+    position: relative;
+    padding-left: 3.25rem;
+    min-height: 2.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.filter-dropdown-content .filter-option.hierarchy-name-only:hover {
+    background: #f6f8fa;
+}
+
+.filter-dropdown-content .filter-option.hierarchy-name-only.selected .filter-option-label {
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: #667eea;
+    text-underline-offset: 0.2rem;
+    color: #2d3748;
+}
+
+.filter-dropdown-content .filter-option.hierarchy-name-only .filter-option-label {
+    margin-left: 0.25rem;
+    padding-left: 0;
+    flex: 1;
+}
+
+/* ==================== Expand/Collapse Button ==================== */
+.filter-dropdown-content .hierarchy-expand-btn {
+    position: absolute;
+    left: 0.25rem;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #4a5568;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, color 0.15s ease, background 0.15s ease;
+    flex-shrink: 0;
+    z-index: 10;
+    font-family: monospace;
+    pointer-events: auto;
+    border-radius: 0.25rem;
+}
+
+.filter-dropdown-content .filter-option-wrapper:has(.filter-children:not(.collapsed)) .hierarchy-expand-btn {
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.filter-dropdown-content .hierarchy-expand-btn:hover {
+    color: #667eea;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 0.25rem;
+}
+
+.filter-dropdown-content .hierarchy-toggle {
+    display: none;
+}
+
+.filter-dropdown-content .hierarchy-label {
+    font-weight: 500;
+}
+
+/* Hide old checkbox-related elements */
+.filter-dropdown-content .filter-option-checkbox,
+.filter-dropdown-content .filter-group-title-checkbox,
+.filter-dropdown-content .filter-option-connector,
+.filter-dropdown-content input[type="checkbox"] {
+    display: none;
+}
+
+/* ==================== Legacy Filter Panel (Hidden) ==================== */
+.filter-panel {
+    display: none;  /* Hidden - replaced by new filter dropdown */
+}
+
+.filter-header {
+    padding: 0.75rem 0.5rem;
+    border-bottom: 1px solid #d0d7de;
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-search-row {
+    display: flex;
+    gap: 0.375rem;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-bottom: 0.5rem;
+}
+
+.filter-search {
+    flex: 1;
+    min-width: 0;
+    padding: 0.375rem 0.75rem;
+    border: 1px solid #d0d7de;
+    border-radius: 0.375rem;
+    font-size: clamp(0.75rem, 0.6875rem + 0.25vw, 0.875rem);
+    background: #ffffff;
+    outline: none;
+    transition: border-color 0.15s ease;
+    box-sizing: border-box;
+}
+
+.filter-search:focus {
+    border-color: #0969da;
+}
+
+.filter-search::placeholder {
+    color: #6e7781;
+}
+
+.btn-filter-reset {
+    flex-shrink: 0;
+    padding: 0.375rem 0.625rem;
+    border: 1px solid #d0d7de;
+    background: #ffffff;
+    color: #24292f;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    font-size: clamp(0.875rem, 0.8125rem + 0.25vw, 1rem);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.25rem;
+    height: 2.25rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-filter-reset:hover {
+    background: linear-gradient(135deg, #f0f4ff 0%, #e1e8ff 100%);
+    border-color: #0969da;
+    color: #0969da;
+    transform: scale(1.05);
+    box-shadow: 
+        0 0.125rem 0.5rem rgba(9, 105, 218, 0.25),
+        0 0 0 0.125rem rgba(9, 105, 218, 0.1);
+}
+
+.btn-filter-reset:active {
+    transform: scale(0.98);
+    box-shadow: 
+        0 0.0625rem 0.25rem rgba(9, 105, 218, 0.3),
+        inset 0 0.0625rem 0.125rem rgba(9, 105, 218, 0.1);
+    background: linear-gradient(135deg, #e1e8ff 0%, #d0d9ff 100%);
+}
+
+/* Filter Finder - 筛选项搜索 */
+.filter-finder {
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.filter-finder-input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.375rem 0.625rem;
+    border: 1px solid #d0d7de;
+    border-radius: 0.375rem;
+    font-size: clamp(0.6875rem, 0.625rem + 0.25vw, 0.75rem);
+    outline: none;
+    transition: border-color 0.15s ease;
+    box-sizing: border-box;
+}
+
+.filter-finder-input:focus {
+    border-color: #0969da;
+}
+
+.filter-finder-nav {
+    display: flex;
+    gap: 0.125rem;
+    align-items: center;
+}
+
+.filter-finder-btn {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0;
+    border: 1px solid #d0d7de;
+    background: #ffffff;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.filter-finder-btn:hover:not(:disabled) {
+    background: #f6f8fa;
+    border-color: #8b949e;
+}
+
+.filter-finder-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.filter-finder-count {
+    font-size: 0.6875rem;
+    color: #666;
+    min-width: 2.1875rem;
+    text-align: center;
+}
+
+/* Filter highlight styles */
+.filter-option.highlight-match {
+    background-color: #fff3cd;
+    border-radius: 0.1875rem;
+    animation: pulse-highlight 0.5s ease;
+}
+
+.filter-option.highlight-match.current-match {
+    background-color: #ffc107;
+    box-shadow: 0 0 0 0.125rem rgba(255, 193, 7, 0.5);
+}
+
+/* Filter stats */
+.filter-stats {
+    padding: 0.75rem 0.5rem;
+    background: #f6f8fa;
+    border-bottom: 1px solid #d0d7de;
+    font-size: clamp(0.75rem, 0.6875rem + 0.25vw, 0.875rem);
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.25rem 0;
+}
+
+.filter-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0.75rem 0.5rem;
+}
+
+.filter-group {
+    margin-bottom: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #d0d7de;
+    padding-left: 0.25rem;
+}
+
+.filter-group:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+.filter-group-title {
+    font-weight: 600;
+    font-size: clamp(0.75rem, 0.6875rem + 0.25vw, 0.875rem);
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.375rem;
+    padding-right: 0;
+}
+
+.filter-group-title-left {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    flex: 1;
+}
+
+.filter-group-title-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.125rem 0.5rem;
+    border-radius: 0.25rem;
+    transition: all 0.2s;
+    width: 5rem;
+    justify-content: flex-end;
+}
+
+.filter-group-title-checkbox:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.filter-group-title-checkbox input[type="checkbox"] {
+    margin: 0;
+    cursor: pointer;
+    width: 1rem;
+    height: 1rem;
+    accent-color: #0969da;
+}
+
+.filter-group-title.highlight-title .filter-group-title-left {
+    color: #0969da;
+}
+
+.filter-group-title:hover {
+    color: #0969da;
+}
+
+.toggle-icon {
+    font-size: 0.625rem;
+    transition: transform 0.2s;
+}
+
+.filter-group.collapsed .toggle-icon {
+    transform: rotate(-90deg);
+}
+
+.filter-group.collapsed .filter-options {
+    display: none;
+}
+
+.filter-option.has-children {
+    display: flex;
+    align-items: center;
+}
+
+.filter-option.hierarchy-name-only .filter-option-label {
+    cursor: pointer;
+}
+
+.filter-option.hierarchy-name-only .filter-option-label:hover {
+    background-color: #f0f8ff;
+}
+
+.filter-option.hierarchy-name-only .filter-option-label:hover .hierarchy-label {
+    color: #0969da;
+    font-weight: 600;
+}
+
+.filter-option.hierarchy-name-only .hierarchy-label {
+    font-weight: 500;
+    transition: color 0.15s ease;
+}
+
+.filter-option-control:hover + * .hierarchy-label,
+.filter-option-control:hover ~ .filter-option-label .hierarchy-label {
+    color: #0969da;
+    font-weight: 600;
+}
+
+.filter-children.collapsed {
+    display: none;
+}
+
+.filter-children {
+    display: block;
+    margin-left: 0;
+}
+
+.hierarchy-toggle {
+    position: absolute;
+    left: -0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+    user-select: none;
+    width: 0.5rem;
+    text-align: center;
+    line-height: 1;
+    color: #6e7781;
+}
+
+.hierarchy-spacer {
+    display: none;
+}
+
+.filter-options {
+    padding-left: 0;
+}
+
+.filter-options .filter-options {
+    padding-left: 0;
+}
+
+.filter-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.375rem 0;
+    font-size: clamp(0.7rem, 0.65rem + 0.25vw, 0.875rem);
+    position: relative;
+    padding: 0.25rem 0;
+}
+
+.filter-option-label {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex: 0 0 auto;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    position: relative;
+}
+
+.checkbox-label {
+    display: none;
+}
+
+.filter-option-connector {
+    flex: 1;
+    border-bottom: 1px dotted #ddd;
+    margin: 0 0.5rem;
+    min-width: 1.25rem;
+}
+
+.filter-option-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    flex: 0 0 auto;
+    padding: 0.125rem 0.5rem;
+    border-radius: 0.25rem;
+    transition: all 0.2s;
+    width: 5rem;
+    justify-content: flex-end;
+}
+
+.filter-option-checkbox:hover {
+    background-color: rgba(9, 105, 218, 0.1);
+}
+
+.filter-option-checkbox:hover .checkbox-label {
+    color: #0969da;
+}
+
+.filter-option input[type="checkbox"] {
+    margin: 0;
+    cursor: pointer;
+    width: 1rem;
+    height: 1rem;
+    accent-color: #0969da;
+}
+
+.filter-option input[type="checkbox"]:checked {
+    background-color: #0969da;
+}
+
+.filter-option.highlight-label .filter-option-label {
+    color: #0969da;
+    font-weight: 600;
+}
+
+.filter-option input {
+    margin-right: 0;
+}
+
+.filter-option-control input {
+    margin: 0;
+}
+
+.filter-option.hierarchy-name-only {
+    cursor: pointer;
+    user-select: none;
+}
+
+.filter-option.hierarchy-name-only:hover {
+    background-color: #f8f9fa;
+}
+
+.hierarchy-label {
+    font-weight: 500;
+}
+
+.filter-option-count {
+    display: inline-block;
+    min-width: 1.875rem;
+    text-align: right;
+    color: #999;
+    font-size: 0.6875rem;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.filter-option-control {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 0.25rem;
+}
+
+.filter-option-control-text {
+    font-size: 0.6875rem;
+    color: #666;
+    white-space: nowrap;
+    user-select: none;
+}
+
+.btn-filter:hover {
+    background: #f8f9fa;
+}
+
+.btn-filter.primary {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.btn-filter.primary:hover {
+    background: #0056b3;
+}
+

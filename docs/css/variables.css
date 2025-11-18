@@ -1,0 +1,69 @@
+/**
+ * CSS Variables
+ * Centralized CSS variable definitions for the RoboCOIN application
+ */
+
+:root {
+    /* ==================== Loading Parameters ==================== */
+    --loading-batch-size: 150;
+
+    /* ==================== Layout Width Parameters ==================== */
+    --filter-panel-width: 0%;
+    --video-panel-width: 65%;
+    --selection-panel-width: 35%;
+    
+    /* ==================== Layout Spacing Parameters ==================== */
+    --content-padding: 0.75rem;  /* 12px base */
+    
+    /* ==================== Grid Layout Parameters ==================== */
+    --grid-min-card-width: 15.625rem; /* 250px / 16 */
+    --grid-card-height: 18.75rem; /* 300px / 16 */
+    --grid-gap: 1rem; /* 16px / 16 */
+    --grid-columns: 4;
+    --grid-buffer-rows: 3;
+    --grid-padding: var(--content-padding);
+    
+    /* ==================== Selection Panel Parameters ==================== */
+    --selection-item-height: 2.8125rem;  /* 45px / 16 */
+    --selection-item-padding: 1rem; /* 16px / 16 */
+    --selection-buffer-items: 20;
+    
+    /* ==================== Video Observer Parameters ==================== */
+    --video-observer-margin: 12.5rem; /* 200px / 16 */
+    --video-observer-threshold: 0.1;
+    
+    /* ==================== Hierarchy Parameters ==================== */
+    --hierarchy-indent: 0.5rem;  /* 8px / 16 */
+    --hierarchy-max-levels: 5;
+    
+    /* ==================== Badge Parameters ==================== */
+    --badge-size: 1.5rem; /* 24px / 16 */
+    --badge-margin: 0.5rem; /* 8px / 16 */
+    
+    /* ==================== Interaction Timing Parameters ==================== */
+    --hover-delay: 500ms;
+    --resize-debounce: 200ms;
+    --scroll-throttle: 16ms;
+    
+    /* ==================== Preview Card Parameters ==================== */
+    --preview-card-max-width: 20rem; /* 320px / 16 */
+    --preview-card-min-width: 15rem; /* 240px / 16 */
+    --preview-card-padding: 1rem; /* 16px / 16 */
+    --preview-card-offset: 0.5rem; /* 8px / 16 */
+    
+    /* ==================== Animation Parameters ==================== */
+    --transition-duration: 0.2s;
+    --fade-duration: 300ms;
+    
+    /* ==================== UI Element Parameters ==================== */
+    --button-size: 2rem; /* 32px / 16 */
+    --icon-size: 1rem; /* 16px / 16 */
+    --border-radius: 0.25rem; /* 4px / 16 */
+    
+    /* ==================== Responsive Layout Breakpoints ==================== */
+    --breakpoint-small: 600px;
+    --breakpoint-medium: 900px;
+    --breakpoint-large: 1200px;
+    --breakpoint-xlarge: 1600px;
+}
+

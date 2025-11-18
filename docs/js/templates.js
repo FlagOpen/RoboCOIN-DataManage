@@ -1,11 +1,21 @@
 /**
- * HTML Templates Module
- * Contains all HTML template generation functions for the RoboCOIN application
+ * @file HTML Templates Module
+ * @description Contains all HTML template generation functions for the RoboCOIN application
  */
+
+/// <reference path="./types.js" />
 
 const Templates = {
     /**
      * Filter Group Templates
+     */
+    
+    /**
+     * Build flat filter group HTML
+     * @param {string} key - Filter key
+     * @param {FilterGroup} group - Filter group
+     * @param {number} baseIndent - Base indentation
+     * @returns {string} HTML string
      */
     buildFlatFilterGroup(key, group, baseIndent) {
         return `
@@ -25,6 +35,13 @@ const Templates = {
         `;
     },
 
+    /**
+     * Build flat filter option HTML
+     * @param {string} key - Filter key
+     * @param {string} val - Filter value
+     * @param {number} baseIndent - Base indentation
+     * @returns {string} HTML string
+     */
     buildFlatFilterOption(key, val, baseIndent) {
         return `
             <div class="filter-option-wrapper" style="margin-left: ${baseIndent}px;" data-level="1">
@@ -42,6 +59,13 @@ const Templates = {
         `;
     },
 
+    /**
+     * Build hierarchical filter group HTML
+     * @param {string} key - Filter key
+     * @param {FilterGroup} group - Filter group
+     * @param {Function} buildHierarchyHTML - Function to build hierarchy HTML
+     * @returns {string} HTML string
+     */
     buildHierarchicalFilterGroup(key, group, buildHierarchyHTML) {
         return `
             <div class="filter-group-title">
@@ -112,6 +136,15 @@ const Templates = {
 
     /**
      * Video Card Templates
+     */
+    
+    /**
+     * Build video card HTML
+     * @param {Dataset} ds - Dataset object
+     * @param {Function} formatMetaTags - Function to format meta tags
+     * @param {Function} formatHoverOverlay - Function to format hover overlay
+     * @param {Set<string>} listDatasets - Set of dataset paths in cart
+     * @returns {string} HTML string
      */
     buildVideoCard(ds, formatMetaTags, formatHoverOverlay, listDatasets) {
         return `
