@@ -1,5 +1,87 @@
 /* ==================== Responsive Design - Media Queries ==================== */
 
+/* ==================== Standard Desktop & Laptop (1200px - 1599px) ==================== */
+/* Includes: MacBook Pro/Air, Dell XPS, ASUS ZenBook, most 1920x1080 displays */
+@media (min-width: 1200px) and (max-width: 1599px) {
+    body {
+        transform: scale(0.85);
+        width: 117.65%;
+        height: 117.65vh;
+    }
+    
+    .video-grid {
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    }
+}
+
+/* ==================== Large Desktop & 4K Displays (≥ 1600px) ==================== */
+@media (min-width: 1600px) {
+    body {
+        transform: scale(0.9);
+        width: 111.11%;
+        height: 111.11vh;
+    }
+    
+    .video-grid {
+        grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+    }
+    
+    .code-output {
+        max-height: 15rem;
+    }
+}
+
+/* ==================== Extra Large Desktop & 4K+ Displays (≥ 2000px) ==================== */
+@media (min-width: 2000px) {
+    body {
+        transform: scale(1);
+        width: 100%;
+        height: 100vh;
+    }
+    
+    html {
+        font-size: 18px;
+    }
+    
+    .video-grid {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+}
+
+/* ==================== Ultra-wide & 4K High DPI (≥ 2560px) ==================== */
+@media (min-width: 2560px) {
+    .video-grid {
+        grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .selection-panel {
+        width: 30%;
+    }
+    
+    .video-panel {
+        width: 70%;
+    }
+}
+
+/* ==================== High DPI / Retina Displays Optimization ==================== */
+/* MacBook Pro Retina, Dell UltraSharp, ASUS ProArt, 4K displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Improve text rendering on high DPI screens */
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+    }
+    
+    /* Crisper borders on Retina */
+    .video-card,
+    .selection-item,
+    .btn-selection {
+        border-width: 0.5px;
+    }
+}
+
 /* ==================== Tablet and below (< 900px) ==================== */
 @media (max-width: 899px) {
     :root {
@@ -192,8 +274,9 @@
     .selection-footer {
         padding: 0.5rem;
         overflow-x: hidden;
-        overflow-y: visible;
+        overflow-y: auto;
         flex-shrink: 0;
+        -webkit-overflow-scrolling: touch;
     }
     
     .selection-actions {
