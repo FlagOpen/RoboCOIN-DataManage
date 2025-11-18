@@ -52,6 +52,16 @@
     }
 }
 
+/* Optimized GPU-accelerated background fill animation using scaleX */
+@keyframes backgroundFillInScale {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
 /* Tooltip fade-in with slide-up effect */
 @keyframes tooltipFadeIn {
     from {

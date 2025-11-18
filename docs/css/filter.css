@@ -343,22 +343,25 @@
 }
 
 /* Selection indicator: Background fill animation from left to right */
+/* Optimized: Using transform: scaleX() instead of width for GPU-accelerated animation */
 .filter-dropdown-content .filter-option::before {
     content: '';
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
-    width: 0;
+    width: 100%;
     background: var(--color-selection-bg);
     border-radius: 0.375rem;
     z-index: 0;
-    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
 }
 
 .filter-dropdown-content .filter-option.selected::before {
-    width: 100%;
-    animation: backgroundFillIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scaleX(1);
 }
 
 .filter-dropdown-content .filter-option.selected:hover::before {
