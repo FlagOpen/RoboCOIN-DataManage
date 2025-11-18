@@ -61,15 +61,15 @@
     --border-radius: 0.25rem; /* 4px / 16 */
     
     /* ==================== Color Palette ==================== */
-    /* Primary Purple Gradient */
-    --color-primary-start: #667eea;
-    --color-primary-end: #764ba2;
+    /* Primary Orange-Yellow Gradient */
+    --color-primary-start: #ff8c00;
+    --color-primary-end: #ffd700;
     --gradient-primary: linear-gradient(135deg, var(--color-primary-start) 0%, var(--color-primary-end) 100%);
-    --gradient-primary-dark: linear-gradient(135deg, #5568d3 0%, #654091 100%);
+    --gradient-primary-dark: linear-gradient(135deg, #e67e00 0%, #e6c200 100%);
     
-    /* Selection Background (Light Purple) */
-    --color-selection-bg: linear-gradient(135deg, rgba(102, 126, 234, 0.12) 0%, rgba(118, 75, 162, 0.08) 100%);
-    --color-selection-bg-hover: linear-gradient(135deg, rgba(102, 126, 234, 0.18) 0%, rgba(118, 75, 162, 0.12) 100%);
+    /* Selection Background (Light Orange-Yellow) */
+    --color-selection-bg: linear-gradient(135deg, rgba(255, 140, 0, 0.12) 0%, rgba(255, 215, 0, 0.08) 100%);
+    --color-selection-bg-hover: linear-gradient(135deg, rgba(255, 140, 0, 0.18) 0%, rgba(255, 215, 0, 0.12) 100%);
     --color-selection-border: var(--color-primary-start);
     
     /* Neutral Colors */

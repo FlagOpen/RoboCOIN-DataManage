@@ -112,38 +112,36 @@ export class EventHandlers {
         
         const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
         
-        // Quick-action buttons for filter groups
+        // Hierarchy action buttons (All/Clear buttons for all levels)
         filterGroups.addEventListener('click', (e) => {
-            const actionBtn = e.target.closest('.filter-group-action-btn');
-            if (actionBtn) {
-                e.stopPropagation(); // Prevent group collapse
-                
-                const groupKey = actionBtn.dataset.group;
-                const action = actionBtn.dataset.action;
-                
-                if (action === 'select-all') {
-                    this.managers.filter.selectAllInGroup(groupKey);
-                } else if (action === 'clear-group') {
-                    this.managers.filter.clearGroup(groupKey);
-                }
-                return;
-            }
-            
-            // Hierarchy action buttons (All/Clear for hierarchy items)
             const hierarchyActionBtn = e.target.closest('.hierarchy-action-btn');
             if (hierarchyActionBtn) {
-                e.stopPropagation();
+                e.stopPropagation(); // Prevent menu collapse
                 
-                const key = hierarchyActionBtn.dataset.key;
-                const path = hierarchyActionBtn.dataset.path;
                 const action = hierarchyActionBtn.dataset.action;
                 
-                if (action === 'select-all-children') {
-                    this.managers.filter.selectAllChildrenInHierarchy(key, path);
-                } else if (action === 'clear-all-children') {
-                    this.managers.filter.clearAllChildrenInHierarchy(key, path);
+                // Top-level group buttons (have data-group)
+                const groupKey = hierarchyActionBtn.dataset.group;
+                if (groupKey) {
+                    if (action === 'select-all') {
+                        this.managers.filter.selectAllInGroup(groupKey);
+                    } else if (action === 'clear-group') {
+                        this.managers.filter.clearGroup(groupKey);
+                    }
+                    return;
                 }
-                return;
+                
+                // Hierarchy item buttons (have data-key and data-path)
+                const key = hierarchyActionBtn.dataset.key;
+                const path = hierarchyActionBtn.dataset.path;
+                if (key && path) {
+                    if (action === 'select-all-children') {
+                        this.managers.filter.selectAllChildrenInHierarchy(key, path);
+                    } else if (action === 'clear-all-children') {
+                        this.managers.filter.clearAllChildrenInHierarchy(key, path);
+                    }
+                    return;
+                }
             }
         });
         
@@ -270,9 +268,6 @@ export class EventHandlers {
         const list = document.getElementById('selectionList');
         if (!list) return;
         
-        let hoverTimer = null;
-        let currentHoverPath = null;
-        
         // Click events
         list.addEventListener('click', (e) => {
             const item = e.target.closest('.selection-item');
@@ -307,50 +302,6 @@ export class EventHandlers {
             this.managers.videoGrid.updateCardStyles();
             this.managers.selectionPanel.updateSelectionPanel();
         });
-        
-        // Hover preview
-        list.addEventListener('mouseenter', (e) => {
-            const item = e.target.closest('.selection-item');
-            if (!item) return;
-            
-            const path = item.dataset.path;
-            if (!path) return;
-            
-            if (e.target.closest('.btn-detail, .btn-remove')) {
-                return;
-            }
-            
-            if (hoverTimer) {
-                clearTimeout(hoverTimer);
-            }
-            
-            currentHoverPath = path;
-            
-            hoverTimer = setTimeout(() => {
-                if (currentHoverPath === path) {
-                    this.managers.ui.showHoverPreview(path, item, this.datasetMap);
-                }
-            }, this.config.timing.hoverDelay);
-        }, true);
-        
-        list.addEventListener('mouseleave', (e) => {
-            const item = e.target.closest('.selection-item');
-            if (!item) return;
-            
-            if (hoverTimer) {
-                clearTimeout(hoverTimer);
-                hoverTimer = null;
-            }
-            
-            currentHoverPath = null;
-            
-            const relatedTarget = e.relatedTarget;
-            const previewCard = document.getElementById('hoverPreviewCard');
-            
-            if (!previewCard || !previewCard.contains(relatedTarget)) {
-                this.managers.ui.hideHoverPreview();
-            }
-        }, true);
     }
     
     /**

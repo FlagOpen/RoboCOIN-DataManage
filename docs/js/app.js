@@ -158,49 +158,90 @@ class Application {
      * @param {Dataset[]} filteredDatasets - Filtered datasets
      */
     updateFilterCounts(filteredDatasets) {
+        const searchQuery = document.getElementById('searchBox')?.value || '';
+        const selectedFilters = this.filterManager.selectedFilters;
+        
+        // Calculate count for a specific filter option
+        const calculateCountForOption = (filterKey, filterValue) => {
+            const filterId = `${filterKey}:${filterValue}`;
+            const isSelected = selectedFilters.has(filterId);
+            
+            // Create a temporary filter set with or without this option
+            const tempFilters = new Set(selectedFilters);
+            if (isSelected) {
+                // Remove this filter to calculate "if deselected"
+                tempFilters.delete(filterId);
+            } else {
+                // Add this filter to calculate "if selected"
+                tempFilters.add(filterId);
+            }
+            
+            // Apply filters with the temporary set
+            const filters = {};
+            tempFilters.forEach(fId => {
+                const [key, value] = fId.split(':');
+                if (!filters[key]) filters[key] = [];
+                filters[key].push(value);
+            });
+            
+            // Count matching datasets
+            let count = 0;
+            this.filterManager.datasets.forEach(ds => {
+                // Apply search query filter
+                if (searchQuery && !ds.name.toLowerCase().includes(searchQuery.toLowerCase())) {
+                    return;
+                }
+                
+                // Apply filter conditions
+                let matches = true;
+                for (const [key, values] of Object.entries(filters)) {
+                    let match = false;
+                    
+                    if (key === 'scene') {
+                        match = ds.scenes && ds.scenes.some(v => values.includes(v));
+                    } else if (key === 'robot') {
+                        const robots = Array.isArray(ds.robot) ? ds.robot : [ds.robot];
+                        match = robots.some(r => values.includes(r));
+                    } else if (key === 'end') {
+                        match = values.includes(ds.endEffector);
+                    } else if (key === 'action') {
+                        match = ds.actions && ds.actions.some(a => values.includes(a));
+                    } else if (key === 'object') {
+                        match = ds.objects && ds.objects.some(obj => 
+                            obj.hierarchy.some(h => values.includes(h))
+                        );
+                    }
+                    
+                    if (!match) {
+                        matches = false;
+                        break;
+                    }
+                }
+                
+                if (matches) count++;
+            });
+            
+            return count;
+        };
+        
         const counts = {};
         
-        filteredDatasets.forEach(ds => {
-            // Count scenes
-            if (ds.scenes) {
-                ds.scenes.forEach(scene => {
-                    const countKey = `scene-${scene}`;
-                    counts[countKey] = (counts[countKey] || 0) + 1;
-                });
-            }
+        // Calculate counts for all filter options
+        document.querySelectorAll('[data-count]').forEach(el => {
+            const countKey = el.dataset.count;
+            if (!countKey) return;
             
-            // Count robots
-            if (ds.robot) {
-                const robots = Array.isArray(ds.robot) ? ds.robot : [ds.robot];
-                robots.forEach(robot => {
-                    const countKey = `robot-${robot}`;
-                    counts[countKey] = (counts[countKey] || 0) + 1;
-                });
-            }
+            // Get the filter option element that contains this count element
+            const optionElement = el.closest('.filter-option');
+            if (!optionElement) return;
             
-            // Count end effectors
-            if (ds.endEffector) {
-                const countKey = `end-${ds.endEffector}`;
-                counts[countKey] = (counts[countKey] || 0) + 1;
-            }
+            // Get filter key and value from the option element
+            const filterKey = optionElement.dataset.filter;
+            const filterValue = optionElement.dataset.value;
             
-            // Count actions
-            if (ds.actions) {
-                ds.actions.forEach(action => {
-                    const countKey = `action-${action}`;
-                    counts[countKey] = (counts[countKey] || 0) + 1;
-                });
-            }
-            
-            // Count objects (including hierarchy paths)
-            if (ds.objects) {
-                ds.objects.forEach(obj => {
-                    obj.hierarchy.forEach(level => {
-                        const fullPath = obj.hierarchy.slice(0, obj.hierarchy.indexOf(level) + 1).join('>');
-                        const countKey = `object-${fullPath}`;
-                        counts[countKey] = (counts[countKey] || 0) + 1;
-                    });
-                });
+            // Only process if this is a selectable filter option (has both filter and value)
+            if (filterKey && filterValue) {
+                counts[countKey] = calculateCountForOption(filterKey, filterValue);
             }
         });
         

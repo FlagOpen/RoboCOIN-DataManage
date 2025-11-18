@@ -139,7 +139,7 @@ export class FilterManager {
         let isFirstGroup = true;
         for (const [key, group] of Object.entries(this.filterGroups)) {
             const div = document.createElement('div');
-            div.className = isFirstGroup ? 'filter-group' : 'filter-group collapsed';
+            div.className = 'filter-group';
             
             if (group.type === 'flat') {
                 div.innerHTML = this.buildFlatFilterGroup(key, group);
@@ -148,32 +148,41 @@ export class FilterManager {
             }
             
             container.appendChild(div);
-            isFirstGroup = false;
-            
-            // Click handler for group title (expand/collapse)
-            const titleElement = div.querySelector('.filter-group-title');
-            titleElement.addEventListener('click', (e) => {
-                // Don't collapse if clicking action buttons
-                if (e.target.closest('.filter-group-action-btn')) {
-                    return;
-                }
-                div.classList.toggle('collapsed');
-            });
             
             // Add click handlers for filter options (with caching)
+            // Capture isFirstGroup value for this iteration
+            const shouldOpenFirst = isFirstGroup;
+            if (isFirstGroup) {
+                isFirstGroup = false;
+            }
+            
             requestAnimationFrame(() => {
+                // Open first group by default
+                if (shouldOpenFirst) {
+                    const topLevelTitle = div.querySelector('.filter-option-wrapper[data-level="0"] > .filter-option.hierarchy-name-only');
+                    if (topLevelTitle) {
+                        const wrapper = topLevelTitle.closest('.filter-option-wrapper');
+                        const children = wrapper?.querySelector('.filter-children');
+                        if (children) {
+                            children.classList.remove('collapsed');
+                        }
+                    }
+                }
+                
                 const filterOptionsElements = div.querySelectorAll('.filter-option');
                 filterOptionsElements.forEach(option => {
-                    // Skip hierarchy parent nodes
+                    // Handle hierarchy parent nodes (expand/collapse)
                     if (option.classList.contains('hierarchy-name-only')) {
                         // Click on hierarchy item (not actions) -> expand/collapse
                         option.addEventListener('click', (e) => {
+                            // Don't handle if clicking on action buttons
                             if (e.target.closest('.hierarchy-action-btn')) {
                                 return;
                             }
                             // Expand/collapse children
                             const wrapper = option.closest('.filter-option-wrapper');
-                            const children = wrapper?.querySelector('.filter-children');
+                            if (!wrapper) return;
+                            const children = wrapper.querySelector('.filter-children');
                             if (children) {
                                 children.classList.toggle('collapsed');
                             }

@@ -19,22 +19,19 @@ const Templates = {
      */
     buildFlatFilterGroup(key, group, baseIndent) {
         return `
-            <div class="filter-group-title" data-group-key="${key}">
-                <div class="filter-group-title-left">
-                    <span class="toggle-icon">▼</span>
-                    <span>${group.title}</span>
+            <div class="filter-option-wrapper" data-level="0">
+                <div class="filter-option hierarchy-name-only" data-group-key="${key}">
+                    <div class="filter-option-label">
+                        <span class="hierarchy-label">${group.title}</span>
+                    </div>
+                    <div class="hierarchy-actions">
+                        <button class="hierarchy-action-btn select-all" data-group="${key}" data-action="select-all" title="Select all in ${group.title}">All</button>
+                        <button class="hierarchy-action-btn clear-all" data-group="${key}" data-action="clear-group" title="Clear ${group.title}">✕ Clear</button>
+                    </div>
                 </div>
-                <div class="filter-group-actions">
-                    <button class="filter-group-action-btn select-all" data-group="${key}" data-action="select-all" title="Select all in ${group.title}">All</button>
-                    <button class="filter-group-action-btn clear-group" data-group="${key}" data-action="clear-group" title="Clear ${group.title}">✕ Clear</button>
+                <div class="filter-children collapsed" data-group="${key}">
+                    ${Array.from(group.values).sort().map(val => this.buildFlatFilterOption(key, val, baseIndent)).join('')}
                 </div>
-                <div class="filter-group-title-checkbox">
-                    <input type="checkbox" data-filter="${key}" data-group-all="${key}" value="__GROUP_ALL__" checked>
-                    <span class="filter-option-count" style="visibility: hidden;">0</span>
-                </div>
-            </div>
-            <div class="filter-options" data-group="${key}">
-                ${Array.from(group.values).sort().map(val => this.buildFlatFilterOption(key, val, baseIndent)).join('')}
             </div>
         `;
     },
@@ -49,15 +46,11 @@ const Templates = {
     buildFlatFilterOption(key, val, baseIndent) {
         return `
             <div class="filter-option-wrapper" style="margin-left: ${baseIndent}px;" data-level="1">
-                <div class="filter-option" style="padding-left: 0;" data-filter="${key}" data-value="${val}">
-                    <div class="filter-option-label" style="margin-left: 0;">
+                <div class="filter-option" data-filter="${key}" data-value="${val}">
+                    <div class="filter-option-label">
                         <span>${val}</span>
                     </div>
-                    <div class="filter-option-connector"></div>
-                    <div class="filter-option-checkbox" data-target="single">
-                        <input type="checkbox" data-filter="${key}" value="${val}">
-                        <span class="filter-option-count" data-count="${key}-${val}">0</span>
-                    </div>
+                    <div class="filter-option-count" data-count="${key}-${val}">0</div>
                 </div>
             </div>
         `;
@@ -72,22 +65,19 @@ const Templates = {
      */
     buildHierarchicalFilterGroup(key, group, buildHierarchyHTML) {
         return `
-            <div class="filter-group-title" data-group-key="${key}">
-                <div class="filter-group-title-left">
-                    <span class="toggle-icon">▼</span>
-                    <span>${group.title}</span>
+            <div class="filter-option-wrapper" data-level="0">
+                <div class="filter-option hierarchy-name-only" data-group-key="${key}">
+                    <div class="filter-option-label">
+                        <span class="hierarchy-label">${group.title}</span>
+                    </div>
+                    <div class="hierarchy-actions">
+                        <button class="hierarchy-action-btn select-all" data-group="${key}" data-action="select-all" title="Select all in ${group.title}">All</button>
+                        <button class="hierarchy-action-btn clear-all" data-group="${key}" data-action="clear-group" title="Clear ${group.title}">✕ Clear</button>
+                    </div>
                 </div>
-                <div class="filter-group-actions">
-                    <button class="filter-group-action-btn select-all" data-group="${key}" data-action="select-all" title="Select all in ${group.title}">All</button>
-                    <button class="filter-group-action-btn clear-group" data-group="${key}" data-action="clear-group" title="Clear ${group.title}">✕ Clear</button>
+                <div class="filter-children collapsed" data-group="${key}">
+                    ${buildHierarchyHTML(group.values)}
                 </div>
-                <div class="filter-group-title-checkbox">
-                    <input type="checkbox" data-filter="${key}" data-group-all="${key}" value="__GROUP_ALL__" checked>
-                    <span class="filter-option-count" style="visibility: hidden;">0</span>
-                </div>
-            </div>
-            <div class="filter-options hierarchical" data-group="${key}">
-                ${buildHierarchyHTML(group.values)}
             </div>
         `;
     },
