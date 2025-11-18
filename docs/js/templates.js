@@ -138,7 +138,7 @@ const Templates = {
                      onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                 <div class="video-error" style="display:none;">No Thumbnail</div>
                 <div class="play-indicator" style="display:none;">▶</div>
-                ${listDatasets.has(ds.path) ? '<div class="video-success-badge">✓</div>' : ''}
+                ${listDatasets.has(ds.path) ? '<div class="video-success-badge">📋</div>' : ''}
             </div>
             <div class="video-info">
                 <div class="video-title">${ds.name}</div>
@@ -158,7 +158,7 @@ const Templates = {
     },
 
     buildVideoSuccessBadge() {
-        return '<div class="video-success-badge">✓</div>';
+        return '<div class="video-success-badge">📋</div>';
     },
 
     /**
