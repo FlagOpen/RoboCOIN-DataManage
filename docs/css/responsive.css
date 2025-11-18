@@ -12,10 +12,15 @@
     }
     
     .filter-panel,
-    .video-panel,
+    .video-panel {
+        width: 100%;
+        max-height: 45vh;
+    }
+    
     .selection-panel {
         width: 100%;
-        max-height: 80vh;
+        max-height: 35vh;
+        min-height: 35vh;
     }
     
     /* Filter panel - prevent horizontal overflow */
@@ -140,6 +145,13 @@
     /* Right panel - fix text overflow */
     .selection-header {
         padding: 0.5rem 0.75rem;
+        flex-shrink: 0;
+    }
+    
+    .selection-list {
+        flex: 1;
+        min-height: 0;
+        overflow-y: auto;
     }
     
     .selection-actions {
@@ -178,9 +190,10 @@
     
     /* Selection footer - ensure copy button is visible */
     .selection-footer {
-        padding: 0.75rem 0.5rem;
+        padding: 0.5rem;
         overflow-x: hidden;
-        overflow-y: auto;
+        overflow-y: visible;
+        flex-shrink: 0;
     }
     
     .selection-actions {
@@ -195,7 +208,7 @@
     
     /* Code output area */
     .code-output {
-        max-height: 6rem;
+        max-height: 4rem;
         font-size: 0.625rem;
         word-break: break-all;
     }
@@ -504,6 +517,22 @@
     
     .btn-selection {
         padding: 0.25rem 0.5rem;
+    }
+}
+
+/* ==================== Tablet with limited height ==================== */
+@media (max-width: 899px) and (max-height: 800px) {
+    .video-panel {
+        max-height: 40vh;
+    }
+    
+    .selection-panel {
+        max-height: 30vh;
+        min-height: 30vh;
+    }
+    
+    .code-output {
+        max-height: 3rem;
     }
 }
 
