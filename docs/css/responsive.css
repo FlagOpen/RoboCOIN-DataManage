@@ -15,7 +15,7 @@
     .video-panel,
     .selection-panel {
         width: 100%;
-        max-height: 65vh;
+        max-height: 80vh;
     }
     
     /* Filter panel - prevent horizontal overflow */
