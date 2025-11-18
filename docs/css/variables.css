@@ -84,6 +84,9 @@
     --tooltip-bg: rgba(30, 30, 30, 0.95);
     --tooltip-delay: 300ms;
     
+    /* Code Detail Button Tooltip Text */
+    --code-detail-tooltip-text: "NOTICE: to use this download code, please use git repo:\n https://github.com/FlagOpen/robocoin-lerobot";
+    
     /* ==================== Responsive Layout Breakpoints ==================== */
     --breakpoint-small: 600px;
     --breakpoint-medium: 900px;

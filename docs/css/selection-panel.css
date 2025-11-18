@@ -410,11 +410,87 @@
     margin-bottom: 0.5rem;
 }
 
+.code-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.375rem;
+    position: relative;
+}
+
 .code-section-description {
     font-size: clamp(0.6875rem, 0.625rem + 0.25vw, 0.8125rem);
     color: #666;
-    margin-bottom: 0.375rem;
     font-weight: 500;
+    flex: 1;
+}
+
+/* Code Detail Button - Glass-morphism style like version badge */
+.code-detail-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.75rem;
+    font-size: clamp(0.625rem, 0.5625rem + 0.25vw, 0.875rem);
+    font-weight: 600;
+    color: #24292f;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(208, 215, 222, 0.5);
+    border-radius: 2rem;
+    box-shadow: 
+        0 0.125rem 0.375rem rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.code-detail-btn:hover {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(208, 215, 222, 0.8);
+    box-shadow: 
+        0 0.25rem 0.5rem rgba(0, 0, 0, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transform: translateY(-1px) scale(1.05);
+}
+
+.code-detail-btn:hover::after {
+    content: var(--code-detail-tooltip-text);
+    position: absolute;
+    bottom: calc(100% + 0.5rem);
+    right: 0;
+    background: var(--tooltip-bg);
+    color: #ffffff;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 400;
+    white-space: pre-wrap;
+    max-width: 20rem;
+    min-width: 12rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    pointer-events: none;
+    animation: tooltipFadeIn 0.2s ease;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.code-detail-btn:hover::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 0.25rem);
+    right: 1rem;
+    width: 0;
+    height: 0;
+    border-left: 0.375rem solid transparent;
+    border-right: 0.375rem solid transparent;
+    border-top: 0.375rem solid var(--tooltip-bg);
+    z-index: 1001;
+    pointer-events: none;
 }
 
 .code-format-tabs {
@@ -444,7 +520,7 @@
     padding: 0.75rem;
     font-family: 'SF Mono', 'Consolas', 'Liberation Mono', 'Courier New', Courier, monospace;
     font-size: clamp(0.625rem, 0.5625rem + 0.25vw, 0.75rem);
-    max-height: 12.5rem;
+    height: 6rem;
     overflow-y: auto;
     white-space: pre-wrap;
     word-break: break-all;

@@ -27,7 +27,7 @@
     }
     
     .code-output {
-        max-height: 15rem;
+        height: 7.5rem;
     }
 }
 
@@ -310,7 +310,7 @@
     
     /* Code output area */
     .code-output {
-        max-height: 4rem;
+        height: 2rem;
         font-size: 0.625rem;
         word-break: break-all;
     }
@@ -552,7 +552,7 @@
     
     .code-output {
         padding: 0.5rem;
-        max-height: 10rem;
+        height: 5rem;
     }
     
     /* Loading overlay */
@@ -631,7 +631,7 @@
     }
     
     .code-output {
-        max-height: 3rem;
+        height: 1.5rem;
     }
     
     .selection-header {
