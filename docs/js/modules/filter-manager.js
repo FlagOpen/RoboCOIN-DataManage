@@ -34,6 +34,14 @@ export class FilterManager {
         // Filter Finder state
         this.filterFinderMatches = [];
         this.filterFinderCurrentIndex = -1;
+        
+        // Tooltip state
+        this.tooltipElement = null;
+        this.tooltipTimeout = null;
+        this.currentTooltipTarget = null;
+        
+        // Count cache for tooltips
+        this.filterCounts = new Map();
     }
     
     /**
@@ -144,7 +152,11 @@ export class FilterManager {
             
             // Click handler for group title (expand/collapse)
             const titleElement = div.querySelector('.filter-group-title');
-            titleElement.addEventListener('click', () => {
+            titleElement.addEventListener('click', (e) => {
+                // Don't collapse if clicking action buttons
+                if (e.target.closest('.filter-group-action-btn')) {
+                    return;
+                }
                 div.classList.toggle('collapsed');
             });
             
@@ -154,26 +166,16 @@ export class FilterManager {
                 filterOptionsElements.forEach(option => {
                     // Skip hierarchy parent nodes
                     if (option.classList.contains('hierarchy-name-only')) {
-                        const expandBtn = option.querySelector('.hierarchy-expand-btn');
-                        if (expandBtn) {
-                            expandBtn.addEventListener('click', (e) => {
-                                e.stopPropagation();
-                                const wrapper = option.closest('.filter-option-wrapper');
-                                const children = wrapper?.querySelector('.filter-children');
-                                if (children) {
-                                    children.classList.toggle('collapsed');
-                                }
-                            });
-                        }
-                        
+                        // Click on hierarchy item (not actions) -> expand/collapse
                         option.addEventListener('click', (e) => {
-                            if (e.target.closest('.hierarchy-expand-btn')) {
+                            if (e.target.closest('.hierarchy-action-btn')) {
                                 return;
                             }
-                            const checkbox = option.querySelector('input[type="checkbox"]');
-                            if (checkbox) {
-                                checkbox.checked = !checkbox.checked;
-                                checkbox.dispatchEvent(new Event('change', { bubbles: true }));
+                            // Expand/collapse children
+                            const wrapper = option.closest('.filter-option-wrapper');
+                            const children = wrapper?.querySelector('.filter-children');
+                            if (children) {
+                                children.classList.toggle('collapsed');
                             }
                         });
                         return;
@@ -400,6 +402,11 @@ export class FilterManager {
         }
         
         this.pendingFilterUpdate = setTimeout(() => {
+            // Update tooltip counts when filters change
+            if (this.tooltipElement) {
+                this.updateFilterCounts();
+            }
+            
             // Trigger filter update event
             document.dispatchEvent(new CustomEvent('filtersChanged'));
             this.pendingFilterUpdate = null;
@@ -607,6 +614,397 @@ export class FilterManager {
         const hasMatches = total > 0;
         prevBtn.disabled = !hasMatches;
         nextBtn.disabled = !hasMatches;
+    }
+    
+    /**
+     * Select all filters in a group
+     * @param {string} groupKey - Filter group key
+     */
+    selectAllInGroup(groupKey) {
+        const group = this.filterGroups[groupKey];
+        if (!group) return;
+        
+        if (group.type === 'flat') {
+            group.values.forEach(value => {
+                const filterId = `${groupKey}:${value}`;
+                if (!this.selectedFilters.has(filterId)) {
+                    this.selectedFilters.add(filterId);
+                    const option = this.filterOptionCache.get(filterId);
+                    if (option) {
+                        option.classList.add('selected');
+                    }
+                    this.addFilterTag(filterId, this.getFilterLabel(groupKey, value));
+                }
+            });
+        } else if (group.type === 'hierarchical') {
+            // Select all leaf nodes in hierarchy
+            this.selectAllInHierarchy(groupKey, group.values);
+        }
+        
+        this.updateTriggerCount();
+        this.scheduleFilterUpdate();
+    }
+    
+    /**
+     * Select all in hierarchy recursively
+     * @param {string} groupKey - Filter group key
+     * @param {Map} hierarchyMap - Hierarchy map
+     * @param {string} parentPath - Parent path
+     */
+    selectAllInHierarchy(groupKey, hierarchyMap, parentPath = '') {
+        hierarchyMap.forEach((node, value) => {
+            const fullPath = parentPath ? `${parentPath}>${value}` : value;
+            
+            if (node.isLeaf) {
+                const filterId = `${groupKey}:${value}`;
+                if (!this.selectedFilters.has(filterId)) {
+                    this.selectedFilters.add(filterId);
+                    const option = this.filterOptionCache.get(filterId);
+                    if (option) {
+                        option.classList.add('selected');
+                    }
+                    this.addFilterTag(filterId, this.getFilterLabel(groupKey, value));
+                }
+            }
+            
+            if (node.children.size > 0) {
+                this.selectAllInHierarchy(groupKey, node.children, fullPath);
+            }
+        });
+    }
+    
+    /**
+     * Clear all filters in a group
+     * @param {string} groupKey - Filter group key
+     */
+    clearGroup(groupKey) {
+        const filtersToRemove = [];
+        
+        this.selectedFilters.forEach(filterId => {
+            const [key] = filterId.split(':');
+            if (key === groupKey) {
+                filtersToRemove.push(filterId);
+            }
+        });
+        
+        filtersToRemove.forEach(filterId => {
+            this.selectedFilters.delete(filterId);
+            const option = this.filterOptionCache.get(filterId);
+            if (option) {
+                option.classList.remove('selected');
+            }
+            this.removeFilterTag(filterId);
+        });
+        
+        this.updateTriggerCount();
+        this.scheduleFilterUpdate();
+    }
+    
+    /**
+     * Select all children in a hierarchy path
+     * @param {string} groupKey - Filter group key
+     * @param {string} path - Hierarchy path
+     */
+    selectAllChildrenInHierarchy(groupKey, path) {
+        const group = this.filterGroups[groupKey];
+        if (!group || group.type !== 'hierarchical') return;
+        
+        // Find the node at the given path
+        const node = this.findHierarchyNode(group.values, path);
+        if (!node) return;
+        
+        // Select all leaf nodes under this path
+        this.selectLeafNodesRecursive(groupKey, node.children, path);
+        
+        this.updateTriggerCount();
+        this.scheduleFilterUpdate();
+    }
+    
+    /**
+     * Clear all children in a hierarchy path
+     * @param {string} groupKey - Filter group key
+     * @param {string} path - Hierarchy path
+     */
+    clearAllChildrenInHierarchy(groupKey, path) {
+        const group = this.filterGroups[groupKey];
+        if (!group || group.type !== 'hierarchical') return;
+        
+        // Find the node at the given path
+        const node = this.findHierarchyNode(group.values, path);
+        if (!node) return;
+        
+        // Clear all leaf nodes under this path
+        this.clearLeafNodesRecursive(groupKey, node.children, path);
+        
+        this.updateTriggerCount();
+        this.scheduleFilterUpdate();
+    }
+    
+    /**
+     * Find a node in the hierarchy by path
+     * @param {Map} hierarchyMap - Hierarchy map
+     * @param {string} path - Path to find (e.g., "parent>child")
+     * @returns {Object|null} Node or null
+     */
+    findHierarchyNode(hierarchyMap, path) {
+        const parts = path.split('>');
+        let current = hierarchyMap;
+        
+        for (const part of parts) {
+            if (!current.has(part)) return null;
+            const node = current.get(part);
+            if (parts.indexOf(part) === parts.length - 1) {
+                return node;
+            }
+            current = node.children;
+        }
+        
+        return null;
+    }
+    
+    /**
+     * Select all leaf nodes recursively
+     * @param {string} groupKey - Filter group key
+     * @param {Map} hierarchyMap - Hierarchy map
+     * @param {string} parentPath - Parent path
+     */
+    selectLeafNodesRecursive(groupKey, hierarchyMap, parentPath) {
+        hierarchyMap.forEach((node, value) => {
+            const fullPath = parentPath ? `${parentPath}>${value}` : value;
+            
+            if (node.isLeaf || node.children.size === 0) {
+                // This is a leaf node, select it
+                const filterId = `${groupKey}:${value}`;
+                if (!this.selectedFilters.has(filterId)) {
+                    this.selectedFilters.add(filterId);
+                    const option = this.filterOptionCache.get(filterId);
+                    if (option) {
+                        option.classList.add('selected');
+                    }
+                    this.addFilterTag(filterId, this.getFilterLabel(groupKey, value));
+                }
+            }
+            
+            if (node.children.size > 0) {
+                this.selectLeafNodesRecursive(groupKey, node.children, fullPath);
+            }
+        });
+    }
+    
+    /**
+     * Clear all leaf nodes recursively
+     * @param {string} groupKey - Filter group key
+     * @param {Map} hierarchyMap - Hierarchy map
+     * @param {string} parentPath - Parent path
+     */
+    clearLeafNodesRecursive(groupKey, hierarchyMap, parentPath) {
+        hierarchyMap.forEach((node, value) => {
+            const fullPath = parentPath ? `${parentPath}>${value}` : value;
+            
+            if (node.isLeaf || node.children.size === 0) {
+                // This is a leaf node, clear it
+                const filterId = `${groupKey}:${value}`;
+                if (this.selectedFilters.has(filterId)) {
+                    this.selectedFilters.delete(filterId);
+                    const option = this.filterOptionCache.get(filterId);
+                    if (option) {
+                        option.classList.remove('selected');
+                    }
+                    this.removeFilterTag(filterId);
+                }
+            }
+            
+            if (node.children.size > 0) {
+                this.clearLeafNodesRecursive(groupKey, node.children, fullPath);
+            }
+        });
+    }
+    
+    /**
+     * Initialize tooltip system
+     */
+    initializeTooltips() {
+        // Create tooltip element if it doesn't exist
+        if (!this.tooltipElement) {
+            this.tooltipElement = document.createElement('div');
+            this.tooltipElement.className = 'filter-tooltip';
+            document.body.appendChild(this.tooltipElement);
+        }
+        
+        // Calculate initial counts
+        this.updateFilterCounts();
+    }
+    
+    /**
+     * Update filter counts for all options
+     */
+    updateFilterCounts() {
+        this.filterCounts.clear();
+        
+        // Count for each filter option
+        for (const [key, group] of Object.entries(this.filterGroups)) {
+            if (group.type === 'flat') {
+                group.values.forEach(value => {
+                    const count = this.calculateAffectedCount(key, value);
+                    this.filterCounts.set(`${key}:${value}`, count);
+                });
+            } else if (group.type === 'hierarchical') {
+                this.updateHierarchyCounts(key, group.values);
+            }
+        }
+    }
+    
+    /**
+     * Update hierarchy counts recursively
+     * @param {string} key - Filter key
+     * @param {Map} hierarchyMap - Hierarchy map
+     */
+    updateHierarchyCounts(key, hierarchyMap) {
+        hierarchyMap.forEach((node, value) => {
+            const count = this.calculateAffectedCount(key, value);
+            this.filterCounts.set(`${key}:${value}`, count);
+            
+            if (node.children.size > 0) {
+                this.updateHierarchyCounts(key, node.children);
+            }
+        });
+    }
+    
+    /**
+     * Calculate affected count for a filter
+     * @param {string} filterKey - Filter key
+     * @param {string} filterValue - Filter value
+     * @returns {number} Count of matching datasets
+     */
+    calculateAffectedCount(filterKey, filterValue) {
+        let count = 0;
+        
+        this.datasets.forEach(ds => {
+            let match = false;
+            
+            if (filterKey === 'scene') {
+                match = ds.scenes && ds.scenes.includes(filterValue);
+            } else if (filterKey === 'robot') {
+                const robots = Array.isArray(ds.robot) ? ds.robot : [ds.robot];
+                match = robots.includes(filterValue);
+            } else if (filterKey === 'end') {
+                match = ds.endEffector === filterValue;
+            } else if (filterKey === 'action') {
+                match = ds.actions && ds.actions.includes(filterValue);
+            } else if (filterKey === 'object') {
+                match = ds.objects && ds.objects.some(obj => 
+                    obj.hierarchy.includes(filterValue)
+                );
+            }
+            
+            if (match) count++;
+        });
+        
+        return count;
+    }
+    
+    /**
+     * Show tooltip for filter option
+     * @param {HTMLElement} element - Target element
+     * @param {string} filterKey - Filter key
+     * @param {string} filterValue - Filter value
+     */
+    showTooltip(element, filterKey, filterValue) {
+        if (!this.tooltipElement) return;
+        
+        // Clear any existing timeout
+        if (this.tooltipTimeout) {
+            clearTimeout(this.tooltipTimeout);
+        }
+        
+        // Store current target
+        this.currentTooltipTarget = element;
+        
+        // Get tooltip delay from CSS variable (default 300ms)
+        const tooltipDelay = ConfigManager.getCSSValue('--tooltip-delay', 300);
+        
+        // Debounce tooltip display
+        this.tooltipTimeout = setTimeout(() => {
+            const filterId = `${filterKey}:${filterValue}`;
+            const count = this.filterCounts.get(filterId) || 0;
+            const label = this.getFilterLabel(filterKey, filterValue);
+            
+            // Build tooltip content
+            this.tooltipElement.innerHTML = `
+                <div class="filter-tooltip-content">
+                    <div class="filter-tooltip-label">${label}</div>
+                    <div class="filter-tooltip-count">${count} dataset${count !== 1 ? 's' : ''}</div>
+                </div>
+            `;
+            
+            // Position tooltip
+            this.positionTooltip(element);
+            
+            // Show tooltip
+            this.tooltipElement.classList.add('show');
+        }, tooltipDelay);
+    }
+    
+    /**
+     * Position tooltip relative to element
+     * @param {HTMLElement} element - Target element
+     */
+    positionTooltip(element) {
+        if (!this.tooltipElement) return;
+        
+        const rect = element.getBoundingClientRect();
+        const tooltipRect = this.tooltipElement.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+        
+        // Calculate horizontal position (centered)
+        let left = rect.left + (rect.width / 2) - (tooltipRect.width / 2);
+        
+        // Ensure tooltip stays within viewport horizontally
+        if (left < 10) left = 10;
+        if (left + tooltipRect.width > window.innerWidth - 10) {
+            left = window.innerWidth - tooltipRect.width - 10;
+        }
+        
+        // Calculate vertical position (above or below)
+        const spaceAbove = rect.top;
+        const spaceBelow = viewportHeight - rect.bottom;
+        
+        let top;
+        if (spaceBelow > tooltipRect.height + 10) {
+            // Show below
+            top = rect.bottom + 8;
+            this.tooltipElement.classList.remove('tooltip-top');
+            this.tooltipElement.classList.add('tooltip-bottom');
+        } else if (spaceAbove > tooltipRect.height + 10) {
+            // Show above
+            top = rect.top - tooltipRect.height - 8;
+            this.tooltipElement.classList.remove('tooltip-bottom');
+            this.tooltipElement.classList.add('tooltip-top');
+        } else {
+            // Show below if space is equal
+            top = rect.bottom + 8;
+            this.tooltipElement.classList.remove('tooltip-top');
+            this.tooltipElement.classList.add('tooltip-bottom');
+        }
+        
+        this.tooltipElement.style.left = `${left}px`;
+        this.tooltipElement.style.top = `${top}px`;
+    }
+    
+    /**
+     * Hide tooltip
+     */
+    hideTooltip() {
+        if (this.tooltipTimeout) {
+            clearTimeout(this.tooltipTimeout);
+            this.tooltipTimeout = null;
+        }
+        
+        if (this.tooltipElement) {
+            this.tooltipElement.classList.remove('show');
+        }
+        
+        this.currentTooltipTarget = null;
     }
 }
 

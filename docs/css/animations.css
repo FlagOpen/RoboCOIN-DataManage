@@ -42,3 +42,45 @@
     }
 }
 
+/* Background fill animation from left to right */
+@keyframes backgroundFillIn {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Tooltip fade-in with slide-up effect */
+@keyframes tooltipFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Count badge pulse animation */
+@keyframes countPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+/* Button hover bounce micro-interaction */
+@keyframes buttonHoverBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2px);
+    }
+}
+

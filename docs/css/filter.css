@@ -323,7 +323,7 @@
 .filter-dropdown-content .filter-group-title {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 0.75rem 0.75rem;
     background: transparent;
     cursor: pointer;
@@ -347,6 +347,60 @@
     flex: 1;
 }
 
+/* Quick-Action Buttons */
+.filter-dropdown-content .filter-group-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.filter-dropdown-content .filter-group-action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    min-height: 1.75rem;
+}
+
+.filter-dropdown-content .filter-group-action-btn.select-all {
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: 0 1px 3px rgba(102, 126, 234, 0.3);
+}
+
+.filter-dropdown-content .filter-group-action-btn.select-all:hover {
+    background: var(--gradient-primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(102, 126, 234, 0.4);
+    animation: buttonHoverBounce 0.4s ease;
+}
+
+.filter-dropdown-content .filter-group-action-btn.clear-group {
+    background: var(--color-bg-gray);
+    color: var(--color-text-secondary);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.filter-dropdown-content .filter-group-action-btn.clear-group:hover {
+    background: var(--color-bg-gray-dark);
+    color: var(--color-text-primary);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.filter-dropdown-content .filter-group-action-btn:active {
+    transform: translateY(0) scale(0.95);
+}
+
 .filter-dropdown-content .toggle-icon {
     display: none;
 }
@@ -363,43 +417,72 @@
 .filter-dropdown-content .filter-option {
     display: flex;
     align-items: center;
-    padding: 0.5rem 0.5rem;
+    justify-content: space-between;
+    padding: 0.5rem;
     margin: 0.125rem 0;
     cursor: pointer;
-    transition: background-color 0.15s ease;
+    transition: background-color 0.2s ease, transform 0.15s ease;
     user-select: none;
     position: relative;
     background: transparent;
     min-height: 2.5rem;
+    border-radius: 0.375rem;
+    overflow: hidden;
 }
 
 .filter-dropdown-content:not(.scrolling) .filter-option:hover {
-    background: #f6f8fa;
+    background: var(--color-bg-light);
 }
 
-.filter-dropdown-content .filter-option.selected {
-    background: transparent;
+/* Selection indicator: Background fill animation from left to right */
+.filter-dropdown-content .filter-option::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    background: var(--color-selection-bg);
+    border-radius: 0.375rem;
+    z-index: 0;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Selection indicator: Bold + Underline */
-.filter-dropdown-content .filter-option.selected .filter-option-label {
-    font-weight: 700;
-    text-decoration: underline;
-    text-decoration-color: #667eea;
-    text-underline-offset: 0.2rem;
-    color: #2d3748;
+.filter-dropdown-content .filter-option.selected::before {
+    width: 100%;
+    animation: backgroundFillIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.filter-dropdown-content .filter-option.selected:hover::before {
+    background: var(--color-selection-bg-hover);
+}
+
+/* Ensure content stays above background */
+.filter-dropdown-content .filter-option > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Base label styles */
 .filter-dropdown-content .filter-option-label {
     flex: 1;
     display: flex;
     align-items: center;
     gap: 0.375rem;
     font-size: 0.8125rem;
-    color: #4a5568;
-    transition: all 0.15s ease;
+    color: var(--color-text-secondary);
     font-weight: 400;
     line-height: 1.4;
+    transform: translateX(0);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
+    will-change: transform;
+}
+
+/* Selection indicator: Bold text with smooth transition and right shift */
+.filter-dropdown-content .filter-option.selected .filter-option-label {
+    font-weight: 600;
+    color: var(--color-text-primary);
+    transform: translateX(0.75rem) !important;
 }
 
 .filter-dropdown-content .filter-option-count {
@@ -408,18 +491,96 @@
     justify-content: center;
     min-width: 2rem;
     padding: 0.25rem 0.625rem;
-    background: #e8ecf0;
+    background: var(--color-bg-gray);
     border-radius: 1rem;
     font-size: 0.75rem;
-    color: #64748b;
+    color: var(--color-text-muted);
     font-weight: 600;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
+    margin-left: 0.5rem;
+}
+
+.filter-dropdown-content .filter-option-count.pulse {
+    animation: countPulse 0.4s ease;
 }
 
 .filter-dropdown-content .filter-option.selected .filter-option-count {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--gradient-primary);
     color: white;
     box-shadow: 0 2px 6px rgba(102, 126, 234, 0.3);
+}
+
+/* ==================== Tooltip Styles ==================== */
+.filter-tooltip {
+    position: fixed;
+    z-index: 10000;
+    background: var(--tooltip-bg);
+    color: white;
+    padding: 0.625rem 0.875rem;
+    border-radius: 0.5rem;
+    font-size: 0.8125rem;
+    line-height: 1.4;
+    max-width: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity var(--transition-duration) ease, transform var(--transition-duration) ease;
+    backdrop-filter: blur(8px);
+}
+
+.filter-tooltip.show {
+    opacity: 1;
+    transform: translateY(0);
+    animation: tooltipFadeIn 0.25s ease;
+}
+
+.filter-tooltip::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.filter-tooltip.tooltip-bottom::after {
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 6px 6px 6px;
+    border-color: transparent transparent var(--tooltip-bg) transparent;
+}
+
+.filter-tooltip.tooltip-top::after {
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px 6px 0 6px;
+    border-color: var(--tooltip-bg) transparent transparent transparent;
+}
+
+.filter-tooltip-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.filter-tooltip-label {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.filter-tooltip-count {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+}
+
+.filter-tooltip-count::before {
+    content: '📊';
+    font-size: 0.875rem;
 }
 
 /* ==================== Hierarchical Filter Options ==================== */
@@ -443,69 +604,81 @@
     font-weight: 500;
     background: transparent;
     position: relative;
-    padding-left: 3.25rem;
-    min-height: 2.75rem;
+    padding: 0.5rem;
+    min-height: 2.5rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
 .filter-dropdown-content .filter-option.hierarchy-name-only:hover {
-    background: #f6f8fa;
+    background: var(--color-bg-light);
 }
 
-.filter-dropdown-content .filter-option.hierarchy-name-only.selected .filter-option-label {
-    font-weight: 700;
-    text-decoration: underline;
-    text-decoration-color: #667eea;
-    text-underline-offset: 0.2rem;
-    color: #2d3748;
-}
-
+/* Hierarchy label styling */
 .filter-dropdown-content .filter-option.hierarchy-name-only .filter-option-label {
-    margin-left: 0.25rem;
-    padding-left: 0;
     flex: 1;
-}
-
-/* ==================== Expand/Collapse Button ==================== */
-.filter-dropdown-content .hierarchy-expand-btn {
-    position: absolute;
-    left: 0.25rem;
-    top: 50%;
-    transform: translateY(-50%) rotate(0deg);
-    width: 2.75rem;
-    height: 2.75rem;
-    padding: 0;
-    border: none;
-    background: transparent;
-    color: #4a5568;
-    font-size: 1.125rem;
-    font-weight: 700;
-    line-height: 1;
-    cursor: pointer;
     display: flex;
     align-items: center;
+    gap: 0.375rem;
+    font-size: 0.875rem;
+    color: var(--color-text-primary);
+    transition: color 0.2s ease;
+}
+
+/* ==================== Hierarchy Actions (All/Clear buttons) ==================== */
+.filter-dropdown-content .hierarchy-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    margin-left: 0.5rem;
+}
+
+.filter-dropdown-content .hierarchy-action-btn {
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
-    transition: transform 0.2s ease, color 0.15s ease, background 0.15s ease;
-    flex-shrink: 0;
-    z-index: 10;
-    font-family: monospace;
-    pointer-events: auto;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    border: none;
     border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    min-height: 1.75rem;
 }
 
-.filter-dropdown-content .filter-option-wrapper:has(.filter-children:not(.collapsed)) .hierarchy-expand-btn {
-    transform: translateY(-50%) rotate(90deg);
+.filter-dropdown-content .hierarchy-action-btn.select-all {
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: 0 1px 3px rgba(102, 126, 234, 0.3);
 }
 
-.filter-dropdown-content .hierarchy-expand-btn:hover {
-    color: #667eea;
-    background: rgba(102, 126, 234, 0.1);
-    border-radius: 0.25rem;
+.filter-dropdown-content .hierarchy-action-btn.select-all:hover {
+    background: var(--gradient-primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(102, 126, 234, 0.4);
 }
 
-.filter-dropdown-content .hierarchy-toggle {
-    display: none;
+.filter-dropdown-content .hierarchy-action-btn.clear-all {
+    background: var(--color-bg-gray);
+    color: var(--color-text-secondary);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.filter-dropdown-content .hierarchy-action-btn.clear-all:hover {
+    background: var(--color-bg-gray-dark);
+    color: var(--color-text-primary);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.filter-dropdown-content .hierarchy-action-btn:active {
+    transform: translateY(0) scale(0.95);
 }
 
 .filter-dropdown-content .hierarchy-label {

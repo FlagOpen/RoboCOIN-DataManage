@@ -60,12 +60,15 @@ export class EventHandlers {
         if (filterTriggerBtn) {
             filterTriggerBtn.addEventListener('click', () => {
                 this.managers.ui.openFilterDropdown();
+                // Initialize tooltips when dropdown opens
+                this.managers.filter.initializeTooltips();
             });
         }
         
         if (filterDropdownClose) {
             filterDropdownClose.addEventListener('click', () => {
                 this.managers.ui.closeFilterDropdown();
+                this.managers.filter.hideTooltip();
             });
         }
         
@@ -73,6 +76,7 @@ export class EventHandlers {
             filterDropdownOverlay.addEventListener('click', (e) => {
                 if (e.target.id === 'filterDropdownOverlay') {
                     this.managers.ui.closeFilterDropdown();
+                    this.managers.filter.hideTooltip();
                 }
             });
         }
@@ -92,6 +96,106 @@ export class EventHandlers {
         if (hubSelect) {
             hubSelect.addEventListener('change', (e) => {
                 this.managers.selectionPanel.setHub(e.target.value);
+            });
+        }
+        
+        // Quick-action buttons and tooltips (event delegation)
+        this.bindFilterDropdownEvents();
+    }
+    
+    /**
+     * Bind filter dropdown events (quick-actions and tooltips)
+     */
+    bindFilterDropdownEvents() {
+        const filterGroups = document.getElementById('filterGroups');
+        if (!filterGroups) return;
+        
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        
+        // Quick-action buttons for filter groups
+        filterGroups.addEventListener('click', (e) => {
+            const actionBtn = e.target.closest('.filter-group-action-btn');
+            if (actionBtn) {
+                e.stopPropagation(); // Prevent group collapse
+                
+                const groupKey = actionBtn.dataset.group;
+                const action = actionBtn.dataset.action;
+                
+                if (action === 'select-all') {
+                    this.managers.filter.selectAllInGroup(groupKey);
+                } else if (action === 'clear-group') {
+                    this.managers.filter.clearGroup(groupKey);
+                }
+                return;
+            }
+            
+            // Hierarchy action buttons (All/Clear for hierarchy items)
+            const hierarchyActionBtn = e.target.closest('.hierarchy-action-btn');
+            if (hierarchyActionBtn) {
+                e.stopPropagation();
+                
+                const key = hierarchyActionBtn.dataset.key;
+                const path = hierarchyActionBtn.dataset.path;
+                const action = hierarchyActionBtn.dataset.action;
+                
+                if (action === 'select-all-children') {
+                    this.managers.filter.selectAllChildrenInHierarchy(key, path);
+                } else if (action === 'clear-all-children') {
+                    this.managers.filter.clearAllChildrenInHierarchy(key, path);
+                }
+                return;
+            }
+        });
+        
+        // Tooltip events (non-touch devices)
+        if (!isTouchDevice) {
+            filterGroups.addEventListener('mouseenter', (e) => {
+                const option = e.target.closest('.filter-option');
+                if (!option) return;
+                
+                const filterKey = option.dataset.filter;
+                const filterValue = option.dataset.value;
+                
+                if (filterKey && filterValue) {
+                    this.managers.filter.showTooltip(option, filterKey, filterValue);
+                }
+            }, true);
+            
+            filterGroups.addEventListener('mouseleave', (e) => {
+                const option = e.target.closest('.filter-option');
+                if (!option) return;
+                
+                this.managers.filter.hideTooltip();
+            }, true);
+        }
+        
+        // Touch device tooltip handling
+        if (isTouchDevice) {
+            let lastTouchTarget = null;
+            
+            filterGroups.addEventListener('touchstart', (e) => {
+                const option = e.target.closest('.filter-option');
+                if (!option) {
+                    this.managers.filter.hideTooltip();
+                    lastTouchTarget = null;
+                    return;
+                }
+                
+                const filterKey = option.dataset.filter;
+                const filterValue = option.dataset.value;
+                
+                if (filterKey && filterValue) {
+                    if (lastTouchTarget === option) {
+                        // Second tap - hide tooltip and proceed with selection
+                        this.managers.filter.hideTooltip();
+                        lastTouchTarget = null;
+                    } else {
+                        // First tap - show tooltip
+                        this.managers.filter.showTooltip(option, filterKey, filterValue);
+                        lastTouchTarget = option;
+                        e.preventDefault(); // Prevent immediate selection
+                    }
+                }
             });
         }
     }

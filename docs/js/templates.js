@@ -19,10 +19,14 @@ const Templates = {
      */
     buildFlatFilterGroup(key, group, baseIndent) {
         return `
-            <div class="filter-group-title">
+            <div class="filter-group-title" data-group-key="${key}">
                 <div class="filter-group-title-left">
                     <span class="toggle-icon">▼</span>
                     <span>${group.title}</span>
+                </div>
+                <div class="filter-group-actions">
+                    <button class="filter-group-action-btn select-all" data-group="${key}" data-action="select-all" title="Select all in ${group.title}">All</button>
+                    <button class="filter-group-action-btn clear-group" data-group="${key}" data-action="clear-group" title="Clear ${group.title}">✕ Clear</button>
                 </div>
                 <div class="filter-group-title-checkbox">
                     <input type="checkbox" data-filter="${key}" data-group-all="${key}" value="__GROUP_ALL__" checked>
@@ -68,10 +72,14 @@ const Templates = {
      */
     buildHierarchicalFilterGroup(key, group, buildHierarchyHTML) {
         return `
-            <div class="filter-group-title">
+            <div class="filter-group-title" data-group-key="${key}">
                 <div class="filter-group-title-left">
                     <span class="toggle-icon">▼</span>
                     <span>${group.title}</span>
+                </div>
+                <div class="filter-group-actions">
+                    <button class="filter-group-action-btn select-all" data-group="${key}" data-action="select-all" title="Select all in ${group.title}">All</button>
+                    <button class="filter-group-action-btn clear-group" data-group="${key}" data-action="clear-group" title="Clear ${group.title}">✕ Clear</button>
                 </div>
                 <div class="filter-group-title-checkbox">
                     <input type="checkbox" data-filter="${key}" data-group-all="${key}" value="__GROUP_ALL__" checked>
@@ -91,19 +99,12 @@ const Templates = {
             return `
                 <div class="filter-option-wrapper" style="margin-left: ${indent}px;" data-level="${level}">
                     <div class="filter-option hierarchy-name-only" data-path="${fullPath}">
-                        <button class="hierarchy-expand-btn" data-action="toggle">›</button>
                         <div class="filter-option-label">
                             <span class="hierarchy-label">${value}</span>
                         </div>
-                        <div class="filter-option-connector"></div>
-                        <div class="filter-option-checkbox" data-target="recursive">
-                            <input type="checkbox" 
-                                data-filter="${key}" 
-                                data-level="${level + 1}"
-                                data-path="${fullPath}:ALL"
-                                data-parent-path="${fullPath}"
-                                value="${fullPath}:ALL">
-                            <span class="filter-option-count" data-count="${key}-${fullPath}">0</span>
+                        <div class="hierarchy-actions">
+                            <button class="hierarchy-action-btn select-all" data-key="${key}" data-path="${fullPath}" data-action="select-all-children" title="Select all children">All</button>
+                            <button class="hierarchy-action-btn clear-all" data-key="${key}" data-path="${fullPath}" data-action="clear-all-children" title="Clear all children">✕ Clear</button>
                         </div>
                     </div>
                     <div class="filter-children collapsed">
@@ -114,20 +115,11 @@ const Templates = {
         } else {
             return `
                 <div class="filter-option-wrapper" style="margin-left: ${indent}px;" data-level="${level}">
-                    <div class="filter-option" style="padding-left: 0;" data-filter="${key}" data-value="${value}">
-                        <div class="filter-option-label" style="margin-left: 0;">
-                            <span class="hierarchy-spacer"></span>
+                    <div class="filter-option" data-filter="${key}" data-value="${value}">
+                        <div class="filter-option-label">
                             <span>${value}</span>
                         </div>
-                        <div class="filter-option-connector"></div>
-                        <div class="filter-option-checkbox" data-target="single">
-                            <input type="checkbox" 
-                                data-filter="${key}" 
-                                data-level="${level}"
-                                data-path="${fullPath}"
-                                value="${value}">
-                            <span class="filter-option-count" data-count="${key}-${fullPath}">0</span>
-                        </div>
+                        <div class="filter-option-count" data-count="${key}-${fullPath}">0</div>
                     </div>
                 </div>
             `;
