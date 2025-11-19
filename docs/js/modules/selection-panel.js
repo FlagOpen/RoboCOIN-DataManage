@@ -192,7 +192,7 @@ export class SelectionPanelManager {
             const dsListContent = this._sortedPathsCache.join(' \\\n');
             
             requestAnimationFrame(() => {
-                output.textContent = `python -m lerobot.scripts.download \\\n--hub ${this.currentHub} \\\n--ds_lists ${dsListContent} \\\n--target-dir `;
+                output.textContent = `robocoin-download \\\n--hub ${this.currentHub} \\\n--ds_lists ${dsListContent} \\\n--target-dir `;
             });
         }, 100);
     }
