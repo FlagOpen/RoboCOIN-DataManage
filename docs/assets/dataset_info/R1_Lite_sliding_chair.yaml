@@ -1,0 +1,27 @@
+dataset_name: sliding_chair
+dataset_uuid:
+task_descriptions:
+- pull chair out from table then put back.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3:
+  level4:
+  level5:
+- object_name: chair
+  level1: furniture
+  level2: chair
+  level3:
+  level4:
+  level5:
+operation_platform_height:
+device_model:
+- galaxea_r1_lite
+end_effector_type: two_finger_gripper

@@ -1,0 +1,38 @@
+dataset_name: fold_the_towel
+dataset_uuid:
+task_descriptions:
+- fold the pink towel on the table with a white tablecloth.
+- fold the green towel on the table with a white tablecloth
+- fold the pink towel on the table with a grey tablecloth.
+- fold the pink towel on the white table.
+- fold the pink towel on the table with a green tablecloth.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- place
+- pick
+- fold
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3:
+  level4:
+  level5:
+- object_name: tablecloth
+  level1: clothing
+  level2: tablecloth
+  level3:
+  level4:
+  level5:
+- object_name: towel
+  level1: clothing
+  level2: towel
+  level3:
+  level4:
+  level5:
+operation_platform_height: 77.2
+device_model:
+- agilex_cobot_magic_aloha
+end_effector_type: two_finger_gripper

@@ -159,6 +159,7 @@ class ConfigManager {
             // ./assets/
             //   ├── info/               - JSON index files (data_index.json, consolidated_datasets.json)
             //   ├── dataset_info/       - YAML metadata files (one per dataset)
+            //   ├── thumbnails/         - Thumbnail images (*.jpg, provided by assets/thumbnails)
             //   └── videos/             - MP4 video files (named by dataset path)
             paths: {
                 assetsRoot: './assets',

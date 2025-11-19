@@ -1,0 +1,21 @@
+dataset_name: switch_on_and_off_the_central_air_conditioning
+dataset_uuid:
+task_descriptions:
+- turn on ac press temp up down then turn off.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: central_air_conditioning
+  level1: household_appliances
+  level2: central_air_conditioning
+  level3:
+  level4:
+  level5:
+operation_platform_height:
+device_model:
+- galaxea_r1_lite
+end_effector_type: two_finger_gripper

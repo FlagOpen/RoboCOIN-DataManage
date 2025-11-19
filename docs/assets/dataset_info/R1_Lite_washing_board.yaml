@@ -1,0 +1,42 @@
+dataset_name: washing_board
+dataset_uuid:
+task_descriptions:
+- turn on tap scrub cutting board with cloth then turn off tap.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+- open
+- wipe
+- close
+objects:
+- object_name: faucet
+  level1: tool
+  level2: faucet
+  level3:
+  level4:
+  level5:
+- object_name: sponge
+  level1: daily_necessities
+  level2: sponge
+  level3:
+  level4:
+  level5:
+- object_name: cutting_board
+  level1: tool
+  level2: cutting_board
+  level3:
+  level4:
+  level5:
+- object_name: sink
+  level1: container
+  level2: sink
+  level3:
+  level4:
+  level5:
+operation_platform_height:
+device_model:
+- galaxea_r1_lite
+end_effector_type: two_finger_gripper

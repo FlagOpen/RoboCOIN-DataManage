@@ -1,0 +1,41 @@
+dataset_name: move_beverage
+dataset_uuid:
+task_descriptions:
+- move one drink among three beverages.
+scene_type:
+- supermarket
+- home
+- restaurant
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3:
+  level4:
+  level5:
+- object_name: fanta
+  level1: drink
+  level2: fanta
+  level3:
+  level4:
+  level5:
+- object_name: sprite
+  level1: drink
+  level2: sprite
+  level3:
+  level4:
+  level5:
+- object_name: cola
+  level1: drink
+  level2: cola
+  level3:
+  level4:
+  level5:
+device_model:
+- agilex_cobot_magic_aloha
+end_effector_type: two_finger_gripper
+operation_platform_height: 77.2

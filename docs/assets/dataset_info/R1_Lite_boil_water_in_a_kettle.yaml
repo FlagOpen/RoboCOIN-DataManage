@@ -1,0 +1,39 @@
+dataset_name: boil_water_in_a_kettle
+dataset_uuid:
+task_descriptions:
+- place kettle on heating plate heat then set beside sink.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: stove_top
+  level1: furniture
+  level2: stove_top
+  level3:
+  level4:
+  level5:
+- object_name: boil_the_kettle
+  level1: electric_appliance
+  level2: boil_the_kettle
+  level3:
+  level4:
+  level5:
+- object_name: heating_plate
+  level1: electric_appliance
+  level2: heating_plate
+  level3:
+  level4:
+  level5:
+- object_name: sink
+  level1: container
+  level2: sink
+  level3:
+  level4:
+  level5:
+operation_platform_height:
+device_model:
+- galaxea_r1_lite
+end_effector_type: two_finger_gripper

@@ -1,0 +1,21 @@
+dataset_name: open_and_close_curtains
+dataset_uuid:
+task_descriptions:
+- open close inner and outer curtains on both sides.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: curtains
+  level1: clothing
+  level2: curtains
+  level3:
+  level4:
+  level5:
+operation_platform_height:
+device_model:
+- galaxea_r1_lite
+end_effector_type: two_finger_gripper

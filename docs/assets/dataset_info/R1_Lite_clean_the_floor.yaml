@@ -1,0 +1,40 @@
+dataset_name: clean_the_floor
+dataset_uuid:
+task_descriptions:
+- wipe floor under carpet with rag then place foam net on floor.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+- wipe
+objects:
+- object_name: floor
+  level1: home_building_materials
+  level2: floor
+  level3:
+  level4:
+  level5:
+- object_name: rag
+  level1: fabric
+  level2: rag
+  level3:
+  level4:
+  level5:
+- object_name: carpet
+  level1: fabric
+  level2: carpet
+  level3:
+  level4:
+  level5:
+- object_name: foam_cleaning_net
+  level1: cleaning_supplies
+  level2: foam_cleaning_net
+  level3:
+  level4:
+  level5:
+operation_platform_height:
+device_model:
+- galaxea_r1_lite
+end_effector_type: two_finger_gripper

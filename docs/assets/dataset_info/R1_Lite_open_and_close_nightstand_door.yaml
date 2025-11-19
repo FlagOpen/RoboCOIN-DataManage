@@ -1,0 +1,58 @@
+dataset_name: open_and_close_nightstand_door
+dataset_uuid:
+task_descriptions:
+- put items on nightstand lower then higher shelf and close.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+- push
+objects:
+- object_name: nightstand
+  level1: furniture
+  level2: nightstand
+  level3:
+  level4:
+  level5:
+- object_name: basket
+  level1: container
+  level2: basket
+  level3:
+  level4:
+  level5:
+- object_name: pillow
+  level1: clothing
+  level2: pillow
+  level3:
+  level4:
+  level5:
+- object_name: bag
+  level1: container
+  level2: bag
+  level3:
+  level4:
+  level5:
+- object_name: blue_doll
+  level1: toy
+  level2: blue_doll
+  level3:
+  level4:
+  level5:
+- object_name: green_doll
+  level1: toy
+  level2: green_doll
+  level3:
+  level4:
+  level5:
+- object_name: pink_doll
+  level1: toy
+  level2: pink_doll
+  level3:
+  level4:
+  level5:
+operation_platform_height:
+device_model:
+- galaxea_r1_lite
+end_effector_type: two_finger_gripper

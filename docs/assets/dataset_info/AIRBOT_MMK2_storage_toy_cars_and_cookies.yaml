@@ -1,0 +1,41 @@
+dataset_name: storage_toy_cars_and_cookies
+dataset_uuid:
+task_descriptions:
+- with the left hand, pick up the red toy car and with the right hand, pick up the
+  blue packaged cookies, with the left hand, place the red toy car on the round lid,
+  with the right hand, put the blue packaged cookies on the round lid.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3:
+  level4:
+  level5:
+- object_name: toy_car
+  level1: toy
+  level2: toy_car
+  level3:
+  level4:
+  level5:
+- object_name: cookies
+  level1: food
+  level2: cookies
+  level3:
+  level4:
+  level5:
+- object_name: lid
+  level1: daily necessities
+  level2: lid
+  level3:
+  level4:
+  level5:
+operation_platform_height: 77.2
+device_model:
+- discover_robotics_aitbot_mmk2
+end_effector_type: two_finger_gripper

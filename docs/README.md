@@ -16,6 +16,7 @@ robocoin-html/
 │   │   ├── info/               # 索引文件
 │   │   │   ├── consolidated_datasets.json  # 合并的数据集信息
 │   │   │   └── data_index.json             # 数据集索引
+│   │   ├── thumbnails/         # 缩略图文件（*.jpg，由assets/thumbnails提供）
 │   │   └── videos/             # 视频文件（98个MP4）
 │   │
 │   ├── css/                    # 样式文件（模块化）
@@ -66,7 +67,7 @@ robocoin-html/
 - 视频自动播放
 - 悬浮信息层
 - 详情模态框
-- 缩略图预加载
+- 缩略图加载（从assets/thumbnails目录提供，不自动生成）
 
 ### 3. 选择和管理
 - 多选/单选

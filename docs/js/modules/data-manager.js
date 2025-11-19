@@ -97,6 +97,8 @@ export class DataManager {
             path: path,
             name: raw.dataset_name || path,
             video_url: `${this.config.paths.videos}/${path}.mp4`,
+            // Thumbnails are provided directly from assets/thumbnails directory
+            // No automatic thumbnail generation - thumbnails must exist in assets/thumbnails/${path}.jpg
             thumbnail_url: `${this.config.paths.assetsRoot}/thumbnails/${path}.jpg`,
             description: raw.task_descriptions || '',
             scenes: raw.scene_type || [],

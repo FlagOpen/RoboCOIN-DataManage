@@ -1,0 +1,44 @@
+dataset_name: plate_storaje_baozi
+dataset_uuid:
+task_descriptions:
+- put the steamed buns into the plate on the blue tablecloth.
+- put the steamed buns into the plate on the green tablecloth.
+- put the steamed buns into the plate on the grey tablecloth.
+- put the steamed buns into the plate on the pink tablecloth.
+- put the steamed buns into the plate on the white tablecloth.
+- put the steamed buns into the plate on the white-black tablecloth.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- place
+- pick
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3:
+  level4:
+  level5:
+- object_name: tablecloth
+  level1: clothing
+  level2: tablecloth
+  level3:
+  level4:
+  level5:
+- object_name: baozi
+  level1: food
+  level2: baozi
+  level3:
+  level4:
+  level5:
+- object_name: steamer
+  level1: container
+  level2: steamer
+  level3:
+  level4:
+  level5:
+operation_platform_height:
+device_model:
+- agilex_cobot_magic_aloha
+end_effector_type: two_finger_gripper

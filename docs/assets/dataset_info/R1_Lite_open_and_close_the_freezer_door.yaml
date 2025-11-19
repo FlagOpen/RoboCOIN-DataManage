@@ -1,0 +1,46 @@
+dataset_name: open_and_close_the_freezer_door
+dataset_uuid:
+task_descriptions:
+- put yogurt cups in freezer then take out and close.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+- open
+objects:
+- object_name: freezer
+  level1: furniture
+  level2: freezer
+  level3:
+  level4:
+  level5:
+- object_name: ceramic_cup
+  level1: container
+  level2: ceramic_cup
+  level3:
+  level4:
+  level5:
+- object_name: yogurt
+  level1: food
+  level2: yogurt
+  level3:
+  level4:
+  level5:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3:
+  level4:
+  level5:
+- object_name: paper_cup
+  level1: container
+  level2: paper_cup
+  level3:
+  level4:
+  level5:
+operation_platform_height:
+device_model:
+- galaxea_r1_lite
+end_effector_type: two_finger_gripper

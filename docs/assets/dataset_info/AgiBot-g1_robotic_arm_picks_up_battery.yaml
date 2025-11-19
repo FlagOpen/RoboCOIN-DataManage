@@ -1,0 +1,33 @@
+dataset_name: robotic_arm_picks_up_battery
+dataset_uuid:
+task_descriptions:
+- take the battery and put it on the table.
+scene_type:
+- factory
+atomic_actions:
+- place
+- pick
+- grasp
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3:
+  level4:
+  level5:
+- object_name: carton
+  level1: tool
+  level2: carton
+  level3:
+  level4:
+  level5:
+- object_name: battery
+  level1: tool
+  level2: battery
+  level3:
+  level4:
+  level5:
+operation_platform_height:
+device_model:
+- ruantong_a2d
+end_effector_type: two_finger_gripper

@@ -1,0 +1,39 @@
+dataset_name: storage_of_toiletries
+dataset_uuid:
+task_descriptions:
+- put comb toothpaste toothbrush in opened storage bag on table.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3:
+  level4:
+  level5:
+- object_name: toothpaste
+  level1: personal_care_products
+  level2: toothpaste
+  level3:
+  level4:
+  level5:
+- object_name: toothbrush
+  level1: personal_care_products
+  level2: toothbrush
+  level3:
+  level4:
+  level5:
+- object_name: comb
+  level1: personal_care_products
+  level2: comb
+  level3:
+  level4:
+  level5:
+operation_platform_height:
+device_model:
+- galaxea_r1_lite
+end_effector_type: two_finger_gripper

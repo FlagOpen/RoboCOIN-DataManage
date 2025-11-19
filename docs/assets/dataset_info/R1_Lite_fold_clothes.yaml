@@ -1,0 +1,33 @@
+dataset_name: fold_clothes
+dataset_uuid:
+task_descriptions:
+- fold t shirt shorts sweatshirt on bed then unfold them.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- fold
+- unfold
+objects:
+- object_name: bed
+  level1: furniture
+  level2: bed
+  level3:
+  level4:
+  level5:
+- object_name: bed_sheet
+  level1: fabric
+  level2: bed_sheet
+  level3:
+  level4:
+  level5:
+- object_name: clothes
+  level1: fabric
+  level2: clothes
+  level3:
+  level4:
+  level5:
+operation_platform_height:
+device_model:
+- galaxea_r1_lite
+end_effector_type: two_finger_gripper

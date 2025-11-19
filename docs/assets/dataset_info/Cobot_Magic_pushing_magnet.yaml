@@ -1,0 +1,25 @@
+dataset_name: pushing_magnet
+dataset_uuid:
+task_descriptions:
+- push the magnet on the table from its original position to another position.
+scene_type:
+- home
+atomic_actions:
+- push
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3:
+  level4:
+  level5:
+- object_name: magnet
+  level1: tool
+  level2: magnet
+  level3:
+  level4:
+  level5:
+operation_platform_height: 77.2
+device_model:
+- agilex_cobot_magic_aloha
+end_effector_type: two_finger_gripper

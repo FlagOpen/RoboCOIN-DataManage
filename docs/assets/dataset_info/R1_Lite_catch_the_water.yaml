@@ -1,0 +1,35 @@
+dataset_name: catch_the_water
+dataset_uuid:
+task_descriptions:
+- fill cup with faucet water then turn off and place on table.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+- open
+- close
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3:
+  level4:
+  level5:
+- object_name: water_dispenser
+  level1: container
+  level2: water_dispenser
+  level3:
+  level4:
+  level5:
+- object_name: cup
+  level1: container
+  level2: cup
+  level3:
+  level4:
+  level5:
+operation_platform_height:
+device_model:
+- galaxea_r1_lite
+end_effector_type: two_finger_gripper

@@ -1,0 +1,33 @@
+dataset_name: garbage_disposal
+dataset_uuid:
+task_descriptions:
+- pick up garbage from table and throw into trash can.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3:
+  level4:
+  level5:
+- object_name: garbage
+  level1: garbage
+  level2: garbage
+  level3:
+  level4:
+  level5:
+- object_name: trash_can
+  level1: container
+  level2: trash_can
+  level3:
+  level4:
+  level5:
+operation_platform_height:
+device_model:
+- galaxea_r1_lite
+end_effector_type: two_finger_gripper

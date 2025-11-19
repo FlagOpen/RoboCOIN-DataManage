@@ -1,0 +1,27 @@
+dataset_name: cover_the_pot_lid
+dataset_uuid:
+task_descriptions:
+- pick up the lid of the steamer and place it on the steamer.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: steamer_cage
+  level1: container
+  level2: steamer_cage
+  level3:
+  level4:
+  level5:
+- object_name: steamer_lid
+  level1: daily_necessities
+  level2: steamer_lid
+  level3:
+  level4:
+  level5:
+operation_platform_height:
+device_model:
+- galaxea_r1_lite
+end_effector_type: two_finger_gripper

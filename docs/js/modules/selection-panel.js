@@ -248,8 +248,9 @@ export class SelectionPanelManager {
      * Import selection from JSON file
      * @param {Event} event - File input change event
      * @param {Dataset[]} allDatasets - All available datasets
+     * @param {Function} onComplete - Callback function called after import completes
      */
-    handleImportFile(event, allDatasets) {
+    handleImportFile(event, allDatasets, onComplete) {
         const file = event.target.files[0];
         if (!file) return;
         
@@ -260,6 +261,7 @@ export class SelectionPanelManager {
                 
                 if (!Array.isArray(imported)) {
                     alert('Invalid JSON format. Expected an array of dataset IDs.');
+                    event.target.value = '';
                     return;
                 }
                 
@@ -285,6 +287,14 @@ export class SelectionPanelManager {
                 });
                 
                 this.markListChanged();
+                
+                // 刷新购物车显示
+                this.updateSelectionPanel();
+                
+                // 调用回调函数（用于更新视频网格样式等）
+                if (onComplete && typeof onComplete === 'function') {
+                    onComplete();
+                }
                 
                 alert(`Import completed!\nValid: ${validCount}\nInvalid/Not found: ${invalidCount}`);
                 

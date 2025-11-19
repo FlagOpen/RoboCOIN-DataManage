@@ -1,0 +1,27 @@
+dataset_name: take_and_place_the_portable_power_bank
+dataset_uuid:
+task_descriptions:
+- open cloth bag take out power bank then put back.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: cloth_bag
+  level1: container
+  level2: cloth_bag
+  level3:
+  level4:
+  level5:
+- object_name: portable_power_bank
+  level1: electronic_equipment
+  level2: portable_power_bank
+  level3:
+  level4:
+  level5:
+operation_platform_height:
+device_model:
+- galaxea_r1_lite
+end_effector_type: two_finger_gripper

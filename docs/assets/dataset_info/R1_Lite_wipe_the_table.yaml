@@ -1,0 +1,39 @@
+dataset_name: wipe_the_table
+dataset_uuid:
+task_descriptions:
+- wipe the stains on the table with a cloth.
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3:
+  level4:
+  level5:
+- object_name: towel
+  level1: clothing
+  level2: towel
+  level3:
+  level4:
+  level5:
+- object_name: tablecloth
+  level1: clothing
+  level2: tablecloth
+  level3:
+  level4:
+  level5:
+- object_name: stains
+  level1: rubbish
+  level2: stains
+  level3:
+  level4:
+  level5:
+operation_platform_height:
+device_model:
+- galaxea_r1_lite
+end_effector_type: two_finger_gripper

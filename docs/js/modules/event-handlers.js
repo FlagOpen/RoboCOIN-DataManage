@@ -518,9 +518,15 @@ export class EventHandlers {
         
         if (importFile) {
             importFile.addEventListener('change', (e) => {
-                this.managers.selectionPanel.handleImportFile(e, this.managers.filter.datasets);
-                this.managers.videoGrid.updateCardStyles();
-                this.managers.selectionPanel.updateSelectionPanel();
+                // 传入回调函数，在导入完成后更新视频网格样式
+                this.managers.selectionPanel.handleImportFile(
+                    e, 
+                    this.managers.filter.datasets,
+                    () => {
+                        // 导入完成后更新视频网格样式
+                        this.managers.videoGrid.updateCardStyles();
+                    }
+                );
             });
         }
         
