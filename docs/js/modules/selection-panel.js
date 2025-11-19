@@ -189,10 +189,11 @@ export class SelectionPanelManager {
                 this._listDatasetsChanged = false;
             }
             
-            const dsListContent = this._sortedPathsCache.join(' \\\n');
-            
             requestAnimationFrame(() => {
-                output.textContent = `robocoin-download \\\n--hub ${this.currentHub} \\\n--ds_lists ${dsListContent} \\\n--target-dir `;
+                output.textContent = ConfigManager.generateDownloadCommand(
+                    this.currentHub,
+                    this._sortedPathsCache
+                );
             });
         }, 100);
     }
