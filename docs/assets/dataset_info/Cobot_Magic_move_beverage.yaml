@@ -1,5 +1,5 @@
 dataset_name: move_beverage
-dataset_uuid:
+dataset_uuid: null
 task_descriptions:
 - move one drink among three beverages.
 scene_type:
@@ -14,28 +14,27 @@ objects:
 - object_name: table
   level1: furniture
   level2: table
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: fanta
   level1: drink
   level2: fanta
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: sprite
   level1: drink
   level2: sprite
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: cola
   level1: drink
   level2: cola
-  level3:
-  level4:
-  level5:
-device_model:
-- agilex_cobot_magic_aloha
+  level3: null
+  level4: null
+  level5: null
+device_model: Cobot_Magic
 end_effector_type: two_finger_gripper
 operation_platform_height: 77.2

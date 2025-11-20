@@ -30,6 +30,5 @@ objects:
   level3: null
   level4: null
 operation_platform_height: null
-device_model:
-- AgiBot-g1
+device_model: AgiBot-g1
 end_effector_type: two_finger_gripper

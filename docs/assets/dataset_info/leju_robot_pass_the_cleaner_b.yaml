@@ -1,5 +1,5 @@
 dataset_name: pass_the_cleaner_b
-dataset_uuid:
+dataset_uuid: null
 task_descriptions:
 - pick up the cleaner and put it on the table.
 scene_type:
@@ -13,16 +13,15 @@ objects:
 - object_name: table
   level1: furniture
   level2: table
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: cleaner
   level1: daily_necessities
   level2: cleaner
-  level3:
-  level4:
-  level5:
-operation_platform_height:
-device_model:
-- leju_robot
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
+device_model: leju_robot
 end_effector_type: two_finger_gripper

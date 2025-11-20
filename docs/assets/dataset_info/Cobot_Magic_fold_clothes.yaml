@@ -1,5 +1,5 @@
 dataset_name: fold_clothes
-dataset_uuid:
+dataset_uuid: null
 task_descriptions:
 - fold a grey long-sleeved shirt over a blue coffee tablecloth.
 - fold a grey long-sleeved shirt over the brown coffee tablecloth.
@@ -17,22 +17,21 @@ objects:
 - object_name: table
   level1: furniture
   level2: table
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: long_sleeves
   level1: clothing
   level2: long_sleeves
-  level3:
-  level4:
-  level5:
+  level3: null
+  level4: null
+  level5: null
 - object_name: tablecloth
   level1: clothing
   level2: tablecloth
-  level3:
-  level4:
-  level5:
-operation_platform_height:
-device_model:
-- agilex_cobot_magic_aloha
+  level3: null
+  level4: null
+  level5: null
+operation_platform_height: null
+device_model: Cobot_Magic
 end_effector_type: two_finger_gripper

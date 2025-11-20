@@ -267,7 +267,6 @@ objects:
   level3: null
   level4: null
   level5: null
-device_model:
-- R1_Lite
+device_model: R1_Lite
 end_effector_type: two_finger_gripper
 operation_platform_height: 77.2

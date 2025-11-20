@@ -33,6 +33,5 @@ objects:
   level4: null
   level5: null
 operation_platform_height: 77.2
-device_model:
-- RMC-AIDA-L
+device_model: RMC-AIDA-L
 end_effector_type: two_finger_gripper

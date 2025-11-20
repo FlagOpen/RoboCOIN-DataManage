@@ -44,9 +44,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "AgiBot-g1"
-    ],
+    "device_model": "AgiBot-g1",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_place_the_shark_toys_and_gold_bars": {
@@ -98,9 +96,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_make_tea": {
@@ -169,9 +165,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "RMC-AIDA-L_pour_coffee_beans": {
@@ -264,9 +258,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "RMC-AIDA-L"
-    ],
+    "device_model": "RMC-AIDA-L",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_push_building_blocks": {
@@ -302,9 +294,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_fold_clothes": {
@@ -348,9 +338,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "AgiBot-g1_mobile_accessory_storage_box_e": {
@@ -394,9 +382,7 @@
       }
     ],
     "-operation_platform_height": null,
-    "device_model": [
-      "AgiBot-g1"
-    ],
+    "device_model": "AgiBot-g1",
     "end_effector_type": "two_finger_gripper"
   },
   "AgiBot-g1_picks_up_cardboard_box": {
@@ -439,9 +425,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "AgiBot-g1"
-    ],
+    "device_model": "AgiBot-g1",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_make_the_bed": {
@@ -486,9 +470,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "Split_aloha_basket_storage_peach": {
@@ -533,9 +515,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Split_aloha",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_switch_labels": {
@@ -579,9 +559,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_cake_storage": {
@@ -625,9 +603,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_take_and_place_the_portable_power_bank": {
@@ -663,9 +639,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_place_the_building_blocks": {
@@ -709,9 +683,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_place_the_umbrella_and_the_ruler": {
@@ -763,9 +735,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_fold_clothes": {
@@ -814,9 +784,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "AgiBot-g1_picks_up_parts_a": {
@@ -860,9 +828,7 @@
       }
     ],
     "-operation_platform_height": null,
-    "device_model": [
-      "AgiBot-g1"
-    ],
+    "device_model": "AgiBot-g1",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_pass_the_cleaner_c": {
@@ -899,9 +865,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_storage_for_building_blocks_and_beauty_sponges": {
@@ -987,9 +951,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_make_a_landline_call": {
@@ -1025,9 +987,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_hotel_services_c": {
@@ -1079,9 +1039,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "AgiBot-g1_box_storage_b": {
@@ -1117,9 +1075,7 @@
       }
     ],
     "-operation_platform_height": null,
-    "device_model": [
-      "AgiBot-g1"
-    ],
+    "device_model": "AgiBot-g1",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_the_plate_holds_the_vegetables": {
@@ -1176,9 +1132,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "RMC-AIDA-L_glasses_storage": {
@@ -1227,9 +1181,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "RMC-AIDA-L"
-    ],
+    "device_model": "RMC-AIDA-L",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_washing_board": {
@@ -1284,9 +1236,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_storage_remote_control_clip_box_water_bottle": {
@@ -1338,9 +1288,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_storage_wet_tissue_and_building_block": {
@@ -1392,9 +1340,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_storage_tissue_paper": {
@@ -1438,9 +1384,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "RMC-AIDA-L_stack_baskets": {
@@ -1485,9 +1429,7 @@
         "level5": null
       }
     ],
-    "device_model": [
-      "RMC-AIDA-L"
-    ],
+    "device_model": "RMC-AIDA-L",
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
   },
@@ -1536,9 +1478,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "AgiBot-g1"
-    ],
+    "device_model": "AgiBot-g1",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_move_the_bread": {
@@ -1582,9 +1522,43 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
+    "device_model": "Cobot_Magic",
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AgiBot-g1_box_storage_e": {
+    "dataset_name": "box_storage_e",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "place the small box on the table into the large box on the left."
     ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "box",
+        "level1": "container",
+        "level2": "box",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "-operation_platform_height": null,
+    "device_model": "AgiBot-g1",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_hotel_services_ag": {
@@ -1636,9 +1610,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "Split_aloha_basket_storage_banana": {
@@ -1683,9 +1655,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Split_aloha",
     "end_effector_type": "two_finger_gripper"
   },
   "Split_aloha_basket_storage_long_bread": {
@@ -1730,9 +1700,51 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
+    "device_model": "Split_aloha",
+    "end_effector_type": "two_finger_gripper"
+  },
+  "leju_robot_moving_parts_n": {
+    "dataset_name": "moving_parts_n",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take the parts from the cabinet and place them on the table."
     ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cabinet",
+        "level1": "furniture",
+        "level2": "cabinet",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "parts",
+        "level1": "mechanical_parts",
+        "level2": "parts",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "AgiBot-g1_pick_up_battery": {
@@ -1776,9 +1788,7 @@
       }
     ],
     "-operation_platform_height": null,
-    "device_model": [
-      "AgiBot-g1"
-    ],
+    "device_model": "AgiBot-g1",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_diamond_storage": {
@@ -1823,9 +1833,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "Split_aloha_plate_storage": {
@@ -1874,9 +1882,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Split_aloha",
     "end_effector_type": "two_finger_gripper"
   },
   "AgiBot-g1_box_storage_cardboard_box_a": {
@@ -1919,9 +1925,7 @@
       }
     ],
     "-operation_platform_height": null,
-    "device_model": [
-      "AgiBot-g1"
-    ],
+    "device_model": "AgiBot-g1",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_switch_on_and_off_the_central_air_conditioning": {
@@ -1949,9 +1953,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "RMC-AIDA-L_get_water": {
@@ -2008,9 +2010,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "RMC-AIDA-L"
-    ],
+    "device_model": "RMC-AIDA-L",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_hotel_services_ab": {
@@ -2062,9 +2062,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_cup_storage": {
@@ -2108,9 +2106,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_twist_bottle_cap": {
@@ -2196,10 +2192,44 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
+  },
+  "alpha_bot_2_sticker": {
+    "dataset_name": "sticker",
+    "task_descriptions": [
+      "stick the poster on the table by hand."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "poster",
+        "level1": "toy",
+        "level2": "poster",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": "alpha_bot_2",
+    "end_effector_type": "two_finger_gripper",
+    "dataset_uuid": null
   },
   "R1_Lite_stack_baskets": {
     "dataset_name": "stack_baskets",
@@ -2235,9 +2265,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_connect_the_router_cable": {
@@ -2298,9 +2326,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_pour_drink": {
@@ -2510,9 +2536,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_wash_the_tableware": {
@@ -2580,9 +2604,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_store_peaches_and_pears": {
@@ -2633,9 +2655,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_box_storage_parcel_d": {
@@ -2687,9 +2707,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_move_the_cup": {
@@ -2733,9 +2751,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_storage_of_toiletries": {
@@ -2787,9 +2803,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "AgiBot-g1_storage_item_d": {
@@ -2839,9 +2853,7 @@
       }
     ],
     "-operation_platform_height": null,
-    "device_model": [
-      "AgiBot-g1"
-    ],
+    "device_model": "AgiBot-g1",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_pass_the_cleaner_d": {
@@ -2878,9 +2890,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_pass_the_cleaner_b": {
@@ -2917,9 +2927,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_place_the_test_tube": {
@@ -2976,9 +2984,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_open_the_food_pan": {
@@ -3014,9 +3020,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_pass_the_cleaner_e": {
@@ -3053,9 +3057,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "RMC-AIDA-L_basket_storage_orange": {
@@ -3104,9 +3106,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "RMC-AIDA-L"
-    ],
+    "device_model": "RMC-AIDA-L",
     "end_effector_type": "two_finger_gripper"
   },
   "Split_aloha_scoop_coffee_beans": {
@@ -3175,9 +3175,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Split_aloha",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_put_on_a_garbage_bag": {
@@ -3221,9 +3219,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_hotel_services_f": {
@@ -3275,9 +3271,95 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
+    "device_model": "leju_robot",
+    "end_effector_type": "two_finger_gripper"
+  },
+  "alpha_bot_2_pass_the_sandbag": {
+    "dataset_name": "pass_the_sandbag",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "the right hand took the sandbag from the left hand and placed it on the table."
     ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "sandbag",
+        "level1": "toy",
+        "level2": "sandbag",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": "alpha_bot_2",
+    "end_effector_type": "two_finger_gripper"
+  },
+  "AIRBOT_MMK2_clean_the_desktop_a": {
+    "dataset_name": "clean_the_desktop",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "place the umbrella and tissues on the white lid."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "pick",
+      "place"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "umbrella",
+        "level1": "daily_necessities",
+        "level2": "umbrella",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "tissues",
+        "level1": "daily_necessities",
+        "level2": "tissues",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "lid",
+        "level1": "container",
+        "level2": "lid",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": 77.2,
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_store_beauty_blender_and_building_blocks": {
@@ -3329,9 +3411,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "RMC-AIDA-L_place_the_fruits_repeatedly": {
@@ -3407,9 +3487,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "RMC-AIDA-L"
-    ],
+    "device_model": "RMC-AIDA-L",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_place_the_piano_and_the_needle-nose_pliers": {
@@ -3461,9 +3539,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_take_the_book": {
@@ -3498,9 +3574,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_move_the_plate": {
@@ -3536,9 +3610,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "AgiBot-g1_robotic_arm_picks_up_battery": {
@@ -3582,9 +3654,43 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "AgiBot-g1"
+    "device_model": "AgiBot-g1",
+    "end_effector_type": "two_finger_gripper"
+  },
+  "alpha_bot_2_stack_building_blocks": {
+    "dataset_name": "stack_building_blocks",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "stack building blocks on the table."
     ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "building_blocks",
+        "level1": "toy",
+        "level2": "building_blocks",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": "alpha_bot_2",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_catch_the_ball": {
@@ -3620,9 +3726,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_bowl_storage_pepper": {
@@ -3674,9 +3778,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_move_the_position_of_the_cookie": {
@@ -4039,9 +4141,7 @@
         "level5": null
       }
     ],
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
   },
@@ -4086,9 +4186,35 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
+    "device_model": "Cobot_Magic",
+    "end_effector_type": "two_finger_gripper"
+  },
+  "alpha_bot_2_carry_the_clothes_basket": {
+    "dataset_name": "carry_the_clothes_basket",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "carry the clothes basket in coordination with both hands."
     ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "clothes_basket",
+        "level1": "container",
+        "level2": "clothes_basket",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": "alpha_bot_2",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_tableware_arrangement": {
@@ -4156,9 +4282,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_hotel_services_ad": {
@@ -4210,9 +4334,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "AgiBot-g1_remove_the_accessory": {
@@ -4256,9 +4378,7 @@
       }
     ],
     "-operation_platform_height": null,
-    "device_model": [
-      "AgiBot-g1"
-    ],
+    "device_model": "AgiBot-g1",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_box_storage_parcel_g": {
@@ -4310,9 +4430,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_place_the_small_bowl_of_canned_food": {
@@ -4356,9 +4474,43 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
+    "device_model": "AIRBOT_MMK2",
+    "end_effector_type": "two_finger_gripper"
+  },
+  "alpha_bot_2_item_reversal": {
+    "dataset_name": "item_reversal",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "on the white table pick up the cup wit your left hand and hand it to your right hand then turn it over."
     ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cup",
+        "level1": "container",
+        "level2": "cup",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": "alpha_bot_2",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_steamer_storage_dumpling": {
@@ -4415,9 +4567,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_plate_storaje_baozi": {
@@ -4474,9 +4624,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_move_the_position_of_the_milk": {
@@ -4839,9 +4987,7 @@
         "level5": null
       }
     ],
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
   },
@@ -4894,9 +5040,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_take_and_put_away_garden_stuff_a": {
@@ -4990,9 +5134,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_move_beverage": {
@@ -5045,9 +5187,7 @@
         "level5": null
       }
     ],
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
   },
@@ -5084,9 +5224,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_storage_plate": {
@@ -5144,9 +5282,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "Split_aloha_wipe_the_table": {
@@ -5203,9 +5339,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Split_aloha",
     "end_effector_type": "two_finger_gripper"
   },
   "RMC-AIDA-L_food_packaging": {
@@ -5284,9 +5418,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "RMC-AIDA-L"
-    ],
+    "device_model": "RMC-AIDA-L",
     "end_effector_type": "two_finger_gripper"
   },
   "AgiBot-g1_tool_storage": {
@@ -5330,9 +5462,7 @@
       }
     ],
     "-operation_platform_height": null,
-    "device_model": [
-      "AgiBot-g1"
-    ],
+    "device_model": "AgiBot-g1",
     "end_effector_type": "two_finger_gripper"
   },
   "Split_aloha_wipe_table": {
@@ -5386,9 +5516,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Split_aloha",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_pour_water": {
@@ -5441,9 +5569,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "AgiBot-g1_picks_up_battery_b": {
@@ -5487,9 +5613,7 @@
       }
     ],
     "-operation_platform_height": null,
-    "device_model": [
-      "AgiBot-g1"
-    ],
+    "device_model": "AgiBot-g1",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_close_the_computer": {
@@ -5525,9 +5649,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "RMC-AIDA-L_build_blocks": {
@@ -5563,9 +5685,7 @@
         "level5": null
       }
     ],
-    "device_model": [
-      "RMC-AIDA-L"
-    ],
+    "device_model": "RMC-AIDA-L",
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
   },
@@ -5602,9 +5722,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_take_and_put_the_bowl": {
@@ -5664,9 +5782,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_put_the_pillow_on_the_bed": {
@@ -5702,9 +5818,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "RMC-AIDA-L_stir_coffee": {
@@ -5766,9 +5880,7 @@
         "level5": null
       }
     ],
-    "device_model": [
-      "RMC-AIDA-L"
-    ],
+    "device_model": "RMC-AIDA-L",
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
   },
@@ -5831,9 +5943,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "RMC-AIDA-L"
-    ],
+    "device_model": "RMC-AIDA-L",
     "end_effector_type": "two_finger_gripper"
   },
   "Split_aloha_basket_storage_orange": {
@@ -5878,9 +5988,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Split_aloha",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_build_blocks": {
@@ -5917,9 +6025,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_open_and_close_microwave_oven": {
@@ -5967,9 +6073,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_pull_zipper": {
@@ -6009,9 +6113,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_place_the_cake": {
@@ -6099,9 +6201,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "Split_aloha_pour_rice": {
@@ -6155,9 +6255,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Split_aloha",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_clean_the_sink": {
@@ -6204,9 +6302,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "Tianqin_A2_box_storage_part": {
@@ -6291,9 +6387,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Split_aloha",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_store_wet_wipes_and_bowls": {
@@ -6345,9 +6439,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_open_and_close_curtains": {
@@ -6375,9 +6467,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_moving_parts_c": {
@@ -6421,9 +6511,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_mobile_phone_storage": {
@@ -6467,9 +6555,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_take_out_a_pen_from_the_pen_holder": {
@@ -6519,9 +6605,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_move_the_position_of_the_long_bread": {
@@ -6884,9 +6968,7 @@
         "level5": null
       }
     ],
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
   },
@@ -6952,9 +7034,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_mobile_cube": {
@@ -6990,9 +7070,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "RMC-AIDA-L_fold_shorts": {
@@ -7032,9 +7110,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "RMC-AIDA-L"
-    ],
+    "device_model": "RMC-AIDA-L",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_hang_clothes": {
@@ -7086,9 +7162,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_hotel_services_i": {
@@ -7140,9 +7214,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_place_the_yellow_block": {
@@ -7186,9 +7258,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_box_storage_parcel_b": {
@@ -7240,9 +7310,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_storage_spoon": {
@@ -7286,9 +7354,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_mobile_cube_blackboard": {
@@ -7324,9 +7390,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "AgiBot-g1_box_storage_c": {
@@ -7362,9 +7426,7 @@
       }
     ],
     "-operation_platform_height": null,
-    "device_model": [
-      "AgiBot-g1"
-    ],
+    "device_model": "AgiBot-g1",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_open_and_close_nightstand_drawer": {
@@ -7409,9 +7471,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_hotel_services_aa": {
@@ -7463,9 +7523,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_hotel_services_ae": {
@@ -7517,9 +7575,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_clear_the_desktop": {
@@ -7565,9 +7621,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_open_and_close_the_freezer_door": {
@@ -7628,9 +7682,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_part_placement": {
@@ -7674,9 +7726,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_move_the_ball": {
@@ -7720,10 +7770,94 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
+  },
+  "alpha_bot_2_press_the_button_a": {
+    "dataset_name": "press_the_button_a",
+    "task_descriptions": [
+      "after avoiding the water bottle on the table, press the button."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "pressbutton"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "water_bottle",
+        "level1": "container",
+        "level2": "water_bottle",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "button",
+        "level1": "toy",
+        "level2": "button",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": "alpha_bot_2",
+    "end_effector_type": "two_finger_gripper",
+    "dataset_uuid": null
+  },
+  "alpha_bot_2_recover_after_touching_an_obstacle": {
+    "dataset_name": "recover_after_touching_an_obstacle",
+    "task_descriptions": [
+      "return to a safe position after touching an obstacle with your arm on the white table."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "pick",
+      "grasp",
+      null
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "mineral_water",
+        "level1": "drinks",
+        "level2": "mineral_water",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "button",
+        "level1": "toy",
+        "level2": "button",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": "alpha_bot_2",
+    "end_effector_type": "two_finger_gripper",
+    "dataset_uuid": null
   },
   "leju_robot_pass_the_cleaner_a": {
     "dataset_name": "pass_the_cleaner_a",
@@ -7759,9 +7893,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_move_the_position_of_the_brush": {
@@ -8124,9 +8256,7 @@
         "level5": null
       }
     ],
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
   },
@@ -8179,9 +8309,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_cube_reset": {
@@ -8225,9 +8353,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "AgiBot-g1_robotic_arm_picks_up_parts": {
@@ -8271,9 +8397,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "AgiBot-g1"
-    ],
+    "device_model": "AgiBot-g1",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_organize_books": {
@@ -8317,9 +8441,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "RMC-AIDA-L_fold_towel": {
@@ -8357,9 +8479,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "RMC-AIDA-L"
-    ],
+    "device_model": "RMC-AIDA-L",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_peach_storage": {
@@ -8405,9 +8525,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_turn_on_the_bulb": {
@@ -8441,9 +8559,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_move_the_position_of_the_apple": {
@@ -8806,9 +8922,7 @@
         "level5": null
       }
     ],
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
   },
@@ -8853,9 +8967,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_hotel_services_e": {
@@ -8907,9 +9019,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "AgiBot-g1_picks_up_battery_a": {
@@ -8953,9 +9063,7 @@
       }
     ],
     "-operation_platform_height": null,
-    "device_model": [
-      "AgiBot-g1"
-    ],
+    "device_model": "AgiBot-g1",
     "end_effector_type": "two_finger_gripper"
   },
   "AgiBot-g1_mobile_accessory_storage_box_a": {
@@ -8999,9 +9107,7 @@
       }
     ],
     "-operation_platform_height": null,
-    "device_model": [
-      "AgiBot-g1"
-    ],
+    "device_model": "AgiBot-g1",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_pushing_magnet": {
@@ -9035,9 +9141,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_moving_parts_b": {
@@ -9081,9 +9185,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "AgiBot-g1_battery_storage_b": {
@@ -9127,9 +9229,7 @@
       }
     ],
     "-operation_platform_height": null,
-    "device_model": [
-      "AgiBot-g1"
-    ],
+    "device_model": "AgiBot-g1",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_the_box_stores_table_tennis_balls": {
@@ -9186,9 +9286,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_take_and_put_away_items": {
@@ -9258,9 +9356,51 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
+    "device_model": "R1_Lite",
+    "end_effector_type": "two_finger_gripper"
+  },
+  "leju_robot_moving_parts_u": {
+    "dataset_name": "moving_parts_u",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take the parts from the cabinet and place them on the table."
     ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cabinet",
+        "level1": "furniture",
+        "level2": "cabinet",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "parts",
+        "level1": "mechanical_parts",
+        "level2": "parts",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "RMC-AIDA-L_clean_table": {
@@ -9325,9 +9465,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "RMC-AIDA-L"
-    ],
+    "device_model": "RMC-AIDA-L",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_hotel_services_b": {
@@ -9379,9 +9517,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_pour_water_bottle": {
@@ -9435,9 +9571,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "AgiBot-g1_box_storage_a": {
@@ -9473,9 +9607,7 @@
       }
     ],
     "-operation_platform_height": null,
-    "device_model": [
-      "AgiBot-g1"
-    ],
+    "device_model": "AgiBot-g1",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_move_the_position_of_the_duck": {
@@ -9838,9 +9970,7 @@
         "level5": null
       }
     ],
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
   },
@@ -9881,9 +10011,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_catch_the_water": {
@@ -9929,9 +10057,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_place_the_glasses_case_and_gold_bars": {
@@ -9975,9 +10101,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_plate_storage_bread": {
@@ -10021,9 +10145,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_box_storage_parcel_h": {
@@ -10075,9 +10197,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "AgiBot-g1_box_storage_cardboard_box_b": {
@@ -10120,9 +10240,7 @@
       }
     ],
     "-operation_platform_height": null,
-    "device_model": [
-      "AgiBot-g1"
-    ],
+    "device_model": "AgiBot-g1",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_fold_the_towel": {
@@ -10171,9 +10289,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_move_the_position_of_the_black_marker": {
@@ -10536,9 +10652,7 @@
         "level5": null
       }
     ],
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
   },
@@ -10582,9 +10696,7 @@
       }
     ],
     "-operation_platform_height": null,
-    "device_model": [
-      "AgiBot-g1"
-    ],
+    "device_model": "AgiBot-g1",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_movethe_position_of_the_bluetooth": {
@@ -10629,9 +10741,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_tableware_cleaning": {
@@ -10707,9 +10817,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_boxs_storage": {
@@ -10787,9 +10895,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_place_the_blue_and_purple_blocks": {
@@ -10833,9 +10939,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_move_the_position_of_the_triangle_bread": {
@@ -11206,9 +11310,7 @@
         "level5": null
       }
     ],
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
   },
@@ -11261,9 +11363,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_pour_out_the_beauty_blender": {
@@ -11315,9 +11415,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_item_storage": {
@@ -11382,9 +11480,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_opening_and_closing_aalcony_sliding_doors": {
@@ -11412,9 +11508,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_plate_storage_apple": {
@@ -11458,9 +11552,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "Split_aloha_basket_storage_bread": {
@@ -11508,9 +11600,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Split_aloha",
     "end_effector_type": "two_finger_gripper"
   },
   "AgiBot-g1_storage_item_e": {
@@ -11560,9 +11650,7 @@
       }
     ],
     "-operation_platform_height": null,
-    "device_model": [
-      "AgiBot-g1"
-    ],
+    "device_model": "AgiBot-g1",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_move_the_position_of_the_orange": {
@@ -11925,9 +12013,7 @@
         "level5": null
       }
     ],
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
   },
@@ -12291,9 +12377,7 @@
         "level5": null
       }
     ],
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
   },
@@ -12346,9 +12430,51 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
+    "device_model": "leju_robot",
+    "end_effector_type": "two_finger_gripper"
+  },
+  "leju_robot_moving_parts_q": {
+    "dataset_name": "moving_parts_q",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take the parts from the cabinet and place them on the table."
     ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cabinet",
+        "level1": "furniture",
+        "level2": "cabinet",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "parts",
+        "level1": "mechanical_parts",
+        "level2": "parts",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_fold_towel_a": {
@@ -12385,9 +12511,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_storage_box_for_mouse_and_sponge": {
@@ -12439,9 +12563,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_take_the_shoes_off_the_shelf": {
@@ -12490,9 +12612,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_wipe_the_table": {
@@ -12544,9 +12664,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_take_down_umbrella_and_mineral_water": {
@@ -12642,9 +12760,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_storage_tissue_and_milk_carton": {
@@ -12696,9 +12812,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "RMC-AIDA-L_pour_tea": {
@@ -12753,9 +12867,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "RMC-AIDA-L"
-    ],
+    "device_model": "RMC-AIDA-L",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_tea_service_table_setting": {
@@ -12823,9 +12935,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_storage_item": {
@@ -12885,9 +12995,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_box_storage_parcel_a": {
@@ -12939,9 +13047,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "RMC-AIDA-L_food_storage": {
@@ -13021,9 +13127,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "RMC-AIDA-L"
-    ],
+    "device_model": "RMC-AIDA-L",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_the_plate_holds_the_fruit": {
@@ -13080,9 +13184,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_screw_the_bottle_cap": {
@@ -13118,9 +13220,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_toy_storage": {
@@ -13191,9 +13291,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_mobile_car": {
@@ -13227,9 +13325,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_garbage_disposal": {
@@ -13273,9 +13369,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_moving_parts_k": {
@@ -13319,9 +13413,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_place_the_books": {
@@ -13366,9 +13458,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_pull_the_syringe_piston": {
@@ -13404,9 +13494,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_move_the_position_of_the_peeler": {
@@ -13769,9 +13857,7 @@
         "level5": null
       }
     ],
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
   },
@@ -13824,9 +13910,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_water_bottle_storage": {
@@ -13871,9 +13955,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_make_breakfast": {
@@ -13966,9 +14048,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_move_the_small_ball": {
@@ -14004,9 +14084,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_hotel_services_d": {
@@ -14058,9 +14136,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_egg_storage": {
@@ -14113,9 +14189,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_dispose_of_leftover_food": {
@@ -14176,9 +14250,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_cover_the_pot_lid": {
@@ -14214,9 +14286,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "Split_aloha_basket_storage_egg_yolk_pastry": {
@@ -14261,9 +14331,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Split_aloha",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_tidy_up_toiletries": {
@@ -14323,9 +14391,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "AgiBot-g1_storage_item_b": {
@@ -14375,9 +14441,35 @@
       }
     ],
     "-operation_platform_height": null,
-    "device_model": [
-      "AgiBot-g1"
+    "device_model": "AgiBot-g1",
+    "end_effector_type": "two_finger_gripper"
+  },
+  "alpha_bot_2_move_the_table": {
+    "dataset_name": "move_the_table",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "human machine collaborative table moving."
     ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": "alpha_bot_2",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_moving_parts_f": {
@@ -14421,9 +14513,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_food_storage": {
@@ -14553,9 +14643,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_take_and_put_away_garden_stuff": {
@@ -14649,9 +14737,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_put_the_building_block_on_the_table": {
@@ -14688,9 +14774,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "RMC-AIDA-L_basket_storage_banana": {
@@ -14738,9 +14822,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "RMC-AIDA-L"
-    ],
+    "device_model": "RMC-AIDA-L",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_box_storage_parcel_j": {
@@ -14792,9 +14874,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_hotel_services_af": {
@@ -14846,9 +14926,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_take_or_store_plates": {
@@ -14900,9 +14978,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_move_the_position_of_the_rubiks_cube": {
@@ -15265,9 +15341,7 @@
         "level5": null
       }
     ],
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
   },
@@ -15304,9 +15378,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "AgiBot-g1_mobile_accessory_storage_box_c": {
@@ -15350,9 +15422,7 @@
       }
     ],
     "-operation_platform_height": null,
-    "device_model": [
-      "AgiBot-g1"
-    ],
+    "device_model": "AgiBot-g1",
     "end_effector_type": "two_finger_gripper"
   },
   "Tianqin_A2_container_storage_graphics_card": {
@@ -15487,9 +15557,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_place_the_network_cable_and_mouse_box": {
@@ -15541,9 +15609,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_move_the_ball_interference": {
@@ -15587,9 +15653,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_double-sided_tape_placement": {
@@ -15633,9 +15697,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_close_book": {
@@ -15680,9 +15742,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_turn_on_the_desk_lamp": {
@@ -15729,9 +15789,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "RMC-AIDA-L_desktop_organization": {
@@ -15872,9 +15930,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "RMC-AIDA-L"
-    ],
+    "device_model": "RMC-AIDA-L",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_play_the_guitar": {
@@ -15911,9 +15967,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_move_the_position_of_the_pen": {
@@ -16277,9 +16331,7 @@
         "level5": null
       }
     ],
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
   },
@@ -16324,9 +16376,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_organize_and_place_books": {
@@ -16362,9 +16412,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_sliding_chair": {
@@ -16400,9 +16448,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_pumpkin_storage": {
@@ -16446,9 +16492,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_potato_storage": {
@@ -16494,9 +16538,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_classification_of_tableware": {
@@ -16577,9 +16619,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_clean_blackboard": {
@@ -16622,9 +16662,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_place_the_paper_drawer": {
@@ -16858,9 +16896,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_storage_toy_cars_and_cookies": {
@@ -16912,9 +16948,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_box_storage_parcel_c": {
@@ -16966,9 +17000,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_desktop_storage": {
@@ -17028,9 +17060,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_pot_storage_steamer": {
@@ -17095,9 +17125,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_close_button": {
@@ -17144,9 +17172,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_open_and_close_nightstand_door": {
@@ -17223,9 +17249,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_move_the_position_of_the_glass": {
@@ -17588,9 +17612,7 @@
         "level5": null
       }
     ],
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper",
     "operation_platform_height": 77.2
   },
@@ -17643,9 +17665,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_square_arrangement": {
@@ -17681,10 +17701,44 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
+  },
+  "alpha_bot_2_operate_the_microwave_oven": {
+    "dataset_name": "operate_the_microwave_oven",
+    "task_descriptions": [
+      "set the temperature of the microwave oven and turn it on. Open the door of the microwave oven and then close it."
+    ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "pullapart",
+      "pushtogether",
+      "turn"
+    ],
+    "objects": [
+      {
+        "object_name": "microwave_oven",
+        "level1": "kitchenware",
+        "level2": "microwave_oven",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": "alpha_bot_2",
+    "end_effector_type": "two_finger_gripper",
+    "dataset_uuid": null
   },
   "AIRBOT_MMK2_lemon_and_orange_storage": {
     "dataset_name": "lemon_and_orange_storage",
@@ -17735,9 +17789,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_take_down_paper_cup": {
@@ -17781,9 +17833,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
-    ],
+    "device_model": "AIRBOT_MMK2",
     "end_effector_type": "two_finger_gripper"
   },
   "leju_robot_hotel_services_a": {
@@ -17835,9 +17885,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "leju_robot"
-    ],
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_clean_toilet": {
@@ -17892,9 +17940,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   },
   "Cobot_Magic_move_plate": {
@@ -17931,9 +17977,7 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "agilex_cobot_magic_aloha"
-    ],
+    "device_model": "Cobot_Magic",
     "end_effector_type": "two_finger_gripper"
   },
   "AIRBOT_MMK2_storage_rubiks_cube_and_cup": {
@@ -17985,9 +18029,51 @@
       }
     ],
     "operation_platform_height": 77.2,
-    "device_model": [
-      "AIRBOT_MMK2"
+    "device_model": "AIRBOT_MMK2",
+    "end_effector_type": "two_finger_gripper"
+  },
+  "leju_robot_moving_parts_r": {
+    "dataset_name": "moving_parts_r",
+    "dataset_uuid": null,
+    "task_descriptions": [
+      "take the parts from the cabinet and place them on the table."
     ],
+    "scene_type": [
+      "home"
+    ],
+    "atomic_actions": [
+      "grasp",
+      "place",
+      "pick"
+    ],
+    "objects": [
+      {
+        "object_name": "table",
+        "level1": "furniture",
+        "level2": "table",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "cabinet",
+        "level1": "furniture",
+        "level2": "cabinet",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      },
+      {
+        "object_name": "parts",
+        "level1": "mechanical_parts",
+        "level2": "parts",
+        "level3": null,
+        "level4": null,
+        "level5": null
+      }
+    ],
+    "operation_platform_height": null,
+    "device_model": "leju_robot",
     "end_effector_type": "two_finger_gripper"
   },
   "R1_Lite_clean_the_floor": {
@@ -18040,9 +18126,7 @@
       }
     ],
     "operation_platform_height": null,
-    "device_model": [
-      "R1_Lite"
-    ],
+    "device_model": "R1_Lite",
     "end_effector_type": "two_finger_gripper"
   }
 }
