@@ -359,6 +359,68 @@ export class EventHandlers {
         
         const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
         
+        // Store hover timers for each card
+        const hoverTimers = new WeakMap();
+        
+        // Setup delayed hover overlay display (0.5s delay)
+        // Use MutationObserver to attach listeners to newly created cards
+        if (!isTouchDevice) {
+            const setupCardHoverListeners = (card) => {
+                const overlay = card.querySelector('.video-hover-overlay');
+                if (!overlay || card.dataset.hoverListenerSetup) return;
+                
+                card.dataset.hoverListenerSetup = 'true';
+                
+                card.addEventListener('mouseenter', () => {
+                    // Clear any existing timer
+                    const existingTimer = hoverTimers.get(card);
+                    if (existingTimer) {
+                        clearTimeout(existingTimer);
+                    }
+                    
+                    // Set timer to show overlay after 0.5s
+                    const timer = setTimeout(() => {
+                        overlay.classList.add('delayed-show');
+                        hoverTimers.delete(card);
+                    }, 500);
+                    
+                    hoverTimers.set(card, timer);
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    // Clear timer
+                    const timer = hoverTimers.get(card);
+                    if (timer) {
+                        clearTimeout(timer);
+                        hoverTimers.delete(card);
+                    }
+                    
+                    // Remove overlay immediately
+                    overlay.classList.remove('delayed-show');
+                });
+            };
+            
+            // Setup listeners for existing cards
+            grid.querySelectorAll('.video-card').forEach(setupCardHoverListeners);
+            
+            // Use MutationObserver to setup listeners for newly created cards
+            const observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    mutation.addedNodes.forEach((node) => {
+                        if (node.nodeType === Node.ELEMENT_NODE) {
+                            if (node.classList?.contains('video-card')) {
+                                setupCardHoverListeners(node);
+                            }
+                            // Also check children
+                            node.querySelectorAll?.('.video-card').forEach(setupCardHoverListeners);
+                        }
+                    });
+                });
+            });
+            
+            observer.observe(grid, { childList: true, subtree: true });
+        }
+        
         // Event delegation: click on video-card
         grid.addEventListener('click', (e) => {
             if (e.target.tagName === 'VIDEO') return;

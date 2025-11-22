@@ -403,7 +403,8 @@
     padding: 1rem;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+    transition-delay: 0s;
     z-index: 10;
     overflow-y: auto;
     overflow-x: hidden;
@@ -413,9 +414,10 @@
     cursor: pointer;
 }
 
-.video-card:hover .video-hover-overlay {
+.video-hover-overlay.delayed-show {
     opacity: 1;
     visibility: visible;
+    transition-delay: 0s;
 }
 
 .video-hover-overlay.touch-active {
