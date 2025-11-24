@@ -61,7 +61,7 @@ export class SelectionPanelManager {
      */
     updateSelectionPanel() {
         document.getElementById('selectedCount').textContent = this.selectedDatasets.size;
-        document.getElementById('selectionCount').textContent = this.listDatasets.size;
+        document.getElementById('cartCount').textContent = this.listDatasets.size;
         
         const list = document.getElementById('selectionList');
         if (!list) return;

@@ -262,10 +262,6 @@
     }
 
     /* Right panel - fix text overflow */
-    .selection-header {
-        padding: 0.5rem 0.75rem;
-        flex-shrink: 0;
-    }
 
     .selection-list {
         flex: 1;
@@ -549,10 +545,6 @@
     }
 
     /* Selection panel */
-    .selection-header {
-        padding: 0.5rem;
-        gap: 0.5rem;
-    }
 
     .selection-actions {
         flex-direction: column;
@@ -659,9 +651,6 @@
         max-height: 1.5rem;
     }
 
-    .selection-header {
-        padding: 0.4rem 0.5rem;
-    }
 
     .selection-footer {
         padding: 0.4rem;

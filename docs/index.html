@@ -71,6 +71,10 @@
                     <span class="stat-label">Selected:</span>
                     <strong id="selectedCount">0</strong>
                 </span>
+                <span class="stat-inline">
+                    <span class="stat-label">in cart:</span>
+                    <strong id="cartCount">0</strong>
+                </span>
             </div>
         </div>
         <!-- Active Filter Tags Container -->
@@ -111,17 +115,11 @@
 
         <!-- Selection Panel -->
         <div class="selection-panel">
-            <div class="selection-header">
-                <div class="selection-header-top">
-                    <span id="selectionCount">0</span> items in cart
-                    <input type="file" id="importFile" accept=".json" style="display: none;">
-                </div>
-            </div>
-
             <div class="selection-list" id="selectionList"></div>
 
             <!-- Selection Footer -->
             <div class="selection-footer">
+                <input type="file" id="importFile" accept=".json" style="display: none;">
                 <div class="selection-actions">
                     <button class="btn-selection" id="importBtn">Import JSON</button>
                     <button class="btn-selection" id="exportBtn">Export JSON</button>

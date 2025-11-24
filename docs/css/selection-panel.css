@@ -11,28 +11,7 @@
     z-index: 100;
 }
 
-/* ==================== Selection Header ==================== */
 
-.selection-header {
-    padding: 1.25rem 1.5rem;
-    border-bottom: 1px solid var(--color-border);
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    background: white;
-}
-
-.selection-header-top {
-    font-family: var(--font-family-mono);
-    text-align: center;
-    font-weight: 600;
-    color: var(--color-primary);
-    font-size: 0.875rem;
-    background: transparent;
-    padding: 0.5rem;
-    border-radius: var(--border-radius-sm);
-    letter-spacing: -0.02em;
-}
 
 .selection-title {
     font-weight: 600;
