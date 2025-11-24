@@ -224,35 +224,12 @@ const Templates = {
     buildEmptyCartHint() {
         return `
             <div class="empty-cart-hint">
-                <div class="hint-title">🛒 <strong>Your cart is empty</strong> 💭</div>
-                <div class="hint-subtitle">👋 ✨ <strong>Quick Start Guide:</strong> 🚀</div>
-                <div class="hint-steps">
-                    ${this.buildHintStep(1, '🔍 Filter datasets (left panel)')}
-                    ${this.buildHintArrow()}
-                    ${this.buildHintStep(2, '✅ Select items (click cards or "select all")')}
-                    ${this.buildHintArrow()}
-                    ${this.buildHintStep(3, '🎯 Add to cart (green button)')}
-                    ${this.buildHintArrow()}
-                    ${this.buildHintStep(4, '📋 Review & manage (view/remove items)')}
-                    ${this.buildHintArrow()}
-                    ${this.buildHintStep(5, '📦 Choose source & copy download code!')}
-                </div>
+                No items selected. \n Use left panel to filter datasets, \n then click or select/deselect all, \n click Add to cart and then copy download command.
             </div>
         `;
     },
 
-    buildHintStep(number, text) {
-        return `
-            <div class="hint-step">
-                <span class="step-number">${number}</span>
-                <span class="step-text">${text}</span>
-            </div>
-        `;
-    },
 
-    buildHintArrow() {
-        return '<div class="hint-arrow">↓</div>';
-    },
 
     buildSelectionItem(ds) {
         return `

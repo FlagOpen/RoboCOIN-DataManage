@@ -299,6 +299,7 @@ export class EventHandlers {
 
         // Tooltip events (non-touch devices)
         if (!isTouchDevice) {
+            // Use passive listeners for better scroll performance
             filterGroups.addEventListener('mouseenter', (e) => {
                 const option = e.target.closest('.filter-option');
                 if (!option) return;
@@ -309,20 +310,21 @@ export class EventHandlers {
                 if (filterKey && filterValue) {
                     this.managers.filter.showTooltip(option, filterKey, filterValue);
                 }
-            }, true);
+            }, { capture: true, passive: true });
 
             filterGroups.addEventListener('mouseleave', (e) => {
                 const option = e.target.closest('.filter-option');
                 if (!option) return;
 
                 this.managers.filter.hideTooltip();
-            }, true);
+            }, { capture: true, passive: true });
         }
 
         // Touch device tooltip handling
         if (isTouchDevice) {
             let lastTouchTarget = null;
 
+            // Use passive listener for better scroll performance
             filterGroups.addEventListener('touchstart', (e) => {
                 const option = e.target.closest('.filter-option');
                 if (!option) {
@@ -346,7 +348,7 @@ export class EventHandlers {
                         e.preventDefault(); // Prevent immediate selection
                     }
                 }
-            });
+            }, { passive: false }); // passive: false because we call preventDefault
         }
     }
 
@@ -703,6 +705,7 @@ export class EventHandlers {
         if (gridContainer) {
             let videoScrollTicking = false;
 
+            // Use passive listener for better scroll performance
             gridContainer.addEventListener('scroll', () => {
                 if (!videoScrollTicking) {
                     window.requestAnimationFrame(() => {
@@ -714,7 +717,7 @@ export class EventHandlers {
                     });
                     videoScrollTicking = true;
                 }
-            });
+            }, { passive: true });
         }
 
         // Selection list scroll
@@ -722,6 +725,7 @@ export class EventHandlers {
         if (selectionList) {
             let selectionScrollTicking = false;
 
+            // Use passive listener for better scroll performance
             selectionList.addEventListener('scroll', () => {
                 if (!selectionScrollTicking) {
                     window.requestAnimationFrame(() => {
@@ -730,7 +734,7 @@ export class EventHandlers {
                     });
                     selectionScrollTicking = true;
                 }
-            });
+            }, { passive: true });
         }
     }
 
