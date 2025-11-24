@@ -148,34 +148,7 @@
     border: 1px solid var(--color-border);
 }
 
-.video-success-badge {
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    font-size: 1.25rem;
-    z-index: 11;
-    line-height: 1;
-    background: var(--color-success);
-    color: white;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: var(--shadow-md);
-    animation: popIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-@keyframes popIn {
-    from {
-        transform: scale(0);
-    }
-
-    to {
-        transform: scale(1);
-    }
-}
+/* Badge removed - using info area highlight for selected items */
 
 /* ==================== Video Info ==================== */
 
@@ -186,6 +159,12 @@
     box-sizing: border-box;
     flex: 1;
     background: white;
+    transition: all 0.3s ease;
+}
+
+/* In-cart card info area styling */
+.video-card.in-cart .video-info {
+    background: var(--item-gradient-light-alt);
 }
 
 .video-title {
@@ -200,6 +179,12 @@
     -webkit-box-orient: vertical;
     margin: 0 0 0.75rem 0;
     color: var(--color-text-primary);
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.video-card.in-cart .video-title {
+    color: var(--color-primary-light);
 }
 
 .video-tags {
@@ -214,8 +199,8 @@
 
 .video-tag {
     padding: 0.125rem 0.5rem;
-    background: var(--color-bg-surface);
-    border: 1px solid var(--color-border);
+    background: transparent;
+    border: 0.0625rem solid var(--color-primary-light);
     border-radius: 9999px;
     font-size: 0.75rem;
     color: var(--color-text-secondary);
@@ -227,6 +212,13 @@
     display: inline-flex;
     align-items: center;
     transition: all 0.2s ease;
+}
+
+.video-card.in-cart .video-tag {
+    color: var(--color-cart-tag-text);
+    background: var(--color-cart-tag-bg);
+    border-color: var(--color-cart-tag-border);
+    border-width: 0.085rem;
 }
 
 .video-card:hover .video-tag {
@@ -283,6 +275,9 @@
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--color-border);
     color: var(--color-primary);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
 }
 
 .hover-info-group {

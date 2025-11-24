@@ -65,7 +65,7 @@
     --border-radius-lg: 1rem;
     --border-radius-pill: 9999px;
 
-    /* ==================== Color Palette (Gemini-inspired) ==================== */
+    /* ==================== Color Palette ==================== */
     /* Primary Gradient */
     --color-primary: #4f46e5;
     /* Indigo 600 */
@@ -73,9 +73,52 @@
     /* Indigo 700 */
     --color-accent: #8b5cf6;
     /* Violet 500 */
-    --color-accent-gradient: linear-gradient(135deg, #3b82f6 0%, #5caef6 70%, #ffe600 100%);
-    --color-accent-gradient-hover: linear-gradient(135deg, #2563eb 0%, #00c8ff 50%, #ffff00 100%);
+    --color-accent-gradient: linear-gradient(135deg,
+    #360093 0%, 
+    #2332ff 20%,
+    #92c5ff 65%,
+    #f6ffaa 80%,
+    #fff167 90%,
+    #ffb534 100%);
 
+    --btn-gradient: linear-gradient(45deg,
+    #000fda 0%,
+    #0066ff 80%,
+    #92c5ff 90%);
+
+    --item-gradient-light: linear-gradient(45deg,
+    rgba(78, 70, 229, 0.09) 0%,
+    rgba(122, 187, 240, 0.09) 30%,
+    rgba(224, 240, 76, 0.06) 60%,
+    rgba(255, 209, 57, 0.09) 100%);
+
+    --item-gradient-light-alt: linear-gradient(45deg,
+    rgba(255, 179, 71, 0.09) 0%,
+    rgba(255, 214, 102, 0.08) 35%,
+    rgba(102, 187, 255, 0.08) 70%,
+    rgba(79, 70, 229, 0.09) 100%);
+
+    --item-gradient-dark: linear-gradient(45deg,
+    rgba(78, 70, 229, 0.20) 0%,
+    rgba(122, 187, 240, 0.15) 30%,
+    rgba(224, 240, 76, 0.10) 60%,
+    rgba(255, 209, 57, 0.18) 100%);
+
+    --selected-gradient: linear-gradient(45deg,
+    rgba(255, 174, 0, 0.1) 0%,
+    rgba(252, 231, 0, 0.1) 60%,
+    rgba(255, 255, 0, 0.1) 100%);
+
+    --color-primary-light: #3995ff;
+    --color-primary-dark: #49009d;
+    --color-primary-deep: #2563eb;
+
+    /* Cart Item Colors */
+    --color-cart-tag-text: #2563eb;
+    --color-cart-tag-bg: linear-gradient(135deg, rgba(255, 214, 102, 0.18) 0%, rgba(255, 179, 71, 0.15) 100%);
+    --color-cart-tag-border: rgba(255, 179, 71, 0.35);
+
+    
     /* Backgrounds */
     --color-bg-body: #ffffff;
     /* Pure white */
@@ -83,6 +126,12 @@
     /* Very light gray for panels/cards */
     --color-bg-surface-hover: #f1f5f9;
     --color-bg-overlay: rgba(255, 255, 255, 0.9);
+    --color-bg-gray: #f3f4f6;
+    /* Gray 100 */
+    --color-bg-gray-dark: #e5e7eb;
+    /* Gray 200 */
+    --color-primary-bg: rgba(79, 70, 229, 0.08);
+    /* Primary with opacity */
 
     /* Text */
     --color-text-primary: #0f172a;

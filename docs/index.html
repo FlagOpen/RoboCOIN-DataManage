@@ -20,7 +20,6 @@
 </head>
 
 <body>
-    <!-- 加载动画覆盖层 -->
     <div class="loading-overlay" id="loadingOverlay">
         <div class="loading-spinner"></div>
         <div class="loading-text">Loading datasets...</div>
@@ -74,6 +73,8 @@
                 </span>
             </div>
         </div>
+        <!-- Active Filter Tags Container -->
+        <div class="filter-tags-container" id="filterTagsContainer"></div>
     </div>
 
     <!-- Filter Dropdown Overlay -->
@@ -100,15 +101,15 @@
         </div>
     </div>
 
+    <!-- App Container -->
     <div class="app-container">
-        <!-- 中间视频网格区 -->
         <div class="video-panel">
             <div class="video-grid-container">
                 <div class="video-grid" id="videoGrid"></div>
             </div>
         </div>
 
-        <!-- 右侧选中面板 -->
+        <!-- Selection Panel -->
         <div class="selection-panel">
             <div class="selection-header">
                 <div class="selection-header-top">
@@ -119,6 +120,7 @@
 
             <div class="selection-list" id="selectionList"></div>
 
+            <!-- Selection Footer -->
             <div class="selection-footer">
                 <div class="selection-actions">
                     <button class="btn-selection" id="importBtn">Import JSON</button>

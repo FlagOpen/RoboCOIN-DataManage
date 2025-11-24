@@ -212,17 +212,8 @@ export class VideoGridManager {
             card.classList.toggle('selected', shouldBeSelected);
         }
         
-        const shouldHaveBadge = this.listDatasets.has(ds.path);
-        const badge = card.querySelector('.video-success-badge');
-        
-        if (shouldHaveBadge && !badge) {
-            card.querySelector('.video-thumbnail').insertAdjacentHTML(
-                'beforeend', 
-                Templates.buildVideoSuccessBadge()
-            );
-        } else if (!shouldHaveBadge && badge) {
-            badge.remove();
-        }
+        const shouldBeInCart = this.listDatasets.has(ds.path);
+        card.classList.toggle('in-cart', shouldBeInCart);
     }
     
     /**
@@ -248,15 +239,7 @@ export class VideoGridManager {
             
             updates.forEach(({ card, path, shouldBeSelected, shouldHaveBadge }) => {
                 card.classList.toggle('selected', shouldBeSelected);
-                
-                const badge = card.querySelector('.video-success-badge');
-                const thumbnail = card.querySelector('.video-thumbnail');
-                
-                if (shouldHaveBadge && !badge) {
-                    thumbnail.insertAdjacentHTML('beforeend', Templates.buildVideoSuccessBadge());
-                } else if (!shouldHaveBadge && badge) {
-                    badge.remove();
-                }
+                card.classList.toggle('in-cart', shouldHaveBadge);
             });
             
             this.updateStylesScheduled = false;

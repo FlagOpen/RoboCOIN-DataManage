@@ -28,7 +28,7 @@
     font-weight: 600;
     color: var(--color-primary);
     font-size: 0.875rem;
-    background: var(--color-primary-bg);
+    background: transparent;
     padding: 0.5rem;
     border-radius: var(--border-radius-sm);
     letter-spacing: -0.02em;
@@ -108,7 +108,7 @@
     padding: 0;
     position: relative;
     -webkit-overflow-scrolling: touch;
-    background: var(--color-bg-surface);
+    background: white;
 }
 
 /* ==================== Empty Cart Hint ==================== */
@@ -133,7 +133,7 @@
     right: var(--selection-item-padding);
     height: calc(var(--selection-item-height) - 0.25rem);
     padding: 0 1rem;
-    background: white;
+    background: var(--item-gradient-light-alt);
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius-sm);
     margin-bottom: 0;
