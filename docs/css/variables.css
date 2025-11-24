@@ -65,15 +65,16 @@
     --border-radius-lg: 1rem;
     --border-radius-pill: 9999px;
 
-    /* ==================== Color Palette (Prefect-inspired) ==================== */
-    /* Primary Blue Gradient */
-    --color-primary: #0c4a6e;
-    /* Deep blue for text/accents */
-    --color-primary-hover: #075985;
-    --color-accent: #0ea5e9;
-    /* Bright blue for active states */
-    --color-accent-gradient: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%);
-    --color-accent-gradient-hover: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+    /* ==================== Color Palette (Gemini-inspired) ==================== */
+    /* Primary Gradient */
+    --color-primary: #4f46e5;
+    /* Indigo 600 */
+    --color-primary-hover: #4338ca;
+    /* Indigo 700 */
+    --color-accent: #8b5cf6;
+    /* Violet 500 */
+    --color-accent-gradient: linear-gradient(135deg, #3b82f6 0%, #5caef6 70%, #ffe600 100%);
+    --color-accent-gradient-hover: linear-gradient(135deg, #2563eb 0%, #00c8ff 50%, #ffff00 100%);
 
     /* Backgrounds */
     --color-bg-body: #ffffff;
