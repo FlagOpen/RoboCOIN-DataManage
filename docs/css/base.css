@@ -5,17 +5,17 @@
 
 /* ==================== Fluid Typography ==================== */
 html {
-    /* Fluid font size: 14px on mobile to 16px on desktop */
-    font-size: clamp(14px, 0.875rem + 0.25vw, 16px);
+    /* Fluid font size: scales with viewport width for better readability */
+    font-size: clamp(14px, 0.875rem + 0.25vw, 18px);
 }
 
-/* ==================== High DPI Screen Optimization ==================== */
-/* Reduce UI density on high-resolution displays to prevent content from appearing too large */
-@media (-webkit-min-device-pixel-ratio: 2),
-       (min-resolution: 192dpi),
-       (min-resolution: 2dppx) {
+/* ==================== High DPI Screen Optimization for Small Screens ==================== */
+/* Reduce UI density on high-resolution small displays (laptops) to prevent content from appearing too large */
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 1599px),
+       (min-resolution: 192dpi) and (max-width: 1599px),
+       (min-resolution: 2dppx) and (max-width: 1599px) {
     html {
-        /* Use 12px base font size on high DPI screens for better density */
+        /* Use 12px base font size on high DPI laptop screens for better density */
         font-size: 12px;
     }
 }

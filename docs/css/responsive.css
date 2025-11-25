@@ -22,8 +22,16 @@
         overflow: hidden;
     }
 
+    html {
+        font-size: 17px;
+    }
+
+    .selection-panel {
+        max-width: 600px;
+    }
+
     .video-grid {
-        grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
     }
 
     .code-output {
@@ -42,40 +50,85 @@
     }
 
     html {
-        font-size: 18px;
+        font-size: 20px;
+    }
+
+    .selection-panel {
+        max-width: 700px;
     }
 
     .video-grid {
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
     }
 }
 
 /* ==================== Ultra-wide & 4K High DPI (≥ 2560px) ==================== */
 @media (min-width: 2560px) {
+    html {
+        font-size: 22px;
+    }
+
     .video-grid {
-        grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+        gap: 2rem;
     }
 
     .selection-panel {
-        width: 25%;
-        max-width: 480px;
+        width: 28%;
+        max-width: 800px;
     }
 
     .video-panel {
-        width: 75%;
+        width: 72%;
     }
 
     .code-output {
-        font-size: 0.75rem;
-        height: 6rem;
-        min-height: 6rem;
-        max-height: 10rem;
+        font-size: 0.8rem;
+        height: 7rem;
+        min-height: 7rem;
+        max-height: 12rem;
     }
 
     .btn-selection {
-        font-size: 0.8125rem;
-        padding: 0.5rem 0.875rem;
+        font-size: 0.875rem;
+        padding: 0.625rem 1rem;
+    }
+}
+
+/* ==================== 4K Ultra HD Displays (≥ 3840px) ==================== */
+@media (min-width: 3840px) {
+    html {
+        font-size: 24px;
+    }
+
+    .video-grid {
+        grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+        gap: 2.5rem;
+    }
+
+    .selection-panel {
+        width: 30%;
+        max-width: 1000px;
+    }
+
+    .video-panel {
+        width: 70%;
+    }
+
+    .header-container {
+        padding: 1.5rem 2rem;
+    }
+
+    .filter-control-container {
+        padding: 1rem 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .code-output {
+        font-size: 0.85rem;
+        height: 8rem;
+        min-height: 8rem;
+        max-height: 14rem;
     }
 }
 
