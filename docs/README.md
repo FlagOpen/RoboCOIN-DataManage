@@ -1,8 +1,8 @@
 **English** | [中文](README.zh.md)
 
-# RoboCOIN DataManage
+# RoboCOIN DataManager
 
-https://flagopen.github.io/RoboCOIN-DataManage/
+https://flagopen.github.io/RoboCOIN-DataManager/
 
 ## Project Overview
 

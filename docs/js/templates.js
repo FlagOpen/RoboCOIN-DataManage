@@ -194,7 +194,7 @@ const Templates = {
 
         // Description
         if (ds.description) {
-            html += this.buildHoverInfoGroup('discription', ds.description, false);
+            html += this.buildHoverInfoGroup('description', ds.description, false);
         }
 
         return html;
