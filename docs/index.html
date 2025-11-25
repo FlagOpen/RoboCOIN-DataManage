@@ -47,9 +47,8 @@
             <button class="btn-selection secondary" id="resetFiltersBtn">Reset</button>
 
             <div class="top-selection-container">
-                <span class="selection-prefix-box">ALL</span>
-                <button class="btn-toolbar primary" id="selectAllBtn">Select</button>
-                <button class="btn-toolbar danger" id="deselectAllBtn">Deselect</button>
+                <button class="btn-toolbar primary" id="selectAllBtn">Select All</button>
+                <button class="btn-toolbar danger" id="deselectAllBtn">Deselect All</button>
             </div>
 
             <div class="filter-search-container">
@@ -64,7 +63,7 @@
 
             <div class="filter-stats-inline">
                 <span class="stat-inline">
-                    <span class="stat-label">Results:</span>
+                    <span class="stat-label">Filtered:</span>
                     <strong id="filteredCount">0</strong>
                 </span>
                 <span class="stat-inline">
@@ -72,7 +71,7 @@
                     <strong id="selectedCount">0</strong>
                 </span>
                 <span class="stat-inline">
-                    <span class="stat-label">in cart:</span>
+                    <span class="stat-label">In cart:</span>
                     <strong id="cartCount">0</strong>
                 </span>
             </div>
@@ -98,7 +97,10 @@
                     </div>
                 </div>
             </div>
-            <div class="filter-dropdown-content" id="filterGroups"></div>
+            <div class="filter-dropdown-content">
+                <div class="filter-categories-sidebar" id="filterCategoriesSidebar"></div>
+                <div class="filter-options-content" id="filterGroups"></div>
+            </div>
             <div class="filter-dropdown-footer">
                 <button class="filter-dropdown-done" id="filterDropdownClose">Done</button>
             </div>

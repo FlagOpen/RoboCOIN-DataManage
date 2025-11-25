@@ -61,7 +61,7 @@ export class EventHandlers {
             filterTriggerBtn.addEventListener('click', () => {
                 this.managers.ui.openFilterDropdown();
                 // Initialize tooltips when dropdown opens
-                this.managers.filter.initializeTooltips();
+                this.managers.filter.initializeFilters();
                 // Focus search input when dropdown opens
                 setTimeout(() => {
                     const searchInput = document.getElementById('filterFinderInput');
@@ -75,7 +75,6 @@ export class EventHandlers {
         if (filterDropdownClose) {
             filterDropdownClose.addEventListener('click', () => {
                 this.managers.ui.closeFilterDropdown();
-                this.managers.filter.hideTooltip();
                 // Clear search when closing
                 const searchInput = document.getElementById('filterFinderInput');
                 if (searchInput) {
@@ -89,7 +88,6 @@ export class EventHandlers {
             filterDropdownOverlay.addEventListener('click', (e) => {
                 if (e.target.id === 'filterDropdownOverlay') {
                     this.managers.ui.closeFilterDropdown();
-                    this.managers.filter.hideTooltip();
                     // Clear search when closing
                     const searchInput = document.getElementById('filterFinderInput');
                     if (searchInput) {
@@ -297,59 +295,6 @@ export class EventHandlers {
             }
         });
 
-        // Tooltip events (non-touch devices)
-        if (!isTouchDevice) {
-            // Use passive listeners for better scroll performance
-            filterGroups.addEventListener('mouseenter', (e) => {
-                const option = e.target.closest('.filter-option');
-                if (!option) return;
-
-                const filterKey = option.dataset.filter;
-                const filterValue = option.dataset.value;
-
-                if (filterKey && filterValue) {
-                    this.managers.filter.showTooltip(option, filterKey, filterValue);
-                }
-            }, { capture: true, passive: true });
-
-            filterGroups.addEventListener('mouseleave', (e) => {
-                const option = e.target.closest('.filter-option');
-                if (!option) return;
-
-                this.managers.filter.hideTooltip();
-            }, { capture: true, passive: true });
-        }
-
-        // Touch device tooltip handling
-        if (isTouchDevice) {
-            let lastTouchTarget = null;
-
-            // Use passive listener for better scroll performance
-            filterGroups.addEventListener('touchstart', (e) => {
-                const option = e.target.closest('.filter-option');
-                if (!option) {
-                    this.managers.filter.hideTooltip();
-                    lastTouchTarget = null;
-                    return;
-                }
-
-                const filterKey = option.dataset.filter;
-                const filterValue = option.dataset.value;
-
-                if (filterKey && filterValue) {
-                    if (lastTouchTarget === option) {
-                        // Second tap - hide tooltip and proceed with selection
-                        this.managers.filter.hideTooltip();
-                        lastTouchTarget = null;
-                    } else {
-                        // First tap - show tooltip
-                        this.managers.filter.showTooltip(option, filterKey, filterValue);
-                        lastTouchTarget = option;
-                        e.preventDefault(); // Prevent immediate selection
-                    }
-                }
-            }, { passive: false }); // passive: false because we call preventDefault
-        }
     }
 
     /**
