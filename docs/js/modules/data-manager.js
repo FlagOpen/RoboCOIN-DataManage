@@ -93,6 +93,10 @@ export class DataManager {
      * @returns {Dataset} Dataset object
      */
     createDatasetObject(path, raw) {
+        // 优先使用 raw.raw 部分的数据（如果存在），否则使用顶层数据
+        // 这是因为很多数据集的顶层字段为空，但 raw 部分有正确数据
+        const rawData = raw.raw || {};
+        
         return {
             path: path,
             name: path || raw.dataset_name,
@@ -102,25 +106,31 @@ export class DataManager {
             thumbnail_url: `${this.config.paths.assetsRoot}/thumbnails/${path}.jpg`,
             // 使用新字段 tasks（从 meta/tasks.jsonl 读取的精确任务描述）
             // 而非旧的 task_descriptions（YAML中可能包含错误）
-            description: raw.tasks || '',
-            scenes: raw.scene_type || [],
-            actions: raw.atomic_actions || [],
-            objects: (raw.objects || []).map(obj => ({
-                name: obj.object_name,
-                hierarchy: [
-                    obj.level1, 
-                    obj.level2, 
-                    obj.level3, 
-                    obj.level4, 
-                    obj.level5
-                ].filter(level => level !== null && level !== undefined),
-                raw: obj
-            })),
+            description: raw.tasks || (rawData.task_descriptions && rawData.task_descriptions[0]) || '',
+            // 优先从 raw.raw 部分读取，因为顶层字段经常为空
+            scenes: raw.scene_type && raw.scene_type.length > 0 ? raw.scene_type : (rawData.scene_type || []),
+            actions: raw.atomic_actions && raw.atomic_actions.length > 0 ? raw.atomic_actions : (rawData.atomic_actions || []),
+            objects: (function() {
+                const topObjects = raw.objects || [];
+                const rawObjects = rawData.objects || [];
+                const objectsToUse = topObjects.length > 0 ? topObjects : rawObjects;
+                return objectsToUse.map(obj => ({
+                    name: obj.object_name,
+                    hierarchy: [
+                        obj.level1, 
+                        obj.level2, 
+                        obj.level3, 
+                        obj.level4, 
+                        obj.level5
+                    ].filter(level => level !== null && level !== undefined),
+                    raw: obj
+                }));
+            })(),
             // 使用新字段 robot_type（从 meta/info.json 读取）
-            // 而非旧的 device_model（YAML中的字段）
+            // 不使用旧的 device_model（YAML中的字段可能有错误）
             robot: raw.robot_type,
-            endEffector: raw.end_effector_type,
-            platformHeight: raw.operation_platform_height,
+            endEffector: raw.end_effector_type || rawData.end_effector_type,
+            platformHeight: raw.operation_platform_height !== undefined ? raw.operation_platform_height : rawData.operation_platform_height,
             raw: raw,
             getAllScenes: function() { return this.scenes; },
             hasScene: function(sceneType) { return this.scenes.includes(sceneType); },
