@@ -100,7 +100,9 @@ export class DataManager {
             // Thumbnails are provided directly from assets/thumbnails directory
             // No automatic thumbnail generation - thumbnails must exist in assets/thumbnails/${path}.jpg
             thumbnail_url: `${this.config.paths.assetsRoot}/thumbnails/${path}.jpg`,
-            description: raw.task_descriptions || '',
+            // 使用新字段 tasks（从 meta/tasks.jsonl 读取的精确任务描述）
+            // 而非旧的 task_descriptions（YAML中可能包含错误）
+            description: raw.tasks || '',
             scenes: raw.scene_type || [],
             actions: raw.atomic_actions || [],
             objects: (raw.objects || []).map(obj => ({
@@ -114,7 +116,9 @@ export class DataManager {
                 ].filter(level => level !== null && level !== undefined),
                 raw: obj
             })),
-            robot: raw.device_model,
+            // 使用新字段 robot_type（从 meta/info.json 读取）
+            // 而非旧的 device_model（YAML中的字段）
+            robot: raw.robot_type,
             endEffector: raw.end_effector_type,
             platformHeight: raw.operation_platform_height,
             raw: raw,
