@@ -15,8 +15,9 @@ import Templates from '../templates.js';
 export class FilterManager {
     /**
      * @param {Dataset[]} datasets - All datasets
+     * @param {Object} robotAliasManager - Robot alias manager instance
      */
-    constructor(datasets) {
+    constructor(datasets, robotAliasManager) {
         this.datasets = datasets;
 
         /** @type {Object<string, FilterGroup>} */
@@ -37,6 +38,12 @@ export class FilterManager {
 
         // Static count cache for UI display (only calculated once at initialization)
         this.staticFilterCounts = new Map();
+
+        /**
+         * Robot alias manager (optional)
+         * Provides common_name and aliases for robot IDs.
+         */
+        this.robotAliasManager = robotAliasManager || null;
     }
 
     /**
@@ -573,12 +580,54 @@ export class FilterManager {
     }
 
     /**
+     * Build searchable text collection for a dataset.
+     * Includes dataset identifiers and robot aliases (if available).
+     * @param {Dataset} ds - Dataset object
+     * @returns {string[]} Searchable text tokens
+     */
+    getSearchableTextsForDataset(ds) {
+        const texts = new Set();
+
+        if (ds.name) {
+            texts.add(String(ds.name));
+        }
+
+        if (ds.path) {
+            texts.add(String(ds.path));
+        }
+
+        // Robot IDs + aliases
+        if (ds.robot) {
+            const robots = Array.isArray(ds.robot) ? ds.robot : [ds.robot];
+            robots.forEach(robotId => {
+                if (!robotId) return;
+
+                if (this.robotAliasManager && typeof this.robotAliasManager.getSearchTokensForRobot === 'function') {
+                    const tokens = this.robotAliasManager.getSearchTokensForRobot(robotId);
+                    tokens.forEach(token => {
+                        if (token) {
+                            texts.add(String(token));
+                        }
+                    });
+                } else {
+                    texts.add(String(robotId));
+                }
+            });
+        }
+
+        return Array.from(texts);
+    }
+
+    /**
      * Apply filters to datasets
      * @param {string} searchQuery - Search query
      * @returns {Dataset[]} Filtered datasets
      */
     applyFilters(searchQuery = '') {
         const filters = {};
+
+        const trimmedQuery = searchQuery ? searchQuery.trim() : '';
+        const normalizedQuery = trimmedQuery.toLowerCase();
 
         // Collect selected filters
         this.selectedFilters.forEach(filterId => {
@@ -588,8 +637,16 @@ export class FilterManager {
         });
 
         const filtered = this.datasets.filter(ds => {
-            if (searchQuery && !ds.name.toLowerCase().includes(searchQuery.toLowerCase())) {
-                return false;
+            // Keyword search: match against dataset id/name and robot aliases / friendly names
+            if (normalizedQuery) {
+                const texts = this.getSearchableTextsForDataset(ds);
+                const matchesSearch = texts.some(text =>
+                    typeof text === 'string' && text.toLowerCase().includes(normalizedQuery)
+                );
+
+                if (!matchesSearch) {
+                    return false;
+                }
             }
 
             for (const [key, values] of Object.entries(filters)) {

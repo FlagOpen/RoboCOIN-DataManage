@@ -8,6 +8,7 @@
 import ConfigManager from './config.js';
 import Templates from '../templates.js';
 import { calculateVisibleRange, ElementCache } from './virtual-scroll.js';
+import RobotAliasManager from './robot-aliases.js';
 
 /**
  * Video Grid Manager Class
@@ -373,8 +374,13 @@ export class VideoGridManager {
         
         if (ds.robot) {
             const robots = Array.isArray(ds.robot) ? ds.robot : [ds.robot];
-            const more = robots.length > 1 ? `+${robots.length - 1}` : '';
-            tags.push(Templates.buildVideoTag(robots[0], more));
+            const displayRobots = robots.map(r =>
+                RobotAliasManager && typeof RobotAliasManager.getDisplayName === 'function'
+                    ? RobotAliasManager.getDisplayName(r)
+                    : r
+            );
+            const more = displayRobots.length > 1 ? `+${displayRobots.length - 1}` : '';
+            tags.push(Templates.buildVideoTag(displayRobots[0], more));
         }
         
         if (ds.endEffector) {

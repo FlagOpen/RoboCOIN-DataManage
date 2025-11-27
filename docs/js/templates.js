@@ -5,10 +5,24 @@
 
 /// <reference path="./types.js" />
 
+import RobotAliasManager from './modules/robot-aliases.js';
+
 const Templates = {
     /**
      * Filter Group Templates
      */
+
+    /**
+     * Get display label for a robot value using alias map.
+     * @param {string} robotId
+     * @returns {string}
+     */
+    getRobotDisplayLabel(robotId) {
+        if (RobotAliasManager && typeof RobotAliasManager.getDisplayName === 'function') {
+            return RobotAliasManager.getDisplayName(robotId);
+        }
+        return robotId;
+    },
 
     /**
      * Build flat filter group HTML
@@ -44,11 +58,14 @@ const Templates = {
      * @returns {string} HTML string
      */
     buildFlatFilterOption(key, val, baseIndent) {
+        const displayValue = key === 'robot'
+            ? this.getRobotDisplayLabel(val)
+            : val;
         return `
             <div class="filter-option-wrapper" style="margin-left: ${baseIndent}px;" data-level="1">
                 <div class="filter-option" data-filter="${key}" data-value="${val}">
                     <div class="filter-option-label">
-                        <span>${val}</span>
+                        <span>${displayValue}</span>
                     </div>
                     <div class="filter-option-count" data-count="${key}-${val}">0</div>
                 </div>
@@ -167,10 +184,14 @@ const Templates = {
             html += this.buildHoverInfoGroup('scene', ds.scenes.map(s => this.buildHoverTag(s)).join(''));
         }
 
-        // Robot model
+        // Robot model (use friendly names when available)
         if (ds.robot) {
             const robots = Array.isArray(ds.robot) ? ds.robot : [ds.robot];
-            html += this.buildHoverInfoGroup('robot', robots.map(r => this.buildHoverTag(r)).join(''));
+            const displayRobots = robots.map(r => this.getRobotDisplayLabel(r));
+            html += this.buildHoverInfoGroup(
+                'robot',
+                displayRobots.map(r => this.buildHoverTag(r)).join('')
+            );
         }
 
         // End effector
@@ -280,12 +301,19 @@ const Templates = {
     },
 
     buildDetailInfoGrid(dataset, scenesText, actionsText, objectsHTML) {
+        let robotDisplay = 'N/A';
+        if (dataset.robot) {
+            const robots = Array.isArray(dataset.robot) ? dataset.robot : [dataset.robot];
+            const displayRobots = robots.map(r => this.getRobotDisplayLabel(r));
+            robotDisplay = displayRobots.join(', ');
+        }
+
         return `
             <div class="detail-info-grid">
                 ${this.buildDetailInfoItem('Dataset Path', dataset.path)}
                 ${this.buildDetailInfoItem('Dataset Name', dataset.name)}
                 ${this.buildDetailInfoItem('Task Description', dataset.description || 'N/A')}
-                ${this.buildDetailInfoItem('Device Model (Robot)', dataset.robot || 'N/A')}
+                ${this.buildDetailInfoItem('Device Model (Robot)', robotDisplay)}
                 ${this.buildDetailInfoItem('End Effector Type', dataset.endEffector || 'N/A')}
                 ${this.buildDetailInfoItem('Operation Platform Height', dataset.platformHeight !== undefined ? dataset.platformHeight : 'N/A')}
                 ${this.buildDetailInfoItem('Scene Type', scenesText)}
@@ -316,7 +344,12 @@ const Templates = {
             ? dataset.actions.slice(0, 2).join(', ') + (dataset.actions.length > 2 ? '...' : '')
             : 'N/A';
 
-        const robotText = dataset.robot || 'N/A';
+        let robotText = 'N/A';
+        if (dataset.robot) {
+            const robots = Array.isArray(dataset.robot) ? dataset.robot : [dataset.robot];
+            const displayRobots = robots.map(r => this.getRobotDisplayLabel(r));
+            robotText = displayRobots.join(', ');
+        }
 
         return `
             <div class="hover-preview-video">

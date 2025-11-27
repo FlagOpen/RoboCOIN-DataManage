@@ -12,6 +12,7 @@ import VideoGridManager from './modules/video-grid.js';
 import SelectionPanelManager from './modules/selection-panel.js';
 import UIUtils from './modules/ui-utils.js';
 import EventHandlers from './modules/event-handlers.js';
+import RobotAliasManager from './modules/robot-aliases.js';
 
 /**
  * Main Application Class
@@ -54,6 +55,9 @@ class Application {
             
             // Initialize configuration
             this.config = ConfigManager.getConfig();
+            
+            // Load robot alias map (non-blocking for core data, but awaited before UI init)
+            await RobotAliasManager.load(this.config);
             
             // Load datasets
             const loadingProgress = document.getElementById('loadingProgress');
@@ -102,7 +106,10 @@ class Application {
      */
     initializeManagers() {
         // Filter Manager
-        this.filterManager = new FilterManager(dataManager.getAllDatasets());
+        this.filterManager = new FilterManager(
+            dataManager.getAllDatasets(),
+            RobotAliasManager
+        );
         
         // Video Grid Manager
         this.videoGridManager = new VideoGridManager(
