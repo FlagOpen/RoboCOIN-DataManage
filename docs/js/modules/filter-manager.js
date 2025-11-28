@@ -731,7 +731,29 @@ export class FilterManager {
             if (!labelElement) return;
 
             const text = labelElement.textContent.trim();
-            const matches = text.toLowerCase().includes(queryLower);
+            const textLower = text.toLowerCase();
+
+            // Basic label text match
+            let matches = textLower.includes(queryLower);
+
+            // Extend: for robot filters, also match against alias tokens
+            if (!matches) {
+                const filterKey = option.dataset.filter;
+                const filterValue = option.dataset.value;
+
+                if (
+                    filterKey === 'robot' &&
+                    filterValue &&
+                    this.robotAliasManager &&
+                    typeof this.robotAliasManager.getSearchTokensForRobot === 'function'
+                ) {
+                    const tokens = this.robotAliasManager.getSearchTokensForRobot(filterValue);
+                    matches = tokens.some(token =>
+                        typeof token === 'string' &&
+                        token.toLowerCase().includes(queryLower)
+                    );
+                }
+            }
 
             if (matches) {
                 option.classList.add('highlight-match');
