@@ -113,54 +113,53 @@ export class EventHandlers {
             });
         }
 
-        // Hub selection buttons
-        const hubBtnHuggingFace = document.getElementById('hubBtnHuggingFace');
-        const hubBtnModelScope = document.getElementById('hubBtnModelScope');
+        // Hub switch button
+        const hubSwitchBtn = document.getElementById('hubSwitchBtn');
 
-        if (hubBtnHuggingFace) {
-            hubBtnHuggingFace.addEventListener('click', () => {
-                this.managers.selectionPanel.setHub('huggingface');
-                DownloadManager.setCurrentHub('huggingface');
-                this.updateHubButtons('huggingface');
+        if (hubSwitchBtn) {
+            hubSwitchBtn.addEventListener('click', () => {
+                const currentHub = this.managers.selectionPanel.currentHub;
+                const newHub = currentHub === 'huggingface' ? 'modelscope' : 'huggingface';
+
+                // Add transition class for animation
+                hubSwitchBtn.classList.add('transitioning');
+
+                // Update hub after a short delay to allow transition to start
+                setTimeout(() => {
+                    this.managers.selectionPanel.setHub(newHub);
+                    DownloadManager.setCurrentHub(newHub);
+                    this.updateHubSwitchButton(newHub);
+
+                    // Remove transition class after animation completes
+                    setTimeout(() => {
+                        hubSwitchBtn.classList.remove('transitioning');
+                    }, 300);
+                }, 50);
             });
         }
 
-        if (hubBtnModelScope) {
-            hubBtnModelScope.addEventListener('click', () => {
-                this.managers.selectionPanel.setHub('modelscope');
-                DownloadManager.setCurrentHub('modelscope');
-                this.updateHubButtons('modelscope');
-            });
-        }
-
-        // Initialize hub button states
-        this.updateHubButtons(this.managers.selectionPanel.currentHub);
+        // Initialize hub button state
+        this.updateHubSwitchButton(this.managers.selectionPanel.currentHub);
 
         // Quick-action buttons and tooltips (event delegation)
         this.bindFilterDropdownEvents();
     }
 
     /**
-     * Update hub button states
+     * Update hub switch button state
      * @param {string} activeHub - Active hub name ('huggingface' or 'modelscope')
      */
-    updateHubButtons(activeHub) {
-        const hubBtnHuggingFace = document.getElementById('hubBtnHuggingFace');
-        const hubBtnModelScope = document.getElementById('hubBtnModelScope');
+    updateHubSwitchButton(activeHub) {
+        const hubSwitchBtn = document.getElementById('hubSwitchBtn');
 
-        if (hubBtnHuggingFace) {
-            if (activeHub === 'huggingface') {
-                hubBtnHuggingFace.classList.add('active');
-            } else {
-                hubBtnHuggingFace.classList.remove('active');
-            }
-        }
+        if (hubSwitchBtn) {
+            // Update data attribute for CSS positioning
+            hubSwitchBtn.setAttribute('data-hub', activeHub);
 
-        if (hubBtnModelScope) {
-            if (activeHub === 'modelscope') {
-                hubBtnModelScope.classList.add('active');
-            } else {
-                hubBtnModelScope.classList.remove('active');
+            // Update indicator position
+            const indicator = hubSwitchBtn.querySelector('.hub-indicator');
+            if (indicator) {
+                indicator.setAttribute('data-hub', activeHub);
             }
         }
     }
@@ -539,50 +538,6 @@ export class EventHandlers {
             });
         }
 
-        // Code detail button toggle
-        const codeDetailBtn = document.getElementById('codeDetailBtn');
-        const codeDetailPanel = document.getElementById('codeDetailPanel');
-        if (codeDetailBtn && codeDetailPanel) {
-            const codeDetailContent = codeDetailPanel.querySelector('.code-detail-content');
-
-            // Load content from CSS variable
-            const loadDetailContent = () => {
-                const computedStyle = getComputedStyle(document.documentElement);
-                const tooltipText = computedStyle.getPropertyValue('--code-detail-tooltip-text').trim();
-                // Remove quotes if present
-                let cleanText = tooltipText.replace(/^["']|["']$/g, '');
-                // Convert \n to actual newlines for display
-                cleanText = cleanText.replace(/\\n/g, '\n');
-                if (codeDetailContent) {
-                    codeDetailContent.textContent = cleanText;
-                }
-            };
-
-            loadDetailContent();
-
-            codeDetailBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const isExpanded = codeDetailPanel.classList.contains('expanded');
-
-                if (isExpanded) {
-                    codeDetailPanel.classList.remove('expanded');
-                    codeDetailBtn.classList.remove('active');
-                } else {
-                    codeDetailPanel.classList.add('expanded');
-                    codeDetailBtn.classList.add('active');
-                }
-            });
-
-            // Close panel when clicking outside
-            document.addEventListener('click', (e) => {
-                if (codeDetailPanel.classList.contains('expanded') &&
-                    !codeDetailPanel.contains(e.target) &&
-                    !codeDetailBtn.contains(e.target)) {
-                    codeDetailPanel.classList.remove('expanded');
-                    codeDetailBtn.classList.remove('active');
-                }
-            });
-        }
     }
 
     /**

@@ -44,14 +44,18 @@
 
 .video-hover-title {
     cursor: pointer;
-    text-decoration: underline;
     font-size: 1rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 100%;
 }
 
 .video-hover-title:hover {
-    opacity: 0.8;
+    color: var(--color-primary-light);
+    text-decoration: underline;
 }
 
 .video-hover-details {

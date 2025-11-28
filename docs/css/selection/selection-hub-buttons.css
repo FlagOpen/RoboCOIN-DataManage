@@ -1,34 +1,75 @@
-/* ==================== Hub Selection Buttons ==================== */
+/* ==================== Hub Switch Button ==================== */
 
 .hub-buttons-container {
     display: flex;
-    gap: 0.5rem;
-    background: var(--color-bg-surface);
-    padding: 0.25rem;
-    border-radius: var(--border-radius-sm);
-    border: 1px solid var(--color-border);
-    flex-wrap: wrap;
+    width: 100%;
+    background: var(--color-primary-light);
+    border-radius: var(--border-radius-pill);
+    border: 1px solid var(--color-primary-dark);
+    overflow: hidden;
 }
 
-.btn-hub {
-    padding: 0.375rem 0.875rem;
+.btn-hub-switch {
+    flex: 1;
+    padding: 0;
     border: none;
-    border-radius: var(--border-radius-sm);
     font-size: 0.75rem;
     background: transparent;
     color: var(--color-text-secondary);
     cursor: pointer;
-    transition: all 0.2s ease;
     font-weight: 500;
+    height: 2em;
+    border-radius: 9999px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
-.btn-hub:hover {
-    color: var(--color-text-primary);
-}
-
-.btn-hub.active {
-    background: white;
-    color: var(--color-primary);
+.hub-option {
+    flex: 1;
+    text-align: center;
+    padding: 0.375rem 0.25rem;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
     font-weight: 600;
+}
+
+.hub-option.hf {
+    border-radius: 9999px 0 0 9999px;
+}
+
+.hub-option.ms {
+    border-radius: 0 9999px 9999px 0;
+}
+
+.hub-indicator {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: calc(50% - 2px);
+    height: calc(100% - 4px);
+    background: white;
+    border-radius: 9999px;
     box-shadow: var(--shadow-sm);
+    transition: transform 0.4s cubic-bezier(0.4, 0.2, 1);
+    z-index: 1;
+}
+
+.hub-indicator[data-hub="modelscope"] {
+    transform: translateX(100%);
+}
+
+.btn-hub-switch.transitioning .hub-indicator {
+    transition-duration: 0.6s;
+}
+
+.btn-hub-switch:not(.transitioning) .hub-option {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-hub-switch:not(.transitioning)[data-hub="huggingface"] .hub-option.hf,
+.btn-hub-switch:not(.transitioning)[data-hub="modelscope"] .hub-option.ms {
+    color: var(--color-primary-dark);
 }

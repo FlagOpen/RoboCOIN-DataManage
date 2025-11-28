@@ -4,7 +4,7 @@
     position: absolute;
     left: var(--selection-item-padding);
     right: var(--selection-item-padding);
-    height: 2rem;
+    height: calc(var(--selection-item-height) - var(--selection-item-padding));
     padding: 0 0.75rem;
     background: var(--item-gradient-light-alt);
     border: 2px solid var(--color-primary-light);
@@ -47,7 +47,7 @@
     padding: 0.125rem;
     width: 1.5rem;
     height: 1.5rem;
-    border-radius: 50%;
+    border-radius: 9999px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,7 +68,7 @@
     padding: 0.125rem;
     width: 1.5rem;
     height: 1.5rem;
-    border-radius: 50%;
+    border-radius: 9999px;
     display: flex;
     align-items: center;
     justify-content: center;

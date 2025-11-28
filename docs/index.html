@@ -39,22 +39,23 @@
     <!-- Filter Control Bar -->
     <div class="filter-control-bar">
         <div class="filter-control-container">
+            <div class="toolbar-left-controls">
             <button class="filter-trigger-btn" id="filterTriggerBtn">
-                <span class="filter-trigger-text">Filters</span>
+                <span class="filter-trigger-text">Filter datasets</span>
                 <span class="filter-trigger-count" id="filterTriggerCount"></span>
             </button>
 
-            <button class="btn-selection secondary" id="resetFiltersBtn">Reset</button>
-
-            <div class="top-selection-container">
-                <button class="btn-toolbar primary" id="selectAllBtn">Select All</button>
-                <button class="btn-toolbar danger" id="deselectAllBtn">Deselect All</button>
+                <button class="filter-trigger-btn" id="resetFiltersBtn">Reset filters</button>
             </div>
 
             <div class="filter-search-container">
                 <input type="text" id="searchBox" class="filter-search-input" placeholder="Search datasets...">
             </div>
 
+            <div class="top-selection-container">
+                <button class="btn-toolbar primary" id="selectAllBtn">Select all datasets</button>
+                <button class="btn-toolbar danger" id="deselectAllBtn">Deselect all datasets</button>
+            </div>
 
             <div class="filter-stats-inline">
                 <span class="stat-inline">
@@ -108,6 +109,9 @@
 
         <!-- Selection Panel -->
         <div class="selection-panel">
+            <div class="selection-panel-header">
+                <h2 class="selection-panel-title">Batch Downloader</h2>
+            </div>
             <div class="selection-list" id="selectionList"></div>
 
             <!-- Selection Footer -->
@@ -117,26 +121,16 @@
                     <button class="btn-selection" id="importBtn">Import JSON</button>
                     <button class="btn-selection" id="exportBtn">Export JSON</button>
                 </div>
-                <div style="margin-top: 8px; margin-bottom: 8px;">
-                    <div style="font-size: 12px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-                        <span style="font-weight: 500;">Hub Source:</span>
-                        <div class="hub-buttons-container">
-                            <button class="btn-hub active" id="hubBtnHuggingFace"
-                                data-hub="huggingface">HuggingFace</button>
-                            <button class="btn-hub" id="hubBtnModelScope" data-hub="modelscope">ModelScope</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="code-section-header">
-                    <div class="code-section-description">Download command:</div>
-                    <div style="position: relative;">
-                        <button class="code-detail-btn" id="codeDetailBtn" title="">Info</button>
-                        <div class="code-detail-panel" id="codeDetailPanel">
-                            <div class="code-detail-content"></div>
-                        </div>
-                    </div>
-                </div>
                 <div class="code-output" id="codeOutput"></div>
+                <div style="margin-top: 0.1rem; margin-bottom: 0.1rem;">
+                    <div class="hub-buttons-container">
+                        <button class="btn-hub-switch" id="hubSwitchBtn" data-hub="huggingface">
+                            <span class="hub-option hf">Huggingface</span>
+                            <span class="hub-option ms">Modelscope</span>
+                            <span class="hub-indicator" data-hub="huggingface"></span>
+                        </button>
+                    </div>
+                </div>
                 <div class="code-actions">
                     <button class="btn-selection" id="copyCodeBtn">Copy & Checkout</button>
                 </div>
