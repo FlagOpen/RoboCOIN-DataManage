@@ -60,7 +60,6 @@ export function selectAllInHierarchy(manager, groupKey, hierarchyMap, parentPath
             const filterId = `${groupKey}:${value}`;
             if (!manager.selectedFilters.has(filterId)) {
                 manager.selectedFilters.add(filterId);
-                manager.addFilterTag(filterId, manager.getFilterLabel(groupKey, value));
             }
         }
 
@@ -112,7 +111,6 @@ export function clearLeafNodesRecursive(manager, groupKey, hierarchyMap, parentP
                 if (option) {
                     option.classList.remove('selected');
                 }
-                manager.removeFilterTag(filterId);
             }
         }
 

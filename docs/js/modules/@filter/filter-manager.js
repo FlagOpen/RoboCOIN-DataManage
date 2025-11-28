@@ -154,98 +154,17 @@ export class FilterManager {
             if (optionElement) {
                 removeClass(optionElement, 'selected');
             }
-            this.removeFilterTag(filterId);
         } else {
             this.selectedFilters.add(filterId);
             if (optionElement) {
                 addClass(optionElement, 'selected');
             }
-            this.addFilterTag(filterId, filterLabel);
         }
 
         this.updateTriggerCount();
         this.scheduleFilterUpdate();
     }
 
-    /**
-     * Add filter tag to UI
-     * @param {string} filterId - Filter ID
-     * @param {string} filterLabel - Filter label
-     */
-    addFilterTag(filterId, filterLabel) {
-        const container = qs('#filterTagsContainer');
-        if (!container) return;
-
-        const [filterKey, filterValue] = filterId.split(':');
-        const label = filterLabel || this.getFilterLabel(filterKey, filterValue);
-
-        const tag = document.createElement('div');
-        tag.className = 'filter-tag';
-        tag.dataset.filterId = filterId;
-        tag.innerHTML = `
-            <span class="filter-tag-text">${label}</span>
-            <button class="filter-tag-close" data-filter-id="${filterId}">✕</button>
-        `;
-
-        const closeBtn = tag.querySelector('.filter-tag-close');
-        closeBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            this.removeFilterTagById(filterId);
-        });
-
-        container.appendChild(tag);
-    }
-
-    /**
-     * Remove filter tag from UI
-     * @param {string} filterId - Filter ID
-     */
-    removeFilterTag(filterId) {
-        const container = qs('#filterTagsContainer');
-        if (!container) return;
-
-        const tag = container.querySelector(`.filter-tag[data-filter-id="${filterId}"]`);
-        if (tag) {
-            tag.remove();
-        }
-    }
-
-    /**
-     * Remove filter by tag click
-     * @param {string} filterId - Filter ID
-     */
-    removeFilterTagById(filterId) {
-        this.selectedFilters.delete(filterId);
-
-        const option = this.filterOptionCache.get(filterId);
-        if (option) {
-            removeClass(option, 'selected');
-        }
-
-        this.removeFilterTag(filterId);
-        this.updateTriggerCount();
-        this.scheduleFilterUpdate();
-    }
-
-    /**
-     * Render all filter tags
-     */
-    renderFilterTags() {
-        const container = qs('#filterTagsContainer');
-        if (!container) return;
-
-        setHTML(container, '');
-
-        if (this.selectedFilters.size === 0) {
-            return;
-        }
-
-        this.selectedFilters.forEach(filterId => {
-            const [filterKey, filterValue] = filterId.split(':');
-            const filterLabel = this.getFilterLabel(filterKey, filterValue);
-            this.addFilterTag(filterId, filterLabel);
-        });
-    }
 
     /**
      * Update trigger count badge
@@ -315,18 +234,6 @@ export class FilterManager {
      * @param {string} filterValue - Filter value
      * @returns {string} Filter label
      */
-    getFilterLabel(filterKey, filterValue) {
-        const keyLabels = {
-            'scene': 'Scene',
-            'robot': 'Robot',
-            'end': 'End Effector',
-            'action': 'Action',
-            'object': 'Object'
-        };
-
-        const keyLabel = keyLabels[filterKey] || filterKey;
-        return `${keyLabel}: ${filterValue}`;
-    }
 
     /**
      * Schedule filter update (debounced)
@@ -518,7 +425,6 @@ export class FilterManager {
                 const filterId = `${groupKey}:${value}`;
                 if (!this.selectedFilters.has(filterId)) {
                     this.selectedFilters.add(filterId);
-                    this.addFilterTag(filterId, this.getFilterLabel(groupKey, value));
                 }
             });
         } else if (group.type === 'hierarchical') {
@@ -553,7 +459,6 @@ export class FilterManager {
             if (option) {
                 removeClass(option, 'selected');
             }
-            this.removeFilterTag(filterId);
         });
 
         this.updateTriggerCount();
