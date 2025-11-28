@@ -5,8 +5,6 @@
 
 /// <reference path="../types.js" />
 
-import ConfigManager from './config.js';
-import Templates from '../templates.js';
 import FilterState from './filter-state.js';
 import { qs, qsa, addClass, removeClass, toggleClass, setHTML, setText } from './dom-utils.js';
 import {
@@ -16,6 +14,8 @@ import {
     selectAllChildrenInHierarchy,
     clearAllChildrenInHierarchy
 } from './filter-hierarchy.js';
+import FilterSearchHelper from './filter-search.js';
+import FilterRenderer from './filter-renderer.js';
 
 /**
  * Filter Manager Class
@@ -48,10 +48,6 @@ export class FilterManager {
         /** @type {number|null} */
         this.pendingFilterUpdate = null;
 
-        // Filter Finder state
-        this.filterFinderMatches = [];
-        this.filterFinderCurrentIndex = -1;
-
         // Static count cache for UI display (only calculated once at initialization)
         this.staticFilterCounts = new Map();
 
@@ -60,6 +56,18 @@ export class FilterManager {
          * Provides common_name and aliases for robot IDs.
          */
         this.robotAliasManager = robotAliasManager || null;
+
+        /**
+         * UI renderer for filter sidebar and options.
+         * @type {FilterRenderer}
+         */
+        this.renderer = new FilterRenderer(this);
+
+        /**
+         * Filter Finder helper (search / navigate / UI).
+         * @type {FilterSearchHelper}
+         */
+        this.filterSearch = new FilterSearchHelper(this, this.robotAliasManager);
     }
 
     /**
@@ -136,63 +144,10 @@ export class FilterManager {
     }
 
     /**
-     * Render filter groups to UI
+     * Render filter groups to UI (delegated to renderer).
      */
     renderFilterGroups() {
-        // Render categories sidebar
-        this.renderCategoriesSidebar();
-
-        // Render options content (initially empty, will be populated when category is selected)
-        const container = qs('#filterGroups');
-        setHTML(
-            container,
-            '<div class="filter-options-placeholder">Select a category from the left to view options</div>'
-        );
-
-        // Auto-select first category
-        this.selectCategory('scene');
-    }
-
-    /**
-     * Render categories sidebar
-     */
-    renderCategoriesSidebar() {
-        const sidebar = qs('#filterCategoriesSidebar');
-        if (!sidebar) return;
-
-        setHTML(sidebar, '');
-
-        // Define category display names and order
-        const categoryOrder = ['frame range', 'scene', 'robot', 'end', 'action', 'object'];
-        const categoryLabels = {
-            'frame range': 'Frame Range',
-            'scene': 'Scene',
-            'robot': 'Robot Model',
-            'end': 'End Effector',
-            'action': 'Action',
-            'object': 'Operation Object'
-        };
-
-        categoryOrder.forEach(key => {
-            const group = this.filterGroups[key];
-            if (!group) return;
-
-            const categoryBtn = document.createElement('div');
-            categoryBtn.className = 'filter-category-btn';
-            categoryBtn.dataset.category = key;
-
-            const count = this.getCategoryItemCount(key);
-            categoryBtn.innerHTML = `
-                <span class="category-label">${categoryLabels[key]}</span>
-                <span class="category-count">${count}</span>
-            `;
-
-            categoryBtn.addEventListener('click', () => {
-                this.selectCategory(key);
-            });
-
-            sidebar.appendChild(categoryBtn);
-        });
+        this.renderer.renderFilterGroups();
     }
 
     /**
@@ -231,83 +186,7 @@ export class FilterManager {
      * @param {string} categoryKey - The category key
      */
     renderCategoryOptions(categoryKey) {
-        const container = qs('#filterGroups');
-        if (!container) return;
-
-        const group = this.filterGroups[categoryKey];
-        if (!group) return;
-
-        setHTML(container, '');
-
-        const div = document.createElement('div');
-        div.className = 'filter-group';
-
-        if (group.type === 'flat') {
-            div.innerHTML = this.buildFlatFilterGroup(categoryKey, group);
-        } else if (group.type === 'hierarchical') {
-            div.innerHTML = this.buildHierarchicalFilterGroup(categoryKey, group);
-        }
-
-        container.appendChild(div);
-
-        // Add click handlers for filter options
-        requestAnimationFrame(() => {
-            // Open the group by default
-            const topLevelTitle = div.querySelector('.filter-option-wrapper[data-level="0"] > .filter-option.hierarchy-name-only');
-            if (topLevelTitle) {
-                const wrapper = topLevelTitle.closest('.filter-option-wrapper');
-                const children = wrapper?.querySelector('.filter-children');
-                if (children) {
-                    removeClass(children, 'collapsed');
-                }
-            }
-
-            const filterOptionsElements = div.querySelectorAll('.filter-option');
-            filterOptionsElements.forEach(option => {
-                // Handle hierarchy parent nodes (expand/collapse)
-                if (option.classList.contains('hierarchy-name-only')) {
-                    // Click on hierarchy item (not actions) -> expand/collapse
-                    option.addEventListener('click', (e) => {
-                        // Don't handle if clicking on action buttons
-                        if (e.target.closest('.hierarchy-action-btn')) {
-                            return;
-                        }
-                        // Expand/collapse children
-                        const wrapper = option.closest('.filter-option-wrapper');
-                        if (!wrapper) return;
-                        const children = wrapper.querySelector('.filter-children');
-                        if (children) {
-                            toggleClass(children, 'collapsed');
-                            // After expanding, apply selected states to newly visible options
-                            if (!children.classList.contains('collapsed')) {
-                                this.applySelectedStylesToContainer(children);
-                            }
-                        }
-                    });
-                    return;
-                }
-
-                const filterKey = option.dataset.filter;
-                const filterValue = option.dataset.value;
-
-                if (filterKey && filterValue) {
-                    const filterId = `${filterKey}:${filterValue}`;
-                    this.filterOptionCache.set(filterId, option);
-
-                    option.addEventListener('click', (e) => {
-                        if (e.target.closest('.hierarchy-toggle')) {
-                            return;
-                        }
-
-                        const label = option.querySelector('.filter-option-label')?.textContent?.trim() || filterValue;
-                        this.toggleFilterSelection(filterKey, filterValue, label, option);
-                    });
-                }
-            });
-
-            // Apply selected states to already selected filters in this category
-            this.applySelectedStylesToCategory(categoryKey);
-        });
+        this.renderer.renderCategoryOptions(categoryKey);
     }
 
     /**
@@ -325,43 +204,6 @@ export class FilterManager {
             return countHierarchyItems(group.values);
         }
         return 0;
-    }
-
-    /**
-     * Build flat filter group HTML
-     * @param {string} key - Filter key
-     * @param {FilterGroup} group - Filter group
-     * @returns {string} HTML string
-     */
-    buildFlatFilterGroup(key, group) {
-        const baseIndent = ConfigManager.getCSSValue('--hierarchy-indent', 4);
-        return Templates.buildFlatFilterGroup(key, group, baseIndent);
-    }
-
-    /**
-     * Build hierarchical filter group HTML
-     * @param {string} key - Filter key
-     * @param {FilterGroup} group - Filter group
-     * @returns {string} HTML string
-     */
-    buildHierarchicalFilterGroup(key, group) {
-        const buildHierarchyHTML = (map, level = 1, parentPath = '') => {
-            let html = '';
-            const sortedEntries = Array.from(map.entries()).sort((a, b) => a[0].localeCompare(b[0]));
-            const baseIndent = ConfigManager.getCSSValue('--hierarchy-indent', 4);
-
-            sortedEntries.forEach(([value, node]) => {
-                const fullPath = parentPath ? `${parentPath}>${value}` : value;
-                const hasChildren = node.children.size > 0;
-                const childrenHTML = hasChildren ? buildHierarchyHTML(node.children, level + 1, fullPath) : '';
-
-                html += Templates.buildHierarchyOption(key, value, fullPath, hasChildren, level, baseIndent, childrenHTML);
-            });
-
-            return html;
-        };
-
-        return Templates.buildHierarchicalFilterGroup(key, group, buildHierarchyHTML);
     }
 
     /**
@@ -698,102 +540,7 @@ export class FilterManager {
      * @param {string} query - Search query
      */
     searchFilterOptions(query) {
-        this.clearFilterSearch();
-
-        // Only search in the options content (right panel), not in sidebar categories
-        const filterContent = qs('#filterGroups');
-        if (!filterContent) return;
-
-        const allOptions = filterContent.querySelectorAll('.filter-option');
-        const allWrappers = filterContent.querySelectorAll('.filter-option-wrapper');
-        this.filterFinderMatches = [];
-
-        if (!query) {
-            // Show all options when query is empty
-            allWrappers.forEach(wrapper => {
-                removeClass(wrapper, 'filter-search-hidden');
-            });
-            this.updateFilterFinderUI();
-            return;
-        }
-
-        const queryLower = query.toLowerCase();
-
-        // First pass: find all matching options
-        allOptions.forEach(option => {
-            const labelElement = option.querySelector('.filter-option-label, .hierarchy-label');
-            if (!labelElement) return;
-
-            const text = labelElement.textContent.trim();
-            const textLower = text.toLowerCase();
-
-            // Basic label text match
-            let matches = textLower.includes(queryLower);
-
-            // Extend: for robot filters, also match against alias tokens
-            if (!matches) {
-                const filterKey = option.dataset.filter;
-                const filterValue = option.dataset.value;
-
-                if (
-                    filterKey === 'robot' &&
-                    filterValue &&
-                    this.robotAliasManager &&
-                    typeof this.robotAliasManager.getSearchTokensForRobot === 'function'
-                ) {
-                    const tokens = this.robotAliasManager.getSearchTokensForRobot(filterValue);
-                    matches = tokens.some(token =>
-                        typeof token === 'string' &&
-                        token.toLowerCase().includes(queryLower)
-                    );
-                }
-            }
-
-            if (matches) {
-                addClass(option, 'highlight-match');
-                this.filterFinderMatches.push({
-                    element: option,
-                    text: text,
-                    wrapper: option.closest('.filter-option-wrapper')
-                });
-            }
-        });
-
-        // Second pass: hide/show wrappers based on matches
-        // Show wrapper if it or any of its descendants match
-        allWrappers.forEach(wrapper => {
-            const hasMatch = wrapper.querySelector('.highlight-match') !== null;
-            const hasMatchingDescendant = Array.from(wrapper.querySelectorAll('.filter-option-wrapper')).some(
-                child => child.querySelector('.highlight-match') !== null
-            );
-
-            if (hasMatch || hasMatchingDescendant) {
-                removeClass(wrapper, 'filter-search-hidden');
-                // Expand parent collapsed items to show matches
-                let parent = wrapper.parentElement?.closest('.filter-children');
-                while (parent) {
-                    if (parent.classList.contains('collapsed')) {
-                        removeClass(parent, 'collapsed');
-                    }
-                    parent = parent.parentElement?.closest('.filter-children');
-                }
-                // Expand filter group
-                const filterGroup = wrapper.closest('.filter-group');
-                if (filterGroup && filterGroup.classList.contains('collapsed')) {
-                    removeClass(filterGroup, 'collapsed');
-                }
-            } else {
-                // Hide wrapper if it doesn't match and has no matching descendants
-                addClass(wrapper, 'filter-search-hidden');
-            }
-        });
-
-        if (this.filterFinderMatches.length > 0) {
-            this.filterFinderCurrentIndex = 0;
-            this.highlightCurrentMatch();
-        }
-
-        this.updateFilterFinderUI();
+        this.filterSearch.search(query);
     }
 
     /**
@@ -801,103 +548,28 @@ export class FilterManager {
      * @param {string} direction - 'next' or 'prev'
      */
     navigateFilterMatch(direction) {
-        if (this.filterFinderMatches.length === 0) return;
-
-        if (this.filterFinderCurrentIndex >= 0 && this.filterFinderCurrentIndex < this.filterFinderMatches.length) {
-            removeClass(this.filterFinderMatches[this.filterFinderCurrentIndex].element, 'current-match');
-        }
-
-        if (direction === 'next') {
-            this.filterFinderCurrentIndex = (this.filterFinderCurrentIndex + 1) % this.filterFinderMatches.length;
-        } else {
-            this.filterFinderCurrentIndex = (this.filterFinderCurrentIndex - 1 + this.filterFinderMatches.length) % this.filterFinderMatches.length;
-        }
-
-        this.highlightCurrentMatch();
-        this.updateFilterFinderUI();
+        this.filterSearch.navigate(direction === 'prev' ? 'prev' : 'next');
     }
 
     /**
      * Highlight current match
      */
     highlightCurrentMatch() {
-        if (this.filterFinderCurrentIndex < 0 || this.filterFinderCurrentIndex >= this.filterFinderMatches.length) {
-            return;
-        }
-
-        const match = this.filterFinderMatches[this.filterFinderCurrentIndex];
-        const option = match.element;
-
-        addClass(option, 'current-match');
-
-        // Expand all parent collapsed items
-        let parent = option.closest('.filter-children');
-        while (parent) {
-            if (parent.classList.contains('collapsed')) {
-                removeClass(parent, 'collapsed');
-            }
-            parent = parent.parentElement?.closest('.filter-children');
-        }
-
-        // Expand filter group
-        const filterGroup = option.closest('.filter-group');
-        if (filterGroup && filterGroup.classList.contains('collapsed')) {
-            removeClass(filterGroup, 'collapsed');
-        }
-
-        // Scroll into view
-        const filterContent = qs('#filterGroups');
-        if (filterContent && option) {
-            const optionRect = option.getBoundingClientRect();
-            const contentRect = filterContent.getBoundingClientRect();
-
-            if (optionRect.top < contentRect.top || optionRect.bottom > contentRect.bottom) {
-                option.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
-        }
+        this.filterSearch.highlightCurrent();
     }
 
     /**
      * Clear filter search
      */
     clearFilterSearch() {
-        // Only clear search highlights in the options content (right panel)
-        const filterContent = qs('#filterGroups');
-        if (filterContent) {
-            filterContent.querySelectorAll('.filter-option.highlight-match').forEach(el => {
-                removeClass(el, 'highlight-match');
-                removeClass(el, 'current-match');
-            });
-
-            // Show all wrappers in options content
-            filterContent.querySelectorAll('.filter-option-wrapper.filter-search-hidden').forEach(wrapper => {
-                removeClass(wrapper, 'filter-search-hidden');
-            });
-        }
-
-        this.filterFinderMatches = [];
-        this.filterFinderCurrentIndex = -1;
-        this.updateFilterFinderUI();
+        this.filterSearch.clear(true);
     }
 
     /**
      * Update Filter Finder UI
      */
     updateFilterFinderUI() {
-        const countElement = qs('#filterFinderCount');
-        const prevBtn = qs('#filterFinderPrev');
-        const nextBtn = qs('#filterFinderNext');
-
-        if (!countElement || !prevBtn || !nextBtn) return;
-
-        const total = this.filterFinderMatches.length;
-        const current = total > 0 ? this.filterFinderCurrentIndex + 1 : 0;
-
-        countElement.textContent = `${current}/${total}`;
-
-        const hasMatches = total > 0;
-        prevBtn.disabled = !hasMatches;
-        nextBtn.disabled = !hasMatches;
+        this.filterSearch.updateUI();
     }
 
     /**
