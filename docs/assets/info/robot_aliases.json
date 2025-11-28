@@ -22,7 +22,8 @@
   },
   "Cobot_Magic": {
     "common_name": "Cobot Magic", 
-    "aliases": ["Cobot", "Magic","mag", "cobotmagic", "songling", "agilex", "松灵", "aloha"]
+    "aliases": ["Cobot", "Magic","mag", "cobotmagic", 
+    "songling", "agilex", "agile", "松灵", "aloha"]
   },
   "R1_Lite": {
     "common_name": "R1 Lite",
@@ -30,7 +31,8 @@
   },
   "Split_aloha": {
     "common_name": "Aloha",
-    "aliases": ["Aloha", "Split","splitaloha", "songling", "agilex", "松灵", "aloha"]
+    "aliases": ["Aloha", "Split","splitaloha", 
+    "songling", "agilex", "agile", "松灵", "aloha"]
   },
   "Tianqin_A2": {
     "common_name": "Tianqin A2",
