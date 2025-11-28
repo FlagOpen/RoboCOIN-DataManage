@@ -194,6 +194,25 @@ const Templates = {
             );
         }
 
+        // Dataset size
+        if (ds.datasetSize) {
+            html += this.buildHoverInfoGroup('dataset size', this.buildHoverTag(ds.datasetSize));
+        }
+
+        // Dataset statistics
+        if (ds.statistics) {
+            const stats = ds.statistics;
+            const statDetails = [];
+            if (stats.total_episodes) statDetails.push(`episodes: ${stats.total_episodes.toLocaleString()}`);
+            if (stats.total_frames) statDetails.push(`frames: ${stats.total_frames.toLocaleString()}`);
+            if (stats.total_tasks) statDetails.push(`tasks: ${stats.total_tasks}`);
+            if (stats.total_videos) statDetails.push(`videos: ${stats.total_videos}`);
+            if (stats.fps) statDetails.push(`fps: ${stats.fps}`);
+            if (statDetails.length > 0) {
+                html += this.buildHoverInfoGroup('statistics', statDetails.join(', '), false);
+            }
+        }
+
         // End effector
         if (ds.endEffector) {
             html += this.buildHoverInfoGroup('end effector', this.buildHoverTag(ds.endEffector));
@@ -314,6 +333,7 @@ const Templates = {
                 ${this.buildDetailInfoItem('Dataset Name', dataset.name)}
                 ${this.buildDetailInfoItem('Task Description', dataset.description || 'N/A')}
                 ${this.buildDetailInfoItem('Device Model (Robot)', robotDisplay)}
+                ${this.buildDetailInfoItem('Dataset Size', dataset.datasetSize || 'N/A')}
                 ${this.buildDetailInfoItem('End Effector Type', dataset.endEffector || 'N/A')}
                 ${this.buildDetailInfoItem('Operation Platform Height', dataset.platformHeight !== undefined ? dataset.platformHeight : 'N/A')}
                 ${this.buildDetailInfoItem('Scene Type', scenesText)}

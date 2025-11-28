@@ -31,31 +31,59 @@ export class DataManager {
      */
     async loadDatasets(loadingProgress, loadingBar) {
         try {
-            console.log('🚀 Loading consolidated dataset (optimized)...');
+            console.log('🚀 Attempting to load consolidated JSON (preferred)...');
             const startTime = performance.now();
-            
+
             // Update initial progress
             loadingProgress.textContent = 'Loading consolidated data...';
             loadingBar.style.width = '10%';
-            
-            // Load consolidated JSON file (single request instead of 2000!)
-            const res = await fetch(`${this.config.paths.info}/consolidated_datasets.json`);
-            
-            // Check if consolidated JSON exists
-            if (!res.ok) {
-                if (res.status === 404) {
-                    // Consolidated JSON not found, fallback to YAML mode
-                    console.warn('⚠️ Consolidated JSON not found. Falling back to YAML mode (slower).');
-                    loadingProgress.innerHTML = `
-                        <div style="color: #ff9800; font-weight: 600;">⚠️ Loading in YAML mode (slower)</div>
-                        <div style="font-size: 12px; margin-top: 4px;">Consolidated JSON not found. Loading from individual YAML files...</div>
-                    `;
-                    await this.loadDatasetsFromYAML(loadingProgress, loadingBar);
+
+            // PRIORITY: Always try consolidated JSON first (single request, much faster)
+            try {
+                console.log('📄 Fetching consolidated_datasets.json...');
+                const res = await fetch(`${this.config.paths.info}/consolidated_datasets.json`);
+
+                if (res.ok) {
+                    console.log('✅ Consolidated JSON found! Processing...');
+                    loadingBar.style.width = '50%';
+
+                    const allData = await res.json();
+                    loadingBar.style.width = '75%';
+
+                    const datasetCount = Object.keys(allData).length;
+                    console.log(`✓ Loaded ${datasetCount} datasets from consolidated JSON`);
+
+                    // Convert consolidated data to dataset objects
+                    this.datasets = Object.entries(allData).map(([path, raw]) => this.createDatasetObject(path, raw));
+
+                    // Update progress to 100%
+                    loadingProgress.textContent = `${this.datasets.length} datasets loaded`;
+                    loadingBar.style.width = '100%';
+
+                    const endTime = performance.now();
+                    const loadTime = (endTime - startTime).toFixed(2);
+
+                    console.log(`✓ Loaded ${this.datasets.length} datasets in ${loadTime}ms (${(loadTime / this.datasets.length).toFixed(2)}ms per dataset)`);
+                    console.log('🎉 Using optimized consolidated JSON!');
+
                     return this.datasets;
+                } else if (res.status === 404) {
+                    console.warn('⚠️ Consolidated JSON not found (404). This is expected in development.');
                 } else {
-                    throw new Error(`Failed to load consolidated data: ${res.status} ${res.statusText}`);
+                    console.warn(`⚠️ Consolidated JSON request failed (${res.status}). Will try YAML fallback.`);
                 }
+            } catch (jsonError) {
+                console.warn('⚠️ Failed to fetch consolidated JSON:', jsonError.message);
             }
+
+            // FALLBACK: Use YAML mode if JSON is not available
+            console.log('📁 Falling back to YAML mode...');
+            loadingProgress.innerHTML = `
+                <div style="color: #ff9800; font-weight: 600;">📁 Loading in YAML mode</div>
+                <div style="font-size: 12px; margin-top: 4px;">Consolidated JSON not available. Loading from individual YAML files...</div>
+            `;
+            await this.loadDatasetsFromYAML(loadingProgress, loadingBar);
+            return this.datasets;
             
             loadingBar.style.width = '50%';
             
@@ -131,6 +159,12 @@ export class DataManager {
             robot: raw.robot_type,
             endEffector: raw.end_effector_type || rawData.end_effector_type,
             platformHeight: raw.operation_platform_height !== undefined ? raw.operation_platform_height : rawData.operation_platform_height,
+
+            // 数据集大小相关信息
+            frameRange: raw.frame_range || rawData.frame_range,
+            datasetSize: raw.dataset_size || rawData.dataset_size,
+            statistics: raw.statistics || rawData.statistics,
+
             raw: raw,
             getAllScenes: function() { return this.scenes; },
             hasScene: function(sceneType) { return this.scenes.includes(sceneType); },

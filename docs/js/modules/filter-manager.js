@@ -51,6 +51,11 @@ export class FilterManager {
      */
     buildFilterGroups() {
         const groups = {
+            'frame range': {
+                title: 'frame range',
+                values: new Set(),
+                type: 'flat'
+            },
             'scene': {
                 title: 'scene',
                 values: new Set(),
@@ -80,6 +85,11 @@ export class FilterManager {
 
         // Collect all filter options
         this.datasets.forEach(ds => {
+            // Frame range field
+            if (ds.frameRange) {
+                groups['frame range'].values.add(ds.frameRange);
+            }
+
             // Flat multi-value fields
             if (ds.scenes) {
                 ds.scenes.forEach(scene => groups.scene.values.add(scene));
@@ -156,8 +166,9 @@ export class FilterManager {
         sidebar.innerHTML = '';
 
         // Define category display names and order
-        const categoryOrder = ['scene', 'robot', 'end', 'action', 'object'];
+        const categoryOrder = ['frame range', 'scene', 'robot', 'end', 'action', 'object'];
         const categoryLabels = {
+            'frame range': 'Frame Range',
             'scene': 'Scene',
             'robot': 'Robot Model',
             'end': 'End Effector',
@@ -596,6 +607,11 @@ export class FilterManager {
             texts.add(String(ds.path));
         }
 
+        // Frame range
+        if (ds.frameRange) {
+            texts.add(String(ds.frameRange));
+        }
+
         // Robot IDs + aliases
         if (ds.robot) {
             const robots = Array.isArray(ds.robot) ? ds.robot : [ds.robot];
@@ -652,7 +668,9 @@ export class FilterManager {
             for (const [key, values] of Object.entries(filters)) {
                 let match = false;
 
-                if (key === 'scene') {
+                if (key === 'frame range') {
+                    match = values.includes(ds.frameRange);
+                } else if (key === 'scene') {
                     match = ds.scenes && ds.scenes.some(v => values.includes(v));
                 } else if (key === 'robot') {
                     const robots = Array.isArray(ds.robot) ? ds.robot : [ds.robot];

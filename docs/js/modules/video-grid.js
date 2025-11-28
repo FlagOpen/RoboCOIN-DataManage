@@ -366,27 +366,35 @@ export class VideoGridManager {
      */
     formatMetaTags(ds) {
         const tags = [];
-        
+
+        // Size information - show dataset size and key statistics
+        if (ds.datasetSize) {
+            tags.push(Templates.buildVideoTag(ds.datasetSize));
+        }
+
+        // Show key statistics if available
+        if (ds.statistics) {
+            const stats = ds.statistics;
+            if (stats.total_episodes && stats.total_frames) {
+                // Format episode count and total frames
+                const episodes = stats.total_episodes;
+                const frames = stats.total_frames;
+                const formattedFrames = frames >= 1000000 ? `${(frames / 1000000).toFixed(1)}M` : frames >= 1000 ? `${Math.floor(frames / 1000)}K` : frames.toString();
+                tags.push(Templates.buildVideoTag(`${episodes} ep, ${formattedFrames} frames`));
+            }
+        }
+
         if (ds.scenes && ds.scenes.length > 0) {
             const more = ds.scenes.length > 1 ? `+${ds.scenes.length - 1}` : '';
             tags.push(Templates.buildVideoTag(ds.scenes[0], more));
         }
-        
-        if (ds.robot) {
-            const robots = Array.isArray(ds.robot) ? ds.robot : [ds.robot];
-            const displayRobots = robots.map(r =>
-                RobotAliasManager && typeof RobotAliasManager.getDisplayName === 'function'
-                    ? RobotAliasManager.getDisplayName(r)
-                    : r
-            );
-            const more = displayRobots.length > 1 ? `+${displayRobots.length - 1}` : '';
-            tags.push(Templates.buildVideoTag(displayRobots[0], more));
-        }
-        
+
+        // Robot information moved to hover overlay since it's already shown in title
+
         if (ds.endEffector) {
             tags.push(Templates.buildVideoTag(ds.endEffector));
         }
-        
+
         return tags.join('');
     }
     
