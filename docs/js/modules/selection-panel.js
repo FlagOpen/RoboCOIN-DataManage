@@ -8,6 +8,7 @@
 import ConfigManager from './config.js';
 import Templates from '../templates.js';
 import { calculateVisibleRange, ElementCache } from './virtual-scroll.js';
+import ErrorNotifier from './error-notifier.js';
 
 /**
  * Selection Panel Manager Class
@@ -260,7 +261,7 @@ export class SelectionPanelManager {
                 const imported = JSON.parse(e.target.result);
                 
                 if (!Array.isArray(imported)) {
-                    alert('Invalid JSON format. Expected an array of dataset IDs.');
+                    ErrorNotifier.error('Invalid JSON format. Expected an array of dataset IDs.');
                     event.target.value = '';
                     return;
                 }
@@ -296,10 +297,10 @@ export class SelectionPanelManager {
                     onComplete();
                 }
                 
-                alert(`Import completed!\nValid: ${validCount}\nInvalid/Not found: ${invalidCount}`);
+                ErrorNotifier.info(`Import completed!\nValid: ${validCount}\nInvalid/Not found: ${invalidCount}`);
                 
             } catch (err) {
-                alert('Failed to parse JSON file: ' + err.message);
+                ErrorNotifier.error('Failed to parse JSON file: ' + err.message, err);
             }
             
             event.target.value = '';
@@ -330,7 +331,7 @@ export class SelectionPanelManager {
                 btn.classList.remove('success');
             }, 1500);
         }).catch(err => {
-            alert('Copy failed: ' + err.message);
+            ErrorNotifier.error('Copy failed: ' + err.message, err);
         });
     }
     

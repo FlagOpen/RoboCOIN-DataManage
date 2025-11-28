@@ -13,6 +13,7 @@ import SelectionPanelManager from './modules/selection-panel.js';
 import UIUtils from './modules/ui-utils.js';
 import EventHandlers from './modules/event-handlers.js';
 import RobotAliasManager from './modules/robot-aliases.js';
+import ErrorNotifier from './modules/error-notifier.js';
 
 /**
  * Main Application Class
@@ -92,8 +93,7 @@ class Application {
             console.log('✓ Application initialized successfully');
             
         } catch (err) {
-            console.error('Initialization failed:', err);
-            alert('Failed to initialize application: ' + err.message);
+            ErrorNotifier.error('Failed to initialize application: ' + err.message, err);
             
             setTimeout(() => {
                 document.getElementById('loadingOverlay').classList.add('hidden');

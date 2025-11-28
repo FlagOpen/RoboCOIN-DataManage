@@ -4,6 +4,7 @@
  */
 
 import APP from './app.js';
+import ErrorNotifier from './modules/error-notifier.js';
 
 /**
  * Initialize application when DOM is ready
@@ -12,8 +13,7 @@ function initApp() {
     try {
         APP.init();
     } catch (error) {
-        console.error('Failed to initialize application:', error);
-        alert('Application initialization failed. Please refresh the page.');
+        ErrorNotifier.error('Application initialization failed. Please refresh the page.', error);
     }
 }
 

@@ -1,10 +1,104 @@
 dataset_name: desktop_organization
 dataset_uuid: 66922d94-1a12-4281-bddf-1da6a26caf4c
-scene_type: []
-atomic_actions: []
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
 end_effector_type: two_finger_gripper
 operation_platform_height: 77.2
-objects: []
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: orange
+  level1: fruit
+  level2: orange
+  level3: null
+  level4: null
+  level5: null
+- object_name: peach
+  level1: fruit
+  level2: peach
+  level3: null
+  level4: null
+  level5: null
+- object_name: fruit_plate
+  level1: container
+  level2: fruit_plate
+  level3: null
+  level4: null
+  level5: null
+- object_name: paper_ball
+  level1: garbage
+  level2: paper_ball
+  level3: null
+  level4: null
+  level5: null
+- object_name: plastic
+  level1: garbage
+  level2: plastic
+  level3: null
+  level4: null
+  level5: null
+- object_name: trash_can
+  level1: container
+  level2: trash_can
+  level3: null
+  level4: null
+  level5: null
+- object_name: bottle
+  level1: container
+  level2: bottle
+  level3: null
+  level4: null
+  level5: null
+- object_name: art_knife
+  level1: office_supplies
+  level2: art_knife
+  level3: null
+  level4: null
+  level5: null
+- object_name: glue
+  level1: office_supplies
+  level2: glue
+  level3: null
+  level4: null
+  level5: null
+- object_name: eraser
+  level1: office_supplies
+  level2: eraser
+  level3: null
+  level4: null
+  level5: null
+- object_name: ruler
+  level1: office_supplies
+  level2: ruler
+  level3: null
+  level4: null
+  level5: null
+- object_name: pen
+  level1: office_supplies
+  level2: pen
+  level3: null
+  level4: null
+  level5: null
+- object_name: scissor
+  level1: office_supplies
+  level2: scissor
+  level3: null
+  level4: null
+  level5: null
+- object_name: pen_holder
+  level1: container
+  level2: pen_holder
+  level3: null
+  level4: null
+  level5: null
 path: RMC-AIDA-L_desktop_organization
 video_url: ./assets/videos/RMC-AIDA-L_desktop_organization.mp4
 thumbnail_url: ./assets/thumbnails/RMC-AIDA-L_desktop_organization.jpg
@@ -17,7 +111,8 @@ task_categories:
 tags:
 - RoboCOIN
 - LeRobot
-size_categories: 1M-10M
+frame_range: 1M-10M
+dataset_size: 38.7GB
 configs:
 - config_name: default
   data_files: data/*/*.parquet
@@ -36,7 +131,8 @@ homepage: https://flagopen.github.io/RoboCOIN/
 paper: https://arxiv.org/abs/2511.17441
 repository: https://github.com/FlagOpen/RoboCOIN
 project_page: https://flagopen.github.io/RoboCOIN/
-robot_type: realman_rmc_aidal
+issues_url: https://github.com/FlagOpen/RoboCOIN/issues
+robot_type: RMC-AIDA-L
 codebase_version: v2.1
 statistics:
   total_episodes: 1660
@@ -572,23 +668,23 @@ contact_info: For questions, issues, or feedback regarding this dataset, please 
   us.
 support_info: For technical support, please open an issue on our GitHub repository.
 license_details: Please refer to the LICENSE file for full license terms and conditions.
-citation_bibtex: "@misc{RoboCOINReport,\n        author = {Shihan Wu, Xuecheng Liu,\
-  \ Shaoxuan Xie, Pengwei Wang, Xinghang Li, Bowen Yang, Zhe Li, Kai Zhu, Hongyu Wu,\
-  \ Yiheng Liu, Zhaoye Long, Yue Wang, Chong Liu, Dihan Wang, Ziqiang Ni, Xiang Yang,\
-  \ You Liu, Ruoxuan Feng, Runtian Xu, Lei Zhang, Denghang Huang, Chenghao Jin, Anlan\
-  \ Yin, Xinlong Wang, Zhenguo Sun, Junkai Zhao, Mengfei Du, Mingyu Cao, Xiansheng\
-  \ Chen, Hongyang Cheng, Xiaojie Zhang, Yankai Fu, Ning Chen, Cheng Chi, Sixiang\
-  \ Chen, Huaihai Lyu, Xiaoshuai Hao, Yankai Fu, Yequan Wang, Bo Lei, Dong Liu, Xi\
-  \ Yang, Yance Jiao, Tengfei Pan, Yunyan Zhang, Songjing Wang, Ziqian Zhang, Xu Liu,\
-  \ Ji Zhang, Caowei Meng, Zhizheng Zhang, Jiyang Gao, Song Wang, Xiaokun Leng, Zhiqiang\
-  \ Xie, Zhenzhen Zhou, Peng Huang, Wu Yang, Yandong Guo, Yichao Zhu, Suibing Zheng,\
-  \ Hao Cheng, Xinmin Ding, Yang Yue, Huanqian Wang, Chi Chen, Jingrui Pang, YuXi\
-  \ Qian, Haoran Geng, Lianli Gao, Haiyuan Li, Bin Fang, Gao Huang, Yaodong Yang,\
+citation_bibtex: "@article{robocoin,\n    title={RoboCOIN: An Open-Sourced Bimanual\
+  \ Robotic Data Collection for Integrated Manipulation},\n    author={Shihan Wu,\
+  \ Xuecheng Liu, Shaoxuan Xie, Pengwei Wang, Xinghang Li, Bowen Yang, Zhe Li, Kai\
+  \ Zhu, Hongyu Wu, Yiheng Liu, Zhaoye Long, Yue Wang, Chong Liu, Dihan Wang, Ziqiang\
+  \ Ni, Xiang Yang, You Liu, Ruoxuan Feng, Runtian Xu, Lei Zhang, Denghang Huang,\
+  \ Chenghao Jin, Anlan Yin, Xinlong Wang, Zhenguo Sun, Junkai Zhao, Mengfei Du, Mingyu\
+  \ Cao, Xiansheng Chen, Hongyang Cheng, Xiaojie Zhang, Yankai Fu, Ning Chen, Cheng\
+  \ Chi, Sixiang Chen, Huaihai Lyu, Xiaoshuai Hao, Yequan Wang, Bo Lei, Dong Liu,\
+  \ Xi Yang, Yance Jiao, Tengfei Pan, Yunyan Zhang, Songjing Wang, Ziqian Zhang, Xu\
+  \ Liu, Ji Zhang, Caowei Meng, Zhizheng Zhang, Jiyang Gao, Song Wang, Xiaokun Leng,\
+  \ Zhiqiang Xie, Zhenzhen Zhou, Peng Huang, Wu Yang, Yandong Guo, Yichao Zhu, Suibing\
+  \ Zheng, Hao Cheng, Xinmin Ding, Yang Yue, Huanqian Wang, Chi Chen, Jingrui Pang,\
+  \ YuXi Qian, Haoran Geng, Lianli Gao, Haiyuan Li, Bin Fang, Gao Huang, Yaodong Yang,\
   \ Hao Dong, He Wang, Hang Zhao, Yadong Mu, Di Hu, Hao Zhao, Tiejun Huang, Shanghang\
-  \ Zhang, Yonghua Lin, Zhongyuan Wang and Guocai Yao},\n        title = {RoboCOIN:\
-  \ An Open-Sourced Bimanual Robotic Data Collection for Integrated Manipulation},\n\
-  \        year = {2025},\n        eprint = {2511.17441},\n        archivePrefix =\
-  \ {arXiv},\n        url = {https://arxiv.org/abs/2511.17441}\n    }"
+  \ Zhang, Yonghua Lin, Zhongyuan Wang and Guocai Yao},\n    journal={arXiv preprint\
+  \ arXiv:2511.17441},\n    url = {https://arxiv.org/abs/2511.17441},\n    year={2025}\n\
+  \    }"
 additional_citations: 'If you use this dataset, please also consider citing:
 
   - LeRobot Framework: https://github.com/huggingface/lerobot'

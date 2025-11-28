@@ -7,6 +7,15 @@
 
 import ConfigManager from './config.js';
 import Templates from '../templates.js';
+import FilterState from './filter-state.js';
+import { qs, qsa, addClass, removeClass, toggleClass, setHTML, setText } from './dom-utils.js';
+import {
+    addToHierarchy,
+    countHierarchyItems,
+    selectAllInHierarchy,
+    selectAllChildrenInHierarchy,
+    clearAllChildrenInHierarchy
+} from './filter-hierarchy.js';
 
 /**
  * Filter Manager Class
@@ -25,6 +34,13 @@ export class FilterManager {
 
         /** @type {Set<string>} */
         this.selectedFilters = new Set();
+
+        /**
+         * Encapsulated filter selection state helper.
+         * wraps the same backing Set so existing logic keeps working.
+         * @type {FilterState}
+         */
+        this.filterState = new FilterState(this.selectedFilters);
 
         /** @type {Map<string, HTMLElement>} */
         this.filterOptionCache = new Map();
@@ -108,7 +124,7 @@ export class FilterManager {
             // Hierarchical object field
             if (ds.objects) {
                 ds.objects.forEach(obj => {
-                    this.addToHierarchy(groups.object.values, obj.hierarchy);
+                    addToHierarchy(groups.object.values, obj.hierarchy);
                 });
             }
         });
@@ -120,26 +136,6 @@ export class FilterManager {
     }
 
     /**
-     * Add object hierarchy to Map structure
-     * @param {Map} hierarchyMap - Hierarchy map
-     * @param {string[]} levels - Hierarchy levels
-     */
-    addToHierarchy(hierarchyMap, levels) {
-        if (!levels || levels.length === 0) return;
-
-        let current = hierarchyMap;
-        levels.forEach((level, idx) => {
-            if (!current.has(level)) {
-                current.set(level, {
-                    children: new Map(),
-                    isLeaf: idx === levels.length - 1
-                });
-            }
-            current = current.get(level).children;
-        });
-    }
-
-    /**
      * Render filter groups to UI
      */
     renderFilterGroups() {
@@ -147,10 +143,11 @@ export class FilterManager {
         this.renderCategoriesSidebar();
 
         // Render options content (initially empty, will be populated when category is selected)
-        const container = document.getElementById('filterGroups');
-        if (container) {
-            container.innerHTML = '<div class="filter-options-placeholder">Select a category from the left to view options</div>';
-        }
+        const container = qs('#filterGroups');
+        setHTML(
+            container,
+            '<div class="filter-options-placeholder">Select a category from the left to view options</div>'
+        );
 
         // Auto-select first category
         this.selectCategory('scene');
@@ -160,10 +157,10 @@ export class FilterManager {
      * Render categories sidebar
      */
     renderCategoriesSidebar() {
-        const sidebar = document.getElementById('filterCategoriesSidebar');
+        const sidebar = qs('#filterCategoriesSidebar');
         if (!sidebar) return;
 
-        sidebar.innerHTML = '';
+        setHTML(sidebar, '');
 
         // Define category display names and order
         const categoryOrder = ['frame range', 'scene', 'robot', 'end', 'action', 'object'];
@@ -204,15 +201,13 @@ export class FilterManager {
      */
     selectCategory(categoryKey) {
         // Update sidebar selection
-        const sidebar = document.getElementById('filterCategoriesSidebar');
+        const sidebar = qs('#filterCategoriesSidebar');
         if (sidebar) {
-            sidebar.querySelectorAll('.filter-category-btn').forEach(btn => {
-                btn.classList.remove('selected');
+            qsa('.filter-category-btn', sidebar).forEach(btn => {
+                removeClass(btn, 'selected');
             });
             const selectedBtn = sidebar.querySelector(`[data-category="${categoryKey}"]`);
-            if (selectedBtn) {
-                selectedBtn.classList.add('selected');
-            }
+            addClass(selectedBtn, 'selected');
         }
 
         // Clear any active search when switching categories
@@ -225,7 +220,7 @@ export class FilterManager {
         this.updateStaticCountsForCategory(categoryKey);
 
         // Re-apply current search query if any
-        const searchInput = document.getElementById('filterFinderInput');
+        const searchInput = qs('#filterFinderInput');
         if (searchInput && searchInput.value.trim()) {
             this.searchFilterOptions(searchInput.value.trim());
         }
@@ -236,13 +231,13 @@ export class FilterManager {
      * @param {string} categoryKey - The category key
      */
     renderCategoryOptions(categoryKey) {
-        const container = document.getElementById('filterGroups');
+        const container = qs('#filterGroups');
         if (!container) return;
 
         const group = this.filterGroups[categoryKey];
         if (!group) return;
 
-        container.innerHTML = '';
+        setHTML(container, '');
 
         const div = document.createElement('div');
         div.className = 'filter-group';
@@ -263,7 +258,7 @@ export class FilterManager {
                 const wrapper = topLevelTitle.closest('.filter-option-wrapper');
                 const children = wrapper?.querySelector('.filter-children');
                 if (children) {
-                    children.classList.remove('collapsed');
+                    removeClass(children, 'collapsed');
                 }
             }
 
@@ -282,7 +277,7 @@ export class FilterManager {
                         if (!wrapper) return;
                         const children = wrapper.querySelector('.filter-children');
                         if (children) {
-                            children.classList.toggle('collapsed');
+                            toggleClass(children, 'collapsed');
                             // After expanding, apply selected states to newly visible options
                             if (!children.classList.contains('collapsed')) {
                                 this.applySelectedStylesToContainer(children);
@@ -327,26 +322,9 @@ export class FilterManager {
         if (group.type === 'flat') {
             return group.values.size;
         } else if (group.type === 'hierarchical') {
-            return this.countHierarchyItems(group.values);
+            return countHierarchyItems(group.values);
         }
         return 0;
-    }
-
-    /**
-     * Count items in hierarchy recursively
-     * @param {Map} hierarchyMap - Hierarchy map
-     * @returns {number} Count of items
-     */
-    countHierarchyItems(hierarchyMap) {
-        let count = 0;
-        hierarchyMap.forEach(node => {
-            if (node.children.size > 0) {
-                count += this.countHierarchyItems(node.children);
-            } else {
-                count++;
-            }
-        });
-        return count;
     }
 
     /**
@@ -399,13 +377,13 @@ export class FilterManager {
         if (this.selectedFilters.has(filterId)) {
             this.selectedFilters.delete(filterId);
             if (optionElement) {
-                optionElement.classList.remove('selected');
+                removeClass(optionElement, 'selected');
             }
             this.removeFilterTag(filterId);
         } else {
             this.selectedFilters.add(filterId);
             if (optionElement) {
-                optionElement.classList.add('selected');
+                addClass(optionElement, 'selected');
             }
             this.addFilterTag(filterId, filterLabel);
         }
@@ -420,7 +398,7 @@ export class FilterManager {
      * @param {string} filterLabel - Filter label
      */
     addFilterTag(filterId, filterLabel) {
-        const container = document.getElementById('filterTagsContainer');
+        const container = qs('#filterTagsContainer');
         if (!container) return;
 
         const [filterKey, filterValue] = filterId.split(':');
@@ -448,7 +426,7 @@ export class FilterManager {
      * @param {string} filterId - Filter ID
      */
     removeFilterTag(filterId) {
-        const container = document.getElementById('filterTagsContainer');
+        const container = qs('#filterTagsContainer');
         if (!container) return;
 
         const tag = container.querySelector(`.filter-tag[data-filter-id="${filterId}"]`);
@@ -466,7 +444,7 @@ export class FilterManager {
 
         const option = this.filterOptionCache.get(filterId);
         if (option) {
-            option.classList.remove('selected');
+            removeClass(option, 'selected');
         }
 
         this.removeFilterTag(filterId);
@@ -478,10 +456,10 @@ export class FilterManager {
      * Render all filter tags
      */
     renderFilterTags() {
-        const container = document.getElementById('filterTagsContainer');
+        const container = qs('#filterTagsContainer');
         if (!container) return;
 
-        container.innerHTML = '';
+        setHTML(container, '');
 
         if (this.selectedFilters.size === 0) {
             return;
@@ -498,7 +476,7 @@ export class FilterManager {
      * Update trigger count badge
      */
     updateTriggerCount() {
-        const countEl = document.getElementById('filterTriggerCount');
+        const countEl = qs('#filterTriggerCount');
         if (!countEl) return;
 
         if (this.selectedFilters.size > 0) {
@@ -514,9 +492,9 @@ export class FilterManager {
     updateFilterOptionStyles() {
         this.filterOptionCache.forEach((element, filterId) => {
             if (this.selectedFilters.has(filterId)) {
-                element.classList.add('selected');
+                addClass(element, 'selected');
             } else {
-                element.classList.remove('selected');
+                removeClass(element, 'selected');
             }
         });
     }
@@ -530,7 +508,7 @@ export class FilterManager {
             if (filterId.startsWith(`${categoryKey}:`)) {
                 const option = this.filterOptionCache.get(filterId);
                 if (option) {
-                    option.classList.add('selected');
+                    addClass(option, 'selected');
                 }
             }
         });
@@ -550,7 +528,7 @@ export class FilterManager {
             if (filterKey && filterValue) {
                 const filterId = `${filterKey}:${filterValue}`;
                 if (this.selectedFilters.has(filterId)) {
-                    option.classList.add('selected');
+                    addClass(option, 'selected');
                 }
             }
         });
@@ -646,7 +624,7 @@ export class FilterManager {
         const normalizedQuery = trimmedQuery.toLowerCase();
 
         // Collect selected filters
-        this.selectedFilters.forEach(filterId => {
+        this.filterState.forEach(filterId => {
             const [key, value] = filterId.split(':');
             if (!filters[key]) filters[key] = [];
             filters[key].push(value);
@@ -703,13 +681,11 @@ export class FilterManager {
             this.pendingFilterUpdate = null;
         }
 
-        this.selectedFilters.clear();
+        this.filterState.clear();
         this.updateFilterOptionStyles();
 
-        const container = document.getElementById('filterTagsContainer');
-        if (container) {
-            container.innerHTML = '';
-        }
+        const container = qs('#filterTagsContainer');
+        setHTML(container, '');
 
         this.updateTriggerCount();
         this.scheduleFilterUpdate();
@@ -725,7 +701,7 @@ export class FilterManager {
         this.clearFilterSearch();
 
         // Only search in the options content (right panel), not in sidebar categories
-        const filterContent = document.getElementById('filterGroups');
+        const filterContent = qs('#filterGroups');
         if (!filterContent) return;
 
         const allOptions = filterContent.querySelectorAll('.filter-option');
@@ -735,7 +711,7 @@ export class FilterManager {
         if (!query) {
             // Show all options when query is empty
             allWrappers.forEach(wrapper => {
-                wrapper.classList.remove('filter-search-hidden');
+                removeClass(wrapper, 'filter-search-hidden');
             });
             this.updateFilterFinderUI();
             return;
@@ -774,7 +750,7 @@ export class FilterManager {
             }
 
             if (matches) {
-                option.classList.add('highlight-match');
+                addClass(option, 'highlight-match');
                 this.filterFinderMatches.push({
                     element: option,
                     text: text,
@@ -792,23 +768,23 @@ export class FilterManager {
             );
 
             if (hasMatch || hasMatchingDescendant) {
-                wrapper.classList.remove('filter-search-hidden');
+                removeClass(wrapper, 'filter-search-hidden');
                 // Expand parent collapsed items to show matches
                 let parent = wrapper.parentElement?.closest('.filter-children');
                 while (parent) {
                     if (parent.classList.contains('collapsed')) {
-                        parent.classList.remove('collapsed');
+                        removeClass(parent, 'collapsed');
                     }
                     parent = parent.parentElement?.closest('.filter-children');
                 }
                 // Expand filter group
                 const filterGroup = wrapper.closest('.filter-group');
                 if (filterGroup && filterGroup.classList.contains('collapsed')) {
-                    filterGroup.classList.remove('collapsed');
+                    removeClass(filterGroup, 'collapsed');
                 }
             } else {
                 // Hide wrapper if it doesn't match and has no matching descendants
-                wrapper.classList.add('filter-search-hidden');
+                addClass(wrapper, 'filter-search-hidden');
             }
         });
 
@@ -828,7 +804,7 @@ export class FilterManager {
         if (this.filterFinderMatches.length === 0) return;
 
         if (this.filterFinderCurrentIndex >= 0 && this.filterFinderCurrentIndex < this.filterFinderMatches.length) {
-            this.filterFinderMatches[this.filterFinderCurrentIndex].element.classList.remove('current-match');
+            removeClass(this.filterFinderMatches[this.filterFinderCurrentIndex].element, 'current-match');
         }
 
         if (direction === 'next') {
@@ -852,13 +828,13 @@ export class FilterManager {
         const match = this.filterFinderMatches[this.filterFinderCurrentIndex];
         const option = match.element;
 
-        option.classList.add('current-match');
+        addClass(option, 'current-match');
 
         // Expand all parent collapsed items
         let parent = option.closest('.filter-children');
         while (parent) {
             if (parent.classList.contains('collapsed')) {
-                parent.classList.remove('collapsed');
+                removeClass(parent, 'collapsed');
             }
             parent = parent.parentElement?.closest('.filter-children');
         }
@@ -866,11 +842,11 @@ export class FilterManager {
         // Expand filter group
         const filterGroup = option.closest('.filter-group');
         if (filterGroup && filterGroup.classList.contains('collapsed')) {
-            filterGroup.classList.remove('collapsed');
+            removeClass(filterGroup, 'collapsed');
         }
 
         // Scroll into view
-        const filterContent = document.getElementById('filterGroups');
+        const filterContent = qs('#filterGroups');
         if (filterContent && option) {
             const optionRect = option.getBoundingClientRect();
             const contentRect = filterContent.getBoundingClientRect();
@@ -886,15 +862,16 @@ export class FilterManager {
      */
     clearFilterSearch() {
         // Only clear search highlights in the options content (right panel)
-        const filterContent = document.getElementById('filterGroups');
+        const filterContent = qs('#filterGroups');
         if (filterContent) {
             filterContent.querySelectorAll('.filter-option.highlight-match').forEach(el => {
-                el.classList.remove('highlight-match', 'current-match');
+                removeClass(el, 'highlight-match');
+                removeClass(el, 'current-match');
             });
 
             // Show all wrappers in options content
             filterContent.querySelectorAll('.filter-option-wrapper.filter-search-hidden').forEach(wrapper => {
-                wrapper.classList.remove('filter-search-hidden');
+                removeClass(wrapper, 'filter-search-hidden');
             });
         }
 
@@ -907,9 +884,9 @@ export class FilterManager {
      * Update Filter Finder UI
      */
     updateFilterFinderUI() {
-        const countElement = document.getElementById('filterFinderCount');
-        const prevBtn = document.getElementById('filterFinderPrev');
-        const nextBtn = document.getElementById('filterFinderNext');
+        const countElement = qs('#filterFinderCount');
+        const prevBtn = qs('#filterFinderPrev');
+        const nextBtn = qs('#filterFinderNext');
 
         if (!countElement || !prevBtn || !nextBtn) return;
 
@@ -940,8 +917,8 @@ export class FilterManager {
                 }
             });
         } else if (group.type === 'hierarchical') {
-            // Select all leaf nodes in hierarchy
-            this.selectAllInHierarchy(groupKey, group.values);
+            // Select all leaf nodes in hierarchy (delegated helper)
+            selectAllInHierarchy(this, groupKey, group.values);
         }
 
         // Apply styles to currently visible (cached and rendered) options
@@ -949,30 +926,6 @@ export class FilterManager {
 
         this.updateTriggerCount();
         this.scheduleFilterUpdate();
-    }
-
-    /**
-     * Select all in hierarchy recursively
-     * @param {string} groupKey - Filter group key
-     * @param {Map} hierarchyMap - Hierarchy map
-     * @param {string} parentPath - Parent path
-     */
-    selectAllInHierarchy(groupKey, hierarchyMap, parentPath = '') {
-        hierarchyMap.forEach((node, value) => {
-            const fullPath = parentPath ? `${parentPath}>${value}` : value;
-
-            if (node.isLeaf) {
-                const filterId = `${groupKey}:${value}`;
-                if (!this.selectedFilters.has(filterId)) {
-                    this.selectedFilters.add(filterId);
-                    this.addFilterTag(filterId, this.getFilterLabel(groupKey, value));
-                }
-            }
-
-            if (node.children.size > 0) {
-                this.selectAllInHierarchy(groupKey, node.children, fullPath);
-            }
-        });
     }
 
     /**
@@ -993,142 +946,13 @@ export class FilterManager {
             this.selectedFilters.delete(filterId);
             const option = this.filterOptionCache.get(filterId);
             if (option) {
-                option.classList.remove('selected');
+                removeClass(option, 'selected');
             }
             this.removeFilterTag(filterId);
         });
 
         this.updateTriggerCount();
         this.scheduleFilterUpdate();
-    }
-
-    /**
-     * Select all children in a hierarchy path
-     * @param {string} groupKey - Filter group key
-     * @param {string} path - Hierarchy path
-     */
-    selectAllChildrenInHierarchy(groupKey, path) {
-        const group = this.filterGroups[groupKey];
-        if (!group || group.type !== 'hierarchical') return;
-
-        // Find the node at the given path
-        const node = this.findHierarchyNode(group.values, path);
-        if (!node) return;
-
-        // Select all leaf nodes under this path
-        this.selectLeafNodesRecursive(groupKey, node.children, path);
-
-        // Apply styles to currently visible options under this path
-        const container = document.getElementById('filterGroups');
-        if (container) {
-            const pathOption = container.querySelector(`.filter-option[data-path="${path}"]`);
-            if (pathOption) {
-                const wrapper = pathOption.closest('.filter-option-wrapper');
-                const childrenContainer = wrapper?.querySelector('.filter-children');
-                if (childrenContainer) {
-                    this.applySelectedStylesToContainer(childrenContainer);
-                }
-            }
-        }
-
-        this.updateTriggerCount();
-        this.scheduleFilterUpdate();
-    }
-
-    /**
-     * Clear all children in a hierarchy path
-     * @param {string} groupKey - Filter group key
-     * @param {string} path - Hierarchy path
-     */
-    clearAllChildrenInHierarchy(groupKey, path) {
-        const group = this.filterGroups[groupKey];
-        if (!group || group.type !== 'hierarchical') return;
-
-        // Find the node at the given path
-        const node = this.findHierarchyNode(group.values, path);
-        if (!node) return;
-
-        // Clear all leaf nodes under this path
-        this.clearLeafNodesRecursive(groupKey, node.children, path);
-
-        this.updateTriggerCount();
-        this.scheduleFilterUpdate();
-    }
-
-    /**
-     * Find a node in the hierarchy by path
-     * @param {Map} hierarchyMap - Hierarchy map
-     * @param {string} path - Path to find (e.g., "parent>child")
-     * @returns {Object|null} Node or null
-     */
-    findHierarchyNode(hierarchyMap, path) {
-        const parts = path.split('>');
-        let current = hierarchyMap;
-
-        for (const part of parts) {
-            if (!current.has(part)) return null;
-            const node = current.get(part);
-            if (parts.indexOf(part) === parts.length - 1) {
-                return node;
-            }
-            current = node.children;
-        }
-
-        return null;
-    }
-
-    /**
-     * Select all leaf nodes recursively
-     * @param {string} groupKey - Filter group key
-     * @param {Map} hierarchyMap - Hierarchy map
-     * @param {string} parentPath - Parent path
-     */
-    selectLeafNodesRecursive(groupKey, hierarchyMap, parentPath) {
-        hierarchyMap.forEach((node, value) => {
-            const fullPath = parentPath ? `${parentPath}>${value}` : value;
-
-            if (node.isLeaf || node.children.size === 0) {
-                // This is a leaf node, select it
-                const filterId = `${groupKey}:${value}`;
-                if (!this.selectedFilters.has(filterId)) {
-                    this.selectedFilters.add(filterId);
-                    this.addFilterTag(filterId, this.getFilterLabel(groupKey, value));
-                }
-            }
-
-            if (node.children.size > 0) {
-                this.selectLeafNodesRecursive(groupKey, node.children, fullPath);
-            }
-        });
-    }
-
-    /**
-     * Clear all leaf nodes recursively
-     * @param {string} groupKey - Filter group key
-     * @param {Map} hierarchyMap - Hierarchy map
-     * @param {string} parentPath - Parent path
-     */
-    clearLeafNodesRecursive(groupKey, hierarchyMap, parentPath) {
-        hierarchyMap.forEach((node, value) => {
-            const fullPath = parentPath ? `${parentPath}>${value}` : value;
-
-            if (node.isLeaf || node.children.size === 0) {
-                // This is a leaf node, clear it
-                const filterId = `${groupKey}:${value}`;
-                if (this.selectedFilters.has(filterId)) {
-                    this.selectedFilters.delete(filterId);
-                    const option = this.filterOptionCache.get(filterId);
-                    if (option) {
-                        option.classList.remove('selected');
-                    }
-                    this.removeFilterTag(filterId);
-                }
-            }
-
-            if (node.children.size > 0) {
-                this.clearLeafNodesRecursive(groupKey, node.children, fullPath);
-            }
-        });
     }
 
     /**
@@ -1204,7 +1028,7 @@ export class FilterManager {
      * @param {string} categoryKey - The category key to update
      */
     updateUICountsForCategory(categoryKey) {
-        const container = document.getElementById('filterGroups');
+        const container = qs('#filterGroups');
         if (!container) return;
 
         // Find all count elements in the current category

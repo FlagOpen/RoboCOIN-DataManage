@@ -30,25 +30,6 @@ export function calculateVisibleRange(scrollTop, containerHeight, itemHeight, to
 }
 
 /**
- * Calculate grid layout parameters
- * @param {number} gridWidth - Grid container width
- * @param {number} minCardWidth - Minimum card width
- * @param {number} gap - Gap between items
- * @returns {GridLayoutParams} Grid layout parameters
- */
-export function calculateGridLayout(gridWidth, minCardWidth, gap) {
-    const itemsPerRow = Math.max(1, Math.floor((gridWidth + gap) / (minCardWidth + gap)));
-    const cardWidth = Math.floor((gridWidth - gap * (itemsPerRow - 1)) / itemsPerRow);
-    
-    return {
-        gridWidth,
-        cardWidth,
-        itemsPerRow,
-        gap
-    };
-}
-
-/**
  * Element cache for virtual scrolling
  * Manages DOM element reuse to improve performance
  */
@@ -108,66 +89,6 @@ export class ElementCache {
     get size() {
         return this.cache.size;
     }
-}
-
-/**
- * Update element positions for virtual scrolling
- * @param {HTMLElement[]} elements - Elements to position
- * @param {number} startIndex - Start index
- * @param {number} itemHeight - Item height
- * @param {number} itemWidth - Item width
- * @param {number} itemsPerRow - Items per row (for grid layout)
- * @param {number} gap - Gap between items
- */
-export function updateElementPositions(elements, startIndex, itemHeight, itemWidth, itemsPerRow = 1, gap = 0) {
-    elements.forEach((element, i) => {
-        const globalIndex = startIndex + i;
-        
-        if (itemsPerRow > 1) {
-            // Grid layout
-            const row = Math.floor(globalIndex / itemsPerRow);
-            const col = globalIndex % itemsPerRow;
-            element.style.position = 'absolute';
-            element.style.left = `${col * (itemWidth + gap)}px`;
-            element.style.top = `${row * itemHeight}px`;
-        } else {
-            // List layout
-            element.style.position = 'absolute';
-            element.style.top = `${globalIndex * itemHeight}px`;
-        }
-    });
-}
-
-/**
- * Remove elements not in visible set
- * @param {HTMLElement} container - Container element
- * @param {Set<string>} visibleKeys - Set of visible keys
- * @param {ElementCache} cache - Element cache
- * @param {string} selector - Element selector
- */
-export function removeInvisibleElements(container, visibleKeys, cache, selector) {
-    const existingElements = container.querySelectorAll(selector);
-    existingElements.forEach(element => {
-        const key = element.dataset.path || element.dataset.key;
-        if (!visibleKeys.has(key)) {
-            element.remove();
-            cache.delete(key);
-        }
-    });
-}
-
-/**
- * Create virtual container with proper height
- * @param {number} totalItems - Total number of items
- * @param {number} itemHeight - Height of each item
- * @returns {HTMLElement} Virtual container element
- */
-export function createVirtualContainer(totalItems, itemHeight) {
-    const container = document.createElement('div');
-    container.className = 'virtual-container';
-    container.style.position = 'relative';
-    container.style.height = `${totalItems * itemHeight}px`;
-    return container;
 }
 
 /**

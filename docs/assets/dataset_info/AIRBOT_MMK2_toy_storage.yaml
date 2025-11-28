@@ -1,10 +1,50 @@
 dataset_name: toy_storage
 dataset_uuid: 38eb75f9-27a2-42df-817f-90d75b91a582
-scene_type: []
-atomic_actions: []
+scene_type:
+- home
+atomic_actions:
+- grasp
+- pick
+- place
 end_effector_type: five_finger_hand
 operation_platform_height: 77.2
-objects: []
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: little_dog_doll
+  level1: toy
+  level2: little_dog_doll
+  level3: null
+  level4: null
+  level5: null
+- object_name: plate
+  level1: container
+  level2: plate
+  level3: null
+  level4: null
+  level5: null
+- object_name: shark_doll
+  level1: toy
+  level2: shark_doll
+  level3: null
+  level4: null
+  level5: null
+- object_name: lid
+  level1: container
+  level2: lid
+  level3: null
+  level4: null
+  level5: null
+- object_name: building_block
+  level1: toy
+  level2: building_block
+  level3: null
+  level4: null
+  level5: null
 path: AIRBOT_MMK2_toy_storage
 video_url: ./assets/videos/AIRBOT_MMK2_toy_storage.mp4
 thumbnail_url: ./assets/thumbnails/AIRBOT_MMK2_toy_storage.jpg
@@ -17,7 +57,8 @@ task_categories:
 tags:
 - RoboCOIN
 - LeRobot
-size_categories: 10K-100K
+frame_range: 10K-100K
+dataset_size: 1.1GB
 configs:
 - config_name: default
   data_files: data/*/*.parquet
@@ -36,7 +77,8 @@ homepage: https://flagopen.github.io/RoboCOIN/
 paper: https://arxiv.org/abs/2511.17441
 repository: https://github.com/FlagOpen/RoboCOIN
 project_page: https://flagopen.github.io/RoboCOIN/
-robot_type: discover_robotics_aitbot_mmk2
+issues_url: https://github.com/FlagOpen/RoboCOIN/issues
+robot_type: AIRBOT_MMK2
 codebase_version: v2.1
 statistics:
   total_episodes: 199
@@ -555,23 +597,23 @@ contact_info: For questions, issues, or feedback regarding this dataset, please 
   us.
 support_info: For technical support, please open an issue on our GitHub repository.
 license_details: Please refer to the LICENSE file for full license terms and conditions.
-citation_bibtex: "@misc{RoboCOINReport,\n        author = {Shihan Wu, Xuecheng Liu,\
-  \ Shaoxuan Xie, Pengwei Wang, Xinghang Li, Bowen Yang, Zhe Li, Kai Zhu, Hongyu Wu,\
-  \ Yiheng Liu, Zhaoye Long, Yue Wang, Chong Liu, Dihan Wang, Ziqiang Ni, Xiang Yang,\
-  \ You Liu, Ruoxuan Feng, Runtian Xu, Lei Zhang, Denghang Huang, Chenghao Jin, Anlan\
-  \ Yin, Xinlong Wang, Zhenguo Sun, Junkai Zhao, Mengfei Du, Mingyu Cao, Xiansheng\
-  \ Chen, Hongyang Cheng, Xiaojie Zhang, Yankai Fu, Ning Chen, Cheng Chi, Sixiang\
-  \ Chen, Huaihai Lyu, Xiaoshuai Hao, Yankai Fu, Yequan Wang, Bo Lei, Dong Liu, Xi\
-  \ Yang, Yance Jiao, Tengfei Pan, Yunyan Zhang, Songjing Wang, Ziqian Zhang, Xu Liu,\
-  \ Ji Zhang, Caowei Meng, Zhizheng Zhang, Jiyang Gao, Song Wang, Xiaokun Leng, Zhiqiang\
-  \ Xie, Zhenzhen Zhou, Peng Huang, Wu Yang, Yandong Guo, Yichao Zhu, Suibing Zheng,\
-  \ Hao Cheng, Xinmin Ding, Yang Yue, Huanqian Wang, Chi Chen, Jingrui Pang, YuXi\
-  \ Qian, Haoran Geng, Lianli Gao, Haiyuan Li, Bin Fang, Gao Huang, Yaodong Yang,\
+citation_bibtex: "@article{robocoin,\n    title={RoboCOIN: An Open-Sourced Bimanual\
+  \ Robotic Data Collection for Integrated Manipulation},\n    author={Shihan Wu,\
+  \ Xuecheng Liu, Shaoxuan Xie, Pengwei Wang, Xinghang Li, Bowen Yang, Zhe Li, Kai\
+  \ Zhu, Hongyu Wu, Yiheng Liu, Zhaoye Long, Yue Wang, Chong Liu, Dihan Wang, Ziqiang\
+  \ Ni, Xiang Yang, You Liu, Ruoxuan Feng, Runtian Xu, Lei Zhang, Denghang Huang,\
+  \ Chenghao Jin, Anlan Yin, Xinlong Wang, Zhenguo Sun, Junkai Zhao, Mengfei Du, Mingyu\
+  \ Cao, Xiansheng Chen, Hongyang Cheng, Xiaojie Zhang, Yankai Fu, Ning Chen, Cheng\
+  \ Chi, Sixiang Chen, Huaihai Lyu, Xiaoshuai Hao, Yequan Wang, Bo Lei, Dong Liu,\
+  \ Xi Yang, Yance Jiao, Tengfei Pan, Yunyan Zhang, Songjing Wang, Ziqian Zhang, Xu\
+  \ Liu, Ji Zhang, Caowei Meng, Zhizheng Zhang, Jiyang Gao, Song Wang, Xiaokun Leng,\
+  \ Zhiqiang Xie, Zhenzhen Zhou, Peng Huang, Wu Yang, Yandong Guo, Yichao Zhu, Suibing\
+  \ Zheng, Hao Cheng, Xinmin Ding, Yang Yue, Huanqian Wang, Chi Chen, Jingrui Pang,\
+  \ YuXi Qian, Haoran Geng, Lianli Gao, Haiyuan Li, Bin Fang, Gao Huang, Yaodong Yang,\
   \ Hao Dong, He Wang, Hang Zhao, Yadong Mu, Di Hu, Hao Zhao, Tiejun Huang, Shanghang\
-  \ Zhang, Yonghua Lin, Zhongyuan Wang and Guocai Yao},\n        title = {RoboCOIN:\
-  \ An Open-Sourced Bimanual Robotic Data Collection for Integrated Manipulation},\n\
-  \        year = {2025},\n        eprint = {2511.17441},\n        archivePrefix =\
-  \ {arXiv},\n        url = {https://arxiv.org/abs/2511.17441}\n    }"
+  \ Zhang, Yonghua Lin, Zhongyuan Wang and Guocai Yao},\n    journal={arXiv preprint\
+  \ arXiv:2511.17441},\n    url = {https://arxiv.org/abs/2511.17441},\n    year={2025}\n\
+  \    }"
 additional_citations: 'If you use this dataset, please also consider citing:
 
   - LeRobot Framework: https://github.com/huggingface/lerobot'

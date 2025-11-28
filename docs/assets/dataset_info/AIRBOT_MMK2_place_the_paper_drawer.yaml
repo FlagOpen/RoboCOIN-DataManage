@@ -1,10 +1,182 @@
 dataset_name: place_the_paper_drawer
 dataset_uuid: 36dde00a-6af9-43ec-9c49-3b938ff6f736
-scene_type: []
-atomic_actions: []
+scene_type:
+- home
+atomic_actions:
+- grasp
+- place
+- pick
 end_effector_type: five_finger_hand
 operation_platform_height: 77.2
-objects: []
+objects:
+- object_name: table
+  level1: furniture
+  level2: table
+  level3: null
+  level4: null
+  level5: null
+- object_name: pallet
+  level1: container
+  level2: pallet
+  level3: null
+  level4: null
+  level5: null
+- object_name: tissue_paper
+  level1: daily_necessities
+  level2: tissue_paper
+  level3: null
+  level4: null
+  level5: null
+- object_name: calculator_box
+  level1: container
+  level2: calculator_box
+  level3: null
+  level4: null
+  level5: null
+- object_name: power_bank_box
+  level1: container
+  level2: power_bank_box
+  level3: null
+  level4: null
+  level5: null
+- object_name: lid
+  level1: container
+  level2: lid
+  level3: null
+  level4: null
+  level5: null
+- object_name: mineral_water_bottle
+  level1: container
+  level2: mineral_water_bottle
+  level3: null
+  level4: null
+  level5: null
+- object_name: tape_measure
+  level1: tools
+  level2: tape_measure
+  level3: null
+  level4: null
+  level5: null
+- object_name: snacks
+  level1: food
+  level2: snacks
+  level3: null
+  level4: null
+  level5: null
+- object_name: cake
+  level1: food
+  level2: cake
+  level3: null
+  level4: null
+  level5: null
+- object_name: croissant
+  level1: food
+  level2: croissant
+  level3: null
+  level4: null
+  level5: null
+- object_name: apple
+  level1: fruit
+  level2: apple
+  level3: null
+  level4: null
+  level5: null
+- object_name: peach
+  level1: fruit
+  level2: peach
+  level3: null
+  level4: null
+  level5: null
+- object_name: pear
+  level1: fruit
+  level2: pear
+  level3: null
+  level4: null
+  level5: null
+- object_name: pomegranate
+  level1: fruit
+  level2: pomegranate
+  level3: null
+  level4: null
+  level5: null
+- object_name: orange
+  level1: fruit
+  level2: orange
+  level3: null
+  level4: null
+  level5: null
+- object_name: beverage
+  level1: juice
+  level2: beverage
+  level3: null
+  level4: null
+  level5: null
+- object_name: coffee
+  level1: juice
+  level2: coffee
+  level3: null
+  level4: null
+  level5: null
+- object_name: building_blocks
+  level1: toy
+  level2: building_blocks
+  level3: null
+  level4: null
+  level5: null
+- object_name: marble
+  level1: toy
+  level2: marble
+  level3: null
+  level4: null
+  level5: null
+- object_name: toy_car
+  level1: toy
+  level2: toy_car
+  level3: null
+  level4: null
+  level5: null
+- object_name: frying_pan
+  level1: container
+  level2: frying_pan
+  level3: null
+  level4: null
+  level5: null
+- object_name: mouse_box
+  level1: container
+  level2: mouse_box
+  level3: null
+  level4: null
+  level5: null
+- object_name: shark_dagger
+  level1: toy
+  level2: shark_dagger
+  level3: null
+  level4: null
+  level5: null
+- object_name: sponge
+  level1: daily_necessities
+  level2: sponge
+  level3: null
+  level4: null
+  level5: null
+- object_name: bowl
+  level1: container
+  level2: bowl
+  level3: null
+  level4: null
+  level5: null
+- object_name: steel_frame
+  level1: daily_necessities
+  level2: steel_frame
+  level3: null
+  level4: null
+  level5: null
+- object_name: red_cube
+  level1: block
+  level2: red_cube
+  level3: null
+  level4: null
+  level5: null
 path: AIRBOT_MMK2_place_the_paper_drawer
 video_url: ./assets/videos/AIRBOT_MMK2_place_the_paper_drawer.mp4
 thumbnail_url: ./assets/thumbnails/AIRBOT_MMK2_place_the_paper_drawer.jpg
@@ -17,7 +189,8 @@ task_categories:
 tags:
 - RoboCOIN
 - LeRobot
-size_categories: 100K-1M
+frame_range: 100K-1M
+dataset_size: 5.8GB
 configs:
 - config_name: default
   data_files: data/*/*.parquet
@@ -36,7 +209,8 @@ homepage: https://flagopen.github.io/RoboCOIN/
 paper: https://arxiv.org/abs/2511.17441
 repository: https://github.com/FlagOpen/RoboCOIN
 project_page: https://flagopen.github.io/RoboCOIN/
-robot_type: discover_robotics_aitbot_mmk2
+issues_url: https://github.com/FlagOpen/RoboCOIN/issues
+robot_type: AIRBOT_MMK2
 codebase_version: v2.1
 statistics:
   total_episodes: 688
@@ -641,23 +815,23 @@ contact_info: For questions, issues, or feedback regarding this dataset, please 
   us.
 support_info: For technical support, please open an issue on our GitHub repository.
 license_details: Please refer to the LICENSE file for full license terms and conditions.
-citation_bibtex: "@misc{RoboCOINReport,\n        author = {Shihan Wu, Xuecheng Liu,\
-  \ Shaoxuan Xie, Pengwei Wang, Xinghang Li, Bowen Yang, Zhe Li, Kai Zhu, Hongyu Wu,\
-  \ Yiheng Liu, Zhaoye Long, Yue Wang, Chong Liu, Dihan Wang, Ziqiang Ni, Xiang Yang,\
-  \ You Liu, Ruoxuan Feng, Runtian Xu, Lei Zhang, Denghang Huang, Chenghao Jin, Anlan\
-  \ Yin, Xinlong Wang, Zhenguo Sun, Junkai Zhao, Mengfei Du, Mingyu Cao, Xiansheng\
-  \ Chen, Hongyang Cheng, Xiaojie Zhang, Yankai Fu, Ning Chen, Cheng Chi, Sixiang\
-  \ Chen, Huaihai Lyu, Xiaoshuai Hao, Yankai Fu, Yequan Wang, Bo Lei, Dong Liu, Xi\
-  \ Yang, Yance Jiao, Tengfei Pan, Yunyan Zhang, Songjing Wang, Ziqian Zhang, Xu Liu,\
-  \ Ji Zhang, Caowei Meng, Zhizheng Zhang, Jiyang Gao, Song Wang, Xiaokun Leng, Zhiqiang\
-  \ Xie, Zhenzhen Zhou, Peng Huang, Wu Yang, Yandong Guo, Yichao Zhu, Suibing Zheng,\
-  \ Hao Cheng, Xinmin Ding, Yang Yue, Huanqian Wang, Chi Chen, Jingrui Pang, YuXi\
-  \ Qian, Haoran Geng, Lianli Gao, Haiyuan Li, Bin Fang, Gao Huang, Yaodong Yang,\
+citation_bibtex: "@article{robocoin,\n    title={RoboCOIN: An Open-Sourced Bimanual\
+  \ Robotic Data Collection for Integrated Manipulation},\n    author={Shihan Wu,\
+  \ Xuecheng Liu, Shaoxuan Xie, Pengwei Wang, Xinghang Li, Bowen Yang, Zhe Li, Kai\
+  \ Zhu, Hongyu Wu, Yiheng Liu, Zhaoye Long, Yue Wang, Chong Liu, Dihan Wang, Ziqiang\
+  \ Ni, Xiang Yang, You Liu, Ruoxuan Feng, Runtian Xu, Lei Zhang, Denghang Huang,\
+  \ Chenghao Jin, Anlan Yin, Xinlong Wang, Zhenguo Sun, Junkai Zhao, Mengfei Du, Mingyu\
+  \ Cao, Xiansheng Chen, Hongyang Cheng, Xiaojie Zhang, Yankai Fu, Ning Chen, Cheng\
+  \ Chi, Sixiang Chen, Huaihai Lyu, Xiaoshuai Hao, Yequan Wang, Bo Lei, Dong Liu,\
+  \ Xi Yang, Yance Jiao, Tengfei Pan, Yunyan Zhang, Songjing Wang, Ziqian Zhang, Xu\
+  \ Liu, Ji Zhang, Caowei Meng, Zhizheng Zhang, Jiyang Gao, Song Wang, Xiaokun Leng,\
+  \ Zhiqiang Xie, Zhenzhen Zhou, Peng Huang, Wu Yang, Yandong Guo, Yichao Zhu, Suibing\
+  \ Zheng, Hao Cheng, Xinmin Ding, Yang Yue, Huanqian Wang, Chi Chen, Jingrui Pang,\
+  \ YuXi Qian, Haoran Geng, Lianli Gao, Haiyuan Li, Bin Fang, Gao Huang, Yaodong Yang,\
   \ Hao Dong, He Wang, Hang Zhao, Yadong Mu, Di Hu, Hao Zhao, Tiejun Huang, Shanghang\
-  \ Zhang, Yonghua Lin, Zhongyuan Wang and Guocai Yao},\n        title = {RoboCOIN:\
-  \ An Open-Sourced Bimanual Robotic Data Collection for Integrated Manipulation},\n\
-  \        year = {2025},\n        eprint = {2511.17441},\n        archivePrefix =\
-  \ {arXiv},\n        url = {https://arxiv.org/abs/2511.17441}\n    }"
+  \ Zhang, Yonghua Lin, Zhongyuan Wang and Guocai Yao},\n    journal={arXiv preprint\
+  \ arXiv:2511.17441},\n    url = {https://arxiv.org/abs/2511.17441},\n    year={2025}\n\
+  \    }"
 additional_citations: 'If you use this dataset, please also consider citing:
 
   - LeRobot Framework: https://github.com/huggingface/lerobot'

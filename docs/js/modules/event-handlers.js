@@ -7,6 +7,7 @@
 
 import ConfigManager from './config.js';
 import { debounce } from './virtual-scroll.js';
+import { selectAllChildrenInHierarchy, clearAllChildrenInHierarchy } from './filter-hierarchy.js';
 
 /**
  * Event Handlers Manager Class
@@ -285,9 +286,9 @@ export class EventHandlers {
                 const path = hierarchyActionBtn.dataset.path;
                 if (key && path) {
                     if (action === 'select-all-children') {
-                        this.managers.filter.selectAllChildrenInHierarchy(key, path);
+                        selectAllChildrenInHierarchy(this.managers.filter, key, path);
                     } else if (action === 'clear-all-children') {
-                        this.managers.filter.clearAllChildrenInHierarchy(key, path);
+                        clearAllChildrenInHierarchy(this.managers.filter, key, path);
                     }
                     return;
                 }
