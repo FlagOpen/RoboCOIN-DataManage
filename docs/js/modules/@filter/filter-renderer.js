@@ -51,7 +51,7 @@ export class FilterRenderer {
         // Define category display names and order
         const categoryOrder = ['frame range', 'scene', 'robot', 'end', 'action', 'object'];
         const categoryLabels = {
-            'frame range': 'Frame Range',
+            'frame range': 'Frame Count',
             'scene': 'Scene',
             'robot': 'Robot Model',
             'end': 'End Effector',

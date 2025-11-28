@@ -16,7 +16,7 @@
     cursor: pointer;
     /* Optimize transitions - only use GPU-accelerated properties */
     transition: background-color 0.15s ease, border-color 0.15s ease;
-    border-radius: var(--border-radius);
+    border-radius: 9999px;
     border: 1px solid transparent;
     background: transparent;
     /* Contain layout changes */
@@ -123,7 +123,7 @@
     gap: 0.5rem;
     padding: 0.5rem;
     background: var(--color-bg-surface);
-    border-radius: var(--border-radius);
+    border-radius: 9999px;
     border: 1px solid var(--color-border);
 }
 
@@ -148,7 +148,7 @@
     align-items: center;
     justify-content: center;
     border: 1px solid var(--color-border);
-    border-radius: var(--border-radius-sm);
+    border-radius: 9999px;
     background: white;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -172,7 +172,7 @@
     width: 2rem;
     height: 2rem;
     border: 1px solid var(--color-border);
-    border-radius: var(--border-radius-sm);
+    border-radius: 9999px;
     background: white;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -248,7 +248,7 @@
     align-items: center;
     gap: 0.25rem;
     padding: 0.125rem 0.5rem;
-    border-radius: 0.25rem;
+    border-radius: 9999px;
     transition: all 0.2s;
     width: 5rem;
     justify-content: flex-end;
@@ -386,7 +386,7 @@
     gap: 0.25rem;
     flex: 0 0 auto;
     padding: 0.125rem 0.5rem;
-    border-radius: 0.25rem;
+    border-radius: 9999px;
     transition: all 0.2s;
     width: 5rem;
     justify-content: flex-end;
