@@ -52,6 +52,30 @@ export class EventHandlers {
             searchBox.addEventListener('input', debounce(() => {
                 document.dispatchEvent(new CustomEvent('filtersChanged'));
             }, 150));
+
+            // ESC key to clear search
+            searchBox.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    searchBox.value = '';
+                    document.dispatchEvent(new CustomEvent('filtersChanged'));
+                    searchBox.blur();
+                }
+            });
+        }
+
+        // Clear search button
+        const searchClearBtn = document.getElementById('searchClearBtn');
+        if (searchClearBtn) {
+            searchClearBtn.addEventListener('click', () => {
+                const searchBox = document.getElementById('searchBox');
+                if (searchBox) {
+                    searchBox.value = '';
+                    // Trigger filters changed event to refresh results
+                    document.dispatchEvent(new CustomEvent('filtersChanged'));
+                    // Focus back to search input
+                    searchBox.focus();
+                }
+            });
         }
 
         // Filter dropdown events
@@ -169,6 +193,7 @@ export class EventHandlers {
      */
     bindFilterFinderEvents() {
         const filterFinderInput = document.getElementById('filterFinderInput');
+        const filterFinderClearBtn = document.getElementById('filterFinderClearBtn');
         const filterFinderPrev = document.getElementById('filterFinderPrev');
         const filterFinderNext = document.getElementById('filterFinderNext');
 
@@ -179,6 +204,15 @@ export class EventHandlers {
             const query = e.target.value.trim();
             this.managers.filter.searchFilterOptions(query);
         });
+
+        // Clear button event
+        if (filterFinderClearBtn) {
+            filterFinderClearBtn.addEventListener('click', () => {
+                filterFinderInput.value = '';
+                this.managers.filter.clearFilterSearch();
+                filterFinderInput.focus();
+            });
+        }
 
         // Previous/Next button events
         if (filterFinderPrev) {
@@ -200,6 +234,7 @@ export class EventHandlers {
                 filterFinderInput.value = '';
                 this.managers.filter.clearFilterSearch();
                 filterFinderInput.blur();
+                e.stopPropagation(); // Prevent closing the dropdown
                 return;
             }
 

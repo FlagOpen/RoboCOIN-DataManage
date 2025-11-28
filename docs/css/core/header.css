@@ -1,7 +1,69 @@
 /**
  * Header Styles
- * Application header and version badge styles
+ * Application header, global banner, and version badge styles
  */
+
+/* ==================== Global Top Banner ==================== */
+.global-banner {
+    width: 100%;
+    padding: 0.6rem 1.5rem;
+    background: #fef3c7;
+    /* Amber 100 */
+    border-bottom: 1px solid #facc15;
+    /* Amber 400 */
+    color: #92400e;
+    /* Amber 900 */
+    font-family: var(--font-family-sans);
+    font-size: 0.8125rem;
+    line-height: 1.4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1100;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.2);
+    transform: translateY(0);
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.global-banner-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.global-banner-icon {
+    font-size: 0.95rem;
+}
+
+.global-banner-label {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.75rem;
+}
+
+.global-banner-text {
+    font-weight: 400;
+}
+
+.global-banner-warning {
+    background: #fef3c7;
+    border-bottom-color: #facc15;
+    color: #92400e;
+}
+
+.global-banner-hidden {
+    opacity: 0;
+    transform: translateY(-100%);
+    pointer-events: none;
+}
 
 /* ==================== Header with Glass-Effect Version Badge ==================== */
 .header-container {
@@ -62,10 +124,18 @@
     transform: translateY(-1px);
 }
 
-/* ==================== Responsive Header ==================== */
+/* ==================== Responsive Header & Banner ==================== */
 
 /* Mobile (< 600px) */
 @media (max-width: 599px) {
+    .global-banner {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .global-banner-content {
+        gap: 0.35rem;
+    }
+
     .header-container {
         padding: 0.75rem 1rem;
     }

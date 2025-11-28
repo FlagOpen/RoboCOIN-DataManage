@@ -20,6 +20,18 @@
 </head>
 
 <body>
+    <div class="global-banner global-banner-warning" id="globalBanner">
+        <div class="global-banner-content">
+            <span class="global-banner-icon" aria-hidden="true">⚠️</span>
+            <span class="global-banner-label">Notice</span>
+            <span class="global-banner-text">
+                RoboCOIN is available at 
+                <a href="https://github.com/FlagOpen/RoboCOIN" target="_blank" rel="noopener noreferrer">github.com/FlagOpen/RoboCOIN</a>. 
+                To get started, please install the Python package with <code>pip install robocoin</code>.
+            </span>
+        </div>
+    </div>
+
     <div class="loading-overlay" id="loadingOverlay">
         <div class="loading-spinner"></div>
         <div class="loading-text">Loading datasets...</div>
@@ -32,7 +44,7 @@
     <div class="header-container">
         <div class="header-content">
             <h1 class="header-title">RoboCOIN-DataManager</h1>
-            <span class="version-badge">v1.0</span>
+            <span class="version-badge">v1.1</span>
         </div>
     </div>
 
@@ -50,6 +62,12 @@
 
             <div class="filter-search-container">
                 <input type="text" id="searchBox" class="filter-search-input" placeholder="Search datasets...">
+                <button class="search-clear-btn" id="searchClearBtn" title="Clear search">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
             </div>
 
             <div class="top-selection-container">
@@ -78,6 +96,12 @@
                 <div class="filter-finder">
                     <input type="text" id="filterFinderInput" class="filter-finder-input"
                         placeholder="Search filter options... (Ctrl+F)" autocomplete="off" spellcheck="false">
+                    <button class="filter-finder-clear-btn" id="filterFinderClearBtn" title="Clear search">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
                     <div class="filter-finder-nav">
                         <button class="filter-finder-btn" id="filterFinderPrev" title="Previous match (↑)"
                             disabled>↑</button>
@@ -140,6 +164,57 @@
     <!-- Debug utilities for high DPI display optimization -->
     <script src="./js/debug.js?v=20251124-200355"></script>
     <script type="module" src="./js/main.js?v=20251124-200355"></script>
+    <script>
+        (function () {
+            var banner = document.getElementById('globalBanner');
+            if (!banner) return;
+
+            var hiddenClass = 'global-banner-hidden';
+            var hasHidden = false;
+
+            function hideBanner() {
+                if (hasHidden) return;
+                hasHidden = true;
+                banner.classList.add(hiddenClass);
+                removeListeners();
+            }
+
+            function interactionHandler(event) {
+                // Ignore interactions that originate from inside the banner itself
+                if (banner.contains(event.target)) {
+                    return;
+                }
+                hideBanner();
+            }
+
+            function keydownHandler(event) {
+                // Any key press counts as interaction
+                hideBanner();
+            }
+
+            function addListeners() {
+                window.addEventListener('click', interactionHandler, { capture: true });
+                window.addEventListener('pointerdown', interactionHandler, { capture: true });
+                window.addEventListener('wheel', interactionHandler, { capture: true, passive: true });
+                window.addEventListener('touchstart', interactionHandler, { capture: true, passive: true });
+                window.addEventListener('keydown', keydownHandler, { capture: true });
+            }
+
+            function removeListeners() {
+                window.removeEventListener('click', interactionHandler, { capture: true });
+                window.removeEventListener('pointerdown', interactionHandler, { capture: true });
+                window.removeEventListener('wheel', interactionHandler, { capture: true, passive: true });
+                window.removeEventListener('touchstart', interactionHandler, { capture: true, passive: true });
+                window.removeEventListener('keydown', keydownHandler, { capture: true });
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', addListeners);
+            } else {
+                addListeners();
+            }
+        })();
+    </script>
 </body>
 
 </html>
