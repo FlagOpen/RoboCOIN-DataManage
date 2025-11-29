@@ -288,7 +288,8 @@ const Templates = {
     buildEmptyCartHint() {
         return `
             <div class="empty-cart-hint">
-                No items selected. \n Use left panel to filter datasets, \n then click or select/deselect all, \n click Add to cart and then copy download command.
+                Click the download icon on the right side of the video pane for individual downloads.<br>
+                Use Filter to select datasets, then click on selected datasets and use Batch Downloader here for bulk downloads.
             </div>
         `;
     },
