@@ -4,90 +4,178 @@
 
 https://flagopen.github.io/RoboCOIN-DataManager/
 
+**Version:** v1.1
+
 ## Project Overview
 
-RoboCOIN dataset visualization and download tool, supporting filtering, preview, selection, and dataset export.
+RoboCOIN dataset visualization and download tool, supporting advanced filtering, preview, selection, and dataset export. Features a modern, responsive interface with virtual scrolling for handling large datasets efficiently.
 
 ## Project Structure
 
 ```
-robocoin-html/
+DataManage/
 ├── docs/
 │   ├── assets/                 # Resource files
-│   │   ├── dataset_info/       # Dataset metadata (98 YAML files)
+│   │   ├── dataset_info/       # Dataset metadata (266 YAML files)
 │   │   ├── info/               # Index files
 │   │   │   ├── consolidated_datasets.json  # Consolidated dataset information
-│   │   │   └── data_index.json             # Dataset index
-│   │   ├── thumbnails/         # Thumbnail files (*.jpg, provided by assets/thumbnails)
-│   │   └── videos/             # Video files (98 MP4s)
+│   │   │   ├── data_index.json             # Dataset index
+│   │   │   └── robot_aliases.json          # Robot display name mappings
+│   │   ├── thumbnails/         # Thumbnail images (*.jpg)
+│   │   └── videos/             # Video files (*.mp4)
 │   │
-│   ├── css/                    # Style files (modular)
-│   │   ├── variables.css       # CSS variable definitions
-│   │   ├── base.css            # Base styles
-│   │   ├── layout.css          # Layout styles
-│   │   ├── header.css          # Header styles
-│   │   ├── filter.css          # Filter styles
-│   │   ├── video-grid.css      # Video grid styles
-│   │   ├── selection-panel.css # Selection panel styles
-│   │   ├── modal.css           # Modal styles
-│   │   ├── animations.css      # Animation definitions
-│   │   ├── responsive.css      # Responsive styles
+│   ├── css/                    # Modular style files
+│   │   ├── core/               # Core styles
+│   │   │   ├── variables.css   # CSS variable definitions
+│   │   │   ├── base.css        # Base styles
+│   │   │   ├── layout.css      # Layout styles
+│   │   │   └── header.css      # Header styles
+│   │   ├── filter/             # Filter component styles
+│   │   │   ├── filter-control-bar.css
+│   │   │   ├── filter-dropdown.css
+│   │   │   ├── filter-options.css
+│   │   │   └── filter-tooltip.css
+│   │   ├── video/              # Video component styles
+│   │   │   ├── video-card.css
+│   │   │   ├── video-grid.css
+│   │   │   ├── video-hover-overlay.css
+│   │   │   ├── video-info.css
+│   │   │   ├── video-panel.css
+│   │   │   ├── video-thumbnail.css
+│   │   │   └── video-toolbar.css
+│   │   ├── selection/          # Selection panel styles
+│   │   │   ├── selection-panel-base.css
+│   │   │   ├── selection-list.css
+│   │   │   ├── selection-item.css
+│   │   │   ├── selection-footer.css
+│   │   │   └── selection-hub-buttons.css
+│   │   ├── components/         # Reusable components
+│   │   │   ├── modal.css
+│   │   │   └── toast.css
+│   │   ├── animations/         # Animation definitions
+│   │   │   └── animations.css
+│   │   ├── responsive/         # Responsive design
+│   │   │   ├── responsive-desktop.css
+│   │   │   ├── responsive-tablet.css
+│   │   │   ├── responsive-mobile.css
+│   │   │   └── responsive-print.css
 │   │   └── style.css           # CSS entry point
 │   │
-│   ├── js/                     # JavaScript files (modular)
+│   ├── js/                     # Modular JavaScript files
 │   │   ├── modules/            # Feature modules
+│   │   │   ├── @filter/        # Filter module group
+│   │   │   │   ├── filter-manager.js
+│   │   │   │   ├── filter-renderer.js
+│   │   │   │   ├── filter-state.js
+│   │   │   │   ├── filter-search.js
+│   │   │   │   ├── filter-hierarchy.js
+│   │   │   │   ├── data.js
+│   │   │   │   └── index.js
 │   │   │   ├── config.js       # Configuration management
 │   │   │   ├── data-manager.js # Data management
-│   │   │   ├── filter-manager.js # Filter management
-│   │   │   ├── video-grid.js   # Video grid
-│   │   │   ├── selection-panel.js # Selection panel
+│   │   │   ├── video-grid.js   # Video grid with virtual scrolling
+│   │   │   ├── selection-panel.js # Selection panel with virtual scrolling
+│   │   │   ├── download-manager.js # Download command generation
+│   │   │   ├── robot-aliases.js # Robot name alias management
 │   │   │   ├── ui-utils.js     # UI utilities
 │   │   │   ├── event-handlers.js # Event handling
-│   │   │   └── virtual-scroll.js # Virtual scrolling
-│   │   ├── app.js              # Main application
-│   │   ├── main.js             # Entry file
-│   │   ├── templates.js        # HTML templates
-│   │   └── types.js            # Type definitions
+│   │   │   ├── virtual-scroll.js # Virtual scrolling utilities
+│   │   │   ├── dom-utils.js    # DOM manipulation utilities
+│   │   │   ├── error-notifier.js # Error handling
+│   │   │   └── toast-manager.js # Toast notifications
+│   │   ├── app.js              # Main application coordinator
+│   │   ├── main.js             # Application entry point
+│   │   ├── templates.js        # HTML template generator
+│   │   └── types.js            # TypeScript-like type definitions
 │   │
 │   ├── index.html              # Main page
 │   ├── favicon.ico             # Website icon
-│   ├── README.md               # Project documentation
-│   └── REFACTORING.md          # Refactoring documentation
+│   ├── README.md               # Project documentation (English)
+│   └── README.zh.md            # Project documentation (Chinese)
 │
 └── README.md                   # Root directory documentation
 ```
 
 ## Core Features
 
-### 1. Dataset Filtering
-- Multi-dimensional filtering: Scene, Robot, End-effector, Action, Object
-- Hierarchical filters (supports object hierarchy)
-- Real-time search functionality
-- Filter Finder (filter option search)
+### 1. Advanced Dataset Filtering
+- **Multi-dimensional filtering**: Scene, Robot, End-effector, Action, Object
+- **Hierarchical filters**: Supports object hierarchy with expandable/collapsible groups
+- **Filter Finder**: Search filter options with keyboard navigation (Ctrl+F)
+  - Real-time highlighting of matching options
+  - Navigate through matches with arrow keys
+  - Match counter display
+- **Real-time dataset search**: Search datasets by name in the main search box
+- **Filter state management**: Active filter count display and easy reset
+- **Robot alias support**: Friendly display names for robot models
 
-### 2. Dataset Preview
-- Video auto-play
-- Hover information overlay
-- Detail modal dialog
-- Thumbnail loading (provided from assets/thumbnails directory, not auto-generated)
+### 2. Rich Dataset Preview
+- **Video auto-play on hover**: Videos automatically play when hovering over cards
+- **Hover information overlay**: Quick preview of dataset metadata
+- **Detail modal dialog**: Comprehensive dataset information including:
+  - Dataset metadata (scene, robot, action, objects)
+  - Version information
+  - Codebase version
+  - Download links
+- **Thumbnail loading**: Fast thumbnail display for quick browsing
+- **Video controls**: Play/pause controls in video cards
 
 ### 3. Selection and Management
-- Multi-select/Single-select
-- Shopping cart functionality
-- Batch operations (add/remove/clear)
-- Selection state persistence
+- **Multi-select support**: Click cards to select/deselect multiple datasets
+- **Batch operations**: 
+  - Select all filtered datasets
+  - Deselect all datasets
+  - Add selected items to cart
+  - Remove selected items from cart
+  - Clear entire cart
+- **Shopping cart (Batch Downloader)**: 
+  - Virtual scrolling for large selections
+  - Individual item removal
+  - Real-time count updates
+- **Selection state persistence**: Maintains selection state during filtering
 
-### 4. Export Functionality
-- JSON format export
-- Python download command generation
-- Support for ModelScope/HuggingFace sources
-- Import saved selections
+### 4. Export and Download
+- **JSON export/import**: 
+  - Export selection list as JSON file
+  - Import previously saved selections
+- **Python download command generation**: 
+  - Generate ready-to-use download commands
+  - Support for both ModelScope and HuggingFace hubs
+  - One-click copy to clipboard
+  - Batch download support for multiple datasets
 
 ### 5. Performance Optimization
-- Virtual scrolling (supports large datasets)
-- Lazy loading videos
-- IntersectionObserver optimization
-- Element caching and reuse
+- **Virtual scrolling**: 
+  - Efficient rendering for large datasets (266+ datasets)
+  - Applied to both video grid and selection panel
+  - Element caching and reuse
+- **Lazy loading**: 
+  - Videos load only when visible
+  - IntersectionObserver-based optimization
+  - Progressive loading with progress indicator
+- **Optimized rendering**: 
+  - Minimal DOM manipulation
+  - Efficient event handling
+  - Smooth animations and transitions
+
+### 6. User Experience
+- **Responsive design**: 
+  - Desktop, tablet, and mobile layouts
+  - Print-friendly styles
+  - Adaptive UI components
+- **Loading indicators**: 
+  - Progress bar during dataset loading
+  - Loading overlay with spinner
+  - Dataset count display
+- **Toast notifications**: 
+  - Success/error feedback
+  - Non-intrusive notifications
+- **Global banner**: 
+  - Important announcements
+  - Auto-dismissible on interaction
+- **Keyboard shortcuts**: 
+  - Ctrl+F for Filter Finder
+  - Arrow keys for navigation
 
 ## Quick Start
 
@@ -104,39 +192,66 @@ robocoin-html/
 
 ### 1. Filter Datasets
 
-Click the **Filters** button to open the filter panel:
-- Select scene type
-- Select robot model
-- Select end-effector
-- Select action type
-- Select object (supports hierarchical selection)
+Click the **"Filter datasets"** button to open the filter panel:
+- **Select filter categories**: Scene, Robot, End-effector, Action, Object
+- **Hierarchical selection**: Expand/collapse object groups for hierarchical filtering
+- **Filter Finder**: 
+  - Press `Ctrl+F` or click the search box in the filter panel
+  - Type to search filter options
+  - Use ↑/↓ arrow keys or navigation buttons to move between matches
+  - Matching options are highlighted automatically
+- **View active filters**: The filter button shows the count of active filters
+- **Reset filters**: Click "Reset filters" to clear all active filters
 
 ### 2. Search Datasets
 
-Use the top search box to search datasets by name.
+- Use the **search box** in the top toolbar to search datasets by name
+- Search works in real-time and filters the displayed datasets
+- Click the **×** button to clear the search
 
 ### 3. Select Datasets
 
-- Click cards to select/deselect
-- Use **select all** / **deselect** for batch operations
-- Selected cards will be highlighted
+- **Single selection**: Click on a video card to select/deselect it
+- **Batch selection**: 
+  - Click **"Select all datasets"** to select all currently filtered datasets
+  - Click **"Deselect all datasets"** to clear all selections
+- **Visual feedback**: Selected cards are highlighted with a border
+- **Selection count**: The toolbar shows the number of selected datasets
 
-### 4. Manage Shopping Cart
+### 4. Manage Shopping Cart (Batch Downloader)
 
-- Click **🛒 add** to add selected items to cart
-- Click **🗑️ remove** to remove selected items from cart
-- Click **🔄 clear** to clear the cart
+The selection panel on the right side shows your shopping cart:
+- **Add to cart**: Selected datasets can be added to the cart (managed automatically)
+- **View cart items**: Scroll through the cart list (supports virtual scrolling)
+- **Remove items**: Click the remove button on individual items
+- **Cart count**: See how many datasets are in your cart
 
 ### 5. Export Download Commands
 
-1. Select Hub source (ModelScope or HuggingFace)
-2. Click **📋 Copy & Checkout ⬇️** to copy the command
-3. Execute the command in terminal to download datasets
+1. **Select Hub source**: 
+   - Toggle between **HuggingFace** and **ModelScope** using the hub switch button
+   - The current hub is indicated by the active state
+2. **Generate command**: 
+   - The download command is automatically generated based on cart contents
+   - View the command in the code output area
+3. **Copy command**: 
+   - Click **"Copy & Checkout"** to copy the command to clipboard
+   - Execute the command in your terminal to download datasets
 
 ### 6. Import/Export Selections
 
-- Click **📤 export .json** to export selection list
-- Click **📋 import .json** to import saved list
+- **Export JSON**: 
+  - Click **"Export JSON"** to save your current cart as a JSON file
+  - Useful for sharing selections or saving for later
+- **Import JSON**: 
+  - Click **"Import JSON"** to load a previously saved selection file
+  - Restores your cart from the JSON file
+
+### 7. View Dataset Details
+
+- **Hover preview**: Hover over a video card to see quick information
+- **Detail modal**: Click on a video card to open a detailed information modal
+- **Video playback**: Videos auto-play on hover (desktop) or on click (mobile)
 
 ## Contributing
 
