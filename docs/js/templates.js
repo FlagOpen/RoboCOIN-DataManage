@@ -188,37 +188,81 @@ const Templates = {
     buildHoverDetailsHTML(ds) {
         let html = '';
 
-        // Basic info
+        // Basic info - simple format
         if (ds.robot) {
             const robots = Array.isArray(ds.robot) ? ds.robot : [ds.robot];
             const displayRobots = robots.map(r => this.getRobotDisplayLabel(r));
-            html += `<strong>Robot:</strong> ${displayRobots.join(', ')}<br><br>`;
+            html += `<strong>Robot:</strong> ${displayRobots.join(', ')}<br>`;
+        }
+
+        if (ds.robot_type) {
+            html += `<strong>Robot Type:</strong> ${ds.robot_type}<br>`;
+        }
+
+        if (ds.endEffector) {
+            html += `<strong>End Effector:</strong> ${ds.endEffector}<br>`;
         }
 
         if (ds.scenes && ds.scenes.length > 0) {
-            html += `<strong>Scene:</strong> ${ds.scenes.join(', ')}<br><br>`;
+            html += `<strong>Scene:</strong> ${ds.scenes.join(', ')}<br>`;
+        }
+
+        if (ds.platformHeight !== undefined) {
+            html += `<strong>Platform Height:</strong> ${ds.platformHeight} cm<br>`;
         }
 
         if (ds.datasetSize) {
-            html += `<strong>Dataset Size:</strong> ${ds.datasetSize}<br><br>`;
+            html += `<strong>Dataset Size:</strong> ${ds.datasetSize}<br>`;
         }
 
-        // Statistics
+        // Statistics - show all available stats with specific numbers
         if (ds.statistics) {
             const stats = ds.statistics;
-            if (stats.total_episodes || stats.total_frames) {
-                html += `<strong>Statistics:</strong><ul>`;
-                if (stats.total_episodes) html += `<li>Episodes: ${stats.total_episodes.toLocaleString()}</li>`;
-                if (stats.total_frames) html += `<li>Frames: ${stats.total_frames.toLocaleString()}</li>`;
-                if (stats.total_videos) html += `<li>Videos: ${stats.total_videos}</li>`;
-                if (stats.fps) html += `<li>FPS: ${stats.fps}</li>`;
-                html += `</ul><br>`;
+            html += `<strong>Statistics:</strong><br>`;
+            if (stats.total_episodes) html += `• Episodes: ${stats.total_episodes.toLocaleString()}<br>`;
+            if (stats.total_frames) html += `• Frames: ${stats.total_frames.toLocaleString()}<br>`;
+            if (stats.total_videos) html += `• Videos: ${stats.total_videos}<br>`;
+            if (stats.total_tasks) html += `• Tasks: ${stats.total_tasks}<br>`;
+            if (stats.total_chunks) html += `• Chunks: ${stats.total_chunks}<br>`;
+            if (stats.chunks_size) html += `• Chunk Size: ${stats.chunks_size}<br>`;
+            if (stats.fps) html += `• FPS: ${stats.fps}<br>`;
+        }
+
+        // Atomic actions
+        if (ds.atomic_actions && ds.atomic_actions.length > 0) {
+            html += `<strong>Atomic Actions:</strong> ${ds.atomic_actions.join(', ')}<br>`;
+        }
+
+        // Objects
+        if (ds.objects && ds.objects.length > 0) {
+            const objectNames = ds.objects.map(obj => obj.object_name || obj.name).filter(name => name);
+            if (objectNames.length > 0) {
+                html += `<strong>Objects:</strong> ${objectNames.join(', ')}<br>`;
             }
         }
 
+        // Camera information
+        if (ds.cameras && ds.cameras.length > 0) {
+            html += `<strong>Cameras:</strong> ${ds.cameras.length}<br>`;
+            // Show camera details if space allows
+            const cameraNames = ds.cameras.map(cam => cam.name || cam.key.split('.').pop()).slice(0, 3);
+            if (cameraNames.length > 0) {
+                html += `• ${cameraNames.join(', ')}${ds.cameras.length > 3 ? '...' : ''}<br>`;
+            }
+        }
+
+        // License and tags
+        if (ds.license) {
+            html += `<strong>License:</strong> ${ds.license}<br>`;
+        }
+
+        if (ds.tags && ds.tags.length > 0) {
+            html += `<strong>Tags:</strong> ${ds.tags.join(', ')}<br>`;
+        }
+
         // Description (if available and not too long)
-        if (ds.description && ds.description.length < 200) {
-            html += `<strong>Description:</strong><br>${ds.description.replace(/\n/g, '<br>')}`;
+        if (ds.description && ds.description.length < 150) {
+            html += `<strong>Description:</strong> ${ds.description.replace(/\n/g, '<br>')}`;
         }
 
         return html;

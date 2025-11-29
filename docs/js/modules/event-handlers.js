@@ -398,11 +398,13 @@ export class EventHandlers {
                 }
 
                 const hoverDelay = this.config?.timing?.hoverDelay || 800;
+
                 this._hoverOverlayShowTimeout = setTimeout(() => {
                     // Hide any previously active overlay
                     if (this._hoverOverlayActiveCard && this._hoverOverlayActiveCard !== card) {
                         this._hoverOverlayActiveCard.classList.remove('hover-overlay-visible');
                     }
+
                     card.classList.add('hover-overlay-visible');
                     this._hoverOverlayActiveCard = card;
                     this._hoverOverlayShowTimeout = null;

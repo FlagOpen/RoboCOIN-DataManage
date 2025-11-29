@@ -6,6 +6,7 @@
     "AIRBOT_MMK2_building_block_storage",
     "AIRBOT_MMK2_cake_storage",
     "AIRBOT_MMK2_chop_the_scallions",
+    "AIRBOT_MMK2_clean_the_desktop",
     "AIRBOT_MMK2_close_the_computer",
     "AIRBOT_MMK2_cup_storage",
     "AIRBOT_MMK2_desktop_storage",
@@ -117,6 +118,7 @@
     "Cobot_Magic_plate_storaje_baozi",
     "Cobot_Magic_pot_storage_steamer",
     "Cobot_Magic_pour_drink",
+    "Cobot_Magic_pour_water_a",
     "Cobot_Magic_pour_water_bottle",
     "Cobot_Magic_prepare_breakfast",
     "Cobot_Magic_pull_zipper",
@@ -223,6 +225,7 @@
     "RMC-AIDA-L_build_blocks",
     "RMC-AIDA-L_clean_table",
     "RMC-AIDA-L_desktop_organization",
+    "RMC-AIDA-L_fold_shirt",
     "RMC-AIDA-L_fold_shorts",
     "RMC-AIDA-L_fold_towel",
     "RMC-AIDA-L_food_packaging",
@@ -261,5 +264,5 @@
     "leju_robot_part_placement",
     "leju_robot_pass_the_cleaner_a"
   ],
-  "count": 260
+  "count": 263
 }

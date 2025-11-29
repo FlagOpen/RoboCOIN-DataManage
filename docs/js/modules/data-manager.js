@@ -165,6 +165,12 @@ export class DataManager {
             datasetSize: raw.dataset_size || rawData.dataset_size,
             statistics: raw.statistics || rawData.statistics,
 
+            // Additional metadata
+            cameras: raw.cameras || rawData.cameras || [],
+            license: raw.license || rawData.license,
+            tags: raw.tags || rawData.tags || [],
+            robot_type: raw.robot_type || rawData.robot_type,
+
             raw: raw,
             getAllScenes: function() { return this.scenes; },
             hasScene: function(sceneType) { return this.scenes.includes(sceneType); },

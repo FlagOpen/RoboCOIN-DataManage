@@ -35,6 +35,7 @@
  * @property {number} fadeDuration - Fade duration in ms
  */
 
+
 /**
  * @typedef {Object} PathsConfig
  * @property {string} assetsRoot - Root path for assets

@@ -383,7 +383,7 @@ export class VideoGridManager {
                 const episodes = stats.total_episodes;
                 const frames = stats.total_frames;
                 const formattedFrames = frames >= 1000000 ? `${(frames / 1000000).toFixed(1)}M` : frames >= 1000 ? `${Math.floor(frames / 1000)}K` : frames.toString();
-                tags.push(Templates.buildVideoTag(`${episodes} ep, ${formattedFrames} frames`));
+                tags.push(Templates.buildVideoTag(`${episodes} ep, ${formattedFrames} fr`));
             }
         }
 
