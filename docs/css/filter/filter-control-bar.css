@@ -104,6 +104,10 @@
 }
 
 /* Toolbar Buttons (Select/Deselect/Add/Remove) */
+.btn-toolbar {
+    font-weight: 600;
+}
+
 .btn-toolbar.primary {
     background: white;
     color: var(--color-primary);

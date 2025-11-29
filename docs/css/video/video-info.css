@@ -33,10 +33,6 @@
     transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 
-.video-title:hover {
-    color: var(--color-primary);
-    text-decoration: underline;
-}
 
 .video-card.in-cart .video-title {
     color: var(--color-primary-light);

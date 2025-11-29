@@ -407,6 +407,8 @@ export class EventHandlers {
 
                     card.classList.add('hover-overlay-visible');
                     this._hoverOverlayActiveCard = card;
+                    // 冻结当前卡片的视频为静态缩略图，减少悬停时的解码/绘制开销
+                    this.freezeCardThumbnail(card);
                     this._hoverOverlayShowTimeout = null;
                 }, hoverDelay);
             });
@@ -434,6 +436,8 @@ export class EventHandlers {
                 if (this._hoverOverlayActiveCard === card) {
                     this._hoverOverlayActiveCard = null;
                 }
+                // 悬停结束后恢复原本的动态行为（在可视区域时继续自动播放）
+                this.unfreezeCardThumbnail(card);
             });
         }
 
@@ -490,6 +494,83 @@ export class EventHandlers {
             this.managers.videoGrid.updateCardStyles();
             this.managers.selectionPanel.updateSelectionPanel();
         });
+    }
+
+    /**
+     * Freeze card thumbnail video to a static image while hover overlay is shown.
+     * This keeps the UI responsive by avoiding extra video decoding/rendering.
+     * @param {HTMLElement} card - Video card element
+     */
+    freezeCardThumbnail(card) {
+        if (!card || card.dataset.hoverFrozen === 'true') return;
+
+        const thumbnail = card.querySelector('.video-thumbnail');
+        if (!thumbnail) return;
+
+        const video = thumbnail.querySelector('video');
+        const img = thumbnail.querySelector('.thumbnail-image');
+
+        if (video) {
+            try {
+                video.pause();
+            } catch (e) {
+                // Ignore pause errors
+            }
+            video.style.opacity = '0';
+        }
+
+        if (img) {
+            img.style.opacity = '1';
+        }
+
+        card.dataset.hoverFrozen = 'true';
+    }
+
+    /**
+     * Clear hover freeze flag after overlay is hidden.
+     * @param {HTMLElement} card - Video card element
+     */
+    unfreezeCardThumbnail(card) {
+        if (!card || card.dataset.hoverFrozen !== 'true') return;
+
+        const thumbnail = card.querySelector('.video-thumbnail');
+        if (!thumbnail) {
+            delete card.dataset.hoverFrozen;
+            return;
+        }
+
+        const video = thumbnail.querySelector('video');
+        const img = thumbnail.querySelector('.thumbnail-image');
+
+        // 如果视频已经加载过（data-video-loaded 标记为 true），直接恢复播放与显示
+        if (thumbnail.dataset.videoLoaded === 'true' && video) {
+            video.style.opacity = '1';
+            if (img) {
+                img.style.opacity = '0';
+            }
+            try {
+                video.play();
+            } catch (e) {
+                // 忽略播放错误，保持静态缩略图也可以接受
+            }
+        } else {
+            // 尚未加载过视频：通过重新 observe 触发 IntersectionObserver 的首次回调，
+            // 让现有的自动播放逻辑在卡片可见时自行加载/播放
+            const videoGridManager = this.managers && this.managers.videoGrid;
+            if (videoGridManager && videoGridManager.videoAutoPlayObserver) {
+                try {
+                    if (card.dataset.videoObserved) {
+                        videoGridManager.videoAutoPlayObserver.unobserve(card);
+                    }
+                    videoGridManager.videoAutoPlayObserver.observe(card);
+                    card.dataset.videoObserved = 'true';
+                } catch (e) {
+                    // 如果观察失败则静默退化为仅显示缩略图
+                }
+            }
+        }
+
+        delete card.dataset.hoverFrozen;
     }
 
     /**
