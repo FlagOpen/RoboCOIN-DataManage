@@ -343,14 +343,14 @@ features:
     - 2
 tasks: pick up the long bread and put it into the basket.
 sub_tasks:
-- Abnormal
-- End
-- Grasp the basket with the left gripper
 - Grasp the long bread with right gripper
-- 'null'
-- Place the basket in the center of the table with the left gripper
+- Grasp the basket with the left gripper
+- End
 - Place the long bread in the basket with right gripper
+- Place the basket in the center of the table with the left gripper
+- Abnormal
 - Static
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

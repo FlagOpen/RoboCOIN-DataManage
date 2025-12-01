@@ -460,10 +460,10 @@ features:
     - 2
 tasks: put the tools into the yellow box on the white table.
 sub_tasks:
+- Place the mouse and power cord into the box.
 - Grab and lift both the mouse and power cord from the accessory packaging area at
   the same time.
 - 'null'
-- Place the mouse and power cord into the box.
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

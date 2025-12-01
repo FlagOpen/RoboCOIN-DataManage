@@ -322,14 +322,14 @@ tasks: 'wipe the coffee stains on the table with a green rag.
 
   wipe the coffee stains on the table with a blue rag.'
 sub_tasks:
+- Place the tablecloth
+- Sweep the stains on the table
 - End
-- 'null'
+- Sweep the stains on the table with the right gripper
+- Place the tablecloth with the right gripper
 - Pick up the tablecloth
 - Pick up the tablecloth with the right gripper
-- Place the tablecloth
-- Place the tablecloth with the right gripper
-- Sweep the stains on the table
-- Sweep the stains on the table with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

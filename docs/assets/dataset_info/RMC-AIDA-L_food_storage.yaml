@@ -387,19 +387,19 @@ tasks: 'pick up the bread from the table and place it in the brown handbag.
 
   pick up the egg yolk pastry from the table and place it in the white handbag.'
 sub_tasks:
-- abnormal
-- end
 - Lift the woven bag with the left gripper to open it
 - Lower the woven bag with the left gripper to close it
-- 'null'
-- Pick up the bread with the right gripper
-- Pick up the egg yolk pastry with the right gripper
-- Pick up the orange with the right gripper
-- Pick up the peach with the right gripper
-- Place the bread into the woven bag with the right gripper
+- abnormal
 - Place the egg yolk pastry into the woven bag with the right gripper
-- Place the orange into the woven bag with the right gripper
 - Place the peach into the woven bag with the right gripper
+- Pick up the orange with the right gripper
+- Pick up the egg yolk pastry with the right gripper
+- Pick up the bread with the right gripper
+- end
+- Place the bread into the woven bag with the right gripper
+- Place the orange into the woven bag with the right gripper
+- Pick up the peach with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

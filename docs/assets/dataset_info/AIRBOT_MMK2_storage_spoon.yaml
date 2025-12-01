@@ -347,13 +347,13 @@ features:
 tasks: Take a spoon in one hand and put it into the basin, then take another spoon
   in your other hand and put it into the basin.
 sub_tasks:
+- Static
+- Grasp the spoon with the right gripper
 - End
 - Grasp the spoon with the left gripper
-- Grasp the spoon with the right gripper
-- 'null'
-- Place the spoon into the basin with the left gripper
 - Place the spoon into the basin with the right gripper
-- Static
+- Place the spoon into the basin with the left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

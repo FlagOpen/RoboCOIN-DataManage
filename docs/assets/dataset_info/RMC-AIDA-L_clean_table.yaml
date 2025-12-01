@@ -366,19 +366,19 @@ tasks: 'wipe off the black water stains in the middle of the table with a blue r
 
   wipe off the brown water stains in the middle of the table with a pruple rag.'
 sub_tasks:
-- abnormal
-- end
+- Place the rag on the table with the right gripper
+- Stand the paper cup upright with the left gripper
 - Grasp the paper cup with the left gripper
 - Grasp the paper cup with the right gripper
 - Grasp the rag with the left gripper
 - Grasp the rag with the right gripper
-- 'null'
-- Place the rag on the table with the left gripper
-- Place the rag on the table with the right gripper
-- Stand the paper cup upright with the left gripper
-- Stand the paper cup upright with the right gripper
 - Wipe the stains off the table with the left gripper
+- Place the rag on the table with the left gripper
+- Stand the paper cup upright with the right gripper
+- end
 - Wipe the stains off the table with the right gripper
+- abnormal
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -343,14 +343,14 @@ tasks: Take the knife off the knife rack with one hand, hold the scallion with t
   other hand, cut the scallion with the knife, and then put the knife back on the
   knife rack.
 sub_tasks:
-- Abnormal
-- Cut scallions with the right gripper
 - End
-- Grasp the kitchen knife with the right gripper
-- 'null'
-- Place the kitchen knife back on the knife holder with the right gripper
 - Press the scallion with the left gripper
+- Abnormal
+- Grasp the kitchen knife with the right gripper
 - Static
+- Place the kitchen knife back on the knife holder with the right gripper
+- Cut scallions with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -352,10 +352,10 @@ tasks: move one drink among three beverages.
 sub_tasks:
 - End
 - Grasp the beverage bottle placed at the back of the desk
-- 'null'
+- Place the drink at the front of the table
 - Pick up the drink
 - Place the beverage bottle to the front of the table
-- Place the drink at the front of the table
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

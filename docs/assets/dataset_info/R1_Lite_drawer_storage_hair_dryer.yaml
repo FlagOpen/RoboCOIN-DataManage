@@ -322,13 +322,13 @@ tasks: Put the hair dryer into the drawer, then take it out of the drawer and pl
   it in its original place.
 sub_tasks:
 - abnormal
-- Close the drawer
-- 'null'
-- Pick up the hairdryer
-- Place it on the countertop
-- Pull open the drawer
 - Put it into the drawer
 - Take the hairdryer out
+- Close the drawer
+- Place it on the countertop
+- Pull open the drawer
+- Pick up the hairdryer
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

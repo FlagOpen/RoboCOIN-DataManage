@@ -331,15 +331,15 @@ features:
 tasks: pick up the donut from the bowl and place it in the plate, pick up the cake
   from the bowl and place it in the basket.
 sub_tasks:
-- Abnormal
+- Pour the cake into the basket with the left gripper
+- Pick up the bread with the right gripper and place it on the plate
+- Place the bowl on the table with the left gripper
 - End
+- Place the bowl in the center of the table with the left gripper
+- Abnormal
+- Push the bowl to the center of the table using the left gripper
 - Grasp the bowl with the left gripper
 - 'null'
-- Pick up the bread with the right gripper and place it on the plate
-- Place the bowl in the center of the table with the left gripper
-- Place the bowl on the table with the left gripper
-- Pour the cake into the basket with the left gripper
-- Push the bowl to the center of the table using the left gripper
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

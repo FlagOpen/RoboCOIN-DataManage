@@ -358,16 +358,16 @@ tasks: 'Use one hand to place the pumpkin into the large white bowl while using 
   Use one hand to place the small bowl into the large one while using your other hand
   to make space.'
 sub_tasks:
-- Abnormal
-- End
-- Grasp the pumpkin with the left gripper
-- Grasp the white bowl with the left gripper
-- Grasp the yellow round chili pepper with the right gripper
-- 'null'
-- Place the pumpkin on the pink bowl with the left gripper
 - Place the white bowl on the pink bowl with the left gripper
-- Place yellow round chili pepper on the blue bowl with the right gripper
+- Grasp the white bowl with the left gripper
 - Static
+- End
+- Abnormal
+- Grasp the pumpkin with the left gripper
+- Place the pumpkin on the pink bowl with the left gripper
+- Grasp the yellow round chili pepper with the right gripper
+- Place yellow round chili pepper on the blue bowl with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

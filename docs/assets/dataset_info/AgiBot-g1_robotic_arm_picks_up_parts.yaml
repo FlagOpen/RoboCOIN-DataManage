@@ -460,9 +460,9 @@ features:
     - 2
 tasks: pick up parts and place them into a black container.
 sub_tasks:
-- 'null'
-- Pick up the hard drive bracket from the feeding area.
 - Place the hard drive bracket into the box.
+- Pick up the hard drive bracket from the feeding area.
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -354,10 +354,10 @@ tasks: 'One hand grasps the yellow basket and places it in the middle of the tab
   the other hand picks up the long bread and puts it into the yellow basket.'
 sub_tasks:
 - abnormal
-- Move the basket to the center of view
-- 'null'
 - Pick up the bread
+- Move the basket to the center of view
 - place the bread into the basket
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

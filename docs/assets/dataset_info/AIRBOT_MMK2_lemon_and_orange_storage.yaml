@@ -354,13 +354,13 @@ tasks: Place the lemon in one compartment and the orange in the other compartmen
   using a different hand for each.
 sub_tasks:
 - Abnormal
+- Static
 - End
+- Place the lemon into the left compartment of the storage box with the left gripper
+- Place the orange into the right compartment of the storage box with the right gripper
 - Grasp the lemon with the left gripper
 - Grasp the orange with the right gripper
 - 'null'
-- Place the lemon into the left compartment of the storage box with the left gripper
-- Place the orange into the right compartment of the storage box with the right gripper
-- Static
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

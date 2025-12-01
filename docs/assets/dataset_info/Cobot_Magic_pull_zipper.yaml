@@ -345,20 +345,20 @@ tasks: 'pull up zipper of the bag.
 
   pull open zipper of the yellow bag.'
 sub_tasks:
-- Discard.
-- End
-- Grab the zipper with your left hand.
-- Grasp the bag with left gripper
-- Grasp the bag with right gripper
-- Hold the bag with your left hand.
-- Hold the bag with your right hand.
-- 'null'
-- Pull  the zipper with left gripper
-- Pull open the zipper with your left hand.
-- Pull open the zipper with your right hand.
 - Pull the zipper with right gripper
+- Pull open the zipper with your left hand.
+- Grasp the bag with left gripper
+- Hold the bag with your right hand.
+- End
 - Zip up the bag with your left hand.
 - Zip up the bag with your right hand.
+- Grasp the bag with right gripper
+- Pull  the zipper with left gripper
+- Grab the zipper with your left hand.
+- Discard.
+- Pull open the zipper with your right hand.
+- Hold the bag with your left hand.
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

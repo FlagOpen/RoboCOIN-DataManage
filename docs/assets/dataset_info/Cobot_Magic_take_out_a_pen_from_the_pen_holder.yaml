@@ -333,15 +333,15 @@ tasks: 'put the pen in the pen holder on the white table with the left gripper.
 
   put the pen in the pen holder on the white table with the right gripper.'
 sub_tasks:
+- Place the pen on the table with the left gripper
 - Abnormal
 - End
-- 'null'
-- Pick up the pen from the pen holder
 - Pick up the pen with the left gripper
+- Pick up the pen from the pen holder
+- Place the pen on the table with the right gripper
 - Pick up the pen with the right gripper
 - Place the pen on the table
-- Place the pen on the table with the left gripper
-- Place the pen on the table with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

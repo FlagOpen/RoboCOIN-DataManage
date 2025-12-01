@@ -320,13 +320,13 @@ features:
     - 2
 tasks: fill cup with faucet water then turn off and place on table.
 sub_tasks:
-- abnormal
-- 'null'
-- Pick up the cup
-- Place it under the water dispenser
 - Place the cup next to the water dispenser
+- abnormal
+- Pick up the cup
 - Turn off the faucet
+- Place it under the water dispenser
 - Turn on the faucet
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

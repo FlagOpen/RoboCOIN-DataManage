@@ -324,21 +324,21 @@ features:
     - 2
 tasks: hang basket clothes on hanger then take off put back.
 sub_tasks:
-- abnormal
+- Pick up the clothes rack on the clothesline with the right gripper
+- Hang the clothes rack on the clothesline with the right gripper
+- Take the clothes off the clothes rack with the right gripper
 - End
 - Hang the clothes on the clothes rack
-- Hang the clothes on the clothes rack with both grippers
-- Hang the clothes rack on the clothesline
-- Hang the clothes rack on the clothesline with the right gripper
-- 'null'
-- Pick up clothes from the basket
-- Pick up clothes from the basket with the left gripper
-- Pick up the clothes rack on the clothesline
-- Pick up the clothes rack on the clothesline with the right gripper
-- Put clothes in the basket
 - Put clothes in the basket  with the left gripper
+- Pick up the clothes rack on the clothesline
+- Hang the clothes rack on the clothesline
+- Pick up clothes from the basket
 - Take the clothes off the clothes rack
-- Take the clothes off the clothes rack with the right gripper
+- Hang the clothes on the clothes rack with both grippers
+- Pick up clothes from the basket with the left gripper
+- abnormal
+- Put clothes in the basket
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

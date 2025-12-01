@@ -324,11 +324,11 @@ features:
     - 2
 tasks: take the parts from the box containing them and put them into an empty box.
 sub_tasks:
-- Abnormal
-- End
-- Grasp the data cable
-- 'null'
 - Place the data cable in the another box
+- Abnormal
+- Grasp the data cable
+- End
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

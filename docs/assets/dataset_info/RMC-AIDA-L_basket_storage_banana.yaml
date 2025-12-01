@@ -357,24 +357,24 @@ tasks: 'the left gripper pick up the basket to the appropriate position,  the ri
   the right gripper pick up the yellow basket and place it horizontally in the middle
   of the table, the left gripper pick up the banana and place it into the yellow basket.'
 sub_tasks:
-- abnormal
-- end
-- 'null'
-- Pick up the banana with the left gripper
 - Pick up the banana with the right gripper
-- Pick up the basket with the left gripper
-- Pick up the basket with the right gripper
-- Pick up the dark basket with the left gripper
-- Pick up the dark basket with the right gripper
 - Pick up the light basket with the right gripper
-- Place the banana into the basket with the right gripper
-- Place the banana into the dark basket with the left gripper
-- Place the banana into the dark basket with the right gripper
+- abnormal
 - Place the banana into the light basket with the left gripper
-- Place the basket in the center of view with the left gripper
 - Place the dark basket in the center of view with the left gripper
-- Place the dark basket in the center of view with the right gripper
 - Place the light basket in the center of view with the right gripper
+- Place the basket in the center of view with the left gripper
+- Pick up the banana with the left gripper
+- Place the banana into the dark basket with the left gripper
+- end
+- Place the banana into the basket with the right gripper
+- Place the dark basket in the center of view with the right gripper
+- Place the banana into the dark basket with the right gripper
+- Pick up the dark basket with the left gripper
+- Pick up the basket with the right gripper
+- Pick up the basket with the left gripper
+- Pick up the dark basket with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

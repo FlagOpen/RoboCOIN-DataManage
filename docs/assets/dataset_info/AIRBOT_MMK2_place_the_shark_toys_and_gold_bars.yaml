@@ -355,12 +355,12 @@ tasks: Pick up the shark doll with one hand and put it in the lid of the paper b
   of the paper box.
 sub_tasks:
 - End
-- Grasp the gold bar with the right gripper
-- Grasp the whale with the left gripper
-- 'null'
-- Place the gold bar on the paper box with the right gripper
 - Place the whale on the paper box with the left gripper
+- Place the gold bar on the paper box with the right gripper
+- Grasp the whale with the left gripper
 - Static
+- Grasp the gold bar with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

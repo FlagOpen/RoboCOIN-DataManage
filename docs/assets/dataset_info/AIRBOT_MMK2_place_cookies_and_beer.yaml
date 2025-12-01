@@ -354,11 +354,11 @@ tasks: Pick up the biscuit from the table and place it in the white lid, and put
   beer glass from the table into the white lid.
 sub_tasks:
 - End
-- Grasp the bagged cookies with the left gripper
-- Grasp the beer mug with the right gripper
-- 'null'
 - Place the bagged cookies on the white basket with the left gripper
 - Place the beer mug on the white basket with the right gripper
+- Grasp the beer mug with the right gripper
+- Grasp the bagged cookies with the left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

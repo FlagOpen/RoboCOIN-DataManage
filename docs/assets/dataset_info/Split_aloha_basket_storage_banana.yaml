@@ -343,14 +343,14 @@ features:
     - 2
 tasks: pick up the banana and put it into the basket.
 sub_tasks:
-- Abnormal
 - End
-- Grasp the banana with right gripper
-- Grasp the basket with the left gripper
-- 'null'
 - Place the banana in the basket with right gripper
+- Grasp the banana with right gripper
 - Place the basket in the center of the table with the left gripper
+- Grasp the basket with the left gripper
 - Static
+- Abnormal
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

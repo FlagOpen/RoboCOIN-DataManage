@@ -344,12 +344,12 @@ tasks: place the basket in the center of the table and align it, then put the pe
   into the basket.
 sub_tasks:
 - End
-- Grasp the light basket with the left gripper
-- Grasp the peach with the right gripper
-- 'null'
 - Place the light basket on the middle of the table with the left gripper
-- Place the peach into the light basket with the right gripper
+- Grasp the light basket with the left gripper
 - Static
+- Grasp the peach with the right gripper
+- Place the peach into the light basket with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

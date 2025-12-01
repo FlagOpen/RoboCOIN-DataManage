@@ -354,8 +354,8 @@ tasks: 'the pants are placed with the back facing upwards, the cuffs facing to t
   position of the pants to the center of the table.'
 sub_tasks:
 - Fold the bottom of the pants upward
-- Fold the pants from  left  to right
 - Fold your pants from right to left
+- Fold the pants from  left  to right
 - 'null'
 annotations:
   subtask_annotation: auto_generated

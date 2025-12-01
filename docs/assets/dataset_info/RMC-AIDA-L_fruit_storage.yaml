@@ -364,22 +364,22 @@ tasks: 'the left gripper pick up the bowl from the table, the right gripper pick
   the left gripper pick up the banana from the table and place it in the middle plate,
   the right gripper pick up the grape from the table and place it in the middle plate.'
 sub_tasks:
-- Abnormal
 - End
-- Grasp the banana with left gripper
-- Grasp the banana with right gripper
-- Grasp the blue bowl with right gripper
-- Grasp the grape with left gripper
-- Grasp the grape with right gripper
-- Lift the blue bowl with right gripper
-- 'null'
-- Place the banana in the blue bowl with left gripper
-- Place the banana in the purple plate with left gripper
-- Place the banana in the purple plate with right gripper
-- Place the bowl on the table with right gripper
 - Place the grape in the purple plate with left gripper
+- Grasp the grape with right gripper
+- Place the banana in the purple plate with right gripper
+- Place the banana in the blue bowl with left gripper
+- Grasp the banana with right gripper
+- Grasp the grape with left gripper
+- Place the bowl on the table with right gripper
 - Place the grape in the purple plate with right gripper
+- Place the banana in the purple plate with left gripper
+- Lift the blue bowl with right gripper
+- Grasp the blue bowl with right gripper
 - Static
+- Abnormal
+- Grasp the banana with left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

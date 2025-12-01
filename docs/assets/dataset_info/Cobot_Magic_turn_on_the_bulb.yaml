@@ -311,8 +311,8 @@ features:
 tasks: press the switch on the desk to turn on the bulb.
 sub_tasks:
 - End
-- 'null'
 - Turn on the switch
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

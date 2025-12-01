@@ -313,8 +313,8 @@ features:
 tasks: Grasp the spherical object and relocate it to the opposite side.
 sub_tasks:
 - Grasp the spherical object on the right side
-- 'null'
 - Place the picked object on the left side of the table
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

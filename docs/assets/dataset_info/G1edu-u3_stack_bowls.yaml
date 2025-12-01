@@ -312,14 +312,14 @@ tasks: 'Pick up the bowl on one side of the table and place it on top of the mid
   then pick up the bowl on the other side of the table and place it on top of the
   middle bowls.'
 sub_tasks:
-- Abnormal
-- End
-- Grasp the bowl on the left with the left gripper
-- Grasp the bowl on the right with the right gripper
-- 'null'
-- Place the bowl on the left onto the bowl in the middle with left gripper
 - Place the bowl on the right onto the bowl in the middle with right gripper
+- Grasp the bowl on the right with the right gripper
+- Grasp the bowl on the left with the left gripper
+- End
 - Static
+- Abnormal
+- Place the bowl on the left onto the bowl in the middle with left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

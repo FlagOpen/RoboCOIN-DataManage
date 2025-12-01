@@ -319,8 +319,8 @@ features:
 tasks: grasp the yellow bread and place it into the yellow plate.
 sub_tasks:
 - Grasp the yellow bread
-- 'null'
 - Place the bread into the yellow plate
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

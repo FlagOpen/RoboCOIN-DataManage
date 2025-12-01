@@ -353,14 +353,14 @@ features:
 tasks: Pick up the mouse box and place it into the box, then pick up the blue network
   cable and place it into the box.
 sub_tasks:
-- Abnormal
-- End
 - Grasp the blue network cable with the right gripper
-- Grasp the mouse box with the left gripper
-- 'null'
 - Place the blue network cable into carton with the right gripper
-- Place the mouse box into carton with the left gripper
 - Static
+- Grasp the mouse box with the left gripper
+- Place the mouse box into carton with the left gripper
+- End
+- Abnormal
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

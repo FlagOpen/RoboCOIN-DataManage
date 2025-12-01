@@ -356,20 +356,20 @@ tasks: 'Grasp the handle of the teapot with one hand and pour tea into the teacu
 
   Grasp the handle of the teapot with one hand and pour tea into the teacup.'
 sub_tasks:
-- abnormal
-- end
-- 'null'
-- Pick up the teacup with the left gripper
-- Pick up the teacup with the right gripper
-- Pick up the teapot with the left gripper
-- Pick up the teapot with the right gripper
-- Place the teacup in the center of view with the left gripper
-- Place the teacup in the center of view with the right gripper
-- Pour tea into the teacup with the left gripper
 - Pour tea into the teacup with the light gripper
 - Pour tea into the teacup with the right gripper
+- end
+- abnormal
+- Pour tea into the teacup with the left gripper
+- Pick up the teacup with the right gripper
 - Put down the teapot with the left gripper
+- Pick up the teacup with the left gripper
+- Pick up the teapot with the right gripper
+- Place the teacup in the center of view with the left gripper
+- Pick up the teapot with the left gripper
 - Put down the teapot with the right gripper
+- Place the teacup in the center of view with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

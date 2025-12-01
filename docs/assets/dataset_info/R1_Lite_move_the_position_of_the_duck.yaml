@@ -581,14 +581,14 @@ features:
     - 2
 tasks: put the duck the designated position.
 sub_tasks:
-- Abnormal
-- End
-- Grasp the red duck with left gripper
 - Grasp the red duck with right gripper
-- 'null'
-- Place the red duck on the table with left gripper
-- Place the red duck on the table with right gripper
 - Static
+- Place the red duck on the table with right gripper
+- Grasp the red duck with left gripper
+- End
+- Place the red duck on the table with left gripper
+- Abnormal
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -347,13 +347,13 @@ features:
 tasks: Put the cake into the cup.
 sub_tasks:
 - Abnormal
-- End
-- Grasp the cake with the left gripper
-- Grasp the cake with the right gripper
-- 'null'
-- Place the cake into the blue cup with the left gripper
-- Place the cake into the blue cup with the right gripper
 - Static
+- Grasp the cake with the left gripper
+- End
+- Grasp the cake with the right gripper
+- Place the cake into the blue cup with the right gripper
+- Place the cake into the blue cup with the left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

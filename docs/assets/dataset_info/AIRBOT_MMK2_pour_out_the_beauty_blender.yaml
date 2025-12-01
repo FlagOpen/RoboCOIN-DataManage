@@ -352,13 +352,13 @@ features:
     - 2
 tasks: Pick up the cup and pour the beauty blender inside into the bowl.
 sub_tasks:
-- Abnormal
-- End
-- Grasp the paper cup containing bullets with  right gripper
-- 'null'
 - Place the paper cup on the table with right gripper
 - Pour the bullets from the paper cup into the bowl with right gripper
 - Static
+- Grasp the paper cup containing bullets with  right gripper
+- End
+- Abnormal
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

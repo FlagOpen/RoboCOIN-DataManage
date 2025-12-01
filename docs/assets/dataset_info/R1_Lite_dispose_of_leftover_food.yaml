@@ -332,14 +332,14 @@ features:
 tasks: pour leftovers from bowl or plate into trash can put back.
 sub_tasks:
 - Move the bowl over the trash can
-- Move the plate over the trash can
-- 'null'
-- Pick up the bowl with leftover food
-- Pick up the plate with leftover food
-- Pour the leftover food from the bowl into the trash can
 - Pour the leftover food from the plate into the trash can
+- Pour the leftover food from the bowl into the trash can
+- Pick up the plate with leftover food
 - Put the bowl back to the table
+- Move the plate over the trash can
+- Pick up the bowl with leftover food
 - Put the plate back to the table
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -312,12 +312,12 @@ features:
     - 2
 tasks: move pillow from bedside to head then foot of bed.
 sub_tasks:
-- Move to the foot of the bed
-- Move to the head of the bed
-- 'null'
 - Pick up the pillow
-- Place the pillow at the bedside
 - Place the pillow at the end of the bed
+- Move to the head of the bed
+- Move to the foot of the bed
+- Place the pillow at the bedside
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

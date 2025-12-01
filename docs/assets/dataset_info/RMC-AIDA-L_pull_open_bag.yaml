@@ -355,20 +355,20 @@ tasks: 'unzip the black food bag.
 
   close the zipper of the khaki food bag.'
 sub_tasks:
-- Abnormal
-- Deliver the bag from right gripper to left gripper
-- Discard.
-- End
-- Grab the bag with your left hand.
 - Grab the zipper with your left hand.
-- 'null'
-- Pick up the bag with left gripper
-- Pick up the bag with right gripper
+- Abnormal
 - Place the bag on the table with left gripper
 - Pull open the zipper with your right hand.
-- Pull up the zipper with your right hand.
+- Grab the bag with your left hand.
 - Static
 - Unzip the zipper of bag with right gripper
+- End
+- Pick up the bag with left gripper
+- Pick up the bag with right gripper
+- Deliver the bag from right gripper to left gripper
+- Pull up the zipper with your right hand.
+- Discard.
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

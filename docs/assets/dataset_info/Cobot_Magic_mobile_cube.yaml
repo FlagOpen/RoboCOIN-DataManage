@@ -337,9 +337,9 @@ features:
 tasks: pick up the cube block and place it in another position on the table.
 sub_tasks:
 - End
-- 'null'
 - Pick up the small cube
 - Place the small cube on the ahead of the table
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

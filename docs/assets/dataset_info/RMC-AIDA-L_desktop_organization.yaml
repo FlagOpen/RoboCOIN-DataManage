@@ -424,69 +424,69 @@ tasks: 'put the orange in the fruit plate, put the paper ball in the trash can, 
   upright, put the ruler in the pen holder, put the pen in the pen holder, and put
   the scissor in the pen holder.'
 sub_tasks:
-- Discard.
-- end
-- Grab the blue scissors with the left hand.
+- Place the blue scissors into the pen holder with the right hand.
+- Grab the orange with the left hand.
+- Place the blue scissors into the pen holder with the left hand.
+- Pass the ruler from the right hand to the left hand.
+- Place the gray spring-action pen into the pen holder with the left hand.
+- Pass the blue utility knife from the left hand to the right hand.
+- Put the eraser into the pen holder with the right hand.
 - Grab the blue scissors with the right hand.
 - Grab the blue utility knife with the left hand.
-- Grab the blue utility knife with the right hand.
-- Grab the eraser with the left hand.
-- Grab the eraser with the right hand.
-- Grab the gray glue with the left hand.
-- Grab the gray glue with the right hand.
-- Grab the gray spring-action pen with the left hand.
-- Grab the gray spring-action pen with the right hand.
-- Grab the orange with the left hand.
-- Grab the orange with the right hand.
-- Grab the paper ball with the left hand.
-- Grab the paper ball with the right hand.
-- Grab the peach with the left hand.
-- Grab the peach with the right hand.
-- Grab the plastic with the left hand.
-- Grab the plastic with the right hand.
-- Grab the ruler with the left hand.
-- Grab the ruler with the right hand.
-- Grab the water bottle with the left hand.
-- Grab the water bottle with the right hand.
-- 'null'
-- Pass the blue scissors from the left hand to the right hand.
-- Pass the blue scissors from the right hand to the left hand.
-- Pass the blue utility knife from the left hand to the right hand.
-- Pass the blue utility knife from the right hand to the left hand.
-- Pass the eraser from the left hand to the right hand.
-- Pass the gray glue from the left hand to the right hand.
-- Pass the gray glue from the right hand to the left hand.
-- Pass the gray spring-action pen from the left hand to the right hand.
-- Pass the gray spring-action pen from the right hand to the left hand.
-- Pass the orange from the right hand to the left hand.
-- Pass the paper ball from the left hand to the right hand.
-- Pass the peach from the right hand to the left hand.
-- Pass the plastic from the left hand to the right hand.
-- Pass the plastic from the right hand to the left hand.
-- Pass the ruler from the left hand to the right hand.
-- Pass the ruler from the right hand to the left hand.
-- Pass the water bottle from the left hand to the right hand.
-- Pass the water bottle from the right hand to the left hand.
-- Place the blue scissors into the pen holder with the left hand.
-- Place the blue scissors into the pen holder with the right hand.
-- Place the blue utility knife into the pen holder with the left hand.
-- Place the blue utility knife into the pen holder with the right hand.
-- Place the eraser into the pen holder with the left hand.
-- Place the gray glue into the pen holder with the left hand.
-- Place the gray glue into the pen holder with the right hand.
-- Place the gray spring-action pen into the pen holder with the left hand.
-- Place the gray spring-action pen into the pen holder with the right hand.
-- Place the orange into the fruit bowl with the left hand.
 - Place the orange into the fruit bowl with the right hand.
-- Place the paper ball into the trash can with the right hand.
-- Place the peach into the fruit bowl with the left hand.
-- Place the peach into the fruit bowl with the right hand.
-- Place the plastic into the trash can with the right hand.
+- Grab the plastic with the right hand.
+- Discard.
+- Pass the water bottle from the left hand to the right hand.
+- Pass the ruler from the left hand to the right hand.
+- Place the gray spring-action pen into the pen holder with the right hand.
+- Pass the water bottle from the right hand to the left hand.
+- Place the eraser into the pen holder with the left hand.
+- Grab the blue scissors with the left hand.
+- Grab the ruler with the left hand.
+- Grab the eraser with the right hand.
+- Pass the peach from the right hand to the left hand.
+- Pass the blue scissors from the right hand to the left hand.
+- Pass the gray spring-action pen from the left hand to the right hand.
+- Pass the eraser from the left hand to the right hand.
+- Place the blue utility knife into the pen holder with the right hand.
+- Place the blue utility knife into the pen holder with the left hand.
 - Place the ruler into the pen holder with the left hand.
+- Grab the orange with the right hand.
+- Grab the plastic with the left hand.
+- Grab the peach with the right hand.
+- Place the paper ball into the trash can with the right hand.
+- Place the orange into the fruit bowl with the left hand.
+- Grab the gray glue with the right hand.
+- Pass the plastic from the right hand to the left hand.
+- Grab the water bottle with the left hand.
+- Pass the gray glue from the left hand to the right hand.
+- Pass the paper ball from the left hand to the right hand.
+- Pass the plastic from the left hand to the right hand.
+- Grab the blue utility knife with the right hand.
+- Pass the orange from the right hand to the left hand.
+- Grab the paper ball with the left hand.
+- Pass the blue scissors from the left hand to the right hand.
 - Place the ruler into the pen holder with the right hand.
+- Place the peach into the fruit bowl with the right hand.
 - Place the water bottle on the table with the left hand.
+- Grab the eraser with the left hand.
+- Pass the gray glue from the right hand to the left hand.
+- Grab the gray spring-action pen with the left hand.
+- Pass the blue utility knife from the right hand to the left hand.
+- Place the peach into the fruit bowl with the left hand.
+- Grab the gray spring-action pen with the right hand.
+- Grab the gray glue with the left hand.
 - Place the water bottle on the table with the right hand.
-- Put the eraser into the pen holder with the right hand.
+- Grab the ruler with the right hand.
+- Grab the water bottle with the right hand.
+- Place the gray glue into the pen holder with the right hand.
+- Grab the peach with the left hand.
+- Place the plastic into the trash can with the right hand.
+- Pass the gray spring-action pen from the right hand to the left hand.
+- Place the gray glue into the pen holder with the left hand.
+- Grab the paper ball with the right hand.
+- end
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

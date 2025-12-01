@@ -334,37 +334,37 @@ tasks: 'take vegetables from cloth bag on blue coffee tablecloth place on plate.
 
   take vegetables from bag on white checkered tablecloth place on plate.'
 sub_tasks:
-- Abnormal
-- End
+- Place the pumpkin on the plate with right gripper
+- Place the radish on the plate with right gripper
+- Place the potato on the plate with left gripper
+- Place the bell pepper on the plate with right gripper
+- Place the eggplant on the plate with right gripper
+- Place the eggplant on the plate with left gripper
 - Grasp the bell pepper with left gripper
+- End
 - Grasp the bell pepper with right gripper
+- Place the bell pepper on the plate with left gripper
 - Grasp the bitter melon with left gripper
-- Grasp the bitter melon with right gripper
-- Grasp the carrot with left gripper
-- Grasp the carrot with right gripper
-- Grasp the eggplant with left gripper
 - Grasp the eggplant with right gripper
 - Grasp the potato with left gripper
-- Grasp the potato with right gripper
-- Grasp the pumpkin with left gripper
-- Grasp the pumpkin with right gripper
-- Grasp the radish with left gripper
-- Grasp the radish with right gripper
-- 'null'
-- Place the bell pepper on the plate with left gripper
-- Place the bell pepper on the plate with right gripper
-- Place the bitter melon on the plate with left gripper
-- Place the bitter melon on the plate with right gripper
-- Place the carrot on the plate with left gripper
-- Place the carrot on the plate with right gripper
-- Place the eggplant on the plate with left gripper
-- Place the eggplant on the plate with right gripper
-- Place the potato on the plate with left gripper
-- Place the potato on the plate with right gripper
-- Place the pumpkin on the plate with left gripper
-- Place the pumpkin on the plate with right gripper
+- Abnormal
 - Place the radish on the plate with left gripper
-- Place the radish on the plate with right gripper
+- Grasp the bitter melon with right gripper
+- Grasp the eggplant with left gripper
+- Place the pumpkin on the plate with left gripper
+- Place the carrot on the plate with right gripper
+- Place the carrot on the plate with left gripper
+- Grasp the carrot with left gripper
+- Grasp the radish with left gripper
+- Place the bitter melon on the plate with left gripper
+- Grasp the pumpkin with left gripper
+- Grasp the radish with right gripper
+- Grasp the carrot with right gripper
+- Grasp the potato with right gripper
+- Place the potato on the plate with right gripper
+- Grasp the pumpkin with right gripper
+- Place the bitter melon on the plate with right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

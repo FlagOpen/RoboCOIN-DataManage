@@ -319,13 +319,13 @@ features:
     - 2
 tasks: put remote tissue in drawer then take out and close.
 sub_tasks:
-- Close the nightstand drawer
-- 'null'
 - Open the nightstand drawer
 - Put the remote controls on the table in the drawer one by one
-- Put the tissue on the table in the drawer one by one
 - Take the remote control out of the drawer one by one and place them on the table
 - Take the tissue out of the drawer one by one and place them on the table
+- Close the nightstand drawer
+- Put the tissue on the table in the drawer one by one
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

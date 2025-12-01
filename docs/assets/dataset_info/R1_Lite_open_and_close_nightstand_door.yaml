@@ -343,23 +343,23 @@ features:
     - 2
 tasks: put items on nightstand lower then higher shelf and close.
 sub_tasks:
-- abnormal
-- Close the nightstand door
-- End
-- 'null'
-- Open the nightstand door
-- Place the bag on the higher shelf
-- Place the bag on the lower shelf
-- Place the basket on the higher shelf
-- Place the basket on the lower shelf
-- Place the blue doll on the higher shelf
-- Place the blue doll on the lower shelf
-- Place the green doll on the higher shelf
 - Place the green doll on the lower shelf
+- Close the nightstand door
+- Place the basket on the lower shelf
 - Place the pillow on the higher shelf
+- Place the blue doll on the higher shelf
+- End
 - Place the pillow on the lower shelf
-- Place the pink doll on the higher shelf
+- Place the blue doll on the lower shelf
+- abnormal
+- Place the bag on the lower shelf
+- Place the bag on the higher shelf
+- Open the nightstand door
+- Place the basket on the higher shelf
+- Place the green doll on the higher shelf
 - Place the pink doll on the lower shelf
+- Place the pink doll on the higher shelf
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

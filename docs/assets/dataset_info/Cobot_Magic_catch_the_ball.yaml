@@ -312,11 +312,11 @@ features:
     - 2
 tasks: grasp the rolling ball descending the slope.
 sub_tasks:
+- Put the picked-up object on the table.
 - Grab the rolling spherical object.
 - Grab the spherical object with your left arm.
-- 'null'
 - Place the sphere on the white object.
-- Put the picked-up object on the table.
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

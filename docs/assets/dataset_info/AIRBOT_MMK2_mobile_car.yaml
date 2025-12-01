@@ -338,11 +338,11 @@ features:
     - 2
 tasks: Push the yellow cart away from your body with one hand.
 sub_tasks:
-- Abnormal
 - End
-- 'null'
 - Push the toy car from left to right with the left gripper
 - Static
+- Abnormal
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

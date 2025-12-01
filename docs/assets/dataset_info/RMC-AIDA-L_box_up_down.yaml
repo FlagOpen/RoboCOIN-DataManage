@@ -342,18 +342,18 @@ tasks: 'pick up the box from the table with both arms.
 
   place the box on the table with both arms.'
 sub_tasks:
+- Loosen the box on the table with right gripper
+- Loosen the box on the table with left gripper
+- Static
 - Abnormal
+- Place the box on the table with right gripper
+- Place the box on the table with left gripper
 - End
 - Grasp the bandage with left gripper
-- Grasp the bandage with right gripper
 - Lift the box with left gripper
+- Grasp the bandage with right gripper
 - Lift the box with right gripper
-- Loosen the box on the table with left gripper
-- Loosen the box on the table with right gripper
 - 'null'
-- Place the box on the table with left gripper
-- Place the box on the table with right gripper
-- Static
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

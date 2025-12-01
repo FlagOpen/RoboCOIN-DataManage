@@ -323,9 +323,9 @@ tasks: 'on the green tablecloth, hold the book with one hand and close it with t
   on the grey tablecloth, hold the book with one hand and close it with the other.'
 sub_tasks:
 - Abnormal
+- End
 - Close the book
 - Close the open book
-- End
 - 'null'
 annotations:
   subtask_annotation: auto_generated

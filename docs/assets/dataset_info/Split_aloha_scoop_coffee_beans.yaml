@@ -394,12 +394,12 @@ tasks: 'the right gripper place the grey cup in the center of the table, the lef
   cup and put them into the grey cup, the left gripper put the spoon back into the
   cup lid.'
 sub_tasks:
-- abnormal
-- Move the cup to the center of view
-- 'null'
-- Pick up the spoon
 - Place the spoon back in its original place
+- Move the cup to the center of view
+- Pick up the spoon
 - Scoop a spoonful of beans into the cup
+- abnormal
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -318,11 +318,11 @@ features:
     - 2
 tasks: grasp the yellow bread and place it into the yellow plate, then retrieve it.
 sub_tasks:
+- Pick the yellow bread on the yellow plate
+- Place the yellow bread on the table
+- Place the picked object on the yellow plate
 - Grasp the yellow bread on the table
 - 'null'
-- Pick the yellow bread on the yellow plate
-- Place the picked object on the yellow plate
-- Place the yellow bread on the table
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

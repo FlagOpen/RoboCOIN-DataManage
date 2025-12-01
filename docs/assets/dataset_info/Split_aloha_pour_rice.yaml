@@ -351,18 +351,18 @@ features:
 tasks: the right gripper grasp the rice container and place it in the center of the
   table, the left gripper grasp the rice scoop and pour the rice into the rice container.
 sub_tasks:
-- Abnormal
-- End
 - Grasp the cup with rice in it with left gripper
+- Place the bowl in the center of view with the right gripper
+- End
+- Place the cup on the table with the left gripper
+- Static
+- Pick up the bowl with the right gripper
+- Abnormal
 - Move the bowl in the center of view with right gripper
 - Move the bowl to the center of view with the right gripper
-- 'null'
-- Pick up the bowl with the right gripper
 - Pick up the cup with rice in it with the left gripper
-- Place the bowl in the center of view with the right gripper
-- Place the cup on the table with the left gripper
 - Pour the rice from the cup into the bowl with the left gripper
-- Static
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

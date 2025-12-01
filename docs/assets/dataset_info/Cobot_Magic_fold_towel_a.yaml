@@ -313,9 +313,9 @@ features:
     - 2
 tasks: fold the towel on the table twice.
 sub_tasks:
+- pick up the towel with two arm
 - Fold the towel twice on the table
 - 'null'
-- pick up the towel with two arm
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

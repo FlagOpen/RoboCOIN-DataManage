@@ -422,9 +422,9 @@ features:
     - 2
 tasks: pick up the cleaner and put it on the table.
 sub_tasks:
-- 'null'
-- Pick up the bottle from the table.
 - Turn the bottle to the front side.
+- Pick up the bottle from the table.
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -375,18 +375,18 @@ tasks: 'with both hands, picked up the little dog doll on the white plate and pl
   with both hands, he picked up the shark doll on the table and placed it in the white
   lid.'
 sub_tasks:
-- Deliver the whale from left   gripper to right gripper
-- End
-- Grasp  the large green cube block with the left gripper
-- Grasp the  large red cube block with the right gripper
-- Grasp the puppy with the left and right grippers
 - Grasp the whale with the left gripper
-- 'null'
+- End
+- Place the puppy on the table with the left and right grippers
+- Grasp the puppy with the left and right grippers
+- Static
+- Grasp  the large green cube block with the left gripper
+- Place the whale on the white lid with the right gripper
+- Grasp the  large red cube block with the right gripper
 - Place the large green cube block on the pink plate with the left gripper
 - Place the large red cube block on the white lid with the right gripper
-- Place the puppy on the table with the left and right grippers
-- Place the whale on the white lid with the right gripper
-- Static
+- Deliver the whale from left   gripper to right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

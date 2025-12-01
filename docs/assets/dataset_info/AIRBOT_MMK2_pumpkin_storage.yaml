@@ -347,12 +347,12 @@ features:
 tasks: Throw the pumpkin into the designated compartment with one hand, while keeping
   your other hand still.
 sub_tasks:
-- End
+- Static
 - Grasp the pumpkin with the right gripper
-- 'null'
+- End
 - Place the pumpkin into the right compartment of the storage box
 - Place the pumpkin into the right compartment of the storage box with the right gripper
-- Static
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

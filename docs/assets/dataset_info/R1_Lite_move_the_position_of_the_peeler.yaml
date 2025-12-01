@@ -581,13 +581,13 @@ features:
     - 2
 tasks: put the peeler the designated position.
 sub_tasks:
-- End
-- Grasp the peeler with left gripper
 - Grasp the peeler with right gripper
-- 'null'
-- Place the peeler on the table with left gripper
-- Place the peeler on the table with right gripper
 - Static
+- Grasp the peeler with left gripper
+- End
+- Place the peeler on the table with right gripper
+- Place the peeler on the table with left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

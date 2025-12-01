@@ -344,20 +344,20 @@ tasks: 'pick up the eraser on the blackboard and erase the letter "a".
 
   pick up the eraser on the blackboard and erase the letter "B".'
 sub_tasks:
+- Place the blackboard eraser with the right gripper
 - End
-- Erase the letter a use the eraser with the right gripper
-- Erase the letter a with your right hand.
+- pick up the blackboard eraser with the right gripper
 - Erase the letter B use the eraser with the right gripper
-- Erase the letter B with your right hand.
 - Fixed the drawing board with the left gripper
+- Erase the letter a use the eraser with the right gripper
 - Grab the eraser with your right hand.
 - Hold the drawing board steady with your left hand.
-- 'null'
-- pick up the blackboard eraser with the right gripper
-- Place the blackboard eraser with the right gripper
+- Erase the letter B with your right hand.
 - Put down the eraser with your right hand.
-- Release the drawing board with the left gripper
 - Secure the drawing board with your left hand.
+- Erase the letter a with your right hand.
+- Release the drawing board with the left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

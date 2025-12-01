@@ -312,11 +312,11 @@ features:
     - 2
 tasks: lift phone handle dial number then replace to end call.
 sub_tasks:
-- Dial the number
-- End the call using the dial pad
-- 'null'
 - Pick up the desk phone handset
+- End the call using the dial pad
 - Put the handset back
+- Dial the number
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

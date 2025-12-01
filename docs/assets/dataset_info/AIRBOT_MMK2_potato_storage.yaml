@@ -350,13 +350,13 @@ tasks: 'Put the potato in the compartment on one side using the hand on that sam
 
   Put the potatoes in the compartment on one side using the hand on that same side.'
 sub_tasks:
-- Abnormal
 - End
-- Grasp the potato with the left gripper
-- Grasp the potato with the right gripper
-- 'null'
 - Place the potato into the left compartment of the storage box with the left gripper
+- Grasp the potato with the left gripper
 - Place the potato into the right compartment of the storage box with the right gripper
+- Grasp the potato with the right gripper
+- Abnormal
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

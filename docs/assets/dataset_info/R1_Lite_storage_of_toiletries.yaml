@@ -330,20 +330,20 @@ features:
     - 2
 tasks: put comb toothpaste toothbrush in opened storage bag on table.
 sub_tasks:
+- Place the toothpaste in the storage bag
+- Pick up the comb
+- Place the comb on the table
+- Place the comb into the storage bag
+- Pick up the storage bag
+- Pick up a toothbrush
+- Place the toothpaste on the table
 - abnormal
+- Pick up the toothpaste
+- Open the storage bag
 - Close the strorage bag and place it on the desk
+- Place the toothbrush in the storage bag
 - Hand it to the other hand
 - 'null'
-- Open the storage bag
-- Pick up a toothbrush
-- Pick up the comb
-- Pick up the storage bag
-- Pick up the toothpaste
-- Place the comb into the storage bag
-- Place the comb on the table
-- Place the toothbrush in the storage bag
-- Place the toothpaste in the storage bag
-- Place the toothpaste on the table
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

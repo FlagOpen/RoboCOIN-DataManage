@@ -341,13 +341,13 @@ features:
 tasks: Pick up the water bottle with one hand, twist off the cap with the other, and
   place the bottle on the table.
 sub_tasks:
-- End
-- Grasp the bottle with the left gripper
-- Lift the bottle up with the left gripper
-- 'null'
 - Place the bottle on the table with the left gripper
+- Grasp the bottle with the left gripper
 - Unscrew the bottle cap with the right hand while holding the bottle with the left
   hand
+- Lift the bottle up with the left gripper
+- End
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

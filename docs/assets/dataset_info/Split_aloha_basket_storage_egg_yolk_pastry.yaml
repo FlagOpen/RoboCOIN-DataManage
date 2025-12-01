@@ -343,14 +343,14 @@ features:
     - 2
 tasks: pick up the egg yolk pastry and put it into the basket.
 sub_tasks:
-- Abnormal
-- End
-- Grasp egg yolk pastry with right gripper
 - Grasp the basket with left gripper
-- 'null'
-- Place the basket in the center of view with left gripper
-- Place the egg yolk pastry in the basket with right gripper
 - Static
+- Grasp egg yolk pastry with right gripper
+- End
+- Abnormal
+- Place the egg yolk pastry in the basket with right gripper
+- Place the basket in the center of view with left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

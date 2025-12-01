@@ -347,15 +347,15 @@ features:
 tasks: Take both white paper cups and put them one after the other into the yellow
   bucket.
 sub_tasks:
+- Lift the cup the right gripper
+- Grasp the cup  the right gripper
+- Static
+- place the cup in the yellow basket use the left gripper
 - End
 - Grasp the cup  the left gripper
-- Grasp the cup  the right gripper
 - Lift the cup the left  gripper
-- Lift the cup the right gripper
-- 'null'
-- place the cup in the yellow basket use the left gripper
 - place the cup in the yellow basket use the right gripper
-- Static
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

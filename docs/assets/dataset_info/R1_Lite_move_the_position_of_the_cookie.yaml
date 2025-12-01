@@ -581,14 +581,14 @@ features:
     - 2
 tasks: put the cookie the designated position.
 sub_tasks:
-- Abnormal
-- End
-- Grasp the cookie with left gripper
-- Grasp the cookie with right gripper
-- 'null'
-- Place the cookie on the table with left gripper
 - Place the cookie on the table with right gripper
 - Static
+- Place the cookie on the table with left gripper
+- End
+- Grasp the cookie with right gripper
+- Grasp the cookie with left gripper
+- Abnormal
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

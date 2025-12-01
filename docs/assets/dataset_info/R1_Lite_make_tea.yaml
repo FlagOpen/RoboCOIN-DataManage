@@ -337,29 +337,29 @@ features:
     - 2
 tasks: pour kettle water into cup steep tea bag then discard it.
 sub_tasks:
-- Abnormal
-- End
-- Grasp the tea bag with the left gripper
-- Grasp the tea bag with the right gripper
-- Hand it to the other gripper
-- Hand it to the other hand
-- Lift the tea bag in and out of the cup several times
-- 'null'
-- Pick up the kettle
-- Pick up the kettle with the left gripper
-- Pick up the kettle with the right gripper
-- Pick up the tea bag
-- Place the kettle on its original position with the left gripper
-- Place the kettle on its original position with the right gripper
-- Place the kettle to its original position
-- "Place the tea bag in and out of the cup several times with the left gripper \uFEFF"
-- Place the tea bag in and out of the cup several times with the right gripper
 - Place the tea bag into the desktop trash can
 - Place the tea bag into the desktop trash can with the left  gripper
-- Place the tea bag into the desktop trash can with the right gripper
+- Place the kettle on its original position with the left gripper
+- Hand it to the other hand
 - Pour the water from the kettle into the cup with the left gripper
-- Pour the water from the kettle into the cup with the right gripper
+- "Place the tea bag in and out of the cup several times with the left gripper \uFEFF"
+- Grasp the tea bag with the right gripper
+- Lift the tea bag in and out of the cup several times
+- End
+- Pick up the kettle
+- Hand it to the other gripper
+- Abnormal
+- Pick up the tea bag
+- Place the tea bag in and out of the cup several times with the right gripper
+- Place the kettle to its original position
+- Pick up the kettle with the left gripper
+- Pick up the kettle with the right gripper
+- Grasp the tea bag with the left gripper
 - Pour water from the kettle into the cup
+- Pour the water from the kettle into the cup with the right gripper
+- Place the kettle on its original position with the right gripper
+- Place the tea bag into the desktop trash can with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

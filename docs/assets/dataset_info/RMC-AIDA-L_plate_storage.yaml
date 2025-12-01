@@ -348,15 +348,15 @@ tasks: 'Grip the plate with one hand, pass it to the other, then set it on the s
 
   Grip the plate with one hand, pass it to the other, then set it on the shelf.'
 sub_tasks:
-- abnormal
+- Place the plate on the shelf with the right gripper
 - End
-- 'null'
+- Pick up the plate with the right gripper
+- Pick up the plate with the left gripper
 - Pass the plate from the left gripper to the right gripper
 - Pass the plate from the right gripper to the left gripper
-- Pick up the plate with the left gripper
-- Pick up the plate with the right gripper
 - Place the plate on the shelf with the left gripper
-- Place the plate on the shelf with the right gripper
+- abnormal
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -375,31 +375,31 @@ tasks: 'put the apple in the black basket.
 
   put the mango in the black basket.'
 sub_tasks:
-- Abnormal
-- End
-- Grasp the apple with left gripper
-- Grasp the apple with right gripper
-- Grasp the banana with left gripper
-- Grasp the banana with right gripper
-- Grasp the grape with left gripper
-- Grasp the grape with right gripper
-- Grasp the lemon with left gripper
-- Grasp the lemon with right gripper
-- Grasp the mango with left gripper
-- Grasp the mango with right gripper
-- 'null'
-- Place the apple in the basket with left gripper
-- Place the apple in the basket with right gripper
 - Place the banana in the basket with left gripper
 - Place the banana in the basket with right gripper
-- Place the grape in the basket with left gripper
-- Place the grape in the basket with right gripper
-- Place the lemon in the basket with left gripper
-- Place the lemon in the basket with right gripper
-- Place the mango in the basket with left gripper
-- Place the mango in the basket with right gripper
-- Place the mango on the table with right gripper
 - Static
+- Place the apple in the basket with right gripper
+- Grasp the grape with right gripper
+- End
+- Grasp the mango with left gripper
+- Grasp the lemon with left gripper
+- Place the mango in the basket with right gripper
+- Grasp the apple with left gripper
+- Place the mango on the table with right gripper
+- Place the lemon in the basket with right gripper
+- Grasp the lemon with right gripper
+- Grasp the grape with left gripper
+- Place the apple in the basket with left gripper
+- Grasp the mango with right gripper
+- Place the grape in the basket with left gripper
+- Abnormal
+- Place the mango in the basket with left gripper
+- Grasp the apple with right gripper
+- Grasp the banana with left gripper
+- Place the lemon in the basket with left gripper
+- Grasp the banana with right gripper
+- Place the grape in the basket with right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

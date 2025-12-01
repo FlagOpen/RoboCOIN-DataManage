@@ -324,11 +324,11 @@ features:
     - 2
 tasks: Pick up the power cord from the box containing it and place it in another box.
 sub_tasks:
-- Abnormal
 - End
+- Abnormal
 - Grasp the data cable
-- 'null'
 - Place the data cable in the another box
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

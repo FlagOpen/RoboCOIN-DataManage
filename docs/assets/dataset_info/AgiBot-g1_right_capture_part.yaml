@@ -464,9 +464,9 @@ features:
     - 2
 tasks: grasp the part and place them on the black container.
 sub_tasks:
-- 'null'
-- Pick up and lift the front USB bracket from the feeding area.
 - Place the front USB bracket into the box.
+- Pick up and lift the front USB bracket from the feeding area.
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

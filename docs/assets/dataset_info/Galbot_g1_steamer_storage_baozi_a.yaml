@@ -367,12 +367,12 @@ features:
     - 2
 tasks: take steamed baozi put them in steamer.
 sub_tasks:
-- End
-- Grasp the baozi in the plate with right gripper
 - Grasp the pot lid with left gripper
-- 'null'
-- Place the baozi on the steamer with right gripper
 - Place the pot lid on the steamer with left gripper
+- End
+- Place the baozi on the steamer with right gripper
+- Grasp the baozi in the plate with right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -356,17 +356,17 @@ features:
     - 2
 tasks: put garden stuff in fridge drawer then take out to table.
 sub_tasks:
+- Pick up the ball on the table
+- Pick up the ball on the lid
+- Put the toys in the box
+- Open the lid
 - abnormal
 - Close the lid
+- Put the ball in the box
+- Pick up the ball on the floor
+- Pick up toys out of the box
 - Find toys out of the box
 - 'null'
-- Open the lid
-- Pick up the ball on the floor
-- Pick up the ball on the lid
-- Pick up the ball on the table
-- Pick up toys out of the box
-- Put the ball in the box
-- Put the toys in the box
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -356,40 +356,40 @@ features:
     - 2
 tasks: put garden stuff in fridge drawer then take out to table.
 sub_tasks:
-- Abnormal
-- Close the lower drawer with the left gripper
-- Close the lower drawer with the right gripper
-- Close the lower refrigerator drawer
-- Close the middle refrigerator door with the right gripper
-- Close the refrigerator door
-- End
 - Grasp the apple and place it on the table with right gripper
-- Grasp the green bell pepper and place it on the table with right gripper
-- Grasp the orange and place it on the table with right gripper
-- Grasp the potato and place it on the table with left gripper
-- Grasp the potato and place it on the table with right gripper
-- 'null'
-- Open the lower drawer with the right gripper
-- Open the lower refrigerator drawer
-- Open the refrigerator door
-- Open the refrigerator door with left gripper
-- Place the apple in the lower drawer with right gripper
-- Place the green bell pepper in the lower drawer with left gripper
 - Place the green bell pepper in the lower drawer with right gripper
+- Put green pepper in the refrigerator drawer
 - Place the orange in the lower drawer with right gripper
 - Place the potato in the lower drawer with left gripper
+- Take out the potato and place it on the table
+- Open the refrigerator door with left gripper
 - Place the potato in the lower drawer with right gripper
-- Put apple in the refrigerator drawer
-- Put green pepper in the refrigerator drawer
-- Put orange in the refrigerator drawer
-- Put potato in the refrigerator drawer
-- Put pumpkin in the refrigerator drawer
-- Take out the apple and place it on the table
 - Take out the apple and place it on the tray
+- Open the refrigerator door
+- End
+- Close the refrigerator door
+- Close the lower drawer with the left gripper
+- Grasp the potato and place it on the table with left gripper
+- Open the lower refrigerator drawer
+- Close the middle refrigerator door with the right gripper
+- Place the apple in the lower drawer with right gripper
+- Put orange in the refrigerator drawer
+- Abnormal
+- Put pumpkin in the refrigerator drawer
+- Grasp the potato and place it on the table with right gripper
+- Close the lower refrigerator drawer
+- Place the green bell pepper in the lower drawer with left gripper
+- Put apple in the refrigerator drawer
+- Take out the pumpkin and place it on the table
+- Close the lower drawer with the right gripper
+- Grasp the orange and place it on the table with right gripper
+- Put potato in the refrigerator drawer
 - Take out the green pepper and place it on the table
 - Take out the orange and place it on the tray
-- Take out the potato and place it on the table
-- Take out the pumpkin and place it on the table
+- Grasp the green bell pepper and place it on the table with right gripper
+- Take out the apple and place it on the table
+- Open the lower drawer with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

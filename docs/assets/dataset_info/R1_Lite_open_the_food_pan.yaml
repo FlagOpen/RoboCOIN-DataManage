@@ -312,13 +312,13 @@ features:
     - 2
 tasks: fully open pot lid on table then close it.
 sub_tasks:
-- Close the pot lid
-- Hold the pot lid with the left arm
 - Hold the pot lid with the right arm
-- 'null'
+- Close the pot lid
+- Open the pot lid completely
+- Hold the pot lid with the left arm
 - Open the food pot lid  a small opening with the right arm
 - Open the food pot lid a small opening with the left arm
-- Open the pot lid completely
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

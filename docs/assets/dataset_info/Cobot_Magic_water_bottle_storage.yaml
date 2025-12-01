@@ -344,15 +344,15 @@ features:
     - 2
 tasks: place the water bottle into the drawer.
 sub_tasks:
-- Close the drawer.
-- Close the top drawer with the right gripper
 - End
-- 'null'
-- Open the drawer.
-- Open the top drawer with the right gripper
-- Pick up the water bottle with the left gripper
-- Place the water bottle in the top drawer with the left gripper
 - Place the water bottle inside the drawer.
+- Close the drawer.
+- Place the water bottle in the top drawer with the left gripper
+- Close the top drawer with the right gripper
+- Open the top drawer with the right gripper
+- Open the drawer.
+- Pick up the water bottle with the left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

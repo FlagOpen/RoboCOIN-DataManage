@@ -354,25 +354,25 @@ tasks: 'put the black glasses into the black glasses case.
 
   put the white glasses into the green glasses case.'
 sub_tasks:
-- Close the glasses case with your left hand.
-- Close the glasses case with your right hand.
-- Discard.
-- end
-- Fold the frame with your left hand.
-- Fold the frame with your right hand.
-- Grab the eyeglass frame with your right hand.
-- Grab the frame with your right hand.
-- Grab the glasses case with your left hand.
-- Grab the glasses case with your right hand.
-- Grab the glasses with your left hand.
-- Lift the glasses with your left hand.
-- Lift the glasses with your right hand.
-- 'null'
 - Place the glasses case in the center of the table with your left hand.
-- Place the glasses case in the center of the table with your right hand.
-- Place the glasses on the table with your left hand.
-- Put the glasses into the case with your left hand.
+- Grab the glasses case with your left hand.
+- Lift the glasses with your right hand.
 - Put the glasses into the case with your right hand.
+- Discard.
+- Grab the eyeglass frame with your right hand.
+- Put the glasses into the case with your left hand.
+- end
+- Place the glasses on the table with your left hand.
+- Close the glasses case with your left hand.
+- Grab the frame with your right hand.
+- Lift the glasses with your left hand.
+- Fold the frame with your right hand.
+- Place the glasses case in the center of the table with your right hand.
+- Close the glasses case with your right hand.
+- Fold the frame with your left hand.
+- Grab the glasses with your left hand.
+- Grab the glasses case with your right hand.
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

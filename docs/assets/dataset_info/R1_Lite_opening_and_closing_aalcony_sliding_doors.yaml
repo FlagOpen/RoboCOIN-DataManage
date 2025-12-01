@@ -307,8 +307,8 @@ features:
 tasks: close balcony sliding door then open it.
 sub_tasks:
 - Close the slid door
-- 'null'
 - Open the slid door
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -354,16 +354,16 @@ tasks: At the same time as picking up the remote control gripper with one hand, 
   other hand picks up the mineral water bottle; the first hand then puts its item
   into the box, followed by the other hand doing the same.
 sub_tasks:
-- Abnormal
-- End
-- 'Grasp the  remote control clip with the left gripper '
-- Grasp the water bottle with the right gripper
-- 'Lift the remote control clip with the left gripper '
-- Lift the water bottle with the right gripper
-- 'null'
-- Place the remote control clip into the cardboard box with the left gripper
 - Place the water bottle into the cardboard box with the right gripper
+- End
 - Static
+- Lift the water bottle with the right gripper
+- 'Grasp the  remote control clip with the left gripper '
+- 'Lift the remote control clip with the left gripper '
+- Place the remote control clip into the cardboard box with the left gripper
+- Abnormal
+- Grasp the water bottle with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

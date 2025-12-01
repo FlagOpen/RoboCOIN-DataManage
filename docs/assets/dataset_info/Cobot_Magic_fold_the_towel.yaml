@@ -323,15 +323,15 @@ tasks: 'fold the pink towel on the table with a white tablecloth.
 
   fold the pink towel on the white table.'
 sub_tasks:
-- abnormal
 - End
-- Fold the towel
-- Fold the towel from right to left with the right gripper
 - Fold the towel upwards with the both gripper
-- Fold the towel upwards with the left gripper
 - Fold the towel upwards with the right gripper
-- 'null'
 - Tidy up the towels
+- Fold the towel from right to left with the right gripper
+- Fold the towel upwards with the left gripper
+- Fold the towel
+- abnormal
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

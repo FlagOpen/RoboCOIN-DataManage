@@ -383,57 +383,57 @@ tasks: 'tighten the cap of the cestbon bottle.
 
   loosen the cap of the meinianda bottle.'
 sub_tasks:
-- Abnormal
-- Discard
-- End
-- Fix the Mirinda on the left
-- Fix the Yili Changqing on the left
-- Grab the C'estbon with the left hand
-- Grab the green tea with the left hand
-- Grab the Mirinda with the left hand
-- Grab the Peach Oolong Tea with the left hand
-- Grab the Yili Changqing with the left hand
-- Grasp the bottle and move it to the center of the table with the left gripper
-- Lift the bottle and move it to the center of the table with the left gripper
-- Lift the green tea with the left hand
-- Lift the Mirinda with the left hand
-- Lift the Peach Oolong Tea with the left hand
-- Lift the Yili Changqing with the left hand
-- Move from left to right
-- Move from right to left
-- Move the C'estbon to the right with the left hand
-- Move the green tea to the right with the left hand
-- Move the Mirinda from left to right
-- Move the Mirinda from right to left
-- Move the Mirinda from top to bottom
-- Move the Mirinda to the right with the left hand
-- Move the Peach Oolong Tea from left to right
-- Move the Peach Oolong Tea from right to left
-- Move the Peach Oolong Tea to the right with the left hand
-- Move the Yili Changqing from bottom to top
-- Move the Yili Changqing from left to right
-- Move the Yili Changqing from right to left
-- Move the Yili Changqing from top to bottom
-- Move the Yili Changqing to the right with the left hand
-- 'null'
-- Place the bottle cap on the right
-- Place the bottle cap on the table
-- Place the bottle cap on the table with the right gripper
-- Place the bottle cap on the table with the right hand
-- Place the bottle on the table with the left gripper
-- Place the C'estbon with the left hand
-- Place the green tea with the left hand
-- Place the Mirinda with the left hand
-- Place the Peach Oolong Tea with the left hand
 - Place the Yili Changqing with the left hand
+- Lift the Peach Oolong Tea with the left hand
+- Place the bottle cap on the table with the right hand
+- Move the Peach Oolong Tea from right to left
+- Move from left to right
+- Move the Peach Oolong Tea from left to right
 - Secure the C'estbon with the left hand
-- Secure the green tea with the left hand
-- Secure the Mirinda with the left hand
+- Move the Mirinda to the right with the left hand
+- Place the bottle on the table with the left gripper
+- Grasp the bottle and move it to the center of the table with the left gripper
+- Move the Mirinda from left to right
+- Move the Mirinda from top to bottom
+- Discard
+- Place the bottle cap on the table
+- End
+- Place the C'estbon with the left hand
+- Move the Mirinda from right to left
+- Move the green tea to the right with the left hand
+- Lift the bottle and move it to the center of the table with the left gripper
+- Grab the green tea with the left hand
 - Secure the Peach Oolong Tea with the left hand
+- Place the Mirinda with the left hand
+- Fix the Yili Changqing on the left
+- Secure the green tea with the left hand
 - Secure the Yili Changqing with the left hand
-- Twist the bottle cap with the right hand
+- Move the Yili Changqing from left to right
+- Abnormal
+- Place the bottle cap on the right
+- Place the green tea with the left hand
+- Move the Yili Changqing to the right with the left hand
+- Lift the green tea with the left hand
+- Grab the C'estbon with the left hand
+- Move from right to left
 - Unscrew the bottle cap with the right gripper while holding the bottle with the
   left gripper
+- Secure the Mirinda with the left hand
+- Grab the Yili Changqing with the left hand
+- Lift the Yili Changqing with the left hand
+- Move the C'estbon to the right with the left hand
+- Place the Peach Oolong Tea with the left hand
+- Move the Yili Changqing from right to left
+- Fix the Mirinda on the left
+- Move the Yili Changqing from bottom to top
+- Grab the Peach Oolong Tea with the left hand
+- Move the Peach Oolong Tea to the right with the left hand
+- Move the Yili Changqing from top to bottom
+- Grab the Mirinda with the left hand
+- Twist the bottle cap with the right hand
+- Lift the Mirinda with the left hand
+- Place the bottle cap on the table with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

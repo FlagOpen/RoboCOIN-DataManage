@@ -343,15 +343,15 @@ tasks: 'Push the cylindrical block to one side of the cubic block.
   Push the arched block upwards.'
 sub_tasks:
 - Abnormal
-- End
-- Move the blue cube to the upper right side of the box with right gripper
 - Move the green cylinder to the right side of the box with right gripper
+- Move the yellow cube to the upper right side of the box with right gripper
 - Move the orange cylinder to the right side of the box with right gripper
+- Static
+- End
 - Move the wooden arched building blocks to the upper right side of the box with right
   gripper
-- Move the yellow cube to the upper right side of the box with right gripper
+- Move the blue cube to the upper right side of the box with right gripper
 - 'null'
-- Static
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

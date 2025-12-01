@@ -318,23 +318,23 @@ features:
     - 2
 tasks: fold t shirt shorts sweatshirt on bed then unfold them.
 sub_tasks:
-- abnormal
-- End
-- Fold the black sweatshirt
-- Fold the black T-shirt
-- Fold the blue shorts
-- Fold the brown shorts
-- Fold the red T-shirt
-- Fold the white T-shirt
-- Fold the yellow T-shirt
-- 'null'
-- Unfold the black sweatshirt
-- Unford the black T-shirt
-- Unford the blue shorts
-- Unford the brown shorts
-- Unford the red T-shirt
-- Unford the white T-shirt
 - Unford the yellow T-shirt
+- Unford the blue shorts
+- Fold the brown shorts
+- Unford the black T-shirt
+- Unfold the black sweatshirt
+- Fold the black T-shirt
+- Unford the red T-shirt
+- End
+- abnormal
+- Unford the brown shorts
+- Fold the white T-shirt
+- Unford the white T-shirt
+- Fold the yellow T-shirt
+- Fold the blue shorts
+- Fold the red T-shirt
+- Fold the black sweatshirt
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

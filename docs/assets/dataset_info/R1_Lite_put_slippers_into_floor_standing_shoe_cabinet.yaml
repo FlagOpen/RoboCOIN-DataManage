@@ -318,11 +318,11 @@ features:
     - 2
 tasks: put slippers from floor to cabinet then back to floor.
 sub_tasks:
-- 'null'
 - Pick up the slippers in the shoe cabinet
-- Pick up the slippers on the floor
 - Place the slippers into the shoe cabinet
+- Pick up the slippers on the floor
 - Place the slippers on the floor
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

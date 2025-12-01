@@ -324,21 +324,21 @@ features:
     - 2
 tasks: place the plate on the shelf on the green table.
 sub_tasks:
-- end
-- Hand over the plate
-- Left grab the blue plate.
-- Left grab the gray plate.
-- Left grab the green plate.
-- Left grab the pink plate.
 - Left grab the white plate.
-- Left grab the yellow plate.
-- Left lift the plate.
-- 'null'
-- Pick up the plate from the table
+- Left grab the gray plate.
 - Place the plate on the rack
-- Right place it at the back of the shelf.
 - Right place it at the front of the shelf.
 - Right receive the plate.
+- Pick up the plate from the table
+- Left lift the plate.
+- end
+- Left grab the blue plate.
+- Left grab the yellow plate.
+- Hand over the plate
+- Right place it at the back of the shelf.
+- Left grab the pink plate.
+- Left grab the green plate.
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

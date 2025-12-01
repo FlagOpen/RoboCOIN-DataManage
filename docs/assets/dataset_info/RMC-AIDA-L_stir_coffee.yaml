@@ -378,22 +378,22 @@ tasks: 'Move the grey cup to the center, lift the blue spoon, stir it three time
   Move the red cup to the center, lift the pink spoon, stir it three times in the
   cup, and put the spoon into the cup.'
 sub_tasks:
+- Stir the coffee in the cup with the right gripper
+- Stir the coffee with right gripper
 - Abnormal
-- End
-- Grasp the spoon with left gripper
-- Grasp the spoon with right gripper
-- Move the cup in the center of the table with left gripper
-- Move the cup in the center of the table with right gripper
-- Move the cup with coffee to the center of view with the left gripper
 - Move the cup with coffee to the center of view with the right gripper
-- 'null'
+- Static
+- Move the cup in the center of the table with right gripper
+- Grasp the spoon with left gripper
+- Move the cup with coffee to the center of view with the left gripper
+- Stir the coffee in the cup with the left gripper
+- Grasp the spoon with right gripper
+- End
+- Stir the coffee with left gripper
+- Move the cup in the center of the table with left gripper
 - Pick up the spoon with the left gripper
 - Pick up the spoon with the right gripper
-- Static
-- Stir the coffee in the cup with the left gripper
-- Stir the coffee in the cup with the right gripper
-- Stir the coffee with left gripper
-- Stir the coffee with right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -326,21 +326,21 @@ tasks: 'put the brown basket on top of the yellow basket.
 
   put the yellow basket on top of the brown basket.'
 sub_tasks:
-- abnormal
-- End
-- Grasp the dark basket with right gripper
-- Grasp the light basket with left gripper
-- 'null'
+- Pick up the light basket with the right gripper
+- Place the light basket in the center of the table with left gripper
 - Pick up the dark basket with the left gripper
 - Pick up the dark basket with the right gripper
-- Pick up the light basket with the left gripper
-- Pick up the light basket with the right gripper
+- abnormal
+- Grasp the dark basket with right gripper
 - Place the dark basket in the center of view with the left gripper
+- Pick up the light basket with the left gripper
+- End
 - Place the dark basket on the light basket with right gripper
-- Place the dark basket on the light basket with the right gripper
-- Place the light basket in the center of the table with left gripper
 - Place the light basket in the center of view with the left gripper
+- Place the dark basket on the light basket with the right gripper
+- Grasp the light basket with left gripper
 - Place the light basket on the dark basket with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

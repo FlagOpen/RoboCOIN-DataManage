@@ -347,14 +347,14 @@ features:
 tasks: Hold the glasses case in the middle of the table with one hand and place the
   gold bar on it with your other hand.
 sub_tasks:
-- Abnormal
+- Place the glasses case on the middle of the table with the left gripper
 - End
+- Static
+- Place the gold bar on the glasses case with the right gripper
 - Grasp the glasses case with the left gripper
 - Grasp the gold bar the right gripper
+- Abnormal
 - 'null'
-- Place the glasses case on the middle of the table with the left gripper
-- Place the gold bar on the glasses case with the right gripper
-- Static
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

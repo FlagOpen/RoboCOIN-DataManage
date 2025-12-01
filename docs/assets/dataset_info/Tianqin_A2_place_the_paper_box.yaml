@@ -318,13 +318,13 @@ features:
     - 2
 tasks: pick up the paper box and put it at the back.
 sub_tasks:
-- Abnormal
 - End
-- Grasp the data cable
+- Abnormal
 - Grasp the paper box
-- 'null'
-- Place the data cable in the another box
 - Place the paper box on the table
+- Place the data cable in the another box
+- Grasp the data cable
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

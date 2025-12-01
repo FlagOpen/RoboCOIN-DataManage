@@ -353,13 +353,13 @@ features:
 tasks: Throw the beauty blender into the bowl with one hand, and then throw the building
   blocks into the bowl with the other hand.
 sub_tasks:
-- Abnormal
+- Grasp the green cuboid block with the right gripper
+- Place the bullet into the bowl with the left gripper
 - End
 - Grasp the bullet with the left gripper
-- Grasp the green cuboid block with the right gripper
-- 'null'
-- Place the bullet into the bowl with the left gripper
+- Abnormal
 - Place the green cuboid block into the bowl with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

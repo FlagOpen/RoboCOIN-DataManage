@@ -354,13 +354,13 @@ tasks: Place the tissue paper on the white lid with one hand, and with the other
   put the milk carton with the straw on top of the white lid.
 sub_tasks:
 - Abnormal
-- End
-- Grasp the milk  with the right gripper
 - Grasp the tissue with the left gripper
-- 'null'
-- Place the milk on the white basket with the right gripper
-- Place the tissue on the white basket with the left gripper
 - Static
+- End
+- Place the tissue on the white basket with the left gripper
+- Grasp the milk  with the right gripper
+- Place the milk on the white basket with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

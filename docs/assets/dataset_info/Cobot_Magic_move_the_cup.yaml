@@ -319,8 +319,8 @@ features:
 tasks: grasp the transparent glass cup and place it within the blue towel.
 sub_tasks:
 - Grasp the transparent glass cup
-- 'null'
 - Place the glass cup on the blue zone
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

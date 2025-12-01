@@ -581,13 +581,13 @@ features:
     - 2
 tasks: put the black marker in the designated position.
 sub_tasks:
-- End
 - Grasp the Marker pen with left gripper
 - Grasp the Marker pen with right gripper
-- 'null'
-- Place the Marker pen on the table with left gripper
 - Place the Marker pen on the table with right gripper
 - Static
+- End
+- Place the Marker pen on the table with left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

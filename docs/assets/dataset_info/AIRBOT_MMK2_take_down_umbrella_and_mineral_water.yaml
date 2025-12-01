@@ -394,28 +394,28 @@ tasks: 'pick up the blue and green cubes from the lid of the paper box simultane
   take the two black cakes out of the white box simultaneously with both hands and
   place them on the table.'
 sub_tasks:
-- Abnormal
-- End
-- Grasp the blue cube block on the paper box with the left gripper
-- Grasp the cake from the white basket with the left gripper
-- Grasp the cake from the white basket with the right gripper
-- Grasp the egg from the egg storage box with the right gripper
-- Grasp the green cube block on the paper box with the right gripper
-- Grasp the mineral water on the white lid with the left gripper
-- Grasp the umbrella on the white lid with the right gripper
-- Grasp the vitamin B water on the white lid with the left gripper
-- Grasp the vitamin B water on the white lid with the right gripper
-- 'null'
-- Place the blue cube block on the table with the left gripper
 - Place the cake on the table with the left gripper
-- Place the cake on the table with the right gripper
-- Place the egg on the table with the right gripper
-- Place the green cube block on the table with the right gripper
 - Place the mineral water on the table with the left gripper
+- Grasp the umbrella on the white lid with the right gripper
+- Grasp the cake from the white basket with the right gripper
+- Grasp the vitamin B water on the white lid with the left gripper
 - Place the umbrella on the table with the right gripper
-- Place the vitamin B water on the table with the left gripper
+- Grasp the blue cube block on the paper box with the left gripper
+- Place the green cube block on the table with the right gripper
+- End
+- Grasp the cake from the white basket with the left gripper
+- Place the blue cube block on the table with the left gripper
+- Grasp the mineral water on the white lid with the left gripper
 - Place the vitamin B water on the table with the right gripper
+- Place the vitamin B water on the table with the left gripper
 - Static
+- Place the cake on the table with the right gripper
+- Abnormal
+- Grasp the egg from the egg storage box with the right gripper
+- Place the egg on the table with the right gripper
+- Grasp the vitamin B water on the white lid with the right gripper
+- Grasp the green cube block on the paper box with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

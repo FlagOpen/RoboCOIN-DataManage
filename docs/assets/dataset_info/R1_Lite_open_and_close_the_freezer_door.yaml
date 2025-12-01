@@ -332,24 +332,24 @@ features:
 tasks: put yogurt cups in freezer then take out and close.
 sub_tasks:
 - Abnormal
-- Close the freezer door
 - End
-- Grasp the yogur
-- 'null'
-- Open the freezer door
 - Place the ceramic cup on the table
-- Place the paper cup on the table
-- Place the yoghurt on the freezer
-- Place the yoghurt on the table
-- Place the yogurt  on the table
-- Put the ceramic cup in the freezer
-- Put the paper cup in the freezer
 - Put the yoghurt in the freezer
-- Put the yogurt  in the freezer
-- Take the ceramic cup out of the freezer
 - Take the paper cup out of the freezer
-- Take the yoghurt out of the freezer
+- Place the yoghurt on the table
+- Take the ceramic cup out of the freezer
+- Put the ceramic cup in the freezer
 - Take the yogurt  out of the freezer
+- Open the freezer door
+- Put the paper cup in the freezer
+- Put the yogurt  in the freezer
+- Place the paper cup on the table
+- Close the freezer door
+- Grasp the yogur
+- Place the yoghurt on the freezer
+- Place the yogurt  on the table
+- Take the yoghurt out of the freezer
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

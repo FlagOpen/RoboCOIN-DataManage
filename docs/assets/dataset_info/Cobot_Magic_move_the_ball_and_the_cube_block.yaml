@@ -343,14 +343,14 @@ features:
 tasks: Pick up the ball and place it in the circular groove above the cube.
 sub_tasks:
 - End
-- Grasp the sphere on the table
-- 'null'
 - Pick up the ball
 - Pick up the sphere recess
-- Place the ball into the sphere recess
 - Place the ball on the table
 - Place the sphere into the sphere-shaped recess
+- Grasp the sphere on the table
 - Place the sphere recess in the center of the table
+- Place the ball into the sphere recess
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

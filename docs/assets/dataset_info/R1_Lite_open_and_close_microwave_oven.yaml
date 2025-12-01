@@ -322,12 +322,12 @@ features:
     - 2
 tasks: put fries plate in microwave turn on then take out and close.
 sub_tasks:
-- Close the microwave oven
-- 'null'
-- Open the microwave oven
 - Put the microwave back in its original place
-- Put the plate in the microwave oven
 - Take the plate out of the microwave
+- Close the microwave oven
+- Open the microwave oven
+- Put the plate in the microwave oven
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -347,11 +347,11 @@ features:
 tasks: The hand picked up the mini bowl of canned food from the table and placed it
   on the mini table.
 sub_tasks:
-- Abnormal
 - End
+- Abnormal
+- Place the small bowl of canned food on the table with the right gripper
 - Grasp the small bowl of canned food with right gripper
 - 'null'
-- Place the small bowl of canned food on the table with the right gripper
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -324,14 +324,14 @@ features:
     - 2
 tasks: place kettle on heating plate heat then set beside sink.
 sub_tasks:
-- abnormal
+- Start boiling water
+- Place it on the power base
 - Finish boiling water
+- abnormal
+- Place it by the sink
+- Pick up the kettle
 - Grab the kettle
 - 'null'
-- Pick up the kettle
-- Place it by the sink
-- Place it on the power base
-- Start boiling water
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

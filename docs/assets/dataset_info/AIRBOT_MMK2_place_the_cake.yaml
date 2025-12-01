@@ -390,26 +390,26 @@ tasks: 'Pick up one cake from the table and place it on the yellow cube, then pi
   Pick up one swiss roll and put it on the plate, then pick up another swiss roll
   and put it on the plate.'
 sub_tasks:
-- Abnormal
-- End
-- Grasp the bagged cake with the left gripper
-- Grasp the bagged cake with the right gripper
-- Grasp the cake on the plate with the right gripper
-- Grasp the cake with the left gripper
-- Grasp the cake with the right gripper
-- Grasp the ice cream with the left gripper
-- Grasp the ice cream with the right gripper
-- 'null'
-- Place the bagged cake on the white plate with the left gripper
-- Place the bagged cake on the white plate with the right gripper
-- Place the cake into the white basket with the left gripper
-- Place the cake into the white plate with the left gripper
-- Place the cake on the blue cube block with the right gripper
-- Place the cake on the table with the right gripper
 - Place the cake on the yellow cube block with the left gripper
-- Place the ice cream into the white basket with the left gripper
-- Place the ice cream into the white basket with the right gripper
+- Grasp the bagged cake with the left gripper
+- Grasp the cake on the plate with the right gripper
+- Place the cake on the table with the right gripper
+- Abnormal
 - Static
+- Grasp the cake with the left gripper
+- Place the ice cream into the white basket with the right gripper
+- Place the cake into the white basket with the left gripper
+- Place the ice cream into the white basket with the left gripper
+- Grasp the ice cream with the right gripper
+- Grasp the ice cream with the left gripper
+- Grasp the bagged cake with the right gripper
+- Place the cake into the white plate with the left gripper
+- Place the bagged cake on the white plate with the left gripper
+- End
+- Grasp the cake with the right gripper
+- Place the bagged cake on the white plate with the right gripper
+- Place the cake on the blue cube block with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

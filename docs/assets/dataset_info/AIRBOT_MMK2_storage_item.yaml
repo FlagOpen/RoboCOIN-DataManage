@@ -360,14 +360,14 @@ tasks: Pick up the building blocks from the table with one hand and place them i
   the bowl, then pick up the tape measure from the table with your other hand and
   place it in the small tray.
 sub_tasks:
-- Abnormal
-- End
-- Grasp the green rectangular block with the left gripper
-- Grasp the tape measure with the right gripper
-- 'null'
 - Place the green rectangular block into the blue bowl with the left gripper
 - Place the tape measure into the pink plate with the right gripper
+- Grasp the tape measure with the right gripper
 - Static
+- Grasp the green rectangular block with the left gripper
+- End
+- Abnormal
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

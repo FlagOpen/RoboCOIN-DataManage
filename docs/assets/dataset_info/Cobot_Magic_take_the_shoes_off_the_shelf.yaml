@@ -328,16 +328,16 @@ tasks: 'take the shoes off the shelf with your hand from the blue coffee tablecl
 
   take the shoes off the shelf with your hand on the white table.'
 sub_tasks:
-- Hold the shoe in the middle of the shoe rack with your right arm
-- 'null'
+- use the right arm to clamp a shoe in the middle of the shoe rack
+- use the right arm to take out the clamped shoe from the shoe rack and put it down
 - use the left arm to clamp a shoe in the middle of the shoe rack
 - use the left arm to clamp a shoe on the left side of the shoe rack
-- use the left arm to clamp a shoe on the right side of the shoe rack
-- use the right arm to clamp a shoe in the middle of the shoe rack
-- use the right arm to clamp a shoe on the left side of the shoe rack
-- use the right arm to clamp a shoe on the right side of the shoe rack
-- use the right arm to take out the clamped shoe from the shoe rack and put it down
 - Use your left arm to remove the clamped shoe from the shoe rack and put it down
+- use the right arm to clamp a shoe on the right side of the shoe rack
+- use the right arm to clamp a shoe on the left side of the shoe rack
+- Hold the shoe in the middle of the shoe rack with your right arm
+- use the left arm to clamp a shoe on the right side of the shoe rack
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

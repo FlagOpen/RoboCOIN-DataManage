@@ -356,31 +356,31 @@ tasks: 'Pick up the red rectangular block from one side of the table with one ha
   then pick up the red cube from the table with your other hand and place it on top
   of the blue cube.'
 sub_tasks:
-- Abnormal
-- End
-- Grasp the big red cube with the left gripper
-- Grasp the blue cube with the left gripper
-- Grasp the blue cube with the right gripper
-- Grasp the blue rhombic cuboid block with the right gripper
-- Grasp the blue small cube with the left gripper
-- Grasp the green small cube with the right gripper
-- Grasp the orange cube with the right gripper
-- Grasp the red cuboid block with the left gripper
-- Grasp the red small cube with the right gripper
-- Grasp the yellow cube with the right gripper
-- 'null'
-- Place the big red cube in the center of view with the left gripper
-- Place the blue cube on the red cube with the left gripper
-- Place the blue rhombic cuboid block on the red cuboid block with the right gripper
-- Place the blue small cube on the small table with the left gripper
-- Place the blue small cube on the yellow small cube with the left gripper
-- Place the green small cube on the blue small cube with the right gripper
-- Place the orange cube on the yellow cube with the right gripper
-- Place the red cuboid block in the center of view with the left gripper
-- Place the red small cube on the blue small cube with the right gripper
 - Place the yellow cube on the orange cube with the right gripper
-- Place theblue cube on the big red cube with the right gripper
 - Static
+- Grasp the blue rhombic cuboid block with the right gripper
+- Grasp the red cuboid block with the left gripper
+- Grasp the blue small cube with the left gripper
+- Place the red small cube on the blue small cube with the right gripper
+- Place the red cuboid block in the center of view with the left gripper
+- Grasp the big red cube with the left gripper
+- Abnormal
+- Place the orange cube on the yellow cube with the right gripper
+- Place the green small cube on the blue small cube with the right gripper
+- Grasp the green small cube with the right gripper
+- Grasp the red small cube with the right gripper
+- Grasp the blue cube with the right gripper
+- Place the blue cube on the red cube with the left gripper
+- Grasp the orange cube with the right gripper
+- Grasp the blue cube with the left gripper
+- Place the blue small cube on the small table with the left gripper
+- End
+- Place the blue rhombic cuboid block on the red cuboid block with the right gripper
+- Place the blue small cube on the yellow small cube with the left gripper
+- Place the big red cube in the center of view with the left gripper
+- Grasp the yellow cube with the right gripper
+- Place theblue cube on the big red cube with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

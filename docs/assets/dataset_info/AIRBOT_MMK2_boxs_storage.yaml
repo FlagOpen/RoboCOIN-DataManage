@@ -386,22 +386,22 @@ tasks: 'Throw the pomegranate into one square and the mango into the other squar
 
   Put the calculator box and the power bank box in the yellow bucket.'
 sub_tasks:
-- End
-- Grasp the calculator box with the left gripper
-- Grasp the mango with the right gripper
-- Grasp the phone case box with the right gripper
-- Grasp the pomegranate with the left gripper
 - Grasp the potato with the left gripper
-- Grasp the pumpkin with the right gripper
-- 'null'
-- Place the calculator box in the yellow box with the left gripper
-- Place the mango into the right compartment of the storage box with the right gripper
 - Place the phone case box in the yellow box with the right gripper
+- Place the pumpkin into the right compartment of the storage box with the right gripper
+- Place the calculator box in the yellow box with the left gripper
+- Static
+- Grasp the calculator box with the left gripper
+- End
+- Grasp the mango with the right gripper
+- Grasp the pomegranate with the left gripper
 - Place the pomegranate into the left compartment of the storage box with the left
   gripper
+- Place the mango into the right compartment of the storage box with the right gripper
+- Grasp the phone case box with the right gripper
 - Place the potato into the left compartment of the storage box with the left gripper
-- Place the pumpkin into the right compartment of the storage box with the right gripper
-- Static
+- Grasp the pumpkin with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

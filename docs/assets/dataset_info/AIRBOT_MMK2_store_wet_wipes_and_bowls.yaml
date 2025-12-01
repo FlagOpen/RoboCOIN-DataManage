@@ -353,13 +353,13 @@ features:
 tasks: Place the large blue bowl on the square plate with one hand and put the wet
   wipes into the bowl with the other.
 sub_tasks:
-- End
-- Grasp the bowl with the right gripper
-- Grasp the wet wipes with the left gripper
-- 'null'
 - Place the  bowl on the plate with the right gripper
-- Place the  wet wipes into the bowl with the left gripper
 - Static
+- Grasp the wet wipes with the left gripper
+- Grasp the bowl with the right gripper
+- End
+- Place the  wet wipes into the bowl with the left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

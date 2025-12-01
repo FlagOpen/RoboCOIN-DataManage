@@ -340,12 +340,12 @@ features:
     - 2
 tasks: place the umbrella and tissues on the white lid.
 sub_tasks:
-- End
+- Place the umbrella on the white lid with the left gripper
+- Place the tissue on the white lid with the right gripper
 - Grasp the tissue with the right gripper
 - Grasp the umbrella with the left gripper
+- End
 - 'null'
-- Place the tissue on the white lid with the right gripper
-- Place the umbrella on the white lid with the left gripper
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -312,9 +312,9 @@ features:
     - 2
 tasks: Move the plate that can hold fruits to one side of the table.
 sub_tasks:
+- Pick the container that can hold fruits
 - Move the picked object to the right side of the table
 - 'null'
-- Pick the container that can hold fruits
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

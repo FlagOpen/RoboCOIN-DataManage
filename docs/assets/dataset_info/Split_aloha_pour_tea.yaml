@@ -356,24 +356,24 @@ tasks: 'pour tea into the teacup.
   grasp the blue porcelain teapot and pour the tea into the two blue porcelain teacups
   one by one, put the blue porcelain teapot back in its original place.'
 sub_tasks:
-- Abnormal
-- End
-- Grasp the teapot with left gripper
-- Grasp the teapot with right gripper
-- 'null'
-- Pick up the teacup with the left gripper
 - Pick up the teacup with the right gripper
-- Pick up the teapot with the left gripper
-- Pick up the teapot with the right gripper
-- Place the down the teapot with the left gripper
-- Place the down the teapot with the right gripper
 - Place the teacup in the center of view with the right gripper
-- Pour tea into the teacup with left gripper
-- Pour tea into the teacup with right gripper
-- Pour tea into the teacup with the left gripper
-- Pour tea into the teacup with the right gripper
+- Place the down the teapot with the right gripper
+- Pick up the teapot with the left gripper
+- Grasp the teapot with left gripper
+- Pick up the teacup with the left gripper
+- Abnormal
 - Put down the teapot with left gripper
+- Grasp the teapot with right gripper
+- Pour tea into the teacup with right gripper
+- Pick up the teapot with the right gripper
+- Pour tea into the teacup with the right gripper
 - Put down the teapot with right gripper
+- End
+- Place the down the teapot with the left gripper
+- Pour tea into the teacup with the left gripper
+- Pour tea into the teacup with left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

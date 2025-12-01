@@ -347,13 +347,13 @@ features:
 tasks: Take the white paper cup off the white lid with one hand and the other white
   paper cup off with your other hand.
 sub_tasks:
-- Abnormal
 - End
-- Grasp the cup  the left gripper
-- Grasp the cup  the right gripper
-- 'null'
-- place the cup in the table use the left gripper
 - place the cup in the table use the right gripper
+- Grasp the cup  the left gripper
+- place the cup in the table use the left gripper
+- Grasp the cup  the right gripper
+- Abnormal
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

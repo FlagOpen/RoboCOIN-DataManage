@@ -583,11 +583,11 @@ tasks: put the coffee capsulein the designated position.
 sub_tasks:
 - End
 - Grasp the coffee capsule with left gripper
-- Grasp the coffee capsule with right gripper
-- 'null'
-- Place the coffee capsule on the table with left gripper
 - Place the coffee capsule on the table with right gripper
+- Grasp the coffee capsule with right gripper
 - Static
+- Place the coffee capsule on the table with left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

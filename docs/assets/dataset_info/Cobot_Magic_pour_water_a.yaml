@@ -386,48 +386,48 @@ tasks: 'Pick up a paper cup and a bottle of Nongfu Spring mineral water, pour th
   amount of water into the paper cup, first put down the blue paper cup, and then
   put down the mineral water bottle.'
 sub_tasks:
-- abnormal
-- Collect water with the left hand.
-- Collect water with the right hand.
-- Discard.
-- end
-- Fill water with the left hand.
-- Fill water with the right hand.
-- Grab the bottle with right gripper
-- Grab the paper cup with the left hand.
-- Grab the paper cup with the right hand.
 - Grab the water bottle with the left hand.
-- Grab the water bottle with the right hand.
-- Grasp the bottle with the left gripper
-- Grasp the bottle with the right gripper
-- Grasp the cup with left gripper
-- Grasp the paper cup with the left gripper
-- Grasp the paper cup with the right gripper
-- Lift the cup with left gripper
-- Lift the paper cup with the left hand.
-- Lift the paper cup with the right hand.
-- 'null'
-- Pick up the bottle
-- Pick up the cup
-- Place the bottle
-- Place the bottle with the left gripper
-- Place the bottle with the right gripper
-- Place the cup
-- Place the paper cup with the left gripper
-- Place the paper cup with the left hand.
 - Place the paper cup with the right gripper
+- Grab the paper cup with the left hand.
+- Discard.
+- Collect water with the right hand.
+- Grab the paper cup with the right hand.
 - Place the paper cup with the right hand.
-- Place the water bottle with the left hand.
-- Place the water bottle with the right hand.
-- Pour the water with right gripper
-- Pour water from bottle to cup
-- Pour water from bottle to cup with the left gripper
-- Pour water from bottle to cup with the right gripper
 - Pour water with the left hand.
 - Pour water with the right hand.
-- Put the bottle down with right gripper
-- Put the cup down with left gripper
+- Place the bottle
+- Grab the bottle with right gripper
+- Pour water from bottle to cup with the right gripper
+- Grasp the paper cup with the left gripper
+- Grasp the paper cup with the right gripper
+- Pour water from bottle to cup
+- Pick up the bottle
+- Pick up the cup
+- Fill water with the right hand.
+- Place the bottle with the right gripper
+- Fill water with the left hand.
+- Place the water bottle with the right hand.
+- Lift the cup with left gripper
 - Take the water with left gripper
+- Pour water from bottle to cup with the left gripper
+- Pour the water with right gripper
+- abnormal
+- Lift the paper cup with the right hand.
+- Grab the water bottle with the right hand.
+- Put the bottle down with right gripper
+- Place the paper cup with the left hand.
+- Place the cup
+- Grasp the bottle with the right gripper
+- Place the bottle with the left gripper
+- Lift the paper cup with the left hand.
+- Put the cup down with left gripper
+- Place the paper cup with the left gripper
+- Collect water with the left hand.
+- end
+- Grasp the bottle with the left gripper
+- Place the water bottle with the left hand.
+- Grasp the cup with left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -326,23 +326,23 @@ features:
 tasks: on the grey tablecloth, hold the pen cap in one hand and the pen in the other,
   then cover the pen cap.
 sub_tasks:
-- Abnormal
-- End
-- Grab the pen barrel with the left hand.
-- Grab the pen barrel with the right hand.
-- Grab the pen cap with the left hand.
-- Grab the pen cap with the right hand.
-- Insert the pen cap with the left hand.
-- Insert the pen cap with the right hand.
-- Insert the pen into the cap
-- 'null'
-- Pick up the pen
-- Pick up the pen cap
-- Place the pen down with the right hand.
-- Place the pen on the table
-- Put the cap on the pen
-- Secure the pen cap with the left hand.
 - Secure the pen cap with the right hand.
+- Insert the pen into the cap
+- End
+- Put the cap on the pen
+- Pick up the pen cap
+- Grab the pen barrel with the left hand.
+- Secure the pen cap with the left hand.
+- Grab the pen cap with the left hand.
+- Place the pen on the table
+- Abnormal
+- Grab the pen cap with the right hand.
+- Insert the pen cap with the right hand.
+- Grab the pen barrel with the right hand.
+- Pick up the pen
+- Place the pen down with the right hand.
+- Insert the pen cap with the left hand.
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -339,39 +339,39 @@ tasks: 'take the fruit out of the cloth bag on the blue coffee tablecloth and pl
   take the fruit out of the bag on the white checkered tablecloth and place them on
   the plate.'
 sub_tasks:
-- 'null'
 - use the left arm to grab a banana from the bag
-- use the left arm to grab a kiwi from the bag
-- use the left arm to grab a lemon from the bag
-- use the left arm to grab a mango from the bag
-- use the left arm to grab a peach from the bag
-- use the left arm to grab a pear from the bag
-- use the left arm to grab a pomegranate from the bag
-- use the left arm to grab an apple from the bag
-- use the left arm to put the apple into the empty plate on the right
-- use the left arm to put the banana into the empty plate on the right
-- use the left arm to put the kiwi into the empty plate on the right
-- use the left arm to put the lemon into the empty plate on the right
-- use the left arm to put the mango into the empty plate on the right
-- use the left arm to put the peach into the empty plate on the right
-- use the left arm to put the pear into the empty plate on the right
-- use the left arm to put the pomegranate into the empty plate on the right
-- use the right arm to grab a banana from the bag
 - use the right arm to grab a kiwi from the bag
-- use the right arm to grab a lemon from the bag
-- use the right arm to grab a mango from the bag
-- use the right arm to grab a peach from the bag
-- use the right arm to grab a pear from the bag
-- use the right arm to grab a pomegranate from the bag
-- use the right arm to grab an apple from the bag
-- use the right arm to put the apple into the empty plate on the left
-- use the right arm to put the banana into the empty plate on the right
 - use the right arm to put the kiwi into the empty plate on the left
-- use the right arm to put the lemon into the empty plate on the left
-- use the right arm to put the mango into the empty plate on the left
+- use the left arm to grab a pear from the bag
+- use the right arm to put the apple into the empty plate on the left
+- use the left arm to put the kiwi into the empty plate on the right
+- use the left arm to grab a kiwi from the bag
 - use the right arm to put the peach into the empty plate on the left
-- use the right arm to put the pear into the empty plate on the left
+- use the left arm to put the mango into the empty plate on the right
 - use the right arm to put the pomegranate into the empty plate on the left
+- use the left arm to grab an apple from the bag
+- use the left arm to put the peach into the empty plate on the right
+- use the right arm to grab a pomegranate from the bag
+- use the left arm to grab a mango from the bag
+- use the right arm to put the mango into the empty plate on the left
+- use the right arm to grab a mango from the bag
+- use the right arm to grab a banana from the bag
+- use the right arm to grab a peach from the bag
+- use the right arm to grab an apple from the bag
+- use the left arm to put the banana into the empty plate on the right
+- use the left arm to grab a peach from the bag
+- use the left arm to put the pomegranate into the empty plate on the right
+- use the left arm to put the lemon into the empty plate on the right
+- use the right arm to put the pear into the empty plate on the left
+- use the right arm to put the lemon into the empty plate on the left
+- use the right arm to put the banana into the empty plate on the right
+- use the left arm to grab a lemon from the bag
+- use the right arm to grab a pear from the bag
+- use the left arm to put the apple into the empty plate on the right
+- use the right arm to grab a lemon from the bag
+- use the left arm to put the pear into the empty plate on the right
+- use the left arm to grab a pomegranate from the bag
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

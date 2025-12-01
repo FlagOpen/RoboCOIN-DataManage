@@ -347,11 +347,11 @@ features:
     - 2
 tasks: Pick up the diamond and put it into the box, then close the lid.
 sub_tasks:
-- Close the lid of the box with the left gripper
 - End
+- Place the diamond ring in the box with the right gripper
+- Close the lid of the box with the left gripper
 - Grasp the diamond ring with the right gripper
 - 'null'
-- Place the diamond ring in the box with the right gripper
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

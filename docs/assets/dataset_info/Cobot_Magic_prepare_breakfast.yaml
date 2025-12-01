@@ -375,32 +375,32 @@ tasks: 'pick up the apple and put it in the plate.
 
   pick up the cola and place it next to the plate.'
 sub_tasks:
-- Abnormal
-- End
-- Grasp the apple with left gripper
-- Grasp the apple with right gripper
-- Grasp the cola with left gripper
-- Grasp the cola with right gripper
-- Grasp the egg with left gripper
-- Grasp the egg with right gripper
-- Grasp the milk with left gripper
-- Grasp the milk with right gripper
-- Grasp the round bread with left gripper
-- Grasp the round bread with right gripper
-- 'null'
 - Place the apple on the plate with left gripper
-- Place the apple on the plate with right gripper
-- Place the apple on the table with left gripper
-- Place the cola on the plate with right gripper
-- Place the cola on the table with left gripper
-- Place the cola on the table with right gripper
-- Place the egg on the plate with left gripper
-- Place the egg on the plate with right gripper
-- Place the milk on the table with left gripper
-- Place the milk on the table with right gripper
 - Place the round bread on the plate with left gripper
-- Place the round bread on the plate with right gripper
+- Grasp the egg with left gripper
+- Place the egg on the plate with left gripper
+- Place the cola on the table with right gripper
+- Grasp the apple with left gripper
+- Grasp the round bread with right gripper
+- Grasp the milk with left gripper
+- Place the milk on the table with right gripper
+- Place the apple on the plate with right gripper
+- Place the milk on the table with left gripper
+- Place the cola on the plate with right gripper
+- Grasp the cola with right gripper
+- Grasp the egg with right gripper
+- Grasp the cola with left gripper
+- Place the apple on the table with left gripper
+- Grasp the milk with right gripper
+- Place the cola on the table with left gripper
 - Static
+- End
+- Place the round bread on the plate with right gripper
+- Grasp the round bread with left gripper
+- Place the egg on the plate with right gripper
+- Abnormal
+- Grasp the apple with right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

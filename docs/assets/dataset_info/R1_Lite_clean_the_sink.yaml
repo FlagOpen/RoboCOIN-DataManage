@@ -321,11 +321,11 @@ features:
     - 2
 tasks: turn on faucet off wipe washbasin place rag beside it.
 sub_tasks:
-- 'null'
 - Pick up the cloth
-- Turn off the faucet
 - Turn on the faucet
 - Wipe the sink
+- Turn off the faucet
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

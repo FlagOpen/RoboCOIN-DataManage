@@ -346,16 +346,16 @@ tasks: 'the left gripper grasp one corner of the bag, the right gripper pull the
   the right gripper grasp one corner of the bag, the left gripper pull the red zipper,
   the right gripper put down the bag.'
 sub_tasks:
-- End
-- 'null'
-- Pick up the transparent plastic bag with the left gripper
-- Pick up the transparent plastic bag with the right gripper
-- Place the transparent plastic bag
 - Pulling up the zipper on the transparent plastic bag with the left gripper to close
   it
 - Pulling up the zipper on the transparent plastic bag with the right gripper to close
   it
 - Static
+- End
+- Pick up the transparent plastic bag with the left gripper
+- Pick up the transparent plastic bag with the right gripper
+- Place the transparent plastic bag
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

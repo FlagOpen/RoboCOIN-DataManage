@@ -344,13 +344,13 @@ tasks: 'take out a white towel and unfold it.
   take out a black towel and unfold it.'
 sub_tasks:
 - End
-- 'null'
-- Press and secure one corner of the towel with the left arm
 - Press and secure one corner of the towel with the right arm
-- Press and secure one corner of the towel with the right gripper
 - Unfold the towel with the left arm
+- Press and secure one corner of the towel with the left arm
+- Press and secure one corner of the towel with the right gripper
 - Unfold the towel with the left gripper
 - Unfold the towel with the right arm
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

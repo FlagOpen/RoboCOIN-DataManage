@@ -341,13 +341,13 @@ features:
 tasks: Press the bottom corner of the notebook with one hand and open it with the
   other.
 sub_tasks:
+- Release the laptop with the right gripper
+- Press the laptop with the right gripper
+- Open the laptop with the left gripper
+- Static
 - End
 - Grasp the laptop with the left gripper
 - 'null'
-- Open the laptop with the left gripper
-- Press the laptop with the right gripper
-- Release the laptop with the right gripper
-- Static
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

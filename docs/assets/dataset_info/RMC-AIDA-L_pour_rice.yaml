@@ -358,22 +358,22 @@ tasks: 'Place the bowl in the middle of the table with one hand and pour the ric
   Place the bowl in the middle of the table with one hand and pour the rice from the
   grain cup into it with the other hand.'
 sub_tasks:
-- abnormal
-- End
-- Grasp the cup with rice in it with right gripper
-- Move the bowl in the center of view with left gripper
-- 'null'
-- Pick up the bowl with the left gripper
-- Pick up the bowl with the right gripper
 - Pick up the cup with rice in it with the left gripper
-- Pick up the cup with rice in it with the right gripper
-- Place the bowl in the center of view with the left gripper
-- Place the bowl in the center of view with the right gripper
-- Place the cup on the table with the left gripper
+- End
+- Move the bowl in the center of view with left gripper
+- Pick up the bowl with the left gripper
 - Place the cup on the table with the right gripper
 - Pour the rice from the cup into the bowl with the left gripper
-- Pour the rice from the cup into the bowl with the right gripper
+- Place the bowl in the center of view with the right gripper
 - Static
+- Place the cup on the table with the left gripper
+- Pour the rice from the cup into the bowl with the right gripper
+- Pick up the cup with rice in it with the right gripper
+- Pick up the bowl with the right gripper
+- Place the bowl in the center of view with the left gripper
+- Grasp the cup with rice in it with right gripper
+- abnormal
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

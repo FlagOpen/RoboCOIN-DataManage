@@ -346,10 +346,10 @@ tasks: 'A hand''s index finger hooked the book "century" off the bookshelf.
 
   A hand''s index finger hooked the book "letitbe" off the bookshelf.'
 sub_tasks:
+- Lay the book down with the right gripper
+- Hold the book with the right gripper
 - Abnormal
 - End
-- Hold the book with the right gripper
-- Lay the book down with the right gripper
 - 'null'
 annotations:
   subtask_annotation: auto_generated

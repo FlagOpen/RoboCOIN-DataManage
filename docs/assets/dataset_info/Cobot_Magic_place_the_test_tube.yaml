@@ -334,20 +334,20 @@ tasks: 'left gripper passes test tube to right gripper places on test tube holde
 
   on white cloth pass tube from right to left gripper place on stand.'
 sub_tasks:
-- abnormal
-- End
-- Grab the test tube with the left hand.
-- Hand over the test tubes
-- Insert it into the hole at the intersection of the 5th row from the top and the
-  5th column from the left with the right hand.
+- Place the test tubes on the test tube rack with the right gripper
 - Lift the test tube with the left hand.
-- 'null'
+- End
 - Pass the test tube from the left gripper to the right gripper
-- Pick up the test tube with the left gripper
 - Pick up the test tubes from the table
 - Place the test tubes on the rack
-- Place the test tubes on the test tube rack with the right gripper
+- Hand over the test tubes
+- Grab the test tube with the left hand.
 - Receive the test tube with the right hand.
+- Pick up the test tube with the left gripper
+- Insert it into the hole at the intersection of the 5th row from the top and the
+  5th column from the left with the right hand.
+- abnormal
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

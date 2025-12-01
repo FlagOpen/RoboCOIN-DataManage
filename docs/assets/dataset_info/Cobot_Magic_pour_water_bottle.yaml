@@ -350,15 +350,15 @@ features:
     - 2
 tasks: pick up the water bottle and pour the water in it into the glass
 sub_tasks:
-- Abnormal
-- Anomaly
 - End
 - Grasp the mineral water bottle
-- 'null'
-- Pick up the water bottle
-- Place the water bottle
 - Pour water into the cup
+- Anomaly
+- Abnormal
 - Pour water into the teacup
+- Place the water bottle
+- Pick up the water bottle
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

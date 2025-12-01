@@ -348,11 +348,11 @@ tasks: pick up the cake on the table with both hands and place it on a white pla
 sub_tasks:
 - End
 - Grasp the cake with the left gripper
-- Grasp the cake with the right gripper
-- 'null'
 - Place the cake on the white basket with the left gripper
+- Grasp the cake with the right gripper
 - Place the cake on the white basket with the right gripper
 - Static
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

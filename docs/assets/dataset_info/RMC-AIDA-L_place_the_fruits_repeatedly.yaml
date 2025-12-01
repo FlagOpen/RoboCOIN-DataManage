@@ -379,23 +379,23 @@ tasks: 'put the bread into the blue bowl and pour it out repeatedly.
 
   put the peach into the pink bowl and pour it out repeatedly.'
 sub_tasks:
-- abnormal
-- end
-- 'null'
 - Pick up the bowl with the left gripper
-- Pick up the bread with the right gripper
-- Pick up the egg yolk pastry with the right gripper
-- Pick up the orange with the right gripper
-- Pick up the peach with the right gripper
-- Place the bowl on the table
 - Place the bread into the bowl
-- Place the egg yolk pastry into the bowl
-- Place the orange into the bowl
-- Place the peach into the bowl
-- Pour the bread out of the bowl
+- abnormal
+- Pick up the egg yolk pastry with the right gripper
 - Pour the egg yolk pastry out of bowl
 - Pour the orange out of the bowl
+- Place the peach into the bowl
 - Pour the peach out of bowl
+- Place the egg yolk pastry into the bowl
+- Pick up the bread with the right gripper
+- Pick up the peach with the right gripper
+- Pour the bread out of the bowl
+- end
+- Place the bowl on the table
+- Place the orange into the bowl
+- Pick up the orange with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

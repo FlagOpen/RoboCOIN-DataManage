@@ -318,15 +318,15 @@ features:
     - 2
 tasks: take label off door handle switch sign then put back.
 sub_tasks:
-- abnormal
 - End
-- Grasp the lable with left gripper
-- Hand it to the other hand
-- Hang the lable on the doorknob with right gripper
-- Hang the sign back with the other side facing out
-- 'null'
-- Pass the lable from the left gripper to the right gripper
+- abnormal
 - Take down the sign
+- Hang the lable on the doorknob with right gripper
+- Grasp the lable with left gripper
+- Pass the lable from the left gripper to the right gripper
+- Hang the sign back with the other side facing out
+- Hand it to the other hand
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

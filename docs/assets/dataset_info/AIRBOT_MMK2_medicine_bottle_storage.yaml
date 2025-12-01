@@ -353,14 +353,14 @@ features:
 tasks: Place the medicine bottle you are holding in one hand on the white platform,
   then place the other medicine bottle you are holding on the same platform.
 sub_tasks:
-- Abnormal
-- End
-- Grasp the white bottle the right gripper
 - Grasp the white bottle with the left gripper
-- 'null'
+- Static
+- End
+- Abnormal
+- Grasp the white bottle the right gripper
 - Place the white bottle on the white board with the left gripper
 - Place the white bottle on the white board with the right gripper
-- Static
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -534,76 +534,76 @@ tasks: 'pick up the steel frame with both hands and place it on the table.
   Take the sponge and then the bowl out of the white lid and place each one on the
   table.'
 sub_tasks:
-- Abnormal
-- End
-- Grasp the apple with the left gripper
-- Grasp the bagged waffle with the left gripper
+- Place the pomegranate on the middle of the table with the right gripper
+- Place the steel tube on the table with the left gripper
 - Grasp the bowl on the white basket and with the right gripper
-- Grasp the bread with the right gripper
-- Grasp the bullet on the plate with the right gripper
-- Grasp the cake on the plate with the left gripper
-- Grasp the calculator box on the white lid and with the right gripper
-- Grasp the calculator box with the left gripper
-- Grasp the calculator box with the right gripper
-- Grasp the coffee on the white lid with the right gripper
-- Grasp the frying pan with the right gripper
 - Grasp the green rectangular block on the plate with the left gripper
-- Grasp the mineral water with the left gripper
-- Grasp the mouse box on the white lid and with the left gripper
-- Grasp the orange with the right gripper
-- Grasp the peach with the left gripper
-- Grasp the pear with the right gripper
-- Grasp the phone case box with the left gripper
-- Grasp the phone case box with the right gripper
-- Grasp the pomegranate with the right gripper
-- Grasp the shark dagger with the left gripper
-- Grasp the shark dagger with the right gripper
-- Grasp the sponge on the white basket and with the left gripper
-- Grasp the steel tube on the cube block with the left gripper
-- Grasp the steel tube on the cube block with the right gripper
+- Place the mineral water on the table with the left gripper
+- Place the bagged waffle on the carton with the left gripper
+- Place the green rectangular block on the table with the left gripper
 - Grasp the tape measure with the right gripper
 - Grasp the tissue on the white lid with the left gripper
-- Grasp the tissue on the white lid with the right gripper
-- Grasp the toy car on the plate and with the left gripper
-- Grasp the toy car on the plate and with the right gripper
 - Grasp the vitamin B water on the white lid with the left gripper
-- 'null'
-- Place the apple on the left side of the table with the left gripper
-- Place the bagged waffle on the carton with the left gripper
-- Place the bowl on the table with the right gripper
-- Place the bread into the plate with the right gripper
-- Place the bullet on the table with the right gripper
-- Place the cake on the table with the left gripper
-- Place the calculator box into the storage box with the left gripper
-- Place the calculator box into the storage box with the right gripper
-- Place the calculator box on the table with the right gripper
-- Place the coffee on the table with the left gripper
-- Place the coffee on the table with the right gripper
-- Place the frying pan on the red cube block with the right gripper
-- Place the green rectangular block on the table with the left gripper
-- Place the mineral water on the table with the left gripper
-- Place the mouse box on the table with the left gripper
-- Place the orange on the right side of the table with the right gripper
-- Place the peach on the middle of the table with the left gripper
-- Place the pear on the right side of the table with the right gripper
-- Place the phone case box into the storage box with the left gripper
-- Place the phone case box into the storage box with the right gripper
-- Place the pomegranate on the middle of the table with the left gripper
-- Place the pomegranate on the middle of the table with the right gripper
-- Place the shark dagger on the white basket with the left gripper
 - Place the shark dagger on the white basket with the right gripper
-- Place the sponge on the table with the left gripper
-- Place the steel tube on the table with the left gripper
-- Place the steel tube on the table with the right gripper
-- Place the tape measure on the carton with the right gripper
 - Place the tape measure on the table with the right gripper
-- Place the tissue on the table with the left gripper
 - Place the tissue on the table with the right gripper
+- Place the sponge on the table with the left gripper
+- Grasp the apple with the left gripper
+- Place the apple on the left side of the table with the left gripper
+- Grasp the pear with the right gripper
+- Place the pear on the right side of the table with the right gripper
+- Place the calculator box into the storage box with the right gripper
+- Grasp the coffee on the white lid with the right gripper
+- Grasp the bread with the right gripper
+- Grasp the frying pan with the right gripper
+- Grasp the phone case box with the left gripper
+- Place the calculator box into the storage box with the left gripper
+- Grasp the mouse box on the white lid and with the left gripper
+- Grasp the orange with the right gripper
+- Place the bowl on the table with the right gripper
+- Grasp the pomegranate with the right gripper
+- Grasp the tissue on the white lid with the right gripper
+- Place the coffee on the table with the right gripper
+- Place the bread into the plate with the right gripper
+- Grasp the calculator box with the left gripper
+- Abnormal
+- Grasp the steel tube on the cube block with the right gripper
+- Place the vitamin B water on the table with the left gripper
+- Grasp the toy car on the plate and with the right gripper
+- Grasp the peach with the left gripper
+- Place the tape measure on the carton with the right gripper
+- Place the phone case box into the storage box with the right gripper
+- Grasp the cake on the plate with the left gripper
+- Place the phone case box into the storage box with the left gripper
+- Grasp the toy car on the plate and with the left gripper
+- Grasp the calculator box on the white lid and with the right gripper
+- Grasp the shark dagger with the left gripper
+- Grasp the bagged waffle with the left gripper
+- Grasp the mineral water with the left gripper
+- Place the pomegranate on the middle of the table with the left gripper
+- Grasp the sponge on the white basket and with the left gripper
+- Place the peach on the middle of the table with the left gripper
+- Place the shark dagger on the white basket with the left gripper
+- Push the frying pan on left to right with the left gripper
+- Place the steel tube on the table with the right gripper
+- End
+- Place the tissue on the table with the left gripper
+- Grasp the phone case box with the right gripper
+- Place the orange on the right side of the table with the right gripper
+- Grasp the shark dagger with the right gripper
+- Place the cake on the table with the left gripper
 - Place the toy car on the table with the left gripper
 - Place the toy car on the table with the right gripper
-- Place the vitamin B water on the table with the left gripper
-- Push the frying pan on left to right with the left gripper
+- Grasp the steel tube on the cube block with the left gripper
+- Place the calculator box on the table with the right gripper
+- Place the mouse box on the table with the left gripper
+- Grasp the bullet on the plate with the right gripper
+- Place the frying pan on the red cube block with the right gripper
+- Place the coffee on the table with the left gripper
+- Grasp the calculator box with the right gripper
 - Static
+- Place the bullet on the table with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

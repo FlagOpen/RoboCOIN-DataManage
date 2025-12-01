@@ -353,13 +353,13 @@ features:
 tasks: One hand throws the peach into one compartment while the other hand throws
   the pear into the other compartment.
 sub_tasks:
+- Place the pear into the right compartment of the storage box with the right gripper
+- Place the peach into the left compartment of the storage box with the left gripper
 - Abnormal
-- End
 - Grasp a peach with the left gripper
+- End
 - Grasp a pear with the right gripper
 - 'null'
-- Place the peach into the left compartment of the storage box with the left gripper
-- Place the pear into the right compartment of the storage box with the right gripper
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

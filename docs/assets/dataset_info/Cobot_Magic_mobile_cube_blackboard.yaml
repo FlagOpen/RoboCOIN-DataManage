@@ -337,11 +337,11 @@ features:
 tasks: pick up the multiple cubes in two columns one by one and place them in another
   position on the table.
 sub_tasks:
-- End
-- 'null'
-- out of view
-- Pick up the block on the table
 - Place the block at the correct position to assemble the letter S
+- out of view
+- End
+- Pick up the block on the table
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

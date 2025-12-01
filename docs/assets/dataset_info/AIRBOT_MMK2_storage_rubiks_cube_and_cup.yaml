@@ -353,13 +353,13 @@ features:
 tasks: One hand places the rubik's cube onto the circular tray while the other places
   the paper cup on top of it.
 sub_tasks:
-- Abnormal
 - End
+- Place the paper cup on the magic cube with the left gripper
+- Abnormal
 - Grasp the magic cube with the right gripper
+- Place the magic cube on the plate with the right gripper
 - Grasp the paper cup with the left gripper
 - 'null'
-- Place the magic cube on the plate with the right gripper
-- Place the paper cup on the magic cube with the left gripper
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

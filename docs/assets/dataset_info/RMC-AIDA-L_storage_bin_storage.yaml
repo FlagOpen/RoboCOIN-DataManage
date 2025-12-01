@@ -353,42 +353,42 @@ features:
 tasks: pick up the teacup on the table and place it into the storage bin, pick up
   the block on the table and  place it into the storage bin.
 sub_tasks:
-- Abnormal
-- End
-- Grasp the cup with left gripper
-- Grasp the cup with right gripper
-- Grasp the dark blue block with left gripper
-- Grasp the dark blue block with right gripper
-- Grasp the green block and  red block with left gripper
+- Place the orange block in the storage box with left gripper
+- Place the white block in the storage box with left gripper
+- Place the red block in the storage box with left gripper
 - Grasp the green block with left gripper
-- Grasp the green block with right gripper
-- Grasp the light blue block with left gripper
-- Grasp the light blue block with right gripper
-- Grasp the orange block and white block with left gripper
+- Grasp the dark blue block with right gripper
 - Grasp the orange block with left gripper
-- Grasp the orange block with right gripper
-- Grasp the red block with left gripper
-- Grasp the red block with right gripper
-- Grasp the white block with left gripper
-- Grasp the white block with right gripper
-- 'null'
+- Place the white block in the storage box with right gripper
 - Place the  green  block and red  block in the storage box with left gripper
-- Place the cup in the storage box with left gripper
-- Place the cup in the storage box with right gripper
+- Grasp the cup with left gripper
 - Place the dark blue block in the storage box with left gripper
-- Place the dark blue block in the storage box with right gripper
-- Place the green block in the storage box with left gripper
+- Grasp the orange block and white block with left gripper
+- Grasp the light blue block with right gripper
 - Place the green block in the storage box with right gripper
 - Place the light blue block in the storage box with left gripper
-- Place the light blue block in the storage box with right gripper
-- Place the orange block and white block in the storage box with left gripper
-- Place the orange block in the storage box with left gripper
+- Grasp the red block with left gripper
+- Grasp the white block with right gripper
 - Place the orange block in the storage box with right gripper
-- Place the red block in the storage box with left gripper
+- Grasp the green block and  red block with left gripper
+- Place the green block in the storage box with left gripper
+- Grasp the cup with right gripper
+- Abnormal
 - Place the red block in the storage box with right gripper
-- Place the white block in the storage box with left gripper
-- Place the white block in the storage box with right gripper
+- Place the cup in the storage box with left gripper
+- Grasp the light blue block with left gripper
+- Place the light blue block in the storage box with right gripper
+- End
+- Place the dark blue block in the storage box with right gripper
+- Place the cup in the storage box with right gripper
+- Place the orange block and white block in the storage box with left gripper
+- Grasp the green block with right gripper
+- Grasp the white block with left gripper
+- Grasp the red block with right gripper
 - Static
+- Grasp the orange block with right gripper
+- Grasp the dark blue block with left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

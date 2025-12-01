@@ -360,34 +360,34 @@ tasks: 'the left gripper pick up the basket to the appropriate position,  the ri
   the right gripper pick up the yellow basket and place it horizontally in the middle
   of the table, the left gripper pick up the peach and place it into the yellow basket.'
 sub_tasks:
-- abnormal
-- End
-- Grab the basket with your left arm
-- Grab the peach with your right arm
-- Grasp the basket with left gripper
-- Grasp the basket with right gripper
-- Grasp the peach with left gripper
-- Grasp the peach with right gripper
-- Move the basket to the center of view with the left gripper
-- 'null'
-- Pick up the basket with the left gripper
-- Pick up the dark basket with the left gripper
-- Pick up the dark basket with the right gripper
-- Pick up the light basket with the left gripper
-- Pick up the light basket with the right gripper
-- Pick up the peach  with the left gripper
-- Pick up the peach with the right gripper
-- Place the basket in the center of view with left gripper
-- Place the basket in the center of view with right gripper
 - Place the basket in the center of view with the left gripper
 - Place the dark basket in the center of view with the right gripper
-- Place the light basket in the center of view with the right gripper
-- Place the peach in the dark basket with left gripper
+- Pick up the basket with the left gripper
+- Grasp the peach with left gripper
+- Move the basket to the center of view with the left gripper
+- Pick up the dark basket with the right gripper
+- Pick up the dark basket with the left gripper
+- Pick up the peach  with the left gripper
 - Place the peach in the dark basket with right gripper
-- Place the peach into the basket with the left gripper
-- Place the peach into the basket with the right gripper
-- Put the basket in the middle
+- Place the peach in the dark basket with left gripper
+- Pick up the light basket with the right gripper
+- Grasp the basket with right gripper
 - Put the peach into the basket
+- Grasp the basket with left gripper
+- Put the basket in the middle
+- Grab the basket with your left arm
+- Pick up the peach with the right gripper
+- End
+- Place the basket in the center of view with left gripper
+- Place the light basket in the center of view with the right gripper
+- abnormal
+- Place the basket in the center of view with right gripper
+- Grab the peach with your right arm
+- Pick up the light basket with the left gripper
+- Grasp the peach with right gripper
+- Place the peach into the basket with the right gripper
+- Place the peach into the basket with the left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

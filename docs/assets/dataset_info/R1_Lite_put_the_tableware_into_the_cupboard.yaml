@@ -336,34 +336,34 @@ features:
     - 2
 tasks: put tableware in cabinet then back to counter and close.
 sub_tasks:
-- Abnormal
-- Close the cupboard
-- End
-- 'null'
-- Open the cupboard
-- Pick up the bowl and place it  in the cupboard
-- Pick up the chopsticks and place it  in the cupboard
-- Pick up the fork and place it  in the cupboard
-- Pick up the plate and place it  in the cupboard
-- Pick up the spoon and place it  in the cupboard
-- Place a chopstick on the table
-- Place a pair of chopsticks in the cutlery box
-- Place the bowl on the plate
-- Place the bowl on the shelf
 - Place the fork in the cutlery box
-- Place the fork on the table
-- Place the plate on the shelf
-- Place the plate on the table
-- Place the spoon on the cutlery box
 - Place the spoon on the plate
-- Place the spoon on the table
-- Pull apart the cupboard
-- Pull apart the shelf
 - Take the bowl out of the cupboard
+- Pick up the bowl and place it  in the cupboard
 - Take the chopsticks out of the cupboard
-- Take the fork out of the cupboard
+- Pull apart the shelf
+- Pick up the chopsticks and place it  in the cupboard
+- End
 - Take the plate out of the cupboard
+- Place the bowl on the shelf
+- Take the fork out of the cupboard
+- Abnormal
+- Place the plate on the table
+- Pick up the plate and place it  in the cupboard
+- Place a chopstick on the table
+- Place the plate on the shelf
+- Pull apart the cupboard
+- Place the fork on the table
+- Place a pair of chopsticks in the cutlery box
 - Take the spoon out of the cupboard
+- Place the bowl on the plate
+- Place the spoon on the table
+- Place the spoon on the cutlery box
+- Open the cupboard
+- Pick up the spoon and place it  in the cupboard
+- Close the cupboard
+- Pick up the fork and place it  in the cupboard
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

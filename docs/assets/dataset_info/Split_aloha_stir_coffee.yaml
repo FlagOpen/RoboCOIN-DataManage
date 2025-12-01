@@ -381,17 +381,17 @@ tasks: 'the left gripper place the grey cup towards the center of the table, the
   back in its original position.'
 sub_tasks:
 - End
-- Grasp the spoon with left gripper
 - Grasp the spoon with right gripper
-- Move the cup in the center of the table with left gripper
 - Move the cup in the center of the table with right gripper
-- Move the cup with coffee to the center of view
-- 'null'
-- Pick up the spoon
-- Static
-- Stir the coffee in the cup
-- Stir the coffee with left gripper
 - Stir the coffee with right gripper
+- Stir the coffee in the cup
+- Pick up the spoon
+- Grasp the spoon with left gripper
+- Stir the coffee with left gripper
+- Move the cup with coffee to the center of view
+- Static
+- Move the cup in the center of the table with left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

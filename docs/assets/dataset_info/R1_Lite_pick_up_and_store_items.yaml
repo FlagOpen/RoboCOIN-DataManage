@@ -356,47 +356,47 @@ features:
     - 2
 tasks: Open the drawer, then close the drawer.
 sub_tasks:
-- abnormal
-- Close the drawer
-- Close the drawer with the both gripper
-- End
-- 'null'
-- Open the drawer
-- Open the drawer with the both gripper
-- Pick up the adhesive tape on the table
-- Pick up the disposable slippers on the table
-- Pick up the mineral water on the table
-- Pick up the roll paper on the table
-- Pick up the shorts on the table
-- Pick up the solid drinks on the table
-- Pick up the T-shirt on the table
-- Pick up the tissue on the table
-- Place the  adhesive tape on the table
-- Place the  T-shirt on the table
+- Place the tissue on the table
 - Place the disposable slippers on the table
-- Place the mineral water on the table
+- Take out the tissue from the drawer
+- Put the slippers in the drawer
+- Take out the mineral water from the drawer
+- Open the drawer with the both gripper
 - Place the roll paper on the table
 - Place the shorts on the table
-- Place the solid drinks on the table
-- Place the tissue on the table
-- Put the adhesive tape in the drawer
-- Put the disposable slippers in the drawer
-- Put the mineral water in the drawer
-- Put the roll paper in the drawer
-- Put the shorts in the drawer
-- Put the slippers in the drawer
-- Put the solid drinks in the drawer
-- Put the T-shirt in the drawer
-- Put the tissue in the drawer
-- Take out the adhesive tape from the drawer
+- Place the  adhesive tape on the table
 - Take out the disposable slippers from the drawer
-- Take out the mineral water from the drawer
-- Take out the roll paper from the drawer
+- Place the solid drinks on the table
+- Take out the adhesive tape from the drawer
+- Put the shorts in the drawer
+- Close the drawer with the both gripper
+- End
+- Pick up the tissue on the table
+- Put the tissue in the drawer
 - Take out the shorts from the drawer
+- Pick up the T-shirt on the table
 - Take out the solid drinks from the drawer
+- Pick up the mineral water on the table
+- Put the mineral water in the drawer
+- Pick up the adhesive tape on the table
+- Take out the roll paper from the drawer
+- Close the drawer
+- Open the drawer
 - Take out the T-shirt from the drawer
-- Take out the tissue from the drawer
+- Put the disposable slippers in the drawer
+- Put the adhesive tape in the drawer
 - Take the paper out of the drawer and put it on the table
+- Put the solid drinks in the drawer
+- Place the mineral water on the table
+- Put the T-shirt in the drawer
+- abnormal
+- Place the  T-shirt on the table
+- Pick up the solid drinks on the table
+- Pick up the disposable slippers on the table
+- Pick up the shorts on the table
+- Pick up the roll paper on the table
+- Put the roll paper in the drawer
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

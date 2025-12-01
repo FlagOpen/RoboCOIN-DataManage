@@ -340,24 +340,24 @@ tasks: 'on blue tablecloth alternately place white carrots eggplants in plates o
   on pink tablecloth alternately place white carrots eggplants in plates of different
   colors.'
 sub_tasks:
-- 'null'
-- use the left arm to grab a carrot and put it into the left plate
 - use the left arm to grab a carrot and put it into the right plate
-- use the left arm to grab a chayote and put it into the left plate
-- use the left arm to grab a chayote and put it into the right plate
-- use the left arm to grab a radish and put it into the left plate
-- use the left arm to grab a radish and put it into the right plate
-- use the left arm to grab a tomato and put it into the left plate
-- use the left arm to grab an eggplant and put it into the left plate
-- use the left arm to grab an eggplant and put it into the right plate
-- use the right arm to grab a carrot and put it into the left plate
-- use the right arm to grab a carrot and put it into the right plate
-- use the right arm to grab a chayote and put it into the right plate
-- use the right arm to grab a radish and put it into the left plate
 - use the right arm to grab a radish and put it into the right plate
-- use the right arm to grab a tomato and put it into the left plate
+- use the left arm to grab a radish and put it into the right plate
+- use the left arm to grab an eggplant and put it into the left plate
+- use the right arm to grab a chayote and put it into the right plate
+- use the left arm to grab a tomato and put it into the left plate
+- use the right arm to grab a radish and put it into the left plate
+- use the left arm to grab a radish and put it into the left plate
+- use the left arm to grab a chayote and put it into the right plate
+- use the left arm to grab a chayote and put it into the left plate
 - use the right arm to grab an eggplant and put it into the left plate
+- use the left arm to grab an eggplant and put it into the right plate
+- use the right arm to grab a carrot and put it into the right plate
+- use the left arm to grab a carrot and put it into the left plate
+- use the right arm to grab a carrot and put it into the left plate
+- use the right arm to grab a tomato and put it into the left plate
 - use the right arm to grab an eggplant and put it into the right plate
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

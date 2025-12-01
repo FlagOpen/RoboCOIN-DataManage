@@ -347,11 +347,11 @@ features:
 tasks: Take the computer box from the table with one hand and transfer it to the other,
   then place it inside the white lid.
 sub_tasks:
-- Deliver the calculator box from left gripper to right gripper
-- End
-- Grasp the calculator box with the left gripper
-- 'null'
 - Place the calculator box into the white basket with the right gripper
+- Deliver the calculator box from left gripper to right gripper
+- Grasp the calculator box with the left gripper
+- End
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

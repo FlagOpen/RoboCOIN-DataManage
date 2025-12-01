@@ -327,15 +327,15 @@ features:
     - 2
 tasks: turn on tap scrub cutting board with cloth then turn off tap.
 sub_tasks:
-- abnormal
-- 'null'
 - Pick up the cleaning cloth
-- Pick up the cutting board
-- Put down the cleaning cloth
-- Put down the cutting board
-- Scrub the cutting board underwater
-- Turn off the tap
+- abnormal
 - Turn on the tap
+- Put down the cutting board
+- Put down the cleaning cloth
+- Pick up the cutting board
+- Turn off the tap
+- Scrub the cutting board underwater
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

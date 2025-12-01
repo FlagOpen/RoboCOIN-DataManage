@@ -331,33 +331,33 @@ features:
     - 2
 tasks: insert plug into socket then connect cable to router interface.
 sub_tasks:
-- Abnormal
-- Align cable and router interface
-- Align plug and socket
-- Close the lower drawer
-- Close the middle refrigerator door
-- Close the upper refrigerator door
-- Deliver it to the other hand
-- End
 - Hand it to the other hand
-- 'null'
-- Open the lower drawer
-- Open the middle refrigerator door
-- Open the plastic bag
-- Open the upper fridge door
-- Pick up cable
 - Pick up plug
 - Pick up the cable
-- Pick up the plug
-- Place king oyster Mushroom in the lower drawer
-- Place pear in the lower drawer
+- Close the lower drawer
 - Place the iced tea in the fridge
-- Place the Wahaha in the fridge
-- Place zucchini in the lower drawer
-- Plug cable into router interface
-- Plug it into the receiver
+- Open the upper fridge door
 - Plug it into the socket
+- End
+- Place zucchini in the lower drawer
+- Open the lower drawer
+- Deliver it to the other hand
+- Abnormal
 - Plug plug into socket
+- Open the plastic bag
+- Place pear in the lower drawer
+- Place the Wahaha in the fridge
+- Pick up cable
+- Close the middle refrigerator door
+- Open the middle refrigerator door
+- Place king oyster Mushroom in the lower drawer
+- Plug cable into router interface
+- Align cable and router interface
+- Close the upper refrigerator door
+- Align plug and socket
+- Plug it into the receiver
+- Pick up the plug
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

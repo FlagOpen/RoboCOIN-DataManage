@@ -342,9 +342,9 @@ features:
     - 2
 tasks: pick up the cube block from the table and put it on the plate.
 sub_tasks:
+- Place it into the yellow plate
 - Grasp the small cube on the table
 - 'null'
-- Place it into the yellow plate
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

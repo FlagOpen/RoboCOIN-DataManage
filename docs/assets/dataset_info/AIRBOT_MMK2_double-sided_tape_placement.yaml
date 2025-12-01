@@ -347,15 +347,15 @@ features:
 tasks: Pick up a piece of double-sided tape and put it over the meinianda, then pick
   up another piece and put it over the meinianda.
 sub_tasks:
-- Abnormal
-- End
-- Grasp the transparent circular ring on the left with the left gripper
-- Grasp the transparent circular ring on the right with the right gripper
-- 'null'
-- Place the  transparent circular ring on the left onto the fanta in the middle  with
-  left gripper
 - Place the  transparent circular ring on the right onto the fanta in the middle  with
   right gripper
+- End
+- Grasp the transparent circular ring on the left with the left gripper
+- Place the  transparent circular ring on the left onto the fanta in the middle  with
+  left gripper
+- Abnormal
+- Grasp the transparent circular ring on the right with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

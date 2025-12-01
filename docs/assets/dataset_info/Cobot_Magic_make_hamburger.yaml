@@ -397,54 +397,54 @@ tasks: 'make a hamburger with cheese.
 
   place the sliced bread, cheese, lettuce, meat patties, and tomato slices on a plate.'
 sub_tasks:
-- Abnormal
-- Discard.
-- End
-- Grab the lettuce leaf with the right hand.
-- Grab the patty with the right hand.
-- 'null'
-- Pick up the bottom bread slice with the left hand.
 - Pick up the bottom bread with the left hand.
-- Pick up the bread slice with the left gripper
-- Pick up the bread slices and place them on the tray with the left gripper
-- Pick up the cheese slice with the left gripper
-- Pick up the cheese slice with the left hand.
-- Pick up the cheese slice with the right gripper
-- Pick up the cutlet with the right gripper
-- Pick up the hamburger lid with the left gripper
-- Pick up the hamburger lid with the right gripper
-- Pick up the lettuce leaf with the right gripper
-- Pick up the meat patty and place it on top of the tomato with the right gripper
-- Pick up the purple cabbage with the left gripper
-- Pick up the tomato slice with the left gripper
-- Pick up the tomato slice with the left hand.
-- Pick up the tomato slice with the right gripper
-- Pick up the top bread slice with the right hand.
-- Place the bottom bread slice on the tray with the left hand.
-- Place the bread on the tray with the left hand.
-- Place the bread slice on the tray with the left gripper
-- Place the cheese slice on the cutlet with the left gripper
-- Place the cheese slice on the cutlet with the right gripper
-- Place the cheese slice on the patty with the left hand.
-- Place the cutlet on the lettuce leaf with the right gripper
-- Place the cutlet on the tomato slice with the right gripper
-- Place the hamburger lid on the  cutlet with the right gripper
 - Place the hamburger lid on the cheese slice with the left gripper
-- Place the hamburger lid on the cheese slice with the right gripper
-- Place the hamburger lid on the cutlet slice with the left gripper
-- Place the hamburger lid on the purple cabbage with the right gripper
-- Place the lettuce leaf on the  bread slice with the right gripper
-- Place the lettuce leaf on the bottom bread with the right hand.
-- Place the lettuce leaf on the bread slice with the right hand.
-- Place the patty on the tomato slice with the right hand.
-- Place the purple cabbage on the cutlet with the left gripper
-- Place the purple cabbage on the tomato slice with the left gripper
-- Place the tomato slice on the bread slice with the left gripper
-- Place the tomato slice on the bread slice with the right gripper
+- Pick up the tomato slice with the left hand.
 - Place the tomato slice on the lettuce leaf with the left gripper
-- Place the tomato slice on the lettuce leaf with the left hand.
+- Place the cutlet on the lettuce leaf with the right gripper
+- Place the lettuce leaf on the bottom bread with the right hand.
+- Place the hamburger lid on the purple cabbage with the right gripper
+- Grab the patty with the right hand.
+- Place the cheese slice on the patty with the left hand.
+- Place the hamburger lid on the cutlet slice with the left gripper
+- Place the tomato slice on the bread slice with the left gripper
+- Place the lettuce leaf on the  bread slice with the right gripper
+- Pick up the hamburger lid with the right gripper
+- Place the bottom bread slice on the tray with the left hand.
+- End
 - Place the tomato slice on the lettuce leaf with the right gripper
+- Pick up the cheese slice with the left gripper
+- Pick up the meat patty and place it on top of the tomato with the right gripper
+- Discard.
+- Pick up the tomato slice with the left gripper
+- Pick up the bottom bread slice with the left hand.
+- Grab the lettuce leaf with the right hand.
+- Pick up the lettuce leaf with the right gripper
+- Pick up the cutlet with the right gripper
+- Place the purple cabbage on the tomato slice with the left gripper
+- Place the cutlet on the tomato slice with the right gripper
+- Place the bread slice on the tray with the left gripper
+- Abnormal
+- Pick up the top bread slice with the right hand.
+- Place the patty on the tomato slice with the right hand.
+- Pick up the purple cabbage with the left gripper
+- Place the cheese slice on the cutlet with the left gripper
+- Pick up the cheese slice with the left hand.
+- Pick up the bread slices and place them on the tray with the left gripper
+- Place the purple cabbage on the cutlet with the left gripper
 - Place the top bread slice on the cheese with the right hand.
+- Place the hamburger lid on the cheese slice with the right gripper
+- Pick up the cheese slice with the right gripper
+- Place the cheese slice on the cutlet with the right gripper
+- Pick up the hamburger lid with the left gripper
+- Place the hamburger lid on the  cutlet with the right gripper
+- Place the lettuce leaf on the bread slice with the right hand.
+- Place the tomato slice on the lettuce leaf with the left hand.
+- Place the bread on the tray with the left hand.
+- Place the tomato slice on the bread slice with the right gripper
+- Pick up the bread slice with the left gripper
+- Pick up the tomato slice with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

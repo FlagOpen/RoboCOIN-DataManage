@@ -312,10 +312,10 @@ features:
     - 2
 tasks: Grasp the pear and place it on one side of the table.
 sub_tasks:
-- abnormal
 - Grasp the high-fiber fruit
-- 'null'
+- abnormal
 - Place it on the right side of the table
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -360,9 +360,9 @@ tasks: 'the left gripper pick up the fallen cup and place it upright, the right 
   grasp the purple rag and wipe the tea stain on the table, the right gripper put
   the purple rag back in its original position.'
 sub_tasks:
-- 'null'
 - Stand the paper cup upright
 - Wipe the stains off the table with a rag
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

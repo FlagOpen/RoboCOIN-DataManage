@@ -341,15 +341,15 @@ tasks: 'place the steamer in the pot on the blue tablecloth, and put the lid on 
 
   place the steamer in the pot on the white table, and put the lid on the steamer.'
 sub_tasks:
-- 'null'
-- use the left arm to lift the lid of the steamer
-- use the left arm to lift the steamer closest to it
 - use the left arm to place the steamer lid on the steamer
+- use the right arm to lift the steamer closest to it
 - use the left arm to put the steamer into the iron steamer pot in the middle
 - use the right arm to lift the lid of the steamer
-- use the right arm to lift the steamer closest to it
 - use the right arm to place the steamer lid on the steamer
+- use the left arm to lift the lid of the steamer
 - use the right arm to put the steamer into the iron steamer pot in the middle
+- use the left arm to lift the steamer closest to it
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -318,12 +318,12 @@ features:
     - 2
 tasks: take garbage bag from can walk to door put on ground.
 sub_tasks:
-- abnormal
 - End
-- 'null'
-- Pick up the trash bag
 - Place the outer trash can on the ground
 - Put the trash bag at the door
+- Pick up the trash bag
+- abnormal
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

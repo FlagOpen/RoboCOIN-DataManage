@@ -324,11 +324,11 @@ features:
     - 2
 tasks: take out or store plates on the stove and in the cabinet drawers.
 sub_tasks:
-- 'null'
-- Pick up the plate in the cupboard
 - Pick up the plate on the stove
 - Put the plate in the cupboard
+- Pick up the plate in the cupboard
 - Put the plate on the stove
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

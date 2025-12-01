@@ -368,17 +368,17 @@ tasks: 'Place the umbrella on the white lid with one hand, and then put the blue
   Pick up the large and small bowls simultaneously with both hands and put them into
   the yellow bucket at the same time.'
 sub_tasks:
-- End
-- Grasp the bowl with the left gripper
-- Grasp the bowl with the right gripper
-- Grasp the cup with the right gripper
 - Grasp the umbrella with the left gripper
-- 'null'
-- Place the bowl into the  yellow basket with the right gripper
-- Place the bowl into the yellow basket with the left gripper
+- End
+- Grasp the bowl with the right gripper
+- Grasp the bowl with the left gripper
 - Place the cup into the white basket with the right gripper
-- Place the umbrella into the white basket with the left gripper
 - Static
+- Place the umbrella into the white basket with the left gripper
+- Place the bowl into the yellow basket with the left gripper
+- Place the bowl into the  yellow basket with the right gripper
+- Grasp the cup with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

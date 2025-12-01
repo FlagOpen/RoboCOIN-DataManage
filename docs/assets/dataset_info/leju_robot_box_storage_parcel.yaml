@@ -433,19 +433,19 @@ features:
     - 2
 tasks: moved the parcel from conveyor to table for the left to box.
 sub_tasks:
-- Abnormal
-- End
-- Grasp the package on the conveyor belt with right gripper
 - Grasp the package on the scanner with left gripper
-- 'null'
-- Pick up the parcel from the conveyor belt.
-- Pick up the parcel from the inbound machine.
-- Place the package in the green box with left gripper
-- Place the package on the scanner with right gripper
-- Place the parcel into the delivery box.
-- Place the parcel onto the inbound machine.
+- Abnormal
 - Put the parcel inside the courier box.
+- Place the parcel onto the inbound machine.
+- Place the parcel into the delivery box.
+- Grasp the package on the conveyor belt with right gripper
+- Place the package in the green box with left gripper
+- End
+- Pick up the parcel from the conveyor belt.
 - Take the parcel off the conveyor belt.
+- Place the package on the scanner with right gripper
+- Pick up the parcel from the inbound machine.
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

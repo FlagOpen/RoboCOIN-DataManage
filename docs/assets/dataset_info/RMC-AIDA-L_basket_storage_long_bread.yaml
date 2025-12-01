@@ -367,35 +367,35 @@ tasks: 'the left gripper pick up the basket to the appropriate position,  the ri
   of the table, the left gripper pick up the long bread and place it into the yellow
   basket.'
 sub_tasks:
-- Abnormal
-- End
-- Grasp the basket with the left gripper
-- Grasp the long bread with right gripper
-- Move the light basket to the center of view with the left gripper
-- 'null'
-- Pick up the basket with the left gripper
-- Pick up the basket with the right gripper
-- Pick up the dark basket with the left gripper
-- Pick up the dark basket with the right gripper
-- Pick up the light basket with the left gripper
-- Pick up the light basket with the right gripper
-- Pick up the long bread with the left gripper
-- Pick up the long bread with the right gripper
-- Place the basket in the center of the table with the left gripper
-- Place the basket in the center of view with the left gripper
-- Place the basket in the center of view with the right gripper
-- Place the dark basket in the center of view with the left gripper
-- Place the dark basket in the center of view with the right gripper
-- Place the light basket in the center of view with the left gripper
-- Place the light basket in the center of view with the right gripper
-- Place the long bread in the basket with right gripper
 - Place the long bread into the basket with the left gripper
-- Place the long bread into the basket with the right gripper
-- Place the long bread into the dark basket with the left gripper
 - Place the long bread into the dark basket with the right gripper
-- Place the long bread into the light basket with the left gripper
+- Place the light basket in the center of view with the left gripper
 - Place the long bread into the light basket with the right gripper
+- Place the basket in the center of the table with the left gripper
+- Pick up the basket with the left gripper
+- Grasp the long bread with right gripper
+- Place the long bread into the light basket with the left gripper
+- Place the basket in the center of view with the left gripper
+- Pick up the light basket with the left gripper
+- Place the long bread into the dark basket with the left gripper
+- Place the light basket in the center of view with the right gripper
+- Place the dark basket in the center of view with the right gripper
+- Abnormal
+- Move the light basket to the center of view with the left gripper
+- Pick up the basket with the right gripper
+- Place the basket in the center of view with the right gripper
+- Place the long bread in the basket with right gripper
+- End
+- Place the dark basket in the center of view with the left gripper
+- Pick up the light basket with the right gripper
+- Place the long bread into the basket with the right gripper
+- Grasp the basket with the left gripper
 - Static
+- Pick up the long bread with the right gripper
+- Pick up the dark basket with the left gripper
+- Pick up the long bread with the left gripper
+- Pick up the dark basket with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

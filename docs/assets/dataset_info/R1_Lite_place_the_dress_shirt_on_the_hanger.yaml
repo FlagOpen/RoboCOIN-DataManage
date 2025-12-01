@@ -325,12 +325,12 @@ features:
 tasks: hang shirt on hanger then take hanger out and put on bed.
 sub_tasks:
 - abnormal
-- Hook one side of the shirt onto the hanger
 - Hook the other side of the shirt onto the hanger
+- Hook one side of the shirt onto the hanger
 - Lift the shirt and hanger
-- 'null'
-- Place the hanger on the bed
 - Take the clothes hanger out of the clothes
+- Place the hanger on the bed
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

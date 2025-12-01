@@ -336,14 +336,14 @@ features:
     - 2
 tasks: put chopsticks spoons bowls into lunch boxes on plates.
 sub_tasks:
-- abnormal
-- 'null'
-- Pick the bowl and place it on the plate
-- Pick the chopsticks and place it on the plate
-- Pick the spoon and place it in the bowl
-- Put the bowl back from the plate
 - Put the chopsticks back from the plate
+- Put the bowl back from the plate
 - Put the spoon back from the bowl
+- Pick the chopsticks and place it on the plate
+- abnormal
+- Pick the bowl and place it on the plate
+- Pick the spoon and place it in the bowl
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

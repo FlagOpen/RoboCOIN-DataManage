@@ -343,31 +343,31 @@ features:
 tasks: wipe the tableware with a sponge containing detergent then put them in their
   original places.
 sub_tasks:
-- Abnormal
 - End
-- Grab the dish soap
-- 'null'
-- Pick up a bowl and the sponge
-- Place the bowl on the bowl
-- Place the bowl on the plate
-- Place the bowl on the table
-- Place the chopsticks on the glass basin
+- Rinse the chopsticks
 - Place the dish soap on the table
+- Wipe the plate
+- Rinse the plate
+- Place the chopsticks on the glass basin
+- Pick up a bowl and the sponge
+- Rinse the bowl
+- Wash the plate
 - Place the plate on the plate
 - Place the plate on the table
 - Place the spoon in the glass basin
-- Put down the sponge
-- Rinse the bowl
-- Rinse the chopsticks
-- Rinse the plate
-- Rinse the spoon
-- Squeeze it onto the sponge
-- Turn off the faucet
-- Turn on the faucet
-- Wash the bowl
-- Wash the plate
+- Place the bowl on the table
 - Wipe the bowl
-- Wipe the plate
+- Squeeze it onto the sponge
+- Abnormal
+- Rinse the spoon
+- Place the bowl on the plate
+- Put down the sponge
+- Place the bowl on the bowl
+- Turn off the faucet
+- Grab the dish soap
+- Wash the bowl
+- Turn on the faucet
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

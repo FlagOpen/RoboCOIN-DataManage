@@ -326,14 +326,14 @@ features:
 tasks: wipe floor under carpet with rag then place foam net on floor.
 sub_tasks:
 - abnormal
-- Lay down the carpet
-- Lift up the carpet
-- 'null'
-- Pick up the foam protection net
-- Pick up the rag
-- Place the foam protection net on the floor
 - Put down the rag
+- Pick up the foam protection net
+- Lift up the carpet
+- Place the foam protection net on the floor
 - Wipe the floor under the carpet with a rag
+- Pick up the rag
+- Lay down the carpet
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

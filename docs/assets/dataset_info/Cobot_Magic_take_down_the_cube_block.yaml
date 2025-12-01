@@ -345,11 +345,11 @@ tasks: pick up the cube block from the rotating plate and place the cube block o
 sub_tasks:
 - Abnormal
 - End
-- Grasp the rotating cube-shaped block on the turntable
-- 'null'
-- Pick up the rotating cube block on the turntable
-- Place the cube on the desk
 - Place the cube on the table
+- Place the cube on the desk
+- Grasp the rotating cube-shaped block on the turntable
+- Pick up the rotating cube block on the turntable
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

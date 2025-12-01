@@ -340,15 +340,15 @@ tasks: 'on blue tablecloth take chopsticks from black tray and put them in box.
 
   on white tablecloth take chopsticks from black tray and put them in box.'
 sub_tasks:
+- use the right arm to put the chopsticks into the lunch box
 - Abnormal
+- use the left arm to grab a pair of chopsticks
 - End
 - Grasp the a pair of chopsticks with the left gripper
-- 'null'
 - Place the a pair of chopsticks in the box with the left gripper
-- use the left arm to grab a pair of chopsticks
 - use the left arm to put the chopsticks into the lunch box
 - use the right arm to grab a pair of chopsticks
-- use the right arm to put the chopsticks into the lunch box
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

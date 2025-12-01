@@ -341,14 +341,14 @@ features:
 tasks: Pick up the syringe with your left hand and push the syringe piston in with
   your right hand.
 sub_tasks:
+- Static
+- Push the piston with the right gripper
 - End
-- Grasp the piston with the right gripper
 - Grasp the syringe with the left gripper
+- Grasp the piston with the right gripper
+- Place the syringe on the table with the left gripper
 - Lift the syringe with the left gripper
 - 'null'
-- Place the syringe on the table with the left gripper
-- Push the piston with the right gripper
-- Static
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

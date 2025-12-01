@@ -25,6 +25,34 @@ export class DataManager {
 
         /** @type {string[]|null} */
         this._datasetAliasKeys = null;
+
+        /** @type {Set<string>} */
+        this.excludedDatasets = new Set();
+    }
+    
+    /**
+     * Load dataset exclusion list from exclude.json if available
+     * @returns {Promise<void>}
+     */
+    async loadExcludedDatasets() {
+        try {
+            const response = await fetch('./exclude.json');
+            if (!response.ok) {
+                console.warn(`⚠️ Failed to load exclude.json (${response.status}). Continuing without exclusions.`);
+                return;
+            }
+
+            const exclusions = await response.json();
+            if (Array.isArray(exclusions)) {
+                exclusions
+                    .map(name => typeof name === 'string' ? name.trim() : '')
+                    .filter(Boolean)
+                    .forEach(name => this.excludedDatasets.add(name));
+                console.log(`🧹 Loaded ${this.excludedDatasets.size} excluded datasets.`);
+            }
+        } catch (error) {
+            console.warn('⚠️ Could not load exclude.json. Continuing without exclusions.', error);
+        }
     }
     
     /**
@@ -35,6 +63,8 @@ export class DataManager {
      */
     async loadDatasets(loadingProgress, loadingBar) {
         try {
+            await this.loadExcludedDatasets();
+
             console.log('🚀 Attempting to load consolidated JSON (preferred)...');
             const startTime = performance.now();
 
@@ -56,6 +86,7 @@ export class DataManager {
                     console.log(`✓ Loaded ${datasetCount} datasets from consolidated JSON`);
 
                     this.datasets = Object.entries(allData).map(([path, raw]) => this.createDatasetObject(path, raw));
+                    this.applyExclusions();
 
                     loadingProgress.textContent = `${this.datasets.length} datasets loaded`;
                     loadingBar.style.width = '100%';
@@ -78,11 +109,33 @@ export class DataManager {
 
             console.log('📁 Falling back to YAML mode...');
             await this.loadDatasetsFromYAML(loadingProgress, loadingBar);
+            this.applyExclusions();
             return this.datasets;
 
         } catch (err) {
             console.error('Failed to load datasets:', err);
             throw err;
+        }
+    }
+
+    /**
+     * Remove excluded datasets from the in-memory list
+     */
+    applyExclusions() {
+        if (this.excludedDatasets.size === 0) {
+            return;
+        }
+
+        const beforeCount = this.datasets.length;
+        this.datasets = this.datasets.filter(dataset => {
+            const name = dataset?.name || '';
+            const path = dataset?.path || '';
+            return !this.excludedDatasets.has(name) && !this.excludedDatasets.has(path);
+        });
+
+        const removed = beforeCount - this.datasets.length;
+        if (removed > 0) {
+            console.log(`🚫 Excluded ${removed} datasets defined in exclude.json.`);
         }
     }
     

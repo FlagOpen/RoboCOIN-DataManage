@@ -340,13 +340,13 @@ features:
     - 2
 tasks: Hold the computer with one hand and close it with the other.
 sub_tasks:
-- Abnormal
-- Close the laptop with the right gripper
 - End
-- 'null'
 - Press the laptop with the left gripper
 - Release the laptop with the left gripper
 - Static
+- Abnormal
+- Close the laptop with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

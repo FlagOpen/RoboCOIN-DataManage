@@ -326,9 +326,9 @@ tasks: 'turn off the desk lamp on the blue coffee tablecloth by hand.
 
   turn off the desk lamp on the white desktop by hand.'
 sub_tasks:
-- 'null'
 - use the left arm to press the button switch on the lamp holder
 - use the right arm to press the button switch on the lamp holder
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

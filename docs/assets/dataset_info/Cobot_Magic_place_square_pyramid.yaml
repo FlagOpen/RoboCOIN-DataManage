@@ -342,11 +342,11 @@ features:
     - 2
 tasks: pick up the square pyramid from the table and place it on the cube block.
 sub_tasks:
+- Place the block onto the cube-shaped block
+- Place the triangular block onto the cube block
 - End
 - Grasp the triangular block
 - 'null'
-- Place the block onto the cube-shaped block
-- Place the triangular block onto the cube block
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

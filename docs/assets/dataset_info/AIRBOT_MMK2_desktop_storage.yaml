@@ -359,13 +359,13 @@ features:
 tasks: Stack the mouse box on top of the computer box with one hand and place the
   coffee cup on the plate with the other.
 sub_tasks:
-- End
+- Place the mouse box on the calculator box with the left gripper
 - Grasp the coffee with the right gripper
 - Grasp the mouse box with the left gripper
-- 'null'
-- Place the coffee into the plate with the right gripper
-- Place the mouse box on the calculator box with the left gripper
 - Static
+- Place the coffee into the plate with the right gripper
+- End
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -334,23 +334,23 @@ tasks: 'put the steamed buns into the plate on the blue tablecloth.
 
   put the steamed buns into the plate on the white tablecloth.'
 sub_tasks:
-- Abnormal
-- End
 - Grasp the baozi on the steamer with left gripper
-- Grasp the dumpling with left gripper
-- Grasp the dumpling with right gripper
-- Grasp the yellow baozi on the steamer with left gripper
-- Grasp the yellow baozi on the steamer with right gripper
-- 'null'
-- Place the baozi on the plate with left gripper
-- Place the dumpling on the steamer with left gripper
-- Place the dumpling on the steamer with right gripper
+- Abnormal
 - Place the yellow baozi on the plate with left gripper
 - Place the yellow baozi on the plate with right gripper
+- End
+- Grasp the dumpling with left gripper
 - use the left arm to grab the steamed stuffed bun that is closest to it
-- use the left arm to put the steamed stuffed bun into the plate
 - use the right arm to grab the steamed stuffed bun that is closest to it
 - use the right arm to put the steamed stuffed bun into the plate
+- Place the baozi on the plate with left gripper
+- Grasp the yellow baozi on the steamer with left gripper
+- use the left arm to put the steamed stuffed bun into the plate
+- Place the dumpling on the steamer with right gripper
+- Grasp the dumpling with right gripper
+- Grasp the yellow baozi on the steamer with right gripper
+- Place the dumpling on the steamer with left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

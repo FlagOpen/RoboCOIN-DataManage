@@ -334,17 +334,17 @@ tasks: 'put the dumplings into the steamer on the table with the blue tablecloth
 
   put the dumplings into the steamer on the table with the white tablecloth.'
 sub_tasks:
+- use the left arm to put the dumpling into the steamer
 - Abnormal
-- End
+- use the right arm to put the dumpling into the steamer
 - Grasp the dumpling with left gripper
-- Grasp the dumpling with right gripper
-- 'null'
-- Place the dumpling on the steamer with left gripper
+- End
 - Place the dumpling on the steamer with right gripper
 - use the left arm to grab a dumpling
-- use the left arm to put the dumpling into the steamer
+- Grasp the dumpling with right gripper
 - use the right arm to grab a dumpling
-- use the right arm to put the dumpling into the steamer
+- Place the dumpling on the steamer with left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

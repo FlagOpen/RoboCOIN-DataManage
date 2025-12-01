@@ -313,10 +313,10 @@ features:
     - 2
 tasks: hold quilt's folded corner flatten blanket's corners.
 sub_tasks:
-- abnormal
-- End
-- Flatten the corners of the folded blanket
 - Hold the folded corner of the quilt
+- End
+- abnormal
+- Flatten the corners of the folded blanket
 - 'null'
 annotations:
   subtask_annotation: auto_generated

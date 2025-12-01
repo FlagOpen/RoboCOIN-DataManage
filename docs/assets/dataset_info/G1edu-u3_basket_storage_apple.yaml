@@ -312,13 +312,13 @@ features:
     - 2
 tasks: pick up the apple from the table and place it into the basket.
 sub_tasks:
-- End
 - Grasp the apple with the left gripper
-- Grasp the basket with the right gripper
-- Move the basket to the front of the table with the right gripper
-- 'null'
 - Place the apple into the basket with the left gripper
+- End
 - Static
+- Move the basket to the front of the table with the right gripper
+- Grasp the basket with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

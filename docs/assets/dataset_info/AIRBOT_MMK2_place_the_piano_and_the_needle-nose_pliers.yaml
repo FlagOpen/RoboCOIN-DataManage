@@ -353,14 +353,14 @@ features:
 tasks: Use one hand to pick up the piano and place it on the white lid, then use your
   other hand to pick up the pointed nose pliers and place them on the white lid.
 sub_tasks:
-- Abnormal
 - End
-- Grasp the tongs with the right gripper
-- Grasp the xylophone with the left gripper
-- 'null'
-- Place the tongs on the white lid with the right gripper
-- Place the xylophone on the white lid with the left gripper
 - Static
+- Place the tongs on the white lid with the right gripper
+- Grasp the tongs with the right gripper
+- Place the xylophone on the white lid with the left gripper
+- Grasp the xylophone with the left gripper
+- Abnormal
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

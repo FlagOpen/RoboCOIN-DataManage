@@ -581,14 +581,14 @@ features:
     - 2
 tasks: put the milk the designated position.
 sub_tasks:
-- Abnormal
-- End
 - Grasp the wangzai milk with left gripper
-- Grasp the wangzai milk with right gripper
-- 'null'
-- Place the wangzai milk on the table with left gripper
 - Place the wangzai milk on the table with right gripper
 - Static
+- Place the wangzai milk on the table with left gripper
+- Grasp the wangzai milk with right gripper
+- End
+- Abnormal
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

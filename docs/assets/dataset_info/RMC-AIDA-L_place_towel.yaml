@@ -342,14 +342,14 @@ tasks: 'pick up the towel from the storage box and lay it flat on the black tabl
 
   pick up the towel from the storage box and lay it flat on the table.'
 sub_tasks:
-- Abnormal
 - End
-- 'null'
-- Pick up a towel with the left gripper
-- Pick up a towel with the right gripper
 - Spread the towel flat with the left gripper
-- Spread the towel flat with the right gripper
+- Abnormal
+- Pick up a towel with the left gripper
 - Static
+- Pick up a towel with the right gripper
+- Spread the towel flat with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

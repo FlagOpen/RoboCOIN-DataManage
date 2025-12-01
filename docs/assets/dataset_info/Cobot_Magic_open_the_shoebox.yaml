@@ -315,8 +315,8 @@ tasks: 'open the shoebox on the white tablecloth.
 
   open the shoebox on the table.'
 sub_tasks:
-- 'null'
 - Open the shoe box
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

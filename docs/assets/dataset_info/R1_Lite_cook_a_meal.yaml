@@ -340,33 +340,33 @@ features:
     - 2
 tasks: put rice water scallions into rice cooker press start button.
 sub_tasks:
+- Turn off the faucet  with the right gripper
+- Pour water into the rice cooker  with the left gripper
+- Grab the bowl with the right gripper
+- Turn on the faucet with the left gripper
+- Pour the rice from the bowl into the rice cooker
+- Put the bowl on the table with the left gripper
+- Open the rice cooker with the right gripper
+- End
+- Pour the water from the bowl into the rice cooker
+- Grab the bowl with the left gripper
+- Pick up the bowl on the table
 - Abnormal
 - Close the rice cooker
-- End
-- Fill a bowl with water from the tap
-- Grab the bowl with the left gripper
-- Grab the bowl with the right gripper
-- 'null'
-- Open the rice cooker
-- Open the rice cooker with the right gripper
-- Pick up the bowl on the table
-- Place the bowl on the table
-- Pour the chopped green onions from the bowl into the rice cooker
-- Pour the rice from the bowl into the rice cooker
-- Pour the water from the bowl into the rice cooker
-- Pour water into the rice cooker  with the left gripper
-- Pour water into the rice cooker  with the right gripper
-- Press the start button
-- Put the bowl on the table with the left gripper
-- Put the bowl on the table with the right gripper
-- Put the bowl under the faucet  with the left gripper
-- Put the bowl under the faucet  with the right gripper
-- Turn off the faucet  with the left gripper
-- Turn off the faucet  with the right gripper
 - Turn off the rice cooker with the both gripper
 - Turn off the tap
-- Turn on the faucet with the left gripper
+- Place the bowl on the table
+- Turn off the faucet  with the left gripper
+- Open the rice cooker
+- Pour water into the rice cooker  with the right gripper
 - Turn on the tap
+- Put the bowl under the faucet  with the right gripper
+- Press the start button
+- Put the bowl under the faucet  with the left gripper
+- Put the bowl on the table with the right gripper
+- Fill a bowl with water from the tap
+- Pour the chopped green onions from the bowl into the rice cooker
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -347,14 +347,14 @@ features:
 tasks: Pick up the mobile phone and place it on the calculator box, then pick it up
   from the box and put it on the table.
 sub_tasks:
-- Abnormal
 - End
-- Grasp the telephone with the left gripper
-- Grasp the telephone with the right gripper
-- 'null'
-- Place the telephone on the box with the left gripper
 - Place the telephone on the table with the right gripper
 - Static
+- Place the telephone on the box with the left gripper
+- Grasp the telephone with the left gripper
+- Grasp the telephone with the right gripper
+- Abnormal
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

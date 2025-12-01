@@ -366,14 +366,14 @@ tasks: 'cut banana.
 sub_tasks:
 - Cut the banana with your left hand.
 - Cut the banana with your right hand.
-- Discard the waste.
-- end
-- Grab the knife handle with your right hand.
 - Hold the blade with your left hand.
+- Discard the waste.
+- Secure the blade with your left hand.
+- Place the knife on the storage rack with your right hand.
+- Grab the knife handle with your right hand.
+- end
 - Lift the knife with your right hand.
 - 'null'
-- Place the knife on the storage rack with your right hand.
-- Secure the blade with your left hand.
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

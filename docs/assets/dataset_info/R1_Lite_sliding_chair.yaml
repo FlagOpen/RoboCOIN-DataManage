@@ -312,11 +312,11 @@ features:
     - 2
 tasks: pull chair out from table then put back.
 sub_tasks:
-- 'null'
-- Pull the blue chair out from under the dining table
+- Push the gray chair back under the dining table
 - Pull the gray chair out from under the dining table
 - Push the blue chair back under the dining table
-- Push the gray chair back under the dining table
+- Pull the blue chair out from under the dining table
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -338,17 +338,17 @@ features:
     - 2
 tasks: take out or store umbrellas water cables boxes on drawers tables.
 sub_tasks:
-- Close the drawer
-- 'null'
+- Take the mineral water out of the drawer and put it on the table
 - Open the drawer
+- Take the data cable out of the drawer and put it on the table
+- Take the umbrella out of the drawer and put it on the table
+- Take the storage box out of the drawer and put it on the table
+- Put the storage box in the drawer
+- Close the drawer
+- Put the umbrella in the drawer
 - Put the data cable in the drawer
 - Put the mineral water in the drawer
-- Put the storage box in the drawer
-- Put the umbrella in the drawer
-- Take the data cable out of the drawer and put it on the table
-- Take the mineral water out of the drawer and put it on the table
-- Take the storage box out of the drawer and put it on the table
-- Take the umbrella out of the drawer and put it on the table
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

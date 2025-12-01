@@ -343,17 +343,17 @@ features:
     - 2
 tasks: pick up the peach and put it into the basket.
 sub_tasks:
-- Abnormal
-- End
-- Grasp the basket with left gripper
-- Grasp the peach with right gripper
-- Move the basket to the center of view
-- 'null'
 - Pick up the peach
-- Place the basket in the center of view with left gripper
 - Place the peach in the basket with right gripper
 - place the peach into the basket
 - Static
+- Move the basket to the center of view
+- Grasp the peach with right gripper
+- Grasp the basket with left gripper
+- Place the basket in the center of view with left gripper
+- Abnormal
+- End
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

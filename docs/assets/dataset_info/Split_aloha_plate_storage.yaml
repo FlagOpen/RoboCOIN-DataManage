@@ -355,12 +355,12 @@ tasks: 'put the plate on the plate rack.
   the right gripper grasp the pink plate, the right gripper pass the pink plate to
   the left gripper, and the left gripper place the pink plate on the plate rack.'
 sub_tasks:
-- 'null'
 - Pass the plate from the left gripper to the right gripper
+- Place the plate on the shelf
 - Pass the plate from the right gripper to the left gripper
 - Pick up the plate with the left gripper
 - Pick up the plate with the right gripper
-- Place the plate on the shelf
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

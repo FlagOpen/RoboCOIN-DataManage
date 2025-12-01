@@ -328,32 +328,32 @@ tasks: 'fold a grey long-sleeved shirt over a blue coffee tablecloth.
 
   fold a grey long-sleeved shirt on a white desktop.'
 sub_tasks:
-- Abnormal
-- Drag the left edge of the fabric to the left with your left arm and fold it to the
-  right edge
 - End
-- Hold the left edge of the fabric with your left arm
-- 'null'
-- Spread the clothes out flat on the table with both grippers
-- Spread the long sleeves with your arms and place them on the tabletop
-- use both arms simultaneously to clamp the lower edge of the clothing fabric
-- use both arms to drag the lower edge of the fabric forward and fold it over the
-  upper edge
-- use the left arm to clamp the cuff closest to it
-- use the left arm to clamp the cuff farthest from it
-- use the left arm to drag and drop the cuff onto the cuff closest to the left arm
-- use the left arm to drag and place the cuff at the centered position on the left
-  edge of the fabric
-- use the right arm to clamp the right edge of the fabric
-- use the right arm to drag and drop the cuff onto the cuffclosest to the right arm
-- use the right arm to drag and place the cuff at thecentered position on the left
-  edge of the fabric
 - use the right arm to drag the right edge of the fabric to the left and folds it
   over the left edge
+- use the right arm to clamp the right edge of the fabric
+- Use your right arm to clamp the cuff closest to him
+- use the right arm to drag and place the cuff at thecentered position on the left
+  edge of the fabric
 - use the right arm to drag the right edge of the fabric to the right and folds it
   over the left edge
-- Use your right arm to clamp the cuff closest to him
+- Hold the left edge of the fabric with your left arm
+- use the left arm to drag and drop the cuff onto the cuff closest to the left arm
+- use the right arm to drag and drop the cuff onto the cuffclosest to the right arm
+- Spread the clothes out flat on the table with both grippers
+- use both arms to drag the lower edge of the fabric forward and fold it over the
+  upper edge
+- use the left arm to drag and place the cuff at the centered position on the left
+  edge of the fabric
+- Abnormal
+- use both arms simultaneously to clamp the lower edge of the clothing fabric
+- use the left arm to clamp the cuff farthest from it
 - Use your right arm to clamp the cuff farthest to him
+- use the left arm to clamp the cuff closest to it
+- Drag the left edge of the fabric to the left with your left arm and fold it to the
+  right edge
+- Spread the long sleeves with your arms and place them on the tabletop
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

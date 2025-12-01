@@ -342,21 +342,21 @@ tasks: 'the left gripper grasp the black basket and place it in the center of th
   the right gripper grasp the black basket and place it inside the brown one.'
 sub_tasks:
 - End
-- Grasp the dark basket with left gripper
-- Grasp the dark basket with right gripper
 - Grasp the light basket with left gripper
-- Grasp the light basket with right gripper
 - Move the dark basket to the center of view
-- 'null'
-- Pick up the light basket with the right gripper
+- Grasp the dark basket with right gripper
+- Place the dark basket on top of the light basket
+- Grasp the dark basket with left gripper
+- Place the light-colored basket in the center
+- Grasp the light basket with right gripper
 - Place the dark basket in the center of the table with left gripper
 - Place the dark basket on the light basket with right gripper
-- Place the dark basket on top of the light basket
-- Place the light basket in the center of the table with left gripper
-- Place the light basket on the dark basket
-- Place the light basket on the dark basket with right gripper
-- Place the light-colored basket in the center
 - Static
+- Pick up the light basket with the right gripper
+- Place the light basket on the dark basket with right gripper
+- Place the light basket on the dark basket
+- Place the light basket in the center of the table with left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

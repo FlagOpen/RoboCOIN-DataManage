@@ -337,34 +337,34 @@ features:
 tasks: place the bowls on the plates on the blue tablecloth, put the cups on the bowls,
   and place the spoons in the cups.
 sub_tasks:
-- abnormal
-- End
-- Grasp the bowl with the left gripper
-- Grasp the bowl with the right gripper
-- Grasp the cup with the left gripper
-- Grasp the cup with the right gripper
-- Grasp the spoon with the left gripper
-- Grasp the spoon with the right gripper
-- 'null'
-- Place the bowl on the plate with the left gripper
-- Place the bowl on the plate with the right gripper
-- Place the cup on the bowl with the left gripper
-- Place the cup on the bowl with the right gripper
-- Place the spoon on the cup with the left gripper
-- Place the spoon on the cup with the right gripper
-- use the left arm to grab a blue rice bowl
-- use the left arm to grab a blue soup spoon
 - use the left arm to grab a blue teacup
-- use the left arm to put the blue rice bowl into the blue large plate in the middle
-- use the left arm to put the blue soup spoon into the blue teacup in the middle
-- use the left arm to put the blue teacup into the blue rice bowl in the middle
+- Grasp the bowl with the left gripper
 - use the right arm to grab a blue rice bowl
-- use the right arm to grab a blue soup spoon
-- use the right arm to grab a blue teacup
-- use the right arm to put the blue rice bowl into the blue large plate in the middle
-- use the right arm to put the blue soup spoon into the blue teacup in the middle
+- Place the bowl on the plate with the left gripper
+- use the left arm to put the blue soup spoon into the blue teacup in the middle
+- Grasp the spoon with the left gripper
+- Place the spoon on the cup with the left gripper
 - use the right arm to put the blue soup spoon on the blue large plate in the middle
+- use the left arm to put the blue teacup into the blue rice bowl in the middle
+- Grasp the cup with the left gripper
+- use the right arm to put the blue soup spoon into the blue teacup in the middle
 - use the right arm to put the blue teacup into the blue rice bowl in the middle
+- use the left arm to grab a blue rice bowl
+- use the right arm to grab a blue teacup
+- Place the spoon on the cup with the right gripper
+- use the right arm to put the blue rice bowl into the blue large plate in the middle
+- abnormal
+- Grasp the cup with the right gripper
+- use the right arm to grab a blue soup spoon
+- Grasp the bowl with the right gripper
+- Grasp the spoon with the right gripper
+- Place the cup on the bowl with the right gripper
+- Place the cup on the bowl with the left gripper
+- use the left arm to grab a blue soup spoon
+- End
+- Place the bowl on the plate with the right gripper
+- use the left arm to put the blue rice bowl into the blue large plate in the middle
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -347,12 +347,12 @@ features:
 tasks: Pick up a coffee cup with one hand and place it in the basin; then pick up
   another coffee cup with your other hand and place it in the basin.
 sub_tasks:
+- Grasp the cup  the right gripper
+- place the cup in the basin use the left gripper
 - End
 - Grasp the cup  the left gripper
-- Grasp the cup  the right gripper
-- 'null'
-- place the cup in the basin use the left gripper
 - place the cup in the basin use the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -582,12 +582,12 @@ features:
 tasks: put the orange the designated position.
 sub_tasks:
 - End
-- Grasp the orange with left gripper
-- Grasp the orange with right gripper
-- 'null'
-- Place the orange on the table with left gripper
 - Place the orange on the table with right gripper
+- Grasp the orange with right gripper
+- Place the orange on the table with left gripper
+- Grasp the orange with left gripper
 - Static
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -312,9 +312,9 @@ features:
     - 2
 tasks: pick up the lid of the steamer and place it on the steamer.
 sub_tasks:
-- 'null'
 - Pick up the steamer
 - Put the steamer
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

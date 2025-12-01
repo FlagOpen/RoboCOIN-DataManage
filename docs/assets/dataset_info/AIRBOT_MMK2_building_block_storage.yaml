@@ -378,23 +378,23 @@ tasks: 'Take the rectangular building blocks out of the plate with one hand, and
   Pick up the cylindrical building block from the table and place it on the corresponding
   block base.'
 sub_tasks:
-- Abnormal
-- End
-- Grasp the green coil with the right gripper
-- Grasp the green cylinder with the left gripper
-- Grasp the green rectangular block on the plate with the right gripper
-- Grasp the red cylinder with the right gripper
-- Grasp the red rectangular block on the plate with the left gripper
-- Grasp the yellow block with the left gripper
-- Grasp the yellow block with the rightt gripper
-- 'null'
-- Place green rectangular block on the table with the right gripper
-- Place red rectangular block on the table with the left gripper
-- Place the green coil on the wooden pillar with the right gripper
 - Place the green cylinder in the box with the left gripper
-- Place the red cylinder in the box with the right gripper
+- Grasp the green cylinder with the left gripper
+- Grasp the red cylinder with the right gripper
+- Abnormal
+- Grasp the red rectangular block on the plate with the left gripper
+- Place the green coil on the wooden pillar with the right gripper
 - Place the yellow block in the blue circle with the left gripper
+- End
+- Grasp the yellow block with the rightt gripper
+- Grasp the green coil with the right gripper
+- Grasp the green rectangular block on the plate with the right gripper
+- Place the red cylinder in the box with the right gripper
 - Place the yellow block in the blue circle with the right gripper
+- Place red rectangular block on the table with the left gripper
+- Place green rectangular block on the table with the right gripper
+- Grasp the yellow block with the left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

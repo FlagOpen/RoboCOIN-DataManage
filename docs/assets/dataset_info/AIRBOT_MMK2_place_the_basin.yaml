@@ -341,16 +341,16 @@ features:
 tasks: hold the basin on the table with both hands simultaneously, pick it up and
   then put it down.
 sub_tasks:
-- Abnormal
-- End
-- 'Grasp the basin with the left gripper '
-- Grasp the basin with the right gripper
 - 'Lift the basin with the left gripper '
+- 'Place the basin on the table with the left gripper '
+- 'Grasp the basin with the left gripper '
+- Place the basin on the table with the right gripper
+- Abnormal
+- Static
+- End
+- Grasp the basin with the right gripper
 - Lift the basin with the right gripper
 - 'null'
-- 'Place the basin on the table with the left gripper '
-- Place the basin on the table with the right gripper
-- Static
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

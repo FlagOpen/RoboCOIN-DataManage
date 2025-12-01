@@ -340,11 +340,11 @@ tasks: 'take toasted bread from bread machine on blue coffee table place on plat
 
   take toasted bread from bread machine on white table place on plate.'
 sub_tasks:
-- 'null'
+- use the right arm to put a slice of bread into the plate
 - use the left arm to put a slice of bread into the empty plate
 - use the left arm to take out a slice of bread
-- use the right arm to put a slice of bread into the plate
 - use the right arm to take out a slice of bread
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

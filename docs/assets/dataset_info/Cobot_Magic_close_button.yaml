@@ -331,9 +331,9 @@ tasks: 'press the button switch on the cyan tablecloth with the left gripper to 
   press the button switch with the right claw to turn off the button.'
 sub_tasks:
 - end
-- 'null'
-- Press the button to turn off
 - Press the first switch from the left on the right side.
+- Press the button to turn off
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

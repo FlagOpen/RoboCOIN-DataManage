@@ -336,20 +336,20 @@ features:
     - 2
 tasks: take water kettle tea bags from tray to table then back.
 sub_tasks:
-- abnormal
-- 'null'
-- Pick up the bottled water
-- Pick up the kettle
+- Return the tea bag to its original position
 - Pick up the tea bag
 - Pick up the tea cup
-- Place it in front of you
-- Place it on the left
-- Place it on the right
-- Place it on the tray
-- Return the bottled water to its original position
-- Return the kettle to its original position
-- Return the tea bag to its original position
 - Return the tea cup to its original position
+- abnormal
+- Return the bottled water to its original position
+- Place it on the right
+- Return the kettle to its original position
+- Place it on the left
+- Place it in front of you
+- Pick up the kettle
+- Pick up the bottled water
+- Place it on the tray
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -385,22 +385,22 @@ tasks: 'Take the sponge out of the plate with one hand and place it on the table
   then pick up the building blocks from the table with your other hand and place them
   on the plate.'
 sub_tasks:
-- Abnormal
-- End
 - Graasp the bullet on the plate and with the left gripper
-- Graasp the green rectangular block with the right gripper
-- Grasp the mouse box with the right gripper
-- Grasp the sponge in the plate with the left gripper
-- Grasp the Vitamin B water in the plate with the left gripper
-- Grasp the wet wipes with the right gripper
-- 'null'
-- Place the bullet on the table with the left gripper
-- Place the green rectangular block on the plate with the right gripper
+- Abnormal
 - Place the mouse box  into the plate with the right gripper
+- Grasp the Vitamin B water in the plate with the left gripper
+- Place the wet wipes into the plate with the right gripper
+- Place the bullet on the table with the left gripper
+- Grasp the mouse box with the right gripper
 - Place the sponge on the table with the left gripper
 - Place the Vitamin B water on the table with the left gripper
-- Place the wet wipes into the plate with the right gripper
 - Static
+- Graasp the green rectangular block with the right gripper
+- End
+- Grasp the sponge in the plate with the left gripper
+- Grasp the wet wipes with the right gripper
+- Place the green rectangular block on the plate with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

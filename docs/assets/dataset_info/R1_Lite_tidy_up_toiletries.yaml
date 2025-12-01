@@ -330,20 +330,20 @@ features:
     - 2
 tasks: put toiletries in drawer and cup in box or on table.
 sub_tasks:
-- Close the drawer
-- Grasp the bathroom toiletry with the left gripper
-- Grasp the black cup with the left gripper
-- 'null'
-- Open the drawer
-- Open the drawer with the left gripper
-- Pick up the bathroom toiletry
-- Pick up the cup
-- Place the bathroom toiletry into the drawer
-- Place the black cup on the drawer with the left gripper
-- Place the comb on the table with the right gripper
-- Place the cup on the storage box
 - Place the cup on the table
+- Place the comb on the table with the right gripper
+- Place the bathroom toiletry into the drawer
+- Pick up the cup
+- Pick up the bathroom toiletry
+- Open the drawer with the left gripper
+- Grasp the bathroom toiletry with the left gripper
 - Put toiletries in the drawer
+- Grasp the black cup with the left gripper
+- Place the cup on the storage box
+- Close the drawer
+- Open the drawer
+- Place the black cup on the drawer with the left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

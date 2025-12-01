@@ -359,22 +359,22 @@ tasks: 'the left gripper pick up the black basket and place it horizontally in t
   the right gripper pick up the yellow basket and place it horizontally in the middle
   of the table, the left gripper pick up the orange and place it into the yellow basket.'
 sub_tasks:
-- end
-- 'null'
-- Pick up the dark basket with the left gripper
-- Pick up the dark basket with the right gripper
-- Pick up the light basket with the left gripper
-- Pick up the light basket with the right gripper
-- Pick up the orange with the left gripper
-- Pick up the orange with the right gripper
-- Place the dark basket in the center of view with the left gripper
 - Place the dark basket in the center of view with the right gripper
-- Place the light basket in the center of view with the left gripper
 - Place the light basket in the center of view with the right gripper
 - Place the orange into the dark basket with the left gripper
-- Place the orange into the dark basket with the right gripper
+- Place the dark basket in the center of view with the left gripper
+- end
 - Place the orange into the light basket with the left gripper
+- Pick up the light basket with the right gripper
 - Place the orange into the light basket with the right gripper
+- Pick up the orange with the right gripper
+- Place the light basket in the center of view with the left gripper
+- Pick up the dark basket with the left gripper
+- Pick up the light basket with the left gripper
+- Pick up the dark basket with the right gripper
+- Pick up the orange with the left gripper
+- Place the orange into the dark basket with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

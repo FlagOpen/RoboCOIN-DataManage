@@ -312,16 +312,16 @@ features:
     - 2
 tasks: open cloth bag take out power bank then put back.
 sub_tasks:
-- abnormal
-- Close the top of the storage box
-- End
-- Grip the handle
-- Grip the handle again
-- Lift the black box
-- 'null'
 - Open the top of the storage box
-- Place the black box back
 - Release the handle
+- Grip the handle again
+- End
+- abnormal
+- Lift the black box
+- Grip the handle
+- Place the black box back
+- Close the top of the storage box
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

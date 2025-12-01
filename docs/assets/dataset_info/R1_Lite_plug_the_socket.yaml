@@ -324,13 +324,13 @@ features:
     - 2
 tasks: plug in mosquito repellent then unplug and place on table.
 sub_tasks:
-- abnormal
-- Hold the socket with your left hand and unplug it with your right hand
 - Hold the socket with your right hand and unplug it with your left hand
-- Insert the plug into the socket
-- 'null'
+- abnormal
 - Pick up the mosquito repellent liquid
 - Place the mosquito repellent liquid on the table
+- Insert the plug into the socket
+- Hold the socket with your left hand and unplug it with your right hand
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

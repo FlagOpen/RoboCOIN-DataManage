@@ -374,18 +374,18 @@ tasks: 'pick up the sponge and wet wipes on the table with both hands and place 
   Pick up the mouse box and the power bank box on the table with both hands simultaneously
   and put them into the white lid.'
 sub_tasks:
-- Abnormal
-- End
-- Grasp the mouse box with the left gripper
-- Grasp the phone case box with the right gripper
 - 'Grasp the sponge with the left gripper '
 - Grasp the wet wipes with the right gripper
-- 'null'
-- Place the mouse box on the white lid with the left gripper
-- Place the phone case box on the white lid with the right gripper
 - 'Place the sponge  into the white basket with the left gripper '
-- Place the wet wipes into the white basket with the right gripper
 - Static
+- Abnormal
+- End
+- Place the phone case box on the white lid with the right gripper
+- Grasp the mouse box with the left gripper
+- Place the mouse box on the white lid with the left gripper
+- Grasp the phone case box with the right gripper
+- Place the wet wipes into the white basket with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

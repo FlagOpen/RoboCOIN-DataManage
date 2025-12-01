@@ -306,11 +306,11 @@ features:
     - 2
 tasks: turn on ac press temp up down then turn off.
 sub_tasks:
-- 'null'
+- Turn off the central air conditioner
 - Press the temperature decrease button
 - Press the temperature increase button
-- Turn off the central air conditioner
 - Turn on the central air conditioner
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

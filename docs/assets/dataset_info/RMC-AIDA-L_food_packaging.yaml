@@ -378,22 +378,22 @@ tasks: 'the left gripper pick up the blue bag, the right gripper successively pi
   lunch box, bananna and peach and place them into the bag, the right gripper zip
   up the bag.'
 sub_tasks:
-- end
-- Grab the peach with your right hand.
 - Grab the pear with your right hand.
-- Hold the lunch bag with your left hand.
-- Hold the lunch bag with your right hand.
-- 'null'
-- Pick up the cucumber with your right hand.
 - Pick up the lunch box with your right hand.
+- end
+- Put the cucumber into the lunch bag with your right hand.
+- Hold the lunch bag with your left hand.
+- Secure the lunch bag with your left hand.
+- Pick up the cucumber with your right hand.
+- Hold the lunch bag with your right hand.
+- Take the banana with your right hand.
 - Place the lunch box into the lunch bag with your right hand.
 - Place the peach into the lunch bag with your right hand.
-- Place the pear into the lunch bag with your right hand.
-- Put the banana into the lunch bag with your right hand.
-- Put the cucumber into the lunch bag with your right hand.
-- Secure the lunch bag with your left hand.
-- Take the banana with your right hand.
 - Zip up the lunch bag with your right hand.
+- Put the banana into the lunch bag with your right hand.
+- Place the pear into the lunch bag with your right hand.
+- Grab the peach with your right hand.
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

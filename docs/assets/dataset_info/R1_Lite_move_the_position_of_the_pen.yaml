@@ -582,14 +582,14 @@ features:
     - 2
 tasks: put the pen in the designated position.
 sub_tasks:
-- Abnormal
 - End
-- Grasp the sign pen with left gripper
-- Grasp the sign pen with right gripper
-- 'null'
-- Place the sign pen on the table with left gripper
 - Place the sign pen on the table with right gripper
+- Grasp the sign pen with left gripper
+- Place the sign pen on the table with left gripper
+- Grasp the sign pen with right gripper
 - Static
+- Abnormal
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

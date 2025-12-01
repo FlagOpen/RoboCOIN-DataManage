@@ -350,28 +350,28 @@ tasks: 'on blue table put chopsticks spoon bowls plates into blue grey white box
 
   on white black table put chopsticks spoon bowls plates into blue grey white boxes.'
 sub_tasks:
-- 'null'
+- use the right arm to grab the plate
+- use the right arm to grab a chopstick
+- use the right arm to put the plate into the large storage box on the left
+- use the right arm to put the noodle bowl into the large storage box on the left
+- use the right arm to put a chopstick into the small storage box on the right
+- use the left arm to put a chopstick into the small storage box on the right
+- use the left arm to grab the yellow noodle bowl on the left
 - use the left arm to grab a chopstick
 - use the left arm to grab the chopsticks
-- use the left arm to grab the plate
-- use the left arm to grab the soup spoon in the middle
-- use the left arm to grab the yellow noodle bowl on the left
-- use the left arm to put a chopstick into the small storage box on the right
-- use the left arm to put the chopsticks into the small storage box on the right
-- use the left arm to put the noodle bowl into the large storage box on the left
-- use the left arm to put the plate into the large storage box on the left
 - use the left arm to put the soup spoon into the small storage box in the middle
-- use the right arm to grab a chopstick
-- use the right arm to grab the chopsticks
-- use the right arm to grab the plate
 - use the right arm to grab the soup spoon in the middle
-- use the right arm to grab the yellow noodle bowl
-- use the right arm to put a chopstick into the small storage box on the right
-- use the right arm to put the chopsticks into the small storage box on the right
-- use the right arm to put the noodle bowl into the large storage box on the left
-- use the right arm to put the plate into the large storage box on the left
+- use the right arm to grab the chopsticks
 - use the right arm to put the plate on the tray
+- use the right arm to grab the yellow noodle bowl
+- use the left arm to grab the soup spoon in the middle
+- use the left arm to put the plate into the large storage box on the left
+- use the left arm to put the chopsticks into the small storage box on the right
+- use the left arm to grab the plate
+- use the left arm to put the noodle bowl into the large storage box on the left
 - use the right arm to put the soup spoon into the small storage box in the middle
+- use the right arm to put the chopsticks into the small storage box on the right
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

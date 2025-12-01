@@ -582,12 +582,12 @@ features:
 tasks: put the soda the designated position.
 sub_tasks:
 - End
-- Grasp the soda water with left gripper
 - Grasp the soda water with right gripper
-- 'null'
-- Place the soda water on the table with left gripper
 - Place the soda water on the table with right gripper
+- Place the soda water on the table with left gripper
 - Static
+- Grasp the soda water with left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

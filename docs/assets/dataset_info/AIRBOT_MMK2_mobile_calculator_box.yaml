@@ -350,17 +350,17 @@ tasks: 'One hand picked up the white lid from one side of the table and passed i
   Pick up the calculator box from one side of the table with one hand and pass it
   to your other hand, which will then place the box on the opposite side of the table.'
 sub_tasks:
-- End
 - Grasp the calculator case with left gripper
-- Grasp the white box with left gripper
-- Grasp the yellow book with left gripper
-- 'null'
-- Pass the calculator case to right gripper
-- Pass the white box to right gripper
-- Pass the yellow book to right gripper
+- End
 - Place the calculator case in the center of table with right gripper
 - Place the white box in the center of table with right gripper
+- Pass the white box to right gripper
+- Grasp the yellow book with left gripper
 - Place the yellow book in the center of table with right gripper
+- Pass the yellow book to right gripper
+- Pass the calculator case to right gripper
+- Grasp the white box with left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

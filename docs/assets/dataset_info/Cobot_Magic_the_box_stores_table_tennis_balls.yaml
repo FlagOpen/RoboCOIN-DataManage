@@ -332,11 +332,11 @@ tasks: 'put the table tennis balls in the box on the blue coffee tablecloth.
 
   put the table tennis balls into the box on the white checkered tablecloth.'
 sub_tasks:
-- 'null'
-- use the left arm to clamp the table tennis ball closest to it
-- use the left arm to put the table tennis ball into the box
 - use the right arm to clamp the table tennis ball closest to it
 - use the right arm to put the table tennis ball into the box
+- use the left arm to clamp the table tennis ball closest to it
+- use the left arm to put the table tennis ball into the box
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -347,14 +347,14 @@ features:
 tasks: Pick up one pack of tissue paper from the table and place it in the basin,
   then pick up another pack from the table and place it in the basin.
 sub_tasks:
-- Abnormal
-- End
-- Grasp the tissue with the left gripper
-- Grasp the tissue with the right gripper
-- 'null'
-- Place the tissue into the brown basin with the left gripper
-- Place the tissue into the brown basin with the right gripper
 - Static
+- Place the tissue into the brown basin with the left gripper
+- End
+- Abnormal
+- Place the tissue into the brown basin with the right gripper
+- Grasp the tissue with the right gripper
+- Grasp the tissue with the left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

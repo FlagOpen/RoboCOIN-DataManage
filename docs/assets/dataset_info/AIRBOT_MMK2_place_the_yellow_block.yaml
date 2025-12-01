@@ -347,14 +347,14 @@ features:
 tasks: Place the yellow square from the table onto the rubik's cube with one hand,
   and use your other hand to take the yellow square from the rubik's cube to the table.
 sub_tasks:
-- Abnormal
+- Static
 - End
-- Grasp the yellow block on the magic cube with right gripper
+- Abnormal
 - Grasp the yellow block with left gripper
-- 'null'
+- Grasp the yellow block on the magic cube with right gripper
 - Place the yellow block on the magic cube with left gripper
 - Place the yellow block on the table with right gripper
-- Static
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

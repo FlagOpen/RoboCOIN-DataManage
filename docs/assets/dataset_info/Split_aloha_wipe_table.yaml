@@ -352,15 +352,15 @@ tasks: the left gripper pick up the fallen cup and place it upright, the right g
   grasp the black rag and wipe the stain on the table, the right gripper put the black
   rag back in its original position.
 sub_tasks:
-- Abnormal
-- End
-- Grasp the paper cup with left gripper
 - Grasp the rag with right gripper
-- 'null'
+- Abnormal
 - Place the rag on the table with right gripper
 - Stand the paper cup upright with left gripper
+- End
 - Static
+- Grasp the paper cup with left gripper
 - Wipe the stains off the table with the rag with right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -354,13 +354,13 @@ tasks: Pick up the red toy car in one hand and the blue packaged cookies in the 
   then place both items on the round lid.
 sub_tasks:
 - Abnormal
-- End
-- Grasp the toy car with left gripper and grasp the cookies with the right gripper
-- Lift the toy car with left gripper and lift the cookies with the right gripper
-- 'null'
 - Place the cookies on the pink plate with the right gripper
 - Place the toy car on the pink plate with the left gripper
 - Static
+- Grasp the toy car with left gripper and grasp the cookies with the right gripper
+- End
+- Lift the toy car with left gripper and lift the cookies with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

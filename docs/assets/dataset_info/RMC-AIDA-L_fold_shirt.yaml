@@ -357,25 +357,25 @@ tasks: 'the black shirt is place with the back facing up, fold the black shirt i
   the navygreen shirt is place with the back facing up, fold the black shirt into
   a square shape.'
 sub_tasks:
-- Discard
-- end
+- Grab the bottom left corner with your left hand
 - Fold the bottom left sleeve with your left hand
 - Fold the bottom right sleeve to the right
-- Fold the bottom right sleeve with your right hand
-- Fold the clothes to the left
 - Fold the clothes to the right
+- Grab the top left corner with your left hand
+- Fold the clothes to the left
+- Push the clothes to the left
+- Press the middle of the clothes with your right hand
+- end
+- Push the clothes with your left hand
+- Discard
+- Grab the top right corner with your right hand
+- Pull the clothes with your right hand
 - Fold the clothes with your left hand
 - Fold the clothes with your right hand
-- Grab the bottom left corner with your left hand
+- Fold the bottom right sleeve with your right hand
 - Grab the bottom right corner with your right hand
-- Grab the top left corner with your left hand
-- Grab the top right corner with your right hand
-- 'null'
-- Press the middle of the clothes with your right hand
 - Pull the clothes with your left hand
-- Pull the clothes with your right hand
-- Push the clothes to the left
-- Push the clothes with your left hand
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

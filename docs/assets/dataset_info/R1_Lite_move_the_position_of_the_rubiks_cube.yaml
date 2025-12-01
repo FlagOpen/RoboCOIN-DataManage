@@ -582,12 +582,12 @@ features:
 tasks: put the rubiks cube the designated position.
 sub_tasks:
 - End
+- Place the magic cube on the table with right gripper
+- Place the magic cube on the table with left gripper
+- Static
 - Grasp the magic cube with left gripper
 - Grasp the magic cube with right gripper
 - 'null'
-- Place the magic cube on the table with left gripper
-- Place the magic cube on the table with right gripper
-- Static
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

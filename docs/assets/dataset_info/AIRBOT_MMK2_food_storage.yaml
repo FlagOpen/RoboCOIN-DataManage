@@ -425,33 +425,33 @@ tasks: 'Place the potato in one compartment using one hand while keeping the oth
   Pick up one cake with one hand and place it on the wooden rack, and pick up the
   other cake with the other hand and place it on the wooden rack.'
 sub_tasks:
-- Abnormal
-- Close the lid of the egg storage box with the left gripper
-- End
-- Grasp the braised pork in brown sauce with the left gripper
 - Grasp the cake from the table and with the left gripper
-- Grasp the cake from the table and with the right gripper
-- Grasp the cake with the left gripper
-- Grasp the egg with the left gripper
-- Grasp the egg with the right gripper
+- Place the shrimp into the plate with the right gripper
+- Close the lid of the egg storage box with the left gripper
+- Place the potato into the left compartment of the storage box with the left gripper
 - Grasp the ice cream with the right gripper
-- Grasp the potato with the left gripper
-- Grasp the shrimp with the right gripper
-- Grasp the sponge from the plate and with the left gripper
-- 'null'
 - Place the braised pork in brown sauce into the plate with the left gripper
+- Grasp the potato with the left gripper
 - Place the cake into the bowl with the left gripper
-- Place the cake into the plate with the right gripper
+- Place the egg into the egg storage box with the right gripper
+- Grasp the egg with the left gripper
+- Place the egg into the plate with the left gripper
+- Grasp the egg with the right gripper
+- Place the egg into the plate with the right gripper
 - Place the cake onto the block toy with the left gripper
 - Place the cake onto the block toy with the right gripper
-- Place the egg into the egg storage box with the right gripper
-- Place the egg into the plate with the left gripper
-- Place the egg into the plate with the right gripper
+- End
 - Place the ice cream into the plate with the right gripper
-- Place the potato into the left compartment of the storage box with the left gripper
-- Place the shrimp into the plate with the right gripper
+- Grasp the cake from the table and with the right gripper
 - Place the sponge on the table with the left gripper
+- Grasp the braised pork in brown sauce with the left gripper
+- Grasp the cake with the left gripper
 - Static
+- Grasp the sponge from the plate and with the left gripper
+- Place the cake into the plate with the right gripper
+- Abnormal
+- Grasp the shrimp with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

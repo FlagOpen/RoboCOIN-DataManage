@@ -330,14 +330,14 @@ features:
     - 2
 tasks: put bowls plates in cabinet then take out to table close.
 sub_tasks:
-- Close the cabinet door
-- 'null'
-- Pick up the bowl from the table
-- Pick up the plate from the table
 - Place it on the table
 - Put it back into the cabinet
-- Take the bowl from the cabinet
 - Take the plate from the cabinet
+- Pick up the plate from the table
+- Close the cabinet door
+- Pick up the bowl from the table
+- Take the bowl from the cabinet
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

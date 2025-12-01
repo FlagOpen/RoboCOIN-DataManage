@@ -341,12 +341,12 @@ features:
 tasks: Place the small cubes on each side simultaneously on the large cubes on the
   same side.
 sub_tasks:
-- End
-- Grasp the blue cube block with the left gripper
 - Grasp the green cube block with the right gripper
-- 'null'
-- Place the blue cube block on the red cube block with the left gripper
+- Grasp the blue cube block with the left gripper
 - Place the green cube block on the yellow cube block with the right gripper
+- Place the blue cube block on the red cube block with the left gripper
+- End
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

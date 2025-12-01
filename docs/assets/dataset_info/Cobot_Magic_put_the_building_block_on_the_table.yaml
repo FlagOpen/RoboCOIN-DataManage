@@ -313,10 +313,10 @@ features:
     - 2
 tasks: grasp the rotating cube-shaped block on the turntable and place it on the table.
 sub_tasks:
-- abnormal
 - Grasp the rotating cube-shaped block on the turntable
-- 'null'
 - Place the cube on the desk
+- abnormal
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

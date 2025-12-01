@@ -312,12 +312,12 @@ features:
     - 2
 tasks: take shoes out of box then put back in and close.
 sub_tasks:
+- Put the shoes out of the shoe box
 - abnormal
+- Put the shoes into the shoe box
+- Open the shoe box
 - Close the shoe box
 - 'null'
-- Open the shoe box
-- Put the shoes into the shoe box
-- Put the shoes out of the shoe box
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

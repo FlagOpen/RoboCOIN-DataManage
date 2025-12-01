@@ -353,14 +353,14 @@ features:
 tasks: Take the bullet out of the plate with one hand and place it on the table, then
   pick up the cake on the table with your other hand and put it on the plate.
 sub_tasks:
-- Abnormal
-- End
-- Grasp the bullet into the plate with the left gripper
 - Grasp the cake on the table with the right gripper
-- 'null'
-- Place the bullet on the table with the left gripper
+- End
+- Abnormal
 - Place the cake  into the plate with the right gripper
+- Place the bullet on the table with the left gripper
 - Static
+- Grasp the bullet into the plate with the left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

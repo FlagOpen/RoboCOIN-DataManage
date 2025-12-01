@@ -318,13 +318,13 @@ features:
     - 2
 tasks: wipe the stains on the table with a cloth.
 sub_tasks:
+- Pick up the tablecloth
+- Place the tablecloth
+- Place the bottle at the back of the table
+- Pick up the bottle
+- Sweep the stains on the table
 - Hand it to the other hand
 - 'null'
-- Pick up the bottle
-- Pick up the tablecloth
-- Place the bottle at the back of the table
-- Place the tablecloth
-- Sweep the stains on the table
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

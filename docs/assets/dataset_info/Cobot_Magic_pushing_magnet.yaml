@@ -335,8 +335,8 @@ features:
 tasks: push the magnet on the table from its original position to another position.
 sub_tasks:
 - End
-- 'null'
 - Push the magnet on the right to connect the magnet on the left
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

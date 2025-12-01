@@ -334,28 +334,28 @@ tasks: 'insert the flowers into the vase on the table with the blue tablecloth.
 
   insert the flowers into the vase on the table with the white tablecloth.'
 sub_tasks:
-- Abnormal
-- End
-- Grasp the blue flower with left gripper
-- Grasp the blue flower with right gripper
-- Grasp the dumpling with left gripper
-- Grasp the dumpling with right gripper
 - Grasp the pink flower with left gripper
-- Grasp the pink flower with right gripper
-- Grasp the white flower with right gripper
-- 'null'
-- Place the blue flower in the vase with left gripper
-- Place the blue flower in the vase with right gripper
-- Place the dumpling on the steamer with left gripper
+- Grasp the dumpling with left gripper
+- Grasp the blue flower with left gripper
 - Place the dumpling on the steamer with right gripper
-- Place the pink flower in the vase with left gripper
+- Grasp the dumpling with right gripper
+- Grasp the pink flower with right gripper
 - Place the pink flower in the vase with right gripper
-- Place the white flower in the vase with right gripper
-- Put the flowers in the vase with both hands
-- use the left arm to grab a bunch of fresh flowers
+- End
 - use the left arm to insert the flowers into the vase
-- use the right arm to grab a bunch of fresh flowers
+- Place the blue flower in the vase with left gripper
 - use the right arm to insert the flowers into the vase
+- Abnormal
+- use the right arm to grab a bunch of fresh flowers
+- Place the dumpling on the steamer with left gripper
+- Place the blue flower in the vase with right gripper
+- Put the flowers in the vase with both hands
+- Grasp the blue flower with right gripper
+- Place the white flower in the vase with right gripper
+- Place the pink flower in the vase with left gripper
+- Grasp the white flower with right gripper
+- use the left arm to grab a bunch of fresh flowers
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

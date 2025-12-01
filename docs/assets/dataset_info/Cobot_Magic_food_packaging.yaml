@@ -375,55 +375,55 @@ tasks: 'Put the items on the table into a bag.
 
   Put the items on the table into a bag.'
 sub_tasks:
-- Abnormal
-- Discard it.
-- End
-- Grab the banana with your right hand.
-- Grab the bread with your right hand.
-- Grab the cucumber with your right hand.
-- Grab the lemon with your right hand.
-- Grab the lunch bag with your left hand.
-- Grab the lunch bag with your right hand.
-- Grab the lunch box with your left hand.
+- Pick up the bread
 - Grab the lunch box with your right hand.
-- Grab the pear with your right hand.
-- Grasp the banana with the right gripper
-- Grasp the box with the right gripper
-- Grasp the cucumber with the right gripper
-- Grasp the lemon with the right gripper
+- zip up the zipper to close the bag
+- Grab the cucumber with your right hand.
+- Hold the package and Pick up the bread
+- Pull the zipper with your right hand.
+- Pick up the pear
+- Place the cucumber into the package with the right gripper
+- Place the bread into the package
 - Grasp the package with the left gripper
+- Secure the lunch bag with your left hand.
+- Place the cucumber into the package
+- Grab the pear with your right hand.
+- End
+- Abnormal
+- Place the pear into the package
+- Grasp the banana with the right gripper
+- Take the lunch box with your right hand.
+- Move the lunch bag to the left.
+- Grab the lunch bag with your right hand.
+- Grab the lemon with your right hand.
+- Place the banana into the package
+- Hold the package and Pick up the box
 - Grasp the pear with the right gripper
 - Hold the package and Pick up the banana
-- Hold the package and Pick up the box
-- Hold the package and Pick up the bread
-- Hold the package and Pick up the cucumber
-- Hold the package and Pick up the pear
-- Lift the lunch box with your left hand.
-- Move the lunch bag to the left.
-- Move the lunch bag to the right.
-- 'null'
-- Pick up the banana
-- Pick up the box
-- Pick up the bread
-- Pick up the cucumber
-- Pick up the pear
-- Place it into the bag with your right hand.
-- Place the banana into the package
 - Place the banana into the package with the right gripper
-- Place the box into the package
-- Place the box into the package with the right gripper
-- Place the bread into the package
-- Place the cucumber into the package
-- Place the cucumber into the package with the right gripper
+- Grasp the cucumber with the right gripper
+- Pick up the banana
+- Place it into the bag with your right hand.
+- Hold the package and Pick up the cucumber
+- Pick up the cucumber
 - Place the lemon into the package with the right gripper
-- Place the pear into the package
-- Place the pear into the package with the right gripper
-- Pull the zipper with your right hand.
-- Secure the lunch bag with your left hand.
-- Stand the lunch bag upright with your left hand.
+- Grab the lunch box with your left hand.
+- Pick up the box
 - Stand the lunch bag upright with your right hand.
-- Take the lunch box with your right hand.
-- zip up the zipper to close the bag
+- Move the lunch bag to the right.
+- Grab the lunch bag with your left hand.
+- Grasp the lemon with the right gripper
+- Hold the package and Pick up the pear
+- Discard it.
+- Place the box into the package
+- Lift the lunch box with your left hand.
+- Stand the lunch bag upright with your left hand.
+- Grab the banana with your right hand.
+- Grasp the box with the right gripper
+- Place the box into the package with the right gripper
+- Grab the bread with your right hand.
+- Place the pear into the package with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

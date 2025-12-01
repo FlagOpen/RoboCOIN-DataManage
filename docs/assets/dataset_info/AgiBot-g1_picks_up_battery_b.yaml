@@ -460,9 +460,9 @@ features:
     - 2
 tasks: using a robotic arm to pick up battery.
 sub_tasks:
+- Place the power supply on the operating table.
 - Grab and lift the power supply from the large box.
 - 'null'
-- Place the power supply on the operating table.
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

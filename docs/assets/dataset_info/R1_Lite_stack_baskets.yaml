@@ -335,13 +335,13 @@ features:
     - 2
 tasks: stack a basket on top of another basket.
 sub_tasks:
-- End
 - Grasp the dark basket with the right gripper
-- Grasp the light basket with the left gripper
-- 'null'
-- Place the dark basket  into the light color basket with the right gripper
+- End
 - Place the light basket on the middle of the table with the left gripper
+- Grasp the light basket with the left gripper
+- Place the dark basket  into the light color basket with the right gripper
 - Static
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

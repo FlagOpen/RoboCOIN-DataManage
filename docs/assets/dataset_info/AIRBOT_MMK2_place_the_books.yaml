@@ -348,13 +348,13 @@ features:
 tasks: Push the book to one side of the table with one hand, and take it with the
   other hand to put it on the bookshelf.
 sub_tasks:
-- Abnormal
-- End
-- Grasp the  book with the left gripper
-- 'null'
-- Place the  book into the front mezzanine of the bookshelf with the left gripper
 - Push the  book from right to left with the right gripper
+- Grasp the  book with the left gripper
+- Place the  book into the front mezzanine of the bookshelf with the left gripper
 - Static
+- End
+- Abnormal
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

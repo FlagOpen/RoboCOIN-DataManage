@@ -355,13 +355,13 @@ tasks: 'Put the egg on one side in the bowl with one hand and the egg on the oth
 
   Pick up the egg from the table with one hand and put it in the egg box.'
 sub_tasks:
-- Abnormal
-- End
 - Grasp the egg with the left gripper
 - Grasp the egg with the right gripper
-- 'null'
+- Abnormal
+- End
 - Place the egg into bowl with the left gripper
 - Place the egg into bowl with the right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

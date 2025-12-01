@@ -347,16 +347,16 @@ tasks: 'Open the green document bag.
 
   Open the red document bag.'
 sub_tasks:
-- End
-- 'null'
+- Pulling up the zipper on the transparent plastic bag with the right gripper to close
+  it
+- Pulling up the zipper on the transparent plastic bag with the left gripper to close
+  it
 - Pick up the transparent plastic bag with the left gripper
 - Pick up the transparent plastic bag with the right gripper
 - Place the transparent plastic bag
 - Place the transparent plastic bag with the right gripper
-- Pulling up the zipper on the transparent plastic bag with the left gripper to close
-  it
-- Pulling up the zipper on the transparent plastic bag with the right gripper to close
-  it
+- End
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

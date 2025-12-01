@@ -361,24 +361,24 @@ tasks: 'the left gripper pick up the black basket and place it horizontally in t
   of the table, the left gripper pick up the egg yolk pastry and place it into the
   yellow basket.'
 sub_tasks:
-- End
-- Grasp egg yolk pastry with left gripper
-- Grasp egg yolk pastry with right gripper
-- Grasp the basket with left gripper
-- Grasp the basket with right gripper
-- Move the basket to the center of view with the left gripper
-- Move the basket to the center of view with the right gripper
-- 'null'
-- Pick up the basket with the left gripper
-- Pick up the egg yolk pastry with the left gripper
-- Pick up the egg yolk pastry with the right gripper
 - Place the basket in the center of view with left gripper
-- Place the basket in the center of view with right gripper
-- Place the basket in the center of view with the left gripper
-- Place the egg yolk pastry in the basket with left gripper
 - Place the egg yolk pastry in the basket with right gripper
-- Place the egg yolk pastry into the basket with the left gripper
+- Move the basket to the center of view with the right gripper
+- Move the basket to the center of view with the left gripper
+- Pick up the egg yolk pastry with the right gripper
+- Place the basket in the center of view with right gripper
+- Pick up the basket with the left gripper
+- Place the basket in the center of view with the left gripper
+- Grasp egg yolk pastry with left gripper
 - Place the egg yolk pastry into the basket with the right gripper
+- Grasp the basket with right gripper
+- End
+- Grasp egg yolk pastry with right gripper
+- Place the egg yolk pastry in the basket with left gripper
+- Grasp the basket with left gripper
+- Place the egg yolk pastry into the basket with the left gripper
+- Pick up the egg yolk pastry with the left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

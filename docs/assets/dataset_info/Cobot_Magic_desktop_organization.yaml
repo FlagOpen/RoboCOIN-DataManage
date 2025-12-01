@@ -500,114 +500,114 @@ tasks: 'put the mango on the plate, put the waste paper in the basket, place the
 
   pick up the green basket, put the cola inside the basket, and then put the basketdown.'
 sub_tasks:
-- abnormal
+- Pick up the pen with left arm
+- Place the blue knife into the pen holder
+- transfer the pen to the right arm
+- pick up the yellow knife
 - End
+- Place the gray pen in pen holder with left gripper
+- Place the yellow pen in pen holder with left gripper
+- Grasp the yellow pen with right gripper
+- place the red glue into the pen holder
+- place the bread in the plate
+- pick up the pink scissors
+- Hand over the silver glue
 - Grasp the banana with left gripper
 - Grasp the basket with left gripper
-- Grasp the black pen with left gripper
-- Grasp the black pen with right gripper
 - Grasp the blue pen with left gripper
-- Grasp the blue pen with right gripper
-- Grasp the bottle with left gripper
-- Grasp the cola can with left gripper
-- Grasp the cola can with right gripper
-- Grasp the eraser with left gripper
-- Grasp the eraser with right gripper
-- Grasp the gray pen with left gripper
-- Grasp the gray pen with right gripper
-- Grasp the mango with left gripper
-- Grasp the milk with left gripper
-- Grasp the milk with right gripper
-- Grasp the waste paper with left gripper
-- Grasp the waste paper with right gripper
-- Grasp the yellow pen with left gripper
-- Grasp the yellow pen with right gripper
-- Hand over the banana
-- Hand over the blue knife
-- Hand over the blue scissors
-- Hand over the bottle
-- Hand over the bread
-- Hand over the grapes
-- Hand over the pear
-- Hand over the pen
-- Hand over the pink scissors
-- Hand over the plastic
-- Hand over the red glue
-- Hand over the ruler
-- Hand over the silver glue
-- Hand over the waste paper
-- Hand over the yellow glue
-- Hand over the yellow knife
-- Hand the basket to the right gripper with the left gripper
-- Lift the basket with left gripper
-- 'null'
-- Pick up the banana
-- pick up the blue knife
-- pick up the blue pencil sharpener
-- pick up the blue scissors
-- Pick up the bottle with the left arm
-- Pick up the bottle with the right arm
-- pick up the bread
-- Pick up the eraser
-- Pick up the grapes
-- Pick up the pear
-- Pick up the pen with left arm
-- Pick up the pen with right arm
-- pick up the pink scissors
-- Pick up the plastic
-- pick up the red glue
-- pick up the red pencil sharpener
-- pick up the ruler
-- pick up the silver glue
-- Pick up the waste paper
-- pick up the yellow glue
-- pick up the yellow knife
 - Place the banana in the plate
-- Place the banana in the plate with left gripper
-- Place the basket on the table with left gripper
-- Place the basket on the table with right gripper
-- Place the black pen in pen holder with left gripper
-- Place the black pen in pen holder with right gripper
-- Place the blue knife into the pen holder
-- Place the blue pen in pen holder with left gripper
-- Place the blue pen in pen holder with right gripper
-- place the blue pencil sharpener into the pen holder
-- Place the blue scissors into the pen holder
+- pick up the blue knife
 - Place the bottle
-- place the bread in the plate
-- Place the cola can in the basket with left gripper
+- Place the milk in the basket with left gripper
+- pick up the red pencil sharpener
+- Grasp the waste paper with right gripper
+- Place the banana in the plate with left gripper
+- pick up the red glue
 - Place the cola can in the basket with right gripper
 - Place the cola can on the table with left gripper
-- Place the cola can on the table with right gripper
-- Place the eraser in pen holder with left gripper
-- Place the eraser in pen holder with right gripper
-- Place the eraser into the pen holder
-- Place the grapes in the plate
-- Place the gray pen in pen holder with left gripper
-- Place the gray pen in pen holder with right gripper
-- Place the mango in the plate with left gripper
-- Place the milk in the basket with left gripper
-- Place the milk in the basket with right gripper
-- Place the pear in the plate
+- pick up the blue pencil sharpener
+- Hand the basket to the right gripper with the left gripper
 - Place the pen into the pen holder
-- Place the pink scissors into the pen holder
-- Place the plastic in the basket
-- place the red glue into the pen holder
-- Place the red pencil sharpener into the pen holder
+- Hand over the blue scissors
 - Place the ruler into the pen holder
-- place the silver glue into the pen holder
-- Place the waste paper in the basket
-- Place the waste paper in the basket with left gripper
-- Place the waste paper in the basket with right gripper
-- place the yellow glue into the pen holder
 - place the yellow knife into the pen holder
-- Place the yellow pen in pen holder with left gripper
-- Place the yellow pen in pen holder with right gripper
-- Stand the bottle with left gripper
+- Hand over the yellow knife
+- Pick up the bottle with the right arm
+- Grasp the eraser with right gripper
 - Static
+- Grasp the cola can with right gripper
+- pick up the silver glue
+- Grasp the blue pen with right gripper
+- Grasp the gray pen with right gripper
+- pick up the blue scissors
+- Hand over the bread
+- Pick up the pen with right arm
+- Place the yellow pen in pen holder with right gripper
+- Place the black pen in pen holder with left gripper
+- Grasp the cola can with left gripper
+- place the blue pencil sharpener into the pen holder
+- Place the eraser in pen holder with left gripper
+- Grasp the black pen with left gripper
 - transfer the bottle to the left arm
+- Hand over the yellow glue
+- Grasp the milk with left gripper
+- Place the grapes in the plate
+- abnormal
+- Grasp the waste paper with left gripper
+- Stand the bottle with left gripper
+- Pick up the banana
+- Place the plastic in the basket
 - transfer the pen to the left arm
-- transfer the pen to the right arm
+- Place the blue pen in pen holder with right gripper
+- Pick up the eraser
+- Place the blue pen in pen holder with left gripper
+- Grasp the eraser with left gripper
+- place the silver glue into the pen holder
+- Place the mango in the plate with left gripper
+- Place the waste paper in the basket with left gripper
+- Place the pink scissors into the pen holder
+- Place the gray pen in pen holder with right gripper
+- Grasp the black pen with right gripper
+- Place the red pencil sharpener into the pen holder
+- Hand over the plastic
+- Place the eraser into the pen holder
+- Place the basket on the table with left gripper
+- Grasp the gray pen with left gripper
+- Place the eraser in pen holder with right gripper
+- Pick up the pear
+- Place the blue scissors into the pen holder
+- pick up the yellow glue
+- Hand over the pink scissors
+- Place the cola can in the basket with left gripper
+- Place the waste paper in the basket with right gripper
+- Place the waste paper in the basket
+- Place the black pen in pen holder with right gripper
+- Place the milk in the basket with right gripper
+- Hand over the grapes
+- Hand over the waste paper
+- Place the cola can on the table with right gripper
+- Hand over the banana
+- Hand over the pear
+- Pick up the plastic
+- Hand over the blue knife
+- place the yellow glue into the pen holder
+- Lift the basket with left gripper
+- Pick up the waste paper
+- Grasp the bottle with left gripper
+- Hand over the bottle
+- Grasp the milk with right gripper
+- Grasp the mango with left gripper
+- Hand over the pen
+- Place the basket on the table with right gripper
+- Place the pear in the plate
+- Hand over the ruler
+- Pick up the grapes
+- Grasp the yellow pen with left gripper
+- pick up the ruler
+- Hand over the red glue
+- pick up the bread
+- Pick up the bottle with the left arm
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -319,18 +319,18 @@ features:
 tasks: Open the washing machine, take out the clothes from inside and put them in
   the basket, then close the door of the washing machine.
 sub_tasks:
-- abnormal
-- Close the washing machine door with the left hand
+- Press the washing machine switch
 - Close the washing machine door with the right hand
+- Open the lid of the washing machine
+- Close the washing machine door with the left hand
+- Pick a cloth and place it into the basket
+- Place the clothes into the washing machine
 - End
+- Press the washing machine door tightly with the right hand
+- abnormal
+- Pick up the clothes basket and put it beside the washing machine
 - Move to the front of the washing machine
 - 'null'
-- Open the lid of the washing machine
-- Pick a cloth and place it into the basket
-- Pick up the clothes basket and put it beside the washing machine
-- Place the clothes into the washing machine
-- Press the washing machine door tightly with the right hand
-- Press the washing machine switch
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

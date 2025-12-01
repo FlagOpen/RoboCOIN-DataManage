@@ -342,12 +342,12 @@ features:
 tasks: hold the small guitar in your lefthand, pluck the strings with your righthand,  and
   then put down the small guitar with your lefthand.
 sub_tasks:
-- End
-- Grasp the ukulele with the left gripper
-- Lift the ukulele with the left gripper
-- 'null'
-- Place the ukulele on the table with the left gripper
 - Play ukulele with the right gripper
+- End
+- Place the ukulele on the table with the left gripper
+- Lift the ukulele with the left gripper
+- Grasp the ukulele with the left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

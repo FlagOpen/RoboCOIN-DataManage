@@ -355,35 +355,35 @@ tasks: 'the shorts is place with the front facing upwards, the left gripper gras
   the shorts, and the left gripper grasp the bottom of the shorts and folds them in
   the middle.'
 sub_tasks:
-- abnormal
-- Adjust the pants with your left hand.
-- Adjust the pants with your right hand.
-- Anomaly detected.
-- end
-- Fold the bottom of the pants upward with both grippers
-- Fold the bottom of the shorts upward with left gripper
-- Fold the bottom of the shorts upward with right gripper
-- Fold the pants from left to right with the left gripper
-- Fold the pants from right to left with the right gripper
-- Fold the shorts from right to left with right gripper
-- Fold to the left with your right hand.
-- Fold to the right with your left hand.
-- Fold upward with your left hand.
-- Fold upward with your right hand.
 - Grab the lower left pant leg with your left hand.
 - Grab the lower right pant leg with your right hand.
-- Grab the waistband with your right hand.
-- Grasp the lower left leg of the shorts with left gripper
-- Grasp the right lower side of the waistband of the shorts with right gripper
-- Hold the lower left waistband with your left hand.
-- Hold the lower right waistband with your right hand.
+- Fold the bottom of the shorts upward with right gripper
+- Fold the pants from right to left with the right gripper
 - Hold the waistband with your left hand.
-- 'null'
+- Hold the lower right waistband with your right hand.
+- Grab the waistband with your right hand.
+- Fold to the right with your left hand.
+- Press the middle of the pants with your left hand.
+- Fold upward with your left hand.
+- Fold to the left with your right hand.
+- Hold the lower left waistband with your left hand.
+- Place the folded trousers onto the center area with the right grippers
 - Place the folded trousers onto the center area with right gripper
 - Place the folded trousers onto the center area with the left grippers
-- Place the folded trousers onto the center area with the right grippers
-- Press the middle of the pants with your left hand.
+- Grasp the right lower side of the waistband of the shorts with right gripper
+- end
+- Anomaly detected.
+- Grasp the lower left leg of the shorts with left gripper
+- Fold the shorts from right to left with right gripper
+- abnormal
+- Fold the pants from left to right with the left gripper
+- Fold the bottom of the shorts upward with left gripper
+- Fold the bottom of the pants upward with both grippers
+- Adjust the pants with your right hand.
+- Fold upward with your right hand.
+- Adjust the pants with your left hand.
 - Press the middle of the pants with your right hand.
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

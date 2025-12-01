@@ -318,11 +318,11 @@ features:
     - 2
 tasks: pick up garbage from table and throw into trash can.
 sub_tasks:
+- Pick up the garbage
 - abnromal
+- Put the garbage in the trash can
 - Hand it to the other hand
 - 'null'
-- Pick up the garbage
-- Put the garbage in the trash can
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

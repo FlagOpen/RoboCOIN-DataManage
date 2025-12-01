@@ -320,11 +320,11 @@ tasks: 'Grasp the bluetooth earphone case and place it on one side of the table.
 
   Grasp the bluetooth earbud and place it on the other side of the table.'
 sub_tasks:
-- Grasp the Bluetooth earbud
-- Grasp the Bluetooth earphone  case
-- 'null'
 - Place bluetooth earbud on the right side of the table
 - Place bluetooth earphone case on the left side of the table
+- Grasp the Bluetooth earphone  case
+- Grasp the Bluetooth earbud
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -353,13 +353,13 @@ features:
 tasks: Put the wet wipes into the white platform with one hand, and place the arched
   building blocks into the white platform with the other hand.
 sub_tasks:
-- Abnormal
+- Place the arch-shaped block on the white board with the right gripper
+- Grasp the wet wipe with the left gripper
+- Place the wet wipe on the white board with the left gripper
 - End
 - Grasp the arch-shaped block with the right gripper
-- Grasp the wet wipe with the left gripper
+- Abnormal
 - 'null'
-- Place the arch-shaped block on the white board with the right gripper
-- Place the wet wipe on the white board with the left gripper
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

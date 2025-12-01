@@ -363,15 +363,15 @@ tasks: 'the left gripper pick up the black cup and place it horizontally under t
   the right gripper pick up the red cup and place it horizontally under the faucet,
   the left gripper turn on the faucet to fill the cup, and then turn off the faucet.'
 sub_tasks:
-- abnormal
-- Close the dispenser valve with the left gripper
+- Move the cup beneath the water dispenser nozzle with the right gripper
 - Close the dispenser valve with the right gripper
+- Open the dispenser valve and fill the cup with water with the right gripper
+- Close the dispenser valve with the left gripper
+- Open the dispenser valve and fill the cup with water with the left gripper
 - end
 - Move the cup beneath the water dispenser nozzle with the left gripper
-- Move the cup beneath the water dispenser nozzle with the right gripper
+- abnormal
 - 'null'
-- Open the dispenser valve and fill the cup with water with the left gripper
-- Open the dispenser valve and fill the cup with water with the right gripper
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

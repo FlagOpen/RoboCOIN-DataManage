@@ -343,14 +343,14 @@ features:
     - 2
 tasks: pick up the orange and put it into the basket.
 sub_tasks:
-- Abnormal
-- End
-- Grasp the basket with left gripper
-- Grasp the orange with right gripper
-- 'null'
 - Place the basket in the center of view with left gripper
 - Place the orange in the basket with right gripper
+- Grasp the orange with right gripper
+- Grasp the basket with left gripper
+- End
+- Abnormal
 - Static
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

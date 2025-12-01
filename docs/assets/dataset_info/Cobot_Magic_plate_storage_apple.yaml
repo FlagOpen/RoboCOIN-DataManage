@@ -319,8 +319,8 @@ features:
 tasks: grasp the apple and place it into the yellow plate.
 sub_tasks:
 - Grasp the fruit that can keep the doctor away
-- 'null'
 - Place the picked object into the yellow plate
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

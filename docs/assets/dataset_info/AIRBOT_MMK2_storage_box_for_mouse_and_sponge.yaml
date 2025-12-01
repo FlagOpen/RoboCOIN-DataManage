@@ -352,14 +352,14 @@ features:
     - 2
 tasks: Place the mouse box and the sponge in the round plate using one hand.
 sub_tasks:
-- Abnormal
-- End
-- Grasp the box with the left gripper
 - Grasp the sponge with the right gripper
-- 'null'
-- Place the box on the white plate with the left gripper
-- Place the sponge on the white plate with the right gripper
 - Static
+- Place the box on the white plate with the left gripper
+- End
+- Abnormal
+- Place the sponge on the white plate with the right gripper
+- Grasp the box with the left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

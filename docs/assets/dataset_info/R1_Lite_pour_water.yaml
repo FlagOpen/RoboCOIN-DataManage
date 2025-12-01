@@ -325,13 +325,13 @@ features:
     - 2
 tasks: pour water into two cups then put kettle down on table.
 sub_tasks:
-- 'null'
+- Pour water into the cup
+- Put the cup down on the table
+- Put down the kettle on the table
+- Pour water into another cup
 - Pick up the cup
 - Pick up the kettle
-- Pour water into another cup
-- Pour water into the cup
-- Put down the kettle on the table
-- Put the cup down on the table
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

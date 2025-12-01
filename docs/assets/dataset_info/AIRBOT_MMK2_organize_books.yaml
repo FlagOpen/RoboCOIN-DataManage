@@ -346,11 +346,11 @@ features:
     - 2
 tasks: Pick up the book on the table and put it into the bookshelf.
 sub_tasks:
-- End
-- Grasp the yellow book with the right gripper
-- 'null'
-- Place the yellow book into the front mezzanine of the bookshelf with the right gripper
 - Static
+- Grasp the yellow book with the right gripper
+- Place the yellow book into the front mezzanine of the bookshelf with the right gripper
+- End
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

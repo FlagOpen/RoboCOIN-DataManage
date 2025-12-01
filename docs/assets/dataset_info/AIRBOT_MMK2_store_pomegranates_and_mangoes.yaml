@@ -353,14 +353,14 @@ features:
 tasks: One hand throws the pomegranate into one compartment while the other hand throws
   the mango into the other compartment.
 sub_tasks:
-- End
 - Grasp a mango with the right gripper
-- Grasp a pomegranate with the left gripper
-- 'null'
-- Place the mango into the right compartment of the storage box with the right gripper
 - Place the pomegranate  into the left compartment of the storage box with the left
   gripper
+- Place the mango into the right compartment of the storage box with the right gripper
 - Static
+- End
+- Grasp a pomegranate with the left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

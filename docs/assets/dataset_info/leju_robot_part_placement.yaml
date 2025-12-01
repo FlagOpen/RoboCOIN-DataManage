@@ -427,21 +427,21 @@ features:
     - 2
 tasks: pick up part from front cabinet turn around place on part at back table.
 sub_tasks:
-- End
-- Grasp the black part with right gripper
-- Grasp the gray part with right gripper
-- Insert the large parts into the corresponding slots on the workbench.
 - Insert the small parts into the corresponding slots on the workbench.
 - Move the large parts to the workbench.
-- Move the small parts to the workbench.
-- Move to the table behind body
-- 'null'
 - Pick up the large parts from the shelf.
-- Pick up the small parts from the shelf.
-- Place the black part on the table with right gripper
-- Place the gray part on the table with right gripper
-- Return to the initial position at the shelf.
+- Grasp the black part with right gripper
+- Grasp the gray part with right gripper
+- End
 - Return to the initial position at the workbench.
+- Place the gray part on the table with right gripper
+- Place the black part on the table with right gripper
+- Move to the table behind body
+- Insert the large parts into the corresponding slots on the workbench.
+- Return to the initial position at the shelf.
+- Move the small parts to the workbench.
+- Pick up the small parts from the shelf.
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

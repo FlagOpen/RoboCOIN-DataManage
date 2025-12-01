@@ -593,13 +593,13 @@ features:
     - 2
 tasks: put the triangle bread the designated position.
 sub_tasks:
+- Grasp the pizza with right gripper
+- Static
+- Place the pizza on the table with right gripper
 - End
 - Grasp the pizza with left gripper
-- Grasp the pizza with right gripper
-- 'null'
 - Place the pizza on the table with left gripper
-- Place the pizza on the table with right gripper
-- Static
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

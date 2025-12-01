@@ -523,63 +523,63 @@ tasks: 'fill the black mug completely with NFC orange juice.
 
   pour the sprite into the white cup.'
 sub_tasks:
-- Abnormal
-- End
 - Grasp the black cup with left gripper
-- Grasp the black cup with right gripper
+- Grasp the white cup with right gripper
+- Static
+- Place the orange juice bottle on the table with left gripper
+- Lift the black cup with left gripper
+- Place the water bottle on the table with right gripper
+- Place the grey cup on the table with left gripper
+- End
+- Place the sprite bottle on the table with right gripper
+- Lift the red cup with left gripper
+- Place the cola bottle on the table with left gripper
+- Grasp the bottle with cola with right gripper
+- Grasp the bottle with sprite with left gripper
+- Pour the water from bottle to cup with right gripper
+- Place the coffee bottle on the table with right gripper
+- Grasp the bottle with orange juice with left gripper
+- Pour the red wine from bottle to cup with left gripper
+- Place the black cup in the center of view with right gripper
+- Place the transparent cup on the table with right gripper
+- Place the white cup on the table with right gripper
 - Grasp the bottle filled water with right gripper
 - Grasp the bottle with coffee with right gripper
-- Grasp the bottle with cola with right gripper
-- Grasp the bottle with orange juice with left gripper
-- Grasp the bottle with red wine with left gripper
-- Grasp the bottle with sprite with left gripper
-- Grasp the bottle with sprite with right gripper
-- Grasp the bottle with water with right gripper
-- Grasp the bottle with yuexian Milk with right gripper
-- Grasp the grey cup with left gripper
-- Grasp the red cup with left gripper
-- Grasp the transparent cup with right gripper
-- Grasp the white cup with left gripper
-- Grasp the white cup with right gripper
-- Grasp the yellow paper cup with left gripper
-- Grasp the yellow paper cup with right gripper
-- Lift the black cup with left gripper
-- Lift the grey cup with left gripper
-- Lift the grey cup with right gripper
-- Lift the red cup with left gripper
-- Lift the white cup with left gripper
-- Lift the white cup with right gripper
-- Lift the yellow paper cup with left gripper
-- Lift the yellow paper cup with right gripper
-- 'null'
-- Place the black cup in the center of view with right gripper
-- Place the black cup on the table with left gripper
-- Place the coffee bottle on the table with right gripper
-- Place the cola bottle on the table with left gripper
-- Place the cola bottle on the table with right gripper
-- Place the grey cup on the table with left gripper
-- Place the orange juice bottle on the table with left gripper
-- Place the red cup on the table with left gripper
-- Place the red wine bottle on the table with left gripper
-- Place the sprite bottle on the table with left gripper
-- Place the sprite bottle on the table with right gripper
-- Place the transparent cup on the table with right gripper
-- Place the water bottle on the table with right gripper
-- Place the white cup on the table with left gripper
-- Place the white cup on the table with right gripper
 - Place the yellow paper cup on the table with left gripper
-- Place the yellow paper cup on the table with right gripper
-- Place the yuexian Milk bottle on the table with right gripper
-- Pour the coffee from bottle to cup with right gripper
-- Pour the cola from bottle to cup with right gripper
-- Pour the orange juice from bottle to cup with left gripper
-- Pour the red wine from bottle to cup with left gripper
-- Pour the sprite from bottle to cup with left gripper
-- Pour the sprite from bottle to cup with right gripper
-- Pour the water from bottle to cup with right gripper
-- Pour the yogurt from bottle to cup with left gripper
 - Pour the yuexian Milk from bottle to cup with right gripper
-- Static
+- Grasp the bottle with red wine with left gripper
+- Grasp the black cup with right gripper
+- Place the white cup on the table with left gripper
+- Grasp the yellow paper cup with right gripper
+- Grasp the yellow paper cup with left gripper
+- Pour the orange juice from bottle to cup with left gripper
+- Grasp the bottle with water with right gripper
+- Pour the yogurt from bottle to cup with left gripper
+- Grasp the bottle with yuexian Milk with right gripper
+- Place the yellow paper cup on the table with right gripper
+- Pour the cola from bottle to cup with right gripper
+- Abnormal
+- Grasp the white cup with left gripper
+- Pour the sprite from bottle to cup with left gripper
+- Lift the grey cup with left gripper
+- Place the black cup on the table with left gripper
+- Grasp the red cup with left gripper
+- Place the red cup on the table with left gripper
+- Lift the yellow paper cup with right gripper
+- Grasp the grey cup with left gripper
+- Place the yuexian Milk bottle on the table with right gripper
+- Lift the yellow paper cup with left gripper
+- Place the sprite bottle on the table with left gripper
+- Lift the white cup with left gripper
+- Place the cola bottle on the table with right gripper
+- Pour the sprite from bottle to cup with right gripper
+- Place the red wine bottle on the table with left gripper
+- Lift the white cup with right gripper
+- Grasp the transparent cup with right gripper
+- Grasp the bottle with sprite with right gripper
+- Pour the coffee from bottle to cup with right gripper
+- Lift the grey cup with right gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

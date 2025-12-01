@@ -320,14 +320,14 @@ tasks: grasp the small cube and place it into the yellow plate.
 sub_tasks:
 - Anomaly
 - End
-- Grasp the mineral water bottle
-- Grasp the small cube on the table
-- 'null'
-- Pick up the water bottle
+- Pour water into the teacup
+- Pour water into the cup
 - Place it into the yellow plate
 - Place the water bottle
-- Pour water into the cup
-- Pour water into the teacup
+- Grasp the mineral water bottle
+- Grasp the small cube on the table
+- Pick up the water bottle
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -321,17 +321,17 @@ sub_tasks:
 - Abnormal
 - End
 - Grasp a new trash bag  with the right gripper
-- Grasp the trash bag with the right gripper
-- 'null'
-- Pick up a new trash bag
+- put the new garbage bag on the trash can
+- Place the trash can ring on the trash can with the right gripper
 - Pick up the trash bag
-- Place the trash bag on the floor
+- Grasp the trash bag with the right gripper
+- place the trash can ring on the floor with  right gripper
 - Place the trash bag on the floor with the right gripper
 - Place the trash can ring on the floor
-- place the trash can ring on the floor with  right gripper
+- Pick up a new trash bag
 - Place the trash can ring on the trash can
-- Place the trash can ring on the trash can with the right gripper
-- put the new garbage bag on the trash can
+- Place the trash bag on the floor
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

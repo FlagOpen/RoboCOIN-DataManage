@@ -273,12 +273,12 @@ features:
     - 2
 tasks: pick up the rabbit doll from the table and place it on the plate.
 sub_tasks:
-- Abnormal
-- End
-- Grasp the rabbit doll  with the left gripper
-- 'null'
 - Place the rabbit doll  into the plate with the left gripper
+- Grasp the rabbit doll  with the left gripper
+- End
 - Static
+- Abnormal
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

@@ -355,18 +355,18 @@ features:
     - 2
 tasks: bake bread arrange fruits eggs pour water from thermos.
 sub_tasks:
-- abnormal
-- 'null'
-- Pick up the bread slice
-- Pick up the egg
-- Pick up the kettle
-- Pour water into a cup
-- Put the baked bread on a plate
-- Put the bread slices in the toaster
 - Put the egg in the bowl
-- Put the fruit on a plate
+- Put the bread slices in the toaster
 - Put the kettle back
+- Pour water into a cup
+- abnormal
+- Put the baked bread on a plate
 - Use a bread toaster
+- Put the fruit on a plate
+- Pick up the kettle
+- Pick up the egg
+- Pick up the bread slice
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

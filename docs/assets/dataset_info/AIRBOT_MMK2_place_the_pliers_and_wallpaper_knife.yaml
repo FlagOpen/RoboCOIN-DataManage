@@ -353,14 +353,14 @@ features:
 tasks: Pick up the pliers with one hand and place them in the white lid, then pick
   up the wallpaper knife with your other hand and place it in the white lid.
 sub_tasks:
-- Abnormal
+- Static
 - End
+- Place the utility knife into white basket  with the right gripper
+- Place the plier into white basket with the left gripper
+- Abnormal
 - Grasp the plier with the left gripper
 - Grasp the utility knife with the right gripper
 - 'null'
-- Place the plier into white basket with the left gripper
-- Place the utility knife into white basket  with the right gripper
-- Static
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

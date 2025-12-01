@@ -343,11 +343,11 @@ features:
 tasks: pick up the cube block and place it into the cube groove.
 sub_tasks:
 - End
-- Grasp the cube
-- 'null'
 - Pick up the cube
+- Grasp the cube
 - Place cube into the cube recess
 - Place cube into the cube-shaped recess
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

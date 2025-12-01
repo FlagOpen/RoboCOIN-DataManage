@@ -306,19 +306,19 @@ features:
     - 2
 tasks: open close inner and outer curtains on both sides.
 sub_tasks:
-- abnormal
-- Close the inner curtains on both sides
-- Close the left inner curtain with the left gripper
-- Close the outeouter curtains on both sides with the both gripper
-- Close the outer curtains on both sides
-- Close the right inner curtain with the right gripper
-- End
-- 'null'
-- Pull the inner curtains open on both sides
-- Pull the inner curtains open on left sides with the left gripper
-- Pull the inner curtains open on right sides with the right gripper
 - Pull the outeouter curtains open on both sides with the both gripper
 - Pull the outer curtains open on both sides
+- End
+- Pull the inner curtains open on both sides
+- Close the outer curtains on both sides
+- Pull the inner curtains open on left sides with the left gripper
+- Close the right inner curtain with the right gripper
+- Pull the inner curtains open on right sides with the right gripper
+- Close the left inner curtain with the left gripper
+- Close the outeouter curtains on both sides with the both gripper
+- Close the inner curtains on both sides
+- abnormal
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

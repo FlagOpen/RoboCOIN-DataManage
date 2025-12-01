@@ -342,22 +342,22 @@ tasks: 'One arm begins to build blocks.
 
   One arm begins to build blocks.'
 sub_tasks:
-- abnormal
-- End
-- Grasp the arch-shaped block with the left gripper
-- Grasp the arch-shaped block with the right gripper
-- Grasp the box-shaped block with the left gripper
-- Grasp the box-shaped block with the right gripper
-- Grasp the triangle-shaped block with the left gripper
-- Grasp the triangle-shaped block with the right gripper
-- 'null'
-- Place the arch-shaped block in the center of view with the left gripper
-- Place the arch-shaped block in the center of view with the right gripper
-- Place the box-shaped block onto the arch-shaped block with the left gripper
 - Place the box-shaped block onto the arch-shaped block with the right gripper
+- End
+- Grasp the arch-shaped block with the right gripper
+- Grasp the arch-shaped block with the left gripper
+- Grasp the box-shaped block with the right gripper
+- Place the box-shaped block onto the arch-shaped block with the left gripper
+- Place the triangle-shaped block onto the box-shaped block with the right gripper
+- Place the arch-shaped block in the center of view with the right gripper
+- Grasp the box-shaped block with the left gripper
+- Grasp the triangle-shaped block with the right gripper
 - Place the triangle-shaped block onto the box-shaped block with the left grippe
 - Place the triangle-shaped block onto the box-shaped block with the left gripper
-- Place the triangle-shaped block onto the box-shaped block with the right gripper
+- Grasp the triangle-shaped block with the left gripper
+- abnormal
+- Place the arch-shaped block in the center of view with the left gripper
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

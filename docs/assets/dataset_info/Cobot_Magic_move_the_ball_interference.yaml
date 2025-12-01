@@ -344,8 +344,8 @@ tasks: pick up the ball next to the two cube blocks and place them in another po
   on the table.
 sub_tasks:
 - Grasp the spherical object on the right side
-- 'null'
 - Place the picked object on the left side of the table
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

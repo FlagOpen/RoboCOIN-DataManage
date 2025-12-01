@@ -327,18 +327,18 @@ features:
     - 2
 tasks: pour toilet cleaner brush toilet flush then close lid.
 sub_tasks:
-- Abnormal
-- Close the toilet lid
+- Use the left hand to lift the toilet lid slightly
+- Pour in the cleaning agent
 - End
 - Flush the toilet
-- 'null'
-- Open the toilet lid
 - Place the cleaning agent on the floor
-- Pour in the cleaning agent
 - Put the toilet brush back
+- Close the toilet lid
+- Abnormal
+- Open the toilet lid
 - Scrub the toilet bowl
-- Use the left hand to lift the toilet lid slightly
 - Use the right hand to fully open the toilet lid
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated

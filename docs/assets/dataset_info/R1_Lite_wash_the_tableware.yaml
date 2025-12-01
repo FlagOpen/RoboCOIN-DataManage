@@ -336,47 +336,47 @@ features:
     - 2
 tasks: turn on faucet put tableware in sink rinse then back.
 sub_tasks:
-- Abnormal
-- Close the dispenser valve with right gripper
+- Grasp yellow bowl with right gripper
+- Pick up the bowl
+- Open the dispenser valve with right gripper
 - End
+- Rinse the chopsticks
+- Put the chopsticks into the sink
+- Place the chopsticks on the table
+- Put a spoon back to the table from the sink
+- Put a bowl back to the table from the sink
+- Place pink bowl into the sink with right gripper
+- Rinse the plate
+- Wait for the water to rinse the bowl
+- Place a chopstick into the sink with right gripper
+- Put  a bowl into the sink
+- Rinse the bowl
+- Place a chopstick on the bowl with right gripper
+- Place the plate on the table
+- Pour the water from the yellow bowl into the sink with right gripper
+- Place the bowl on the table
+- Pick up the chopsticks
+- Put the chopsticks back to the table from the sink
+- Put a spoon into the sink
+- Pour the water from the pink bowl into the sink with right gripper
+- Place the chopsticks on the bowl
+- Abnormal
+- Pick up the spoon
+- Rinse the spoon
+- Place yellow bowl on the table with right gripper
+- Place yellow bowl into the sink with right gripper
+- Place the spoon on the plate
+- Put a plate back to the table from the sink
+- Turn off the faucet
+- Pick up the plate
+- Place the spoon on the bowl
+- Close the dispenser valve with right gripper
 - Grasp a chopstick with right gripper
 - Grasp pink bowl with right gripper
-- Grasp yellow bowl with right gripper
-- 'null'
-- Open the dispenser valve with right gripper
-- Pick up the bowl
-- Pick up the chopsticks
-- Pick up the plate
-- Pick up the spoon
-- Place a chopstick into the sink with right gripper
-- Place a chopstick on the bowl with right gripper
-- Place pink bowl into the sink with right gripper
-- Place pink bowl on the table with right gripper
-- Place the bowl on the table
-- Place the chopsticks on the bowl
-- Place the chopsticks on the table
-- Place the plate on the table
-- Place the spoon on the bowl
-- Place the spoon on the plate
-- Place yellow bowl into the sink with right gripper
-- Place yellow bowl on the table with right gripper
-- Pour the water from the pink bowl into the sink with right gripper
-- Pour the water from the yellow bowl into the sink with right gripper
-- Put  a bowl into the sink
-- Put a bowl back to the table from the sink
-- Put a plate back to the table from the sink
-- Put a plate into the sink
-- Put a spoon back to the table from the sink
-- Put a spoon into the sink
-- Put the chopsticks back to the table from the sink
-- Put the chopsticks into the sink
-- Rinse the bowl
-- Rinse the chopsticks
-- Rinse the plate
-- Rinse the spoon
-- Turn off the faucet
 - Turn on the faucet
-- Wait for the water to rinse the bowl
+- Place pink bowl on the table with right gripper
+- Put a plate into the sink
+- 'null'
 annotations:
   subtask_annotation: auto_generated
   scene_annotation: auto_generated
