@@ -7,7 +7,6 @@
 
 import RobotAliasManager from './modules/robot-aliases.js';
 
-<<<<<<< HEAD
 const HTML_ESCAPE_MAP = {
     '&': '&amp;',
     '<': '&lt;',
@@ -22,8 +21,6 @@ function escapeHtml(value) {
     }
     return String(value).replace(/[&<>"']/g, char => HTML_ESCAPE_MAP[char] || char);
 }
-=======
->>>>>>> backup/main
 const Templates = {
     /**
      * Filter Group Templates
@@ -42,7 +39,6 @@ const Templates = {
     },
 
     /**
-<<<<<<< HEAD
      * Get display-friendly dataset name (mapped) with HTML escaping.
      * @param {Dataset} ds
      * @returns {string}
@@ -53,8 +49,6 @@ const Templates = {
     },
 
     /**
-=======
->>>>>>> backup/main
      * Build flat filter group HTML
      * @param {string} key - Filter key
      * @param {FilterGroup} group - Filter group
@@ -175,19 +169,12 @@ const Templates = {
      * @returns {string} HTML string
      */
     buildVideoCard(ds, formatMetaTags, listDatasets) {
-<<<<<<< HEAD
         const displayName = this.getDatasetDisplayName(ds);
         const hoverOriginalLabel = this.buildDatasetOriginalLabel(ds.name);
         return `
             <div class="video-thumbnail" data-video-url="${ds.video_url}">
                 <img src="${ds.thumbnail_url}"
                      alt="${displayName}"
-=======
-        return `
-            <div class="video-thumbnail" data-video-url="${ds.video_url}">
-                <img src="${ds.thumbnail_url}"
-                     alt="${ds.name}"
->>>>>>> backup/main
                      class="thumbnail-image"
                      loading="lazy"
                      onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
@@ -206,12 +193,8 @@ const Templates = {
             <div class="video-hover-overlay">
                 <div class="video-hover-content">
                     <div class="hover-click-hint">(Click title to see more)</div>
-<<<<<<< HEAD
                     <div class="video-hover-title" data-path="${ds.path}">${displayName}</div>
                     ${hoverOriginalLabel}
-=======
-                    <div class="video-hover-title" data-path="${ds.path}">${ds.name}</div>
->>>>>>> backup/main
                     <div class="video-hover-details">${this.buildHoverDetailsHTML(ds)}</div>
                 </div>
             </div>
@@ -240,17 +223,11 @@ const Templates = {
             html += `<strong>Robot:</strong> ${displayRobots.join(', ')}<br>`;
         }
 
-<<<<<<< HEAD
         // if (ds.robot_type) {
         //     html += `<strong>Robot Type:</strong> ${ds.robot_type}<br>`;
         // NOTE: This is the ORIGINAL name in the hub, not mapped name. So we
         // no longer show it anymore, thus annotated.
         // }
-=======
-        if (ds.robot_type) {
-            html += `<strong>Robot Type:</strong> ${ds.robot_type}<br>`;
-        }
->>>>>>> backup/main
 
         if (ds.endEffector) {
             html += `<strong>End Effector:</strong> ${ds.endEffector}<br>`;
@@ -260,15 +237,9 @@ const Templates = {
             html += `<strong>Scene:</strong> ${ds.scenes.join(', ')}<br>`;
         }
 
-<<<<<<< HEAD
-        if (ds.platformHeight !== undefined) {
-            html += `<strong>Platform Height:</strong> ${ds.platformHeight} cm<br>`;
-        }
-=======
         // if (ds.platformHeight !== undefined) {
         //     html += `<strong>Platform Height:</strong> ${ds.platformHeight} cm<br>`;
         // }
->>>>>>> backup/main
 
         if (ds.datasetSize) {
             html += `<strong>Dataset Size:</strong> ${ds.datasetSize}<br>`;
@@ -377,26 +348,9 @@ const Templates = {
      * Detail Modal Templates
      */
     buildDetailModal(dataset) {
-<<<<<<< HEAD
-        const scenesText = Array.isArray(dataset.scenes) && dataset.scenes.length > 0
-            ? dataset.scenes.join(', ')
-            : 'N/A';
-
-        const actionsText = Array.isArray(dataset.actions) && dataset.actions.length > 0
-            ? dataset.actions.join(', ')
-            : 'N/A';
-
-        const sceneTypeText = Array.isArray(dataset.scene_type) && dataset.scene_type.length > 0
-            ? dataset.scene_type.join(', ')
-            : 'N/A';
-
-        const atomicActionsText = Array.isArray(dataset.atomic_actions) && dataset.atomic_actions.length > 0
-            ? dataset.atomic_actions.join(', ')
-            : 'N/A';
 
         const datasetDisplayName = this.getDatasetDisplayName(dataset);
         const originalNameLabel = this.buildDatasetOriginalLabel(dataset.name);
-=======
         const sceneTypeSource = Array.isArray(dataset.scenes) && dataset.scenes.length > 0
             ? dataset.scenes
             : (Array.isArray(dataset.raw?.scene_type) ? dataset.raw.scene_type : []);
@@ -411,7 +365,6 @@ const Templates = {
         const totalFramesNumber = typeof totalFramesValue === 'number' ? totalFramesValue : Number(totalFramesValue);
         const hasFrameCount = totalFramesValue !== undefined && totalFramesValue !== null && !Number.isNaN(totalFramesNumber);
         const totalFramesText = hasFrameCount ? `${totalFramesNumber.toLocaleString()} frames` : 'N/A';
->>>>>>> backup/main
 
         let objectsHTML = 'N/A';
         if (Array.isArray(dataset.objects) && dataset.objects.length > 0) {
@@ -435,11 +388,7 @@ const Templates = {
                 </div>
                 <div class="detail-modal-body">
                     ${this.buildDetailVideo(dataset.video_url)}
-<<<<<<< HEAD
-                    ${this.buildDetailInfoGrid(dataset, scenesText, actionsText, sceneTypeText, atomicActionsText, objectsHTML)}
-=======
                     ${this.buildDetailInfoGrid(dataset, sceneTypeText, atomicActionsText, objectsHTML, totalFramesText)}
->>>>>>> backup/main
                 </div>
             </div>
         `;
@@ -456,20 +405,12 @@ const Templates = {
         `;
     },
 
-<<<<<<< HEAD
     buildDetailInfoGrid(dataset, scenesText, actionsText, sceneTypeText, atomicActionsText, objectsHTML) {
         const datasetDisplayName = this.getDatasetDisplayName(dataset);
         let robotDisplay = 'N/A';
         if (dataset.robot || dataset.robot_type || dataset.device_model) {
             const robots = [];
             if (dataset.robot) {
-=======
-    buildDetailInfoGrid(dataset, sceneTypeText, atomicActionsText, objectsHTML, totalFramesText) {
-        let robotDisplay = 'N/A';
-        if (dataset.robot || dataset.robot_type || dataset.device_model) {
-            const robots = [];
-        if (dataset.robot) {
->>>>>>> backup/main
                 const robotList = Array.isArray(dataset.robot) ? dataset.robot : [dataset.robot];
                 robots.push(...robotList);
             }
@@ -547,20 +488,12 @@ const Templates = {
                 <!-- Basic Information Section -->
                 <div class="detail-info-section">
                     <h4 class="detail-section-title">Basic Information</h4>
-<<<<<<< HEAD
                     ${this.buildDetailInfoItem('Dataset Name', datasetDisplayName)}
-=======
-                ${this.buildDetailInfoItem('Dataset Name', dataset.name)}
->>>>>>> backup/main
                     ${this.buildDetailInfoItem('Dataset UUID', dataset.dataset_uuid || dataset.raw?.dataset_uuid || 'N/A')}
                     ${this.buildDetailInfoItem('Task Description', dataset.tasks || dataset.raw?.tasks || dataset.description || 'N/A')}
                 ${this.buildDetailInfoItem('Device Model (Robot)', robotDisplay)}
                     ${this.buildDetailInfoItem('Dataset Size', dataset.datasetSize || dataset.raw?.dataset_size || 'N/A')}
-<<<<<<< HEAD
-                    ${this.buildDetailInfoItem('Frame Range', dataset.frame_range || dataset.raw?.frame_range || 'N/A')}
-=======
                     ${this.buildDetailInfoItem('Total Frames', totalFramesText)}
->>>>>>> backup/main
                     ${this.buildDetailInfoItem('License', dataset.license || dataset.raw?.license || 'N/A')}
                     ${this.buildDetailInfoItem('Language', Array.isArray(dataset.language) ? dataset.language.join(', ') : (Array.isArray(dataset.raw?.language) ? dataset.raw.language.join(', ') : 'N/A'))}
                     ${this.buildDetailInfoItem('Task Categories', Array.isArray(dataset.task_categories) ? dataset.task_categories.join(', ') : (Array.isArray(dataset.raw?.task_categories) ? dataset.raw.task_categories.join(', ') : 'N/A'))}
@@ -571,18 +504,10 @@ const Templates = {
                 <div class="detail-info-section">
                     <h4 class="detail-section-title">Technical Details</h4>
                     ${this.buildDetailInfoItem('End Effector Type', dataset.endEffector || dataset.end_effector_type || dataset.raw?.end_effector_type || 'N/A')}
-<<<<<<< HEAD
-                    ${this.buildDetailInfoItem('Operation Platform Height', dataset.platformHeight !== undefined ? `${dataset.platformHeight} cm` : (dataset.raw?.operation_platform_height !== undefined ? `${dataset.raw.operation_platform_height} cm` : 'N/A'))}
-                    ${this.buildDetailInfoItem('Scene Type', sceneTypeText)}
-                    ${this.buildDetailInfoItem('Atomic Actions', atomicActionsText)}
-                    ${this.buildDetailInfoItem('Codebase Version', dataset.codebase_version || dataset.raw?.codebase_version || 'N/A')}
-                    ${this.buildDetailInfoItem('Depth Enabled', dataset.depth_enabled !== undefined ? dataset.depth_enabled : (dataset.raw?.depth_enabled !== undefined ? dataset.raw.depth_enabled : 'N/A'))}
-=======
                     ${/* ${this.buildDetailInfoItem('Operation Platform Height', dataset.platformHeight !== undefined ? `${dataset.platformHeight} cm` : (dataset.raw?.operation_platform_height !== undefined ? `${dataset.raw.operation_platform_height} cm` : 'N/A'))} */ ''}
                     ${this.buildDetailInfoItem('Scene Type', sceneTypeText)}
                     ${this.buildDetailInfoItem('Atomic Actions', atomicActionsText)}
                     ${this.buildDetailInfoItem('Codebase Version', dataset.codebase_version || dataset.raw?.codebase_version || 'N/A')}
->>>>>>> backup/main
                 </div>
 
                 <!-- Statistics Section -->
@@ -676,11 +601,7 @@ const Templates = {
             ? dataset.actions.slice(0, 2).join(', ') + (dataset.actions.length > 2 ? '...' : '')
             : 'N/A';
 
-<<<<<<< HEAD
         const previewDisplayName = this.getDatasetDisplayName(dataset);
-
-=======
->>>>>>> backup/main
         let robotText = 'N/A';
         if (dataset.robot) {
             const robots = Array.isArray(dataset.robot) ? dataset.robot : [dataset.robot];
