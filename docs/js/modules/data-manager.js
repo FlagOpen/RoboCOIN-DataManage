@@ -6,7 +6,10 @@
 /// <reference path="../types.js" />
 
 import ConfigManager from './config.js';
+<<<<<<< HEAD
 import RobotAliasManager from './robot-aliases.js';
+=======
+>>>>>>> backup/main
 
 /**
  * Data Manager Class
@@ -22,9 +25,12 @@ export class DataManager {
         
         /** @type {Object} */
         this.config = ConfigManager.getConfig();
+<<<<<<< HEAD
 
         /** @type {string[]|null} */
         this._datasetAliasKeys = null;
+=======
+>>>>>>> backup/main
     }
     
     /**
@@ -128,6 +134,7 @@ export class DataManager {
         // 优先使用 raw.raw 部分的数据（如果存在），否则使用顶层数据
         // 这是因为很多数据集的顶层字段为空，但 raw 部分有正确数据
         const rawData = raw.raw || {};
+<<<<<<< HEAD
 
         const originalName = path || raw.dataset_name || '';
         const displayName = this.mapDatasetDisplayName(originalName);
@@ -136,6 +143,12 @@ export class DataManager {
             path: path,
             name: originalName,
             displayName,
+=======
+        
+        return {
+            path: path,
+            name: path || raw.dataset_name,
+>>>>>>> backup/main
             video_url: `${this.config.paths.videos}/${path}.mp4`,
             // Thumbnails are provided directly from assets/thumbnails directory
             // No automatic thumbnail generation - thumbnails must exist in assets/thumbnails/${path}.jpg
@@ -214,6 +227,7 @@ export class DataManager {
             }
         };
     }
+<<<<<<< HEAD
 
     /**
      * Get alias keys sorted by length (longest first) for dataset name matching.
@@ -248,6 +262,8 @@ export class DataManager {
         }
         return datasetName;
     }
+=======
+>>>>>>> backup/main
     
     /**
      * Load datasets from YAML files (fallback)
@@ -390,3 +406,7 @@ export class DataManager {
 
 // Export singleton instance
 export default new DataManager();
+<<<<<<< HEAD
+=======
+
+>>>>>>> backup/main

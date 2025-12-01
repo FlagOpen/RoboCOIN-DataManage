@@ -5,6 +5,9 @@
     <meta charset="utf-8" />
     <title>RoboCOIN-DataManager</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- 
         Standard Asset Structure:
@@ -213,6 +216,69 @@
             } else {
                 addListeners();
             }
+        })();
+    </script>
+    <script>
+        (function () {
+            var STORAGE_KEY = 'robocoin-docs-etag';
+            var POLL_INTERVAL_MS = 5 * 60 * 1000;
+            var fetchPath = window.location.pathname + window.location.search;
+            if (!fetchPath || fetchPath === '') {
+                fetchPath = '/';
+            }
+
+            function getStorage() {
+                try {
+                    return window.localStorage;
+                } catch (error) {
+                    console.warn('Storage access blocked:', error);
+                    return null;
+                }
+            }
+
+            async function fetchVersion() {
+                if (typeof fetch !== 'function') {
+                    return null;
+                }
+                try {
+                    var response = await fetch(fetchPath, {
+                        method: 'HEAD',
+                        cache: 'no-store',
+                    });
+                    if (!response.ok) {
+                        return null;
+                    }
+                    return response.headers.get('etag') || response.headers.get('last-modified');
+                } catch (error) {
+                    console.warn('Update monitor failed:', error);
+                    return null;
+                }
+            }
+
+            async function checkVersion() {
+                var remoteTag = await fetchVersion();
+                if (!remoteTag) {
+                    return;
+                }
+                var storage = getStorage();
+                if (!storage) {
+                    return;
+                }
+                try {
+                    var storedTag = storage.getItem(STORAGE_KEY);
+                    if (storedTag && storedTag !== remoteTag) {
+                        storage.setItem(STORAGE_KEY, remoteTag);
+                        window.location.reload();
+                        return;
+                    }
+                    storage.setItem(STORAGE_KEY, remoteTag);
+                } catch (error) {
+                    console.warn('Update monitor storage fallback:', error);
+                }
+            }
+
+            checkVersion();
+            setInterval(checkVersion, POLL_INTERVAL_MS);
         })();
     </script>
 </body>

@@ -122,6 +122,7 @@
     white-space: normal;
 }
 
+<<<<<<< HEAD
 .detail-modal-title-group {
     display: flex;
     flex-direction: column;
@@ -140,6 +141,8 @@
     white-space: normal;
 }
 
+=======
+>>>>>>> backup/main
 .detail-modal-close {
     background: none;
     border: none;

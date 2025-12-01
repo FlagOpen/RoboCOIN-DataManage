@@ -13,8 +13,12 @@
 /**
  * @typedef {Object} Dataset
  * @property {string} path - Dataset path identifier
+<<<<<<< HEAD
  * @property {string} name - Dataset original name (hub identifier)
  * @property {string} displayName - Dataset display name (mapped)
+=======
+ * @property {string} name - Dataset display name
+>>>>>>> backup/main
  * @property {string} video_url - URL to video file
  * @property {string} thumbnail_url - URL to thumbnail image
  * @property {string} description - Task description
@@ -80,3 +84,7 @@
 
 // Export empty object to make this a module
 export {};
+<<<<<<< HEAD
+=======
+
+>>>>>>> backup/main
