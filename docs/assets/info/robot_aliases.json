@@ -1,52 +1,52 @@
 {
   "G1edu-u3": {
-    "common_name": "Unitree G1",
-    "aliases": ["宇树", "G1", "Unitree", "Unitree_G1", "u3","g1edu", "gedu", 
+    "common_name": "Unitree_G1edu_u3",
+    "aliases": ["宇树", "G1", "Unitree", "Unitree_G1", "u3","g1edu", "edu", 
     "g1u3", "宇树g1", "unitreeg1",  "g1eduu3", "yushu", "yushug1"]
   },
   "RMC-AIDA-L": {
-    "common_name": "RealMan", 
+    "common_name": "Realman_RMC_AIDA_L", 
     "aliases": ["瑞尔曼", "ADIA", "RealMan", "REALMAN", "RMC", 
     "aida", "aidal","rmcaida",
     "realman", "rmc", "adial", "adialrmc","realmanrmc","realmanrmcaida", "ruierman", "睿尔曼",
     "rs", "rs01", "rs02", "rs-01", "rs-02"]
   },
   "AIRBOT_MMK2": {
-    "common_name": "Discover MMK",
+    "common_name": "Airbot_MMK2",
     "aliases": ["AIRBOT", "MMK2", "mmk", "AIRBOT_MMK2", "air", "airbotmmk", "airbot2",
     "discover", "mmk2", "mmk2airbot", "discovermmk2", "discovermmk2airbot","求知"]
   },
   "AgiBot-g1": {
-    "common_name": "AgiBot G1",
+    "common_name": "Agibot_G1",
     "aliases": ["AgiBot", "AGIBOT", "agi","agibotg1", "agig1", "智元", "zhiyuan", "agibot",
     "agi", "a2d", "a2-d"]
   },
   "Cobot_Magic": {
-    "common_name": "Cobot Magic", 
+    "common_name": "Agilex_Cobot_Magic", 
     "aliases": ["Cobot", "Magic","mag", "cobotmagic", 
     "songling", "agilex", "agile", "松灵", "aloha"]
   },
   "R1_Lite": {
-    "common_name": "R1 Lite",
+    "common_name": "Galaxea_R1_Lite",
     "aliases": ["R1", "Lite","r1lite", "xinghaitu", "xinhaitu", "galaxea", "星海图"]
   },
   "Split_aloha": {
-    "common_name": "Aloha",
+    "common_name": "Agilex_Split_ALOHA",
     "aliases": ["Aloha", "Split","splitaloha", 
     "songling", "agilex", "agile", "松灵", "aloha"]
   },
   "Tianqin_A2": {
-    "common_name": "Tianqin A2",
+    "common_name": "Tianqing_A2",
     "aliases": ["Tianqin", "A2", "TQ-A2", "tq","tqa2","tianqina2","ruantong","软通",
     "ruantongtianqin", "软通天擎", "天擎", "tianqing"]
   },
   "alpha_bot_2": {
-    "common_name": "Alpha Bot",
+    "common_name": "AI²_Alphabot_2",
     "aliases": ["Alpha", "Bot2","AlphaBot", "alp", "bot","alpha2",
     "zhipingfang", "zhipinfang", "智平方"]
   },
   "leju_robot": {
-    "common_name": "Leju",
+    "common_name": "Leju_Kuavo_4",
     "aliases": ["Leju","LEJU", "robot", "lejurobot",
     "乐聚",
     "kuavo", "夸父", "kuafu"]

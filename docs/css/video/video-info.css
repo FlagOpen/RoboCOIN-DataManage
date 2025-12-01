@@ -28,7 +28,8 @@
     margin: 0 0 0.75rem 0;
     color: var(--color-text-primary);
     word-break: break-word;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
+    hyphens: auto;
     cursor: pointer;
     transition: color 0.2s ease, text-decoration 0.2s ease;
 }

@@ -54,7 +54,8 @@
     margin: 0 0 0.5rem 0; /* Add top margin to avoid overlapping with hint text */
     color: #000000;
     word-break: break-word;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
+    hyphens: auto;
 }
 
 .video-hover-title:hover {
