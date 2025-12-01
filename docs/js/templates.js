@@ -7,6 +7,20 @@
 
 import RobotAliasManager from './modules/robot-aliases.js';
 
+const HTML_ESCAPE_MAP = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+};
+
+function escapeHtml(value) {
+    if (value === null || value === undefined) {
+        return '';
+    }
+    return String(value).replace(/[&<>"']/g, char => HTML_ESCAPE_MAP[char] || char);
+}
 const Templates = {
     /**
      * Filter Group Templates
@@ -22,6 +36,16 @@ const Templates = {
             return RobotAliasManager.getDisplayName(robotId);
         }
         return robotId;
+    },
+
+    /**
+     * Get display-friendly dataset name (mapped) with HTML escaping.
+     * @param {Dataset} ds
+     * @returns {string}
+     */
+    getDatasetDisplayName(ds) {
+        const nameValue = (ds && (ds.displayName || ds.name)) || '';
+        return escapeHtml(nameValue);
     },
 
     /**
@@ -145,10 +169,12 @@ const Templates = {
      * @returns {string} HTML string
      */
     buildVideoCard(ds, formatMetaTags, listDatasets) {
+        const displayName = this.getDatasetDisplayName(ds);
+        const hoverOriginalLabel = this.buildDatasetOriginalLabel(ds.name);
         return `
             <div class="video-thumbnail" data-video-url="${ds.video_url}">
                 <img src="${ds.thumbnail_url}"
-                     alt="${ds.name}"
+                     alt="${displayName}"
                      class="thumbnail-image"
                      loading="lazy"
                      onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
@@ -161,13 +187,14 @@ const Templates = {
                 </button>
             </div>
             <div class="video-info">
-                <div class="video-title">${ds.name}</div>
+                <div class="video-title">${displayName}</div>
                 <div class="video-tags">${formatMetaTags(ds)}</div>
             </div>
             <div class="video-hover-overlay">
                 <div class="video-hover-content">
                     <div class="hover-click-hint">(Click title to see more)</div>
-                    <div class="video-hover-title" data-path="${ds.path}">${ds.name}</div>
+                    <div class="video-hover-title" data-path="${ds.path}">${displayName}</div>
+                    ${hoverOriginalLabel}
                     <div class="video-hover-details">${this.buildHoverDetailsHTML(ds)}</div>
                 </div>
             </div>
@@ -196,9 +223,11 @@ const Templates = {
             html += `<strong>Robot:</strong> ${displayRobots.join(', ')}<br>`;
         }
 
-        if (ds.robot_type) {
-            html += `<strong>Robot Type:</strong> ${ds.robot_type}<br>`;
-        }
+        // if (ds.robot_type) {
+        //     html += `<strong>Robot Type:</strong> ${ds.robot_type}<br>`;
+        // NOTE: This is the ORIGINAL name in the hub, not mapped name. So we
+        // no longer show it anymore, thus annotated.
+        // }
 
         if (ds.endEffector) {
             html += `<strong>End Effector:</strong> ${ds.endEffector}<br>`;
@@ -269,6 +298,16 @@ const Templates = {
         return html;
     },
 
+    /**
+     * Create the small original-name label used in modals and overlays.
+     * @param {string} originalName
+     * @returns {string}
+     */
+    buildDatasetOriginalLabel(originalName) {
+        if (!originalName) return '';
+        return `<div class="dataset-original-name">Dataset Name In Hub: ${escapeHtml(originalName)}</div>`;
+    },
+
     buildHoverInfoGroup(label, content, useTags = true) {
         return `
             <div class="hover-info-group">
@@ -297,8 +336,9 @@ const Templates = {
 
 
     buildSelectionItem(ds) {
+        const displayName = this.getDatasetDisplayName(ds);
         return `
-            <div class="selection-item-name">${ds.name}</div>
+            <div class="selection-item-name">${displayName}</div>
             <button class="btn-detail" data-path="${ds.path}" title="View details">...</button>
             <button class="btn-remove" data-path="${ds.path}">×</button>
         `;
@@ -324,6 +364,9 @@ const Templates = {
             ? dataset.atomic_actions.join(', ')
             : 'N/A';
 
+        const datasetDisplayName = this.getDatasetDisplayName(dataset);
+        const originalNameLabel = this.buildDatasetOriginalLabel(dataset.name);
+
         let objectsHTML = 'N/A';
         if (Array.isArray(dataset.objects) && dataset.objects.length > 0) {
             objectsHTML = dataset.objects.map(obj => {
@@ -338,7 +381,10 @@ const Templates = {
         return `
             <div class="detail-modal">
                 <div class="detail-modal-header">
-                    <h3 class="detail-modal-title">${dataset.name}</h3>
+                    <div class="detail-modal-title-group">
+                        <h3 class="detail-modal-title">${datasetDisplayName}</h3>
+                        ${originalNameLabel}
+                    </div>
                     <button class="detail-modal-close">×</button>
                 </div>
                 <div class="detail-modal-body">
@@ -361,10 +407,11 @@ const Templates = {
     },
 
     buildDetailInfoGrid(dataset, scenesText, actionsText, sceneTypeText, atomicActionsText, objectsHTML) {
+        const datasetDisplayName = this.getDatasetDisplayName(dataset);
         let robotDisplay = 'N/A';
         if (dataset.robot || dataset.robot_type || dataset.device_model) {
             const robots = [];
-        if (dataset.robot) {
+            if (dataset.robot) {
                 const robotList = Array.isArray(dataset.robot) ? dataset.robot : [dataset.robot];
                 robots.push(...robotList);
             }
@@ -442,8 +489,7 @@ const Templates = {
                 <!-- Basic Information Section -->
                 <div class="detail-info-section">
                     <h4 class="detail-section-title">Basic Information</h4>
-                ${this.buildDetailInfoItem('Dataset Path', dataset.path)}
-                ${this.buildDetailInfoItem('Dataset Name', dataset.name)}
+                    ${this.buildDetailInfoItem('Dataset Name', datasetDisplayName)}
                     ${this.buildDetailInfoItem('Dataset UUID', dataset.dataset_uuid || dataset.raw?.dataset_uuid || 'N/A')}
                     ${this.buildDetailInfoItem('Task Description', dataset.tasks || dataset.raw?.tasks || dataset.description || 'N/A')}
                 ${this.buildDetailInfoItem('Device Model (Robot)', robotDisplay)}
@@ -557,6 +603,8 @@ const Templates = {
             ? dataset.actions.slice(0, 2).join(', ') + (dataset.actions.length > 2 ? '...' : '')
             : 'N/A';
 
+        const previewDisplayName = this.getDatasetDisplayName(dataset);
+
         let robotText = 'N/A';
         if (dataset.robot) {
             const robots = Array.isArray(dataset.robot) ? dataset.robot : [dataset.robot];
@@ -569,7 +617,7 @@ const Templates = {
                 <video src="${dataset.video_url}" autoplay loop muted preload="auto"></video>
             </div>
             <div class="hover-preview-info">
-                <div class="hover-preview-title">${dataset.name}</div>
+                <div class="hover-preview-title">${previewDisplayName}</div>
                 <div class="hover-preview-meta">
                     ${this.buildHoverPreviewMetaItem('Robot', robotText)}
                     ${this.buildHoverPreviewMetaItem('Scene', sceneText)}
@@ -590,4 +638,3 @@ const Templates = {
 };
 
 export default Templates;
-

@@ -6,6 +6,7 @@
 /// <reference path="../types.js" />
 
 import ConfigManager from './config.js';
+import RobotAliasManager from './robot-aliases.js';
 
 /**
  * Data Manager Class
@@ -21,6 +22,9 @@ export class DataManager {
         
         /** @type {Object} */
         this.config = ConfigManager.getConfig();
+
+        /** @type {string[]|null} */
+        this._datasetAliasKeys = null;
     }
     
     /**
@@ -124,10 +128,14 @@ export class DataManager {
         // 优先使用 raw.raw 部分的数据（如果存在），否则使用顶层数据
         // 这是因为很多数据集的顶层字段为空，但 raw 部分有正确数据
         const rawData = raw.raw || {};
+
+        const originalName = path || raw.dataset_name || '';
+        const displayName = this.mapDatasetDisplayName(originalName);
         
         return {
             path: path,
-            name: path || raw.dataset_name,
+            name: originalName,
+            displayName,
             video_url: `${this.config.paths.videos}/${path}.mp4`,
             // Thumbnails are provided directly from assets/thumbnails directory
             // No automatic thumbnail generation - thumbnails must exist in assets/thumbnails/${path}.jpg
@@ -205,6 +213,40 @@ export class DataManager {
                 return [...new Set(this.objects.map(obj => obj.hierarchy[0]))];
             }
         };
+    }
+
+    /**
+     * Get alias keys sorted by length (longest first) for dataset name matching.
+     * @returns {string[]}
+     */
+    getSortedAliasKeys() {
+        if (this._datasetAliasKeys) return this._datasetAliasKeys;
+        const keys = RobotAliasManager.getAliasKeys() || [];
+        const filteredKeys = keys.filter(key => typeof key === 'string' && key.length > 0);
+        filteredKeys.sort((a, b) => b.length - a.length);
+        this._datasetAliasKeys = filteredKeys;
+        return this._datasetAliasKeys;
+    }
+
+    /**
+     * Map dataset name to its display name based on robot alias prefixes.
+     * @param {string} datasetName
+     * @returns {string}
+     */
+    mapDatasetDisplayName(datasetName) {
+        if (!datasetName) return '';
+        const aliasKeys = this.getSortedAliasKeys();
+        for (const key of aliasKeys) {
+            if (!key) continue;
+            if (datasetName === key) {
+                return RobotAliasManager.getDisplayName(key);
+            }
+            if (datasetName.startsWith(`${key}_`)) {
+                const suffix = datasetName.slice(key.length);
+                return `${RobotAliasManager.getDisplayName(key)}${suffix}`;
+            }
+        }
+        return datasetName;
     }
     
     /**
@@ -348,4 +390,3 @@ export class DataManager {
 
 // Export singleton instance
 export default new DataManager();
-

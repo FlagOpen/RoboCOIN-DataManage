@@ -122,6 +122,24 @@
     white-space: normal;
 }
 
+.detail-modal-title-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+}
+
+.dataset-original-name {
+    font-size: 0.75rem;
+    color: #4b5563;
+    font-weight: 500;
+    margin-top: 0.35rem;
+    letter-spacing: 0.02rem;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
 .detail-modal-close {
     background: none;
     border: none;

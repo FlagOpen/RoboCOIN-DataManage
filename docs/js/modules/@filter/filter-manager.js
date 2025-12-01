@@ -263,6 +263,10 @@ export class FilterManager {
             texts.add(String(ds.name));
         }
 
+        if (ds.displayName && ds.displayName !== ds.name) {
+            texts.add(String(ds.displayName));
+        }
+
         if (ds.path) {
             texts.add(String(ds.path));
         }
@@ -622,4 +626,3 @@ export class FilterManager {
 }
 
 export default FilterManager;
-

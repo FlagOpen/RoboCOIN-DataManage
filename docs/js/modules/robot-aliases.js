@@ -115,10 +115,17 @@ class RobotAliasManager {
 
         return tokens;
     }
+
+    /**
+     * Get all configured robot IDs from the alias map.
+     * @returns {string[]}
+     */
+    getAliasKeys() {
+        return Object.keys(this.aliasMap);
+    }
 }
 
 // Export singleton instance
 const instance = new RobotAliasManager();
 export default instance;
-
 
