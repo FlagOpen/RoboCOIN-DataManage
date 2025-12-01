@@ -7,6 +7,7 @@
 
 import ConfigManager from './config.js';
 import Templates from '../templates.js';
+import dataManager from './data-manager.js';
 
 /**
  * UI Utilities Class
@@ -72,7 +73,14 @@ export class UIUtils {
      * @param {Map<string, Dataset>} datasetMap - Dataset map
      */
     showDetailModal(datasetPath, datasetMap) {
-        const dataset = datasetMap.get(datasetPath);
+        // Prefer the provided datasetMap, but fall back to the global dataManager
+        let dataset = null;
+        if (datasetMap && typeof datasetMap.get === 'function') {
+            dataset = datasetMap.get(datasetPath) || null;
+        }
+        if (!dataset) {
+            dataset = dataManager.getDataset(datasetPath) || null;
+        }
         if (!dataset) return;
         
         let overlay = document.getElementById('detailModalOverlay');
@@ -251,4 +259,3 @@ export class UIUtils {
 }
 
 export default UIUtils;
-

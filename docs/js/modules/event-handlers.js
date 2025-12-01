@@ -31,6 +31,22 @@ export class EventHandlers {
     }
 
     /**
+     * Normalize an event target to an Element so we can safely call `.closest`.
+     * @param {EventTarget|null} target
+     * @returns {Element|null}
+     */
+    _resolveEventTargetElement(target) {
+        if (!target) return null;
+        if (target instanceof Element) {
+            return target;
+        }
+        if (typeof target === 'object' && target !== null && 'nodeType' in target && target.nodeType === Node.TEXT_NODE) {
+            return target.parentElement;
+        }
+        return null;
+    }
+
+    /**
      * Bind all events
      */
     bindEvents() {
@@ -301,7 +317,8 @@ export class EventHandlers {
 
         // Hierarchy action buttons (All/Clear buttons for all levels)
         filterGroups.addEventListener('click', (e) => {
-            const hierarchyActionBtn = e.target.closest('.hierarchy-action-btn');
+            const clickedElement = this._resolveEventTargetElement(e.target);
+            const hierarchyActionBtn = clickedElement?.closest('.hierarchy-action-btn');
             if (hierarchyActionBtn) {
                 e.stopPropagation(); // Prevent menu collapse
 
@@ -350,8 +367,9 @@ export class EventHandlers {
         // Event delegation: click on video-card
         grid.addEventListener('click', (e) => {
             try {
+                const clickTarget = this._resolveEventTargetElement(e.target);
                 // Clickable title inside hover overlay
-                const hoverTitle = e.target.closest('.video-hover-title');
+                const hoverTitle = clickTarget?.closest('.video-hover-title');
                 if (hoverTitle && this.managers && this.managers.ui) {
                     e.stopPropagation();
                     const detailPath = hoverTitle.dataset.path;
@@ -363,7 +381,7 @@ export class EventHandlers {
 
                 // Allow clicks on the autoplay preview video to also toggle selection
                 // so users can click anywhere on the video pane (thumbnail or video)
-                const card = e.target.closest('.video-card');
+                const card = clickTarget?.closest('.video-card');
                 if (!card) return;
 
                 const path = card.dataset.path;
@@ -380,7 +398,8 @@ export class EventHandlers {
         // Desktop hover: show in-card hover overlay with detailed info
         if (!isTouchDevice) {
             grid.addEventListener('mouseover', (e) => {
-                const card = e.target.closest('.video-card');
+                const hoverTarget = this._resolveEventTargetElement(e.target);
+                const card = hoverTarget?.closest('.video-card');
                 if (!card || !grid.contains(card)) return;
 
                 const path = card.dataset.path;
@@ -414,7 +433,8 @@ export class EventHandlers {
             });
 
             grid.addEventListener('mouseout', (e) => {
-                const card = e.target.closest('.video-card');
+                const hoverTarget = this._resolveEventTargetElement(e.target);
+                const card = hoverTarget?.closest('.video-card');
                 if (!card || !grid.contains(card)) return;
 
                 const related = /** @type {HTMLElement|null} */ (e.relatedTarget);
@@ -462,14 +482,15 @@ export class EventHandlers {
 
         // Click events
         list.addEventListener('click', (e) => {
-            const item = e.target.closest('.selection-item');
+            const clickTarget = this._resolveEventTargetElement(e.target);
+            const item = clickTarget?.closest('.selection-item');
             if (!item) return;
 
             const path = item.dataset.path;
             if (!path) return;
 
             // Remove button
-            if (e.target.closest('.btn-remove')) {
+            if (clickTarget?.closest('.btn-remove')) {
                 e.stopPropagation();
                 this.managers.selectionPanel.listDatasets.delete(path);
                 this.managers.selectionPanel.markListChanged();
@@ -479,7 +500,7 @@ export class EventHandlers {
             }
 
             // Detail button
-            if (e.target.closest('.btn-detail')) {
+            if (clickTarget?.closest('.btn-detail')) {
                 e.stopPropagation();
                 this.managers.ui.showDetailModal(path, this.datasetMap);
                 return;
@@ -768,4 +789,3 @@ export class EventHandlers {
 }
 
 export default EventHandlers;
-

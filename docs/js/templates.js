@@ -229,8 +229,17 @@ const Templates = {
         // no longer show it anymore, thus annotated.
         // }
 
-        if (ds.endEffector) {
-            html += `<strong>End Effector:</strong> ${ds.endEffector}<br>`;
+        const endEffectors = Array.isArray(ds.endEffectors)
+            ? ds.endEffectors
+            : ds.endEffector
+                ? [ds.endEffector]
+                : Array.isArray(ds.raw?.end_effector_type)
+                    ? ds.raw.end_effector_type
+                    : ds.raw?.end_effector_type
+                        ? [ds.raw.end_effector_type]
+                        : [];
+        if (endEffectors.length > 0) {
+            html += `<strong>End Effector:</strong> ${endEffectors.join(', ')}<br>`;
         }
 
         if (ds.scenes && ds.scenes.length > 0) {
@@ -405,7 +414,7 @@ const Templates = {
         `;
     },
 
-    buildDetailInfoGrid(dataset, scenesText, actionsText, sceneTypeText, atomicActionsText, objectsHTML) {
+    buildDetailInfoGrid(dataset, sceneTypeText, atomicActionsText, objectsHTML, totalFramesText) {
         const datasetDisplayName = this.getDatasetDisplayName(dataset);
         let robotDisplay = 'N/A';
         if (dataset.robot || dataset.robot_type || dataset.device_model) {
@@ -483,6 +492,17 @@ const Templates = {
             }
         }
 
+        const endEffectorValues = Array.isArray(dataset.endEffectors)
+            ? dataset.endEffectors
+            : dataset.endEffector
+                ? [dataset.endEffector]
+                : Array.isArray(dataset.raw?.end_effector_type)
+                    ? dataset.raw.end_effector_type
+                    : dataset.raw?.end_effector_type
+                        ? [dataset.raw.end_effector_type]
+                        : [];
+        const endEffectorText = endEffectorValues.length > 0 ? endEffectorValues.join(', ') : 'N/A';
+
         return `
             <div class="detail-info-grid">
                 <!-- Basic Information Section -->
@@ -503,7 +523,7 @@ const Templates = {
                 <!-- Technical Details Section -->
                 <div class="detail-info-section">
                     <h4 class="detail-section-title">Technical Details</h4>
-                    ${this.buildDetailInfoItem('End Effector Type', dataset.endEffector || dataset.end_effector_type || dataset.raw?.end_effector_type || 'N/A')}
+                    ${this.buildDetailInfoItem('End Effector Type', endEffectorText)}
                     ${/* ${this.buildDetailInfoItem('Operation Platform Height', dataset.platformHeight !== undefined ? `${dataset.platformHeight} cm` : (dataset.raw?.operation_platform_height !== undefined ? `${dataset.raw.operation_platform_height} cm` : 'N/A'))} */ ''}
                     ${this.buildDetailInfoItem('Scene Type', sceneTypeText)}
                     ${this.buildDetailInfoItem('Atomic Actions', atomicActionsText)}

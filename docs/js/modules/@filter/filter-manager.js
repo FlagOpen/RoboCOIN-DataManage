@@ -3,7 +3,7 @@
  * @description Manages dataset filtering, filter UI, and filter state
  */
 
-/// <reference path="../types.js" />
+/// <reference path="../../types.js" />
 
 import FilterState from './filter-state.js';
 import { qs, qsa, addClass, removeClass, toggleClass, setHTML, setText } from '../dom-utils.js';
@@ -21,6 +21,20 @@ import {
     calculateAffectedCount,
     calculateStaticHierarchyCounts
 } from './data.js';
+
+function getDatasetEndEffectors(ds) {
+    if (Array.isArray(ds.endEffectors)) {
+        return ds.endEffectors;
+    }
+    if (ds.endEffector) {
+        return [ds.endEffector];
+    }
+    const rawValue = ds.raw?.end_effector_type;
+    if (Array.isArray(rawValue)) {
+        return rawValue;
+    }
+    return rawValue ? [rawValue] : [];
+}
 
 /**
  * Filter Manager Class
@@ -263,13 +277,9 @@ export class FilterManager {
             texts.add(String(ds.name));
         }
 
-<<<<<<< HEAD
         if (ds.displayName && ds.displayName !== ds.name) {
             texts.add(String(ds.displayName));
         }
-
-=======
->>>>>>> backup/main
         if (ds.path) {
             texts.add(String(ds.path));
         }
@@ -343,7 +353,8 @@ export class FilterManager {
                     const robots = Array.isArray(ds.robot) ? ds.robot : [ds.robot];
                     match = robots.some(r => values.includes(r));
                 } else if (key === 'end') {
-                    match = values.includes(ds.endEffector);
+                    const endEffectors = getDatasetEndEffectors(ds);
+                    match = endEffectors.some(value => values.includes(value));
                 } else if (key === 'action') {
                     match = ds.actions && ds.actions.some(a => values.includes(a));
                 } else if (key === 'object') {
@@ -602,7 +613,8 @@ export class FilterManager {
                 const robots = Array.isArray(ds.robot) ? ds.robot : [ds.robot];
                 match = robots.includes(filterValue);
             } else if (filterKey === 'end') {
-                match = ds.endEffector === filterValue;
+                const endEffectors = getDatasetEndEffectors(ds);
+                match = endEffectors.includes(filterValue);
             } else if (filterKey === 'action') {
                 match = ds.actions && ds.actions.includes(filterValue);
             } else if (filterKey === 'object') {
@@ -629,7 +641,3 @@ export class FilterManager {
 }
 
 export default FilterManager;
-<<<<<<< HEAD
-=======
-
->>>>>>> backup/main

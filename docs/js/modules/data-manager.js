@@ -6,10 +6,7 @@
 /// <reference path="../types.js" />
 
 import ConfigManager from './config.js';
-<<<<<<< HEAD
 import RobotAliasManager from './robot-aliases.js';
-=======
->>>>>>> backup/main
 
 /**
  * Data Manager Class
@@ -25,12 +22,9 @@ export class DataManager {
         
         /** @type {Object} */
         this.config = ConfigManager.getConfig();
-<<<<<<< HEAD
 
         /** @type {string[]|null} */
         this._datasetAliasKeys = null;
-=======
->>>>>>> backup/main
     }
     
     /**
@@ -44,11 +38,9 @@ export class DataManager {
             console.log('🚀 Attempting to load consolidated JSON (preferred)...');
             const startTime = performance.now();
 
-            // Update initial progress
             loadingProgress.textContent = 'Loading consolidated data...';
             loadingBar.style.width = '10%';
 
-            // PRIORITY: Always try consolidated JSON first (single request, much faster)
             try {
                 console.log('📄 Fetching consolidated_datasets.json...');
                 const res = await fetch(`${this.config.paths.info}/consolidated_datasets.json`);
@@ -63,10 +55,8 @@ export class DataManager {
                     const datasetCount = Object.keys(allData).length;
                     console.log(`✓ Loaded ${datasetCount} datasets from consolidated JSON`);
 
-                    // Convert consolidated data to dataset objects
                     this.datasets = Object.entries(allData).map(([path, raw]) => this.createDatasetObject(path, raw));
 
-                    // Update progress to 100%
                     loadingProgress.textContent = `${this.datasets.length} datasets loaded`;
                     loadingBar.style.width = '100%';
 
@@ -86,38 +76,10 @@ export class DataManager {
                 console.warn('⚠️ Failed to fetch consolidated JSON:', jsonError.message);
             }
 
-            // FALLBACK: Use YAML mode if JSON is not available
             console.log('📁 Falling back to YAML mode...');
-            loadingProgress.innerHTML = `
-                <div style="color: #ff9800; font-weight: 600;">📁 Loading in YAML mode</div>
-                <div style="font-size: 12px; margin-top: 4px;">Consolidated JSON not available. Loading from individual YAML files...</div>
-            `;
             await this.loadDatasetsFromYAML(loadingProgress, loadingBar);
             return this.datasets;
-            
-            loadingBar.style.width = '50%';
-            
-            const allData = await res.json();
-            loadingBar.style.width = '75%';
-            
-            const datasetCount = Object.keys(allData).length;
-            console.log(`✓ Loaded ${datasetCount} datasets in consolidated format (optimized)`);
-            
-            // Convert consolidated data to dataset objects
-            this.datasets = Object.entries(allData).map(([path, raw]) => this.createDatasetObject(path, raw));
-            
-            // Update progress to 100%
-            loadingProgress.textContent = `${this.datasets.length} datasets loaded`;
-            loadingBar.style.width = '100%';
-            
-            const endTime = performance.now();
-            const loadTime = (endTime - startTime).toFixed(2);
-            
-            console.log(`✓ Loaded ${this.datasets.length} datasets in ${loadTime}ms (${(loadTime / this.datasets.length).toFixed(2)}ms per dataset)`);
-            console.log('🎉 Optimization: Single JSON request vs 2000+ YAML requests!');
-            
-            return this.datasets;
-            
+
         } catch (err) {
             console.error('Failed to load datasets:', err);
             throw err;
@@ -134,21 +96,23 @@ export class DataManager {
         // 优先使用 raw.raw 部分的数据（如果存在），否则使用顶层数据
         // 这是因为很多数据集的顶层字段为空，但 raw 部分有正确数据
         const rawData = raw.raw || {};
-<<<<<<< HEAD
 
         const originalName = path || raw.dataset_name || '';
         const displayName = this.mapDatasetDisplayName(originalName);
-        
+
+        const endEffectors = (() => {
+            const source = raw.end_effector_type !== undefined ? raw.end_effector_type : rawData.end_effector_type;
+            if (source === undefined || source === null) return [];
+            const values = Array.isArray(source) ? source : [source];
+            return values
+                .map(value => typeof value === 'string' ? value.trim() : value)
+                .filter(value => value);
+        })();
+
         return {
             path: path,
             name: originalName,
             displayName,
-=======
-        
-        return {
-            path: path,
-            name: path || raw.dataset_name,
->>>>>>> backup/main
             video_url: `${this.config.paths.videos}/${path}.mp4`,
             // Thumbnails are provided directly from assets/thumbnails directory
             // No automatic thumbnail generation - thumbnails must exist in assets/thumbnails/${path}.jpg
@@ -178,7 +142,8 @@ export class DataManager {
             // 使用新字段 robot_type（从 meta/info.json 读取）
             // 不使用旧的 device_model（YAML中的字段可能有错误）
             robot: raw.robot_type,
-            endEffector: raw.end_effector_type || rawData.end_effector_type,
+            endEffector: endEffectors[0] || undefined,
+            endEffectors,
             platformHeight: raw.operation_platform_height !== undefined ? raw.operation_platform_height : rawData.operation_platform_height,
 
             // 数据集大小相关信息
@@ -227,7 +192,6 @@ export class DataManager {
             }
         };
     }
-<<<<<<< HEAD
 
     /**
      * Get alias keys sorted by length (longest first) for dataset name matching.
@@ -262,8 +226,6 @@ export class DataManager {
         }
         return datasetName;
     }
-=======
->>>>>>> backup/main
     
     /**
      * Load datasets from YAML files (fallback)
@@ -406,7 +368,3 @@ export class DataManager {
 
 // Export singleton instance
 export default new DataManager();
-<<<<<<< HEAD
-=======
-
->>>>>>> backup/main

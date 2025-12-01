@@ -7,6 +7,20 @@
 
 import { addToHierarchy, countHierarchyItems } from './filter-hierarchy.js';
 
+function getDatasetEndEffectors(ds) {
+    if (Array.isArray(ds.endEffectors)) {
+        return ds.endEffectors;
+    }
+    if (ds.endEffector) {
+        return [ds.endEffector];
+    }
+    const rawValue = ds.raw?.end_effector_type;
+    if (Array.isArray(rawValue)) {
+        return rawValue;
+    }
+    return rawValue ? [rawValue] : [];
+}
+
 /**
  * Build filter groups from datasets.
  * @param {Dataset[]} datasets
@@ -58,9 +72,8 @@ export function buildFilterGroups(datasets) {
             const robots = Array.isArray(ds.robot) ? ds.robot : [ds.robot];
             robots.forEach(r => groups.robot.values.add(r));
         }
-        if (ds.endEffector) {
-            groups.end.values.add(ds.endEffector);
-        }
+        const endEffectors = getDatasetEndEffectors(ds);
+        endEffectors.forEach(value => groups.end.values.add(value));
         if (ds.actions) {
             ds.actions.forEach(action => groups.action.values.add(action));
         }
@@ -96,7 +109,8 @@ export function calculateAffectedCount(datasets, filterKey, filterValue) {
             const robots = Array.isArray(ds.robot) ? ds.robot : [ds.robot];
             match = robots.includes(filterValue);
         } else if (filterKey === 'end') {
-            match = ds.endEffector === filterValue;
+            const endEffectors = getDatasetEndEffectors(ds);
+            match = endEffectors.includes(filterValue);
         } else if (filterKey === 'action') {
             match = ds.actions && ds.actions.includes(filterValue);
         } else if (filterKey === 'object') {
@@ -177,5 +191,4 @@ export default {
     calculateStaticHierarchyCounts,
     getCategoryItemCount
 };
-
 

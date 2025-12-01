@@ -115,7 +115,6 @@ class RobotAliasManager {
 
         return tokens;
     }
-<<<<<<< HEAD
 
     /**
      * Get all configured robot IDs from the alias map.
@@ -124,15 +123,8 @@ class RobotAliasManager {
     getAliasKeys() {
         return Object.keys(this.aliasMap);
     }
-=======
->>>>>>> backup/main
 }
 
 // Export singleton instance
 const instance = new RobotAliasManager();
 export default instance;
-
-<<<<<<< HEAD
-=======
-
->>>>>>> backup/main

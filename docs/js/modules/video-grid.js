@@ -394,8 +394,14 @@ export class VideoGridManager {
 
         // Robot information moved to hover overlay since it's already shown in title
 
-        if (ds.endEffector) {
-            tags.push(Templates.buildVideoTag(ds.endEffector));
+        const endEffectors = Array.isArray(ds.endEffectors)
+            ? ds.endEffectors
+            : ds.endEffector
+                ? [ds.endEffector]
+                : [];
+        if (endEffectors.length > 0) {
+            const more = endEffectors.length > 1 ? `+${endEffectors.length - 1}` : '';
+            tags.push(Templates.buildVideoTag(endEffectors[0], more));
         }
 
         return tags.join('');
@@ -404,4 +410,3 @@ export class VideoGridManager {
 }
 
 export default VideoGridManager;
-
