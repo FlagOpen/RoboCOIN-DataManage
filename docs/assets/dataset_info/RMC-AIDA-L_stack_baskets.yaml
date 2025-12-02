@@ -2,7 +2,8 @@ dataset_name: stack_baskets
 dataset_uuid: d4c26606-f766-48ca-befd-dbdeead83a95
 scene_type: []
 atomic_actions: []
-end_effector_type: two_finger_gripper
+end_effector_type:
+- two_finger_gripper
 operation_platform_height: 77.2
 objects: []
 path: RMC-AIDA-L_stack_baskets

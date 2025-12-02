@@ -7,7 +7,8 @@ atomic_actions:
 - pick
 - place
 - push
-end_effector_type: two_finger_gripper
+end_effector_type:
+- two_finger_gripper
 operation_platform_height: null
 objects:
 - object_name: nightstand

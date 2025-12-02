@@ -7,7 +7,9 @@ atomic_actions:
 - grasp
 - pick
 - place
-end_effector_type: five_finger_hand
+end_effector_type:
+- five_finger_hand
+- three_finger_hand
 operation_platform_height: 77.2
 objects:
 - object_name: table

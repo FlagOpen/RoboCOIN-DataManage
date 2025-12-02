@@ -4,7 +4,8 @@ scene_type:
 - home
 atomic_actions:
 - pick
-end_effector_type: five_finger_hand
+end_effector_type:
+- five_finger_hand
 operation_platform_height: 77.2
 objects:
 - object_name: table

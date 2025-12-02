@@ -8,7 +8,8 @@ atomic_actions:
 - place
 - push
 - pull
-end_effector_type: two_finger_gripper
+end_effector_type:
+- two_finger_gripper
 operation_platform_height: null
 objects:
 - object_name: drawer

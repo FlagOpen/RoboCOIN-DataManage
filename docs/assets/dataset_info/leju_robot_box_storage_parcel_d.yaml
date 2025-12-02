@@ -2,7 +2,8 @@ dataset_name: box_storage_parcel_d
 dataset_uuid: a24f0c02-18b7-4770-8ed1-41d5db2ba6d8
 scene_type: []
 atomic_actions: []
-end_effector_type: five_finger_hand
+end_effector_type:
+- five_finger_hand
 operation_platform_height: null
 objects: []
 path: leju_robot_box_storage_parcel_d

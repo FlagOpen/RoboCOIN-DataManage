@@ -4,7 +4,8 @@ scene_type:
 - home
 atomic_actions:
 - press
-end_effector_type: two_finger_gripper
+end_effector_type:
+- two_finger_gripper
 operation_platform_height: 77.2
 objects:
 - object_name: table

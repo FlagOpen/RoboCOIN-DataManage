@@ -9,7 +9,8 @@ atomic_actions:
 - place
 - hold
 - push
-end_effector_type: two_finger_gripper
+end_effector_type:
+- two_finger_gripper
 operation_platform_height: 77.2
 objects:
 - object_name: table

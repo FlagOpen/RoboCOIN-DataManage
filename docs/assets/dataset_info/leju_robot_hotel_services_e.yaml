@@ -2,7 +2,8 @@ dataset_name: hotel_services_e
 dataset_uuid: 4d57f5ee-7850-4fb4-8532-415c1821c756
 scene_type: []
 atomic_actions: []
-end_effector_type: five_finger_hand
+end_effector_type:
+- five_finger_hand
 operation_platform_height: null
 objects: []
 path: leju_robot_hotel_services_e

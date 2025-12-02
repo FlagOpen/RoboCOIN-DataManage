@@ -5,7 +5,8 @@ scene_type:
 atomic_actions:
 - pick
 - place
-end_effector_type: three_finger_hand
+end_effector_type:
+- three_finger_hand
 operation_platform_height: null
 objects:
 - object_name: table

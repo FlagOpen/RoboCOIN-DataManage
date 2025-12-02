@@ -2,7 +2,8 @@ dataset_name: moving_parts_q
 dataset_uuid: 1632a2f6-2fac-45cf-b9d6-7088ebda0870
 scene_type: []
 atomic_actions: []
-end_effector_type: five_finger_hand
+end_effector_type:
+- five_finger_hand
 operation_platform_height: null
 objects: []
 path: leju_robot_moving_parts_q
