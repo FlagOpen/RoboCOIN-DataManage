@@ -36,9 +36,9 @@ export class DataManager {
      */
     async loadExcludedDatasets() {
         try {
-            const response = await fetch('./exclude.json');
+            const response = await fetch(`${this.config.paths.info}/exclude.json`);
             if (!response.ok) {
-                console.warn(`⚠️ Failed to load exclude.json (${response.status}). Continuing without exclusions.`);
+                console.warn(`⚠️ Failed to load assets/info/exclude.json (${response.status}). Continuing without exclusions.`);
                 return;
             }
 
@@ -51,7 +51,7 @@ export class DataManager {
                 console.log(`🧹 Loaded ${this.excludedDatasets.size} excluded datasets.`);
             }
         } catch (error) {
-            console.warn('⚠️ Could not load exclude.json. Continuing without exclusions.', error);
+            console.warn('⚠️ Could not load assets/info/exclude.json. Continuing without exclusions.', error);
         }
     }
     
@@ -135,7 +135,7 @@ export class DataManager {
 
         const removed = beforeCount - this.datasets.length;
         if (removed > 0) {
-            console.log(`🚫 Excluded ${removed} datasets defined in exclude.json.`);
+            console.log(`🚫 Excluded ${removed} datasets defined in assets/info/exclude.json.`);
         }
     }
     

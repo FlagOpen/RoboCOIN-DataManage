@@ -1,3 +1,5 @@
+import ConfigManager from './config.js';
+
 /**
  * @file Robot Aliases Module
  * @description Lightweight manager for robot display names and search aliases.
@@ -32,7 +34,9 @@ class RobotAliasManager {
             return this.loadingPromise;
         }
 
-        const infoPath = config?.paths?.info || './assets/info';
+        const infoPath =
+            config?.paths?.info ||
+            `${ConfigManager.getDefaultRemoteAssetsRoot()}/info`;
         const url = `${infoPath}/robot_aliases.json`;
 
         this.loadingPromise = (async () => {
