@@ -131,6 +131,8 @@ export class VideoGridManager {
                 // 停止视频播放并清理资源
                 const video = card.querySelector('video');
                 if (video) {
+                    // 标记该视频已被主动清理，后续触发的 error 视为软错误
+                    video.dataset.ignoreError = 'true';
                     video.pause();
                     video.src = '';
                     video.srcObject = null;
@@ -341,7 +343,40 @@ export class VideoGridManager {
             }, { once: true });
             
             video.addEventListener('error', (e) => {
-                console.error(`Video load error: ${videoUrl}`, e);
+                // 如果是我们在虚拟滚动中主动清理过的视频，视为正常资源回收，不打硬错误
+                if (video.dataset.ignoreError === 'true') {
+                    console.debug('Soft video error after cleanup, ignoring', {
+                        url: videoUrl,
+                        readyState: video.readyState,
+                        networkState: video.networkState,
+                        event: e
+                    });
+                    delete thumbnail.dataset.videoLoading;
+                    return;
+                }
+
+                const mediaError = video.error;
+
+                // 某些情况下浏览器会触发 error 事件但并没有 MediaError
+                // 例如请求被中止、元素被移除，这类“软错误”不需要打红色错误日志
+                if (!mediaError) {
+                    console.debug('Soft video error (no MediaError), ignoring', {
+                        url: videoUrl,
+                        readyState: video.readyState,
+                        networkState: video.networkState,
+                        event: e
+                    });
+                    delete thumbnail.dataset.videoLoading;
+                    return;
+                }
+
+                console.error('Video load error (hard failure)', {
+                    url: videoUrl,
+                    code: mediaError.code,       // 1: aborted, 2: network, 3: decode, 4: unsupported src
+                    message: mediaError.message,
+                    readyState: video.readyState,
+                    networkState: video.networkState
+                });
                 delete thumbnail.dataset.videoLoading;
             }, { once: true });
             

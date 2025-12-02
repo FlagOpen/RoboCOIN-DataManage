@@ -14,7 +14,7 @@
 
 /* Feature modules */
 @import './filter/filter-control-bar.css';
-@import './filter/filter-tags.css';
+/* @import './filter/filter-tags.css'; */
 @import './filter/filter-dropdown.css';
 @import './filter/filter-options.css';
 @import './filter/filter-tooltip.css';
@@ -29,7 +29,7 @@
 @import './selection/selection-item.css';
 @import './selection/selection-footer.css';
 @import './selection/selection-hub-buttons.css';
-@import './components/code-detail.css';
+/* @import './components/code-detail.css'; */
 @import './components/modal.css';
 @import './components/toast.css';
 
