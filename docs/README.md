@@ -6,217 +6,143 @@
 
 Live Demo: https://flagopen.github.io/RoboCOIN-DataManager/
 
-## Project Overview
+## What is RoboCOIN DataManager?
 
-RoboCOIN DataManager is a modern web-based dataset visualization and download tool for the RoboCOIN dataset. It provides an intuitive interface for browsing, filtering, previewing, selecting, and batch downloading datasets. The application supports multiple data sources (ModelScope and HuggingFace) and offers advanced filtering capabilities with hierarchical object selection.
+RoboCOIN DataManager is a user-friendly web application designed to help you easily browse, explore, and download datasets from the RoboCOIN project. Whether you're a researcher, developer, or robotics enthusiast, this tool provides an intuitive interface to discover and obtain the robotic manipulation data you need for your projects.
 
-## Project Structure
+### Key Features
+- **Browse RoboCOIN Datasets**: Explore hundreds of robotic manipulation episodes with video previews
+- **Advanced Filtering**: Find specific datasets by scene, robot type, actions, and objects
+- **Video Previews**: Watch short video clips of robotic tasks directly in your browser
+- **Batch Download**: Select multiple datasets and generate download commands for bulk acquisition
+- **Multi-Source Support**: Download from both ModelScope and HuggingFace repositories
 
-```
-DataManage/
-├── docs/                       # Main application directory
-│   ├── assets/                 # Resource files
-│   │   ├── dataset_info/       # Dataset metadata (YAML files)
-│   │   ├── info/               # Index files
-│   │   │   ├── consolidated_datasets.json  # Consolidated dataset information
-│   │   │   ├── data_index.json             # Dataset index
-│   │   │   └── robot_aliases.json          # Robot alias mappings
-│   │   ├── thumbnails/         # Thumbnail images (*.jpg)
-│   │   └── videos/             # Video files (*.mp4)
-│   │
-│   ├── css/                    # Modular style files
-│   │   ├── core/               # Core styles
-│   │   │   ├── variables.css   # CSS variable definitions
-│   │   │   ├── base.css        # Base styles
-│   │   │   ├── layout.css      # Layout styles
-│   │   │   └── header.css      # Header styles
-│   │   ├── filter/             # Filter component styles
-│   │   │   ├── filter-control-bar.css
-│   │   │   ├── filter-dropdown.css
-│   │   │   ├── filter-options.css
-│   │   │   └── filter-tooltip.css
-│   │   ├── video/              # Video component styles
-│   │   │   ├── video-panel.css
-│   │   │   ├── video-card.css
-│   │   │   ├── video-thumbnail.css
-│   │   │   ├── video-info.css
-│   │   │   ├── video-hover-overlay.css
-│   │   │   └── video-toolbar.css
-│   │   ├── selection/          # Selection panel styles
-│   │   │   ├── selection-panel-base.css
-│   │   │   ├── selection-list.css
-│   │   │   ├── selection-item.css
-│   │   │   ├── selection-footer.css
-│   │   │   └── selection-hub-buttons.css
-│   │   ├── components/         # Shared component styles
-│   │   │   ├── modal.css
-│   │   │   └── toast.css
-│   │   ├── responsive/         # Responsive design styles
-│   │   │   ├── responsive-mobile.css
-│   │   │   ├── responsive-tablet.css
-│   │   │   ├── responsive-desktop.css
-│   │   │   └── responsive-print.css
-│   │   ├── animations/         # Animation definitions
-│   │   │   └── animations.css
-│   │   └── style.css           # CSS entry point (imports all styles)
-│   │
-│   ├── js/                     # Modular JavaScript files
-│   │   ├── modules/            # Feature modules
-│   │   │   ├── @filter/        # Filter module package
-│   │   │   │   ├── index.js
-│   │   │   │   ├── filter-manager.js
-│   │   │   │   ├── filter-state.js
-│   │   │   │   ├── filter-renderer.js
-│   │   │   │   ├── filter-hierarchy.js
-│   │   │   │   ├── filter-search.js
-│   │   │   │   └── data.js
-│   │   │   ├── config.js       # Configuration management
-│   │   │   ├── data-manager.js # Data loading and caching
-│   │   │   ├── video-grid.js   # Video grid rendering
-│   │   │   ├── selection-panel.js # Selection panel management
-│   │   │   ├── download-manager.js # Download command generation
-│   │   │   ├── robot-aliases.js # Robot alias management
-│   │   │   ├── ui-utils.js     # UI utilities
-│   │   │   ├── dom-utils.js    # DOM manipulation utilities
-│   │   │   ├── event-handlers.js # Event handling
-│   │   │   ├── virtual-scroll.js # Virtual scrolling
-│   │   │   ├── toast-manager.js # Toast notifications
-│   │   │   └── error-notifier.js # Error handling
-│   │   ├── app.js              # Main application coordinator
-│   │   ├── main.js             # Application entry point
-│   │   ├── templates.js        # HTML templates
-│   │   └── types.js            # JSDoc type definitions
-│   │
-│   ├── index.html              # Main page
-│   ├── favicon.ico             # Website icon
-│   ├── README.md               # Project documentation (English)
-│   └── README.zh.md            # Project documentation (Chinese)
-│
-└── README.md                   # Root directory documentation
-```
+> ⚠️ **Important**: Before downloading datasets through this web interface, please install the [RoboCOIN project](https://github.com/FlagOpen/RoboCOIN) to get the best download experience with pre-built batch download scripts:
+> ```bash
+> pip install robocoin
+> ```
 
-## Core Features
+## How the Web App Works
 
-### 1. Advanced Dataset Filtering
-- **Multi-dimensional filtering**: Filter by Scene, Robot, End-effector, Action, and Object
-- **Hierarchical filters**: Supports nested object hierarchy with intuitive navigation
-- **Real-time search**: Search datasets by name with instant results
-- **Filter Finder**: Quickly locate filter options using keyboard shortcuts (Ctrl+F)
-- **Dynamic filter counts**: See how many datasets match each filter option
-- **Filter reset**: One-click reset to clear all active filters
-- **Persistent filter state**: Filter selections persist during session
+This web application loads RoboCOIN dataset information directly in your browser and provides an interactive interface to explore and select datasets. Here's how it works:
 
-### 2. Rich Dataset Preview
-- **Video auto-play**: Videos automatically play on hover
-- **Hover information overlay**: View key dataset information without opening details
-- **Detail modal dialog**: Comprehensive dataset information in a modal view
-- **Thumbnail support**: Fast-loading thumbnail images for each dataset
-- **Video controls**: Play, pause, and seek controls for video previews
-- **Responsive preview**: Adapts to different screen sizes
-
-### 3. Selection and Batch Management
-- **Batch selection**: Select multiple datasets with visual feedback
-- **Shopping cart functionality**: Add selected datasets to download cart
-- **Batch operations**: Add all filtered items, remove selected items, or clear cart
-- **Selection panel**: Side panel showing all items in download cart
-- **Selection state persistence**: Cart state maintained during filtering
-- **Individual item management**: Remove items from cart individually
-
-### 4. Export and Download Functionality
-- **JSON format export**: Export selection list as JSON file for backup/sharing
-- **JSON import**: Import previously saved selection lists
-- **Python download command**: Generate ready-to-use download commands
-- **Multi-source support**: Switch between ModelScope and HuggingFace hubs
-- **Download path configuration**: Instructions for custom download directories
-- **Clipboard integration**: One-click copy of download commands
-
-### 5. Performance Optimization
-- **Virtual scrolling**: Efficiently handles large datasets (hundreds of items)
-- **Lazy loading videos**: Videos load only when visible in viewport
-- **IntersectionObserver API**: Optimized viewport detection
-- **Element caching and reuse**: Efficient DOM element management
-- **Progressive loading**: Datasets load in batches with progress indicator
-- **Debounced/throttled events**: Optimized scroll and resize handling
-
-### 6. User Experience Enhancements
-- **Loading overlay**: Progress indicator during initial dataset loading
-- **Toast notifications**: Non-intrusive feedback for user actions
-- **Responsive design**: Optimized for desktop, tablet, and mobile devices
-- **Error handling**: Graceful error messages with recovery suggestions
-- **Global banner**: Important announcements (dismissible on interaction)
-- **Robot alias support**: Human-readable robot names instead of technical IDs
-
-## Quick Start
+### Data Loading Process
+1. **Dataset Discovery**: The app loads metadata for all available RoboCOIN datasets
+2. **Video Previews**: Short video clips are loaded for previewing robotic tasks
+3. **Interactive Filtering**: You can filter datasets by various criteria like robot types, scenes, and actions
+4. **Download Generation**: Selected datasets are used to generate Python download commands
 
 ### Browser Requirements
+- **Modern Browsers**: Chrome 61+, Firefox 60+, Safari 11+, Edge 61+, or Opera 48+
+- **JavaScript**: Must be enabled (the app uses modern ES6 modules)
+- **Internet Connection**: Required for loading dataset information and video previews
 
-- Chrome/Edge 61+
-- Firefox 60+
-- Safari 11+
-- Opera 48+
+## Main Features
 
-(Modern browsers supporting ES6 modules)
+### 1. Dataset Exploration
+- **Visual Previews**: Watch short video clips of robotic manipulation tasks
+- **Detailed Information**: View comprehensive metadata for each dataset including robot types, scenes, actions, and objects
+- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
 
-## User Guide
+### 2. Smart Filtering System
+- **Multiple Filter Categories**: Filter datasets by scene, robot model, end-effector, action type, and manipulated objects
+- **Real-time Search**: Search datasets by name with instant filtering
+- **Filter Combinations**: Combine multiple filters to find exactly the datasets you need
+- **Quick Reset**: Easily clear all filters with one click
 
-### 1. Filter Datasets
+### 3. Dataset Selection and Management
+- **Visual Selection**: Click on dataset cards to select/deselect them
+- **Batch Operations**: Select all visible datasets or clear all selections at once
+- **Selection Counter**: Always see how many datasets you've selected
+- **Shopping Cart**: Your selected datasets appear in a dedicated panel on the right
 
-Click the **"Filter datasets"** button to open the filter dropdown overlay:
-- Use the sidebar to navigate between filter categories (Scene, Robot, End-effector, Action, Object)
-- Click filter options to activate/deactivate filters
-- Use **Filter Finder** (Ctrl+F) to quickly search for specific filter options
-- Navigate through filter matches using arrow buttons (↑/↓) or keyboard
-- View dynamic counts showing how many datasets match each filter
-- Click **"Reset filters"** button to clear all active filters
-- Click **"Done"** or press Escape to close the filter panel
+### 4. Download Management
+- **Multi-Source Downloads**: Choose between downloading from ModelScope or HuggingFace
+- **Python Commands**: Get ready-to-use Python commands for downloading your selected datasets
+- **Clipboard Integration**: Copy download commands with one click
+- **Selection Backup**: Export your dataset selections as JSON files for later use
 
-### 2. Search Datasets
+### 5. User-Friendly Interface
+- **Loading Progress**: See progress bars while datasets are loading
+- **Error Handling**: Clear error messages if something goes wrong
+- **Toast Notifications**: Helpful feedback for your actions
+- **Keyboard Shortcuts**: Use Ctrl+F to quickly search through filter options
 
-- Use the search box in the filter control bar to search datasets by name
-- Search is case-insensitive and filters results in real-time
-- Click the clear button (×) in the search box to reset search
-- Search works in combination with active filters
+## Getting Started
 
-### 3. Select Datasets
+### Accessing the Web App
+1. Visit the live demo: https://flagopen.github.io/RoboCOIN-DataManager/
+2. Wait for the datasets to load (you'll see a progress bar)
+3. Start exploring the RoboCOIN datasets!
 
-- **Select individual datasets**: Click on video cards to select/deselect them
-- **Batch selection**: Click **"Select all datasets"** to select all filtered items
-- **Clear selection**: Click **"Deselect all datasets"** to clear all selections
-- Selected cards are highlighted with a border and checkmark
-- View selection count in the filter control bar
+### Browser Compatibility
+- **Recommended**: Chrome 61+, Firefox 60+, Safari 11+, Edge 61+
+- **JavaScript**: Must be enabled in your browser
+- **Internet**: Required for loading dataset information
 
-### 4. Manage Batch Download Cart
+## How to Use the Web App
 
-- **Add to cart**: Selected datasets are shown in the right-side **"Batch Downloader"** panel
-- **View cart**: The selection panel displays all items in your download cart
-- **Remove items**: Click the remove button (×) on individual items in the cart
-- **Cart counter**: See total number of items in cart at the bottom of the panel
+### Step 1: Explore Datasets
+1. **Browse Videos**: Scroll through the dataset cards to see video previews of robotic tasks
+2. **Hover for Info**: Hover over any video card to see basic information without clicking
+3. **Click for Details**: Click on a video card to open a detailed modal with complete dataset information
 
-### 5. Export Download Commands
+### Step 2: Filter Your Search
+1. Click the **"Filter datasets"** button in the top control bar
+2. Use the sidebar to choose filter categories:
+   - **Scene**: Filter by environment (kitchen, living room, etc.)
+   - **Robot**: Filter by robot model (Franka, UR5, etc.)
+   - **End-effector**: Filter by gripper type
+   - **Action**: Filter by task type (pick, place, etc.)
+   - **Object**: Filter by manipulated objects
+3. Click filter options to activate them (you can select multiple)
+4. Use the search box (Ctrl+F) to quickly find specific filter options
+5. Click **"Done"** or press Escape to apply filters
 
-1. **Select Hub source**: Use the hub switcher button to toggle between **HuggingFace** and **ModelScope**
-2. **Review command**: The download command is automatically generated in the code output area
-3. **Copy command**: Click **"Copy & Checkout"** button to copy the command to clipboard
-4. **Execute**: Paste and run the command in your terminal to download datasets
-5. **Custom path**: Add `--target-dir YOUR_DOWNLOAD_DIR` to specify a custom download directory
+### Step 3: Search by Name
+- Use the search box in the top control bar to search datasets by name
+- Search works with your active filters for precise results
+- Click the × button to clear your search
 
-### 6. Import/Export Selections
+### Step 4: Select Datasets
+1. **Individual Selection**: Click on video cards to select/deselect them (selected cards show a border and checkmark)
+2. **Batch Selection**: Click **"Select all datasets"** to select everything currently visible
+3. **Clear Selection**: Click **"Deselect all datasets"** to clear all selections
+4. Watch the selection counter in the top bar to see how many you've chosen
 
-- **Export JSON**: Click **"Export JSON"** to save your current selection list as a JSON file
-- **Import JSON**: Click **"Import JSON"** to load a previously saved selection list
-- This allows you to save and share your dataset selections across sessions
+### Step 5: Generate Download Commands
+1. Your selected datasets appear in the **"Batch Downloader"** panel on the right
+2. Choose your preferred download source: **HuggingFace** or **ModelScope**
+3. Click **"Copy & Checkout"** to copy the Python download command
+4. Paste and run the command in your terminal to download the datasets
+5. **Optional**: Add `--target-dir /your/custom/path` to the command for custom download location
 
-### 7. View Dataset Details
+### Step 6: Save Your Selections
+- **Export Selections**: Click **"Export JSON"** to save your current selections as a file
+- **Import Selections**: Click **"Import JSON"** to load previously saved selections
+- Useful for sharing selections or continuing work later
 
-- **Hover preview**: Hover over a video card to see basic information overlay
-- **Video preview**: Videos automatically play on hover
-- **Detailed view**: Click on a video card or use toolbar buttons to open the detail modal
-- **Dataset information**: View complete metadata including scenes, actions, objects, robot models, etc.
+### Tips for Best Experience
+- **Video Loading**: Videos load automatically when you hover over them
+- **Performance**: The app uses virtual scrolling to handle large numbers of datasets efficiently
+- **Mobile Friendly**: Works on tablets and phones with touch controls
+- **Error Recovery**: If something goes wrong, try refreshing the page
 
-## Contributing
+## Need Help or Found an Issue?
 
-Issues and Pull Requests are welcome!
+### Report Problems
+If you encounter any issues while using the web app, please let us know:
+- **GitHub Issues**: Visit the [RoboCOIN repository](https://github.com/FlagOpen/RoboCOIN) and create an issue
+- **Describe the Problem**: Include what you were doing, what browser you're using, and any error messages
+- **Screenshots**: If possible, include screenshots of the issue
 
-## Contact
+### Contact Information
+For questions about the RoboCOIN project or datasets:
+- **Email**: pykerogers@outlook.com
+- **Project Repository**: [github.com/FlagOpen/RoboCOIN](https://github.com/FlagOpen/RoboCOIN)
 
-For any questions, please contact pykerogers@outlook.com
+### About RoboCOIN
+This web app is part of the RoboCOIN project. To learn more about the datasets and how to use them in your research:
+1. Visit the main RoboCOIN repository
+2. Install the Python package: `pip install robocoin`
+3. Follow the documentation for dataset usage and citation information
