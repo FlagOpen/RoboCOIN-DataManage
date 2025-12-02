@@ -106,10 +106,78 @@ class ConfigManager {
     }
 
     /**
+     * Normalize asset root paths by stripping trailing slashes.
+     * @param {string} path
+     * @returns {string}
+     */
+    static normalizeAssetsRoot(path) {
+        const fallback = this.getDefaultRemoteAssetsRoot();
+        if (!path || typeof path !== 'string') {
+            return fallback;
+        }
+
+        const normalized = path.trim().replace(/\/+$/, '');
+        if (!normalized || normalized === '.') {
+            return fallback;
+        }
+
+        return normalized;
+    }
+
+    /**
+     * Default Hugging Face dataset location for assets.
+     * @returns {string}
+     */
+    static getDefaultRemoteAssetsRoot() {
+        return 'https://huggingface.co/datasets/RogersPyke/RoboCOIN-DataManager-assets/resolve/main';
+    }
+
+    /**
+     * Determine the active assets root.
+     * - Query string ?assets=... or ?assetsRoot=... overrides everything (仅接受 https?://)
+     * - window.ROBOCOIN_ASSETS_ROOT / window.__ASSETS_ROOT__ works for manual overrides
+     * - 默认指向托管在 Hugging Face 的远程数据集，确保所有环境都一致
+     * @returns {string}
+     */
+    static getAssetsRoot() {
+        const defaultRemote = this.getDefaultRemoteAssetsRoot();
+
+        if (typeof window === 'undefined') {
+            return defaultRemote;
+        }
+
+        const search = window.location?.search || '';
+        const params = new URLSearchParams(search);
+        const override =
+            window.ROBOCOIN_ASSETS_ROOT ||
+            window.__ASSETS_ROOT__ ||
+            params.get('assetsRoot') ||
+            params.get('assets');
+
+        if (override) {
+            const trimmed = override.trim();
+            const isRemote = /^https?:\/\//i.test(trimmed);
+
+            if (isRemote) {
+                return this.normalizeAssetsRoot(trimmed);
+            }
+
+            console.warn('[ConfigManager] Ignoring assets override because it is not an absolute http(s) URL.');
+        }
+
+        return this.normalizeAssetsRoot(defaultRemote);
+    }
+
+    /**
      * Get complete application configuration
      * @returns {AppConfig} Complete configuration object
      */
     static getConfig() {
+        const assetsRoot = this.normalizeAssetsRoot(this.getAssetsRoot());
+        const infoPath = `${assetsRoot}/info`;
+        const datasetInfoPath = `${assetsRoot}/dataset_info`;
+        const videosPath = `${assetsRoot}/videos`;
+
         return {
             layout: {
                 contentPadding: this.getCSSValue('--content-padding', 12)
@@ -163,14 +231,10 @@ class ConfigManager {
             //   ├── thumbnails/         - Thumbnail images (*.jpg, provided by assets/thumbnails)
             //   └── videos/             - MP4 video files (named by dataset path)
             paths: {
-                assetsRoot: './assets',
-                info: './assets/info',  // JSON index files following standard structure
-                get datasetInfo() {
-                    return `${this.assetsRoot}/dataset_info`;
-                },
-                get videos() {
-                    return `${this.assetsRoot}/videos`;
-                }
+                assetsRoot,
+                info: infoPath,  // JSON index files following standard structure
+                datasetInfo: datasetInfoPath,
+                videos: videosPath
             },
             // Download command format configuration
             // Modify these values to change the download command format
