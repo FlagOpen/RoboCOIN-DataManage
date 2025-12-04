@@ -10,6 +10,14 @@
 
 RoboCOIN DataManager 是一个网页工具，帮助你查找和下载 RoboCOIN 项目的机器人操作数据集。不用记住复杂的命令，你可以直接看视频，筛选标签，选择需要的数据，然后获取现成的下载命令。
 
+## 📋 重要提示：用户调查
+
+> **为了改进用户体验，了解用户分布，为项目此后的发展方向提供参考，便于项目组后续针对不同地区用户进行更好的兼容，我们希望您在使用RoboCOIN数据集前能够填写一个的相关信息统计调查。这些统计信息将会通过Huggingface或者Modelscope的官方渠道进行收集，并且不会用于除了上述用途之外的任何其他用途。感谢您对RoboCOIN项目的支持！**
+>
+> 🔗 **填写问卷链接**：[https://huggingface.co/datasets/RoboCOIN/gate](https://huggingface.co/datasets/RoboCOIN/gate)
+> 
+> 点击链接，进行顶部的 Gated user access 申请，简单填写相关信息即可！
+
 ## 怎么一步直接下载？
 
 点击视频窗格右下角的下载icon,直接复制下载命令！
